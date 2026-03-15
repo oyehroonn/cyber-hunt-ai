@@ -1,0 +1,47 @@
+# CyberAI - Enterprise Security Assessment Platform
+# Python 3.11+ required
+
+# Core async/web
+playwright>=1.40.0
+httpx>=0.25.0
+websockets>=12.0
+
+# HTML/JS parsing
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+jsbeautifier>=1.14.0
+
+# Data models and validation
+pydantic>=2.5.0
+
+# Data manipulation
+pandas>=2.1.0
+networkx>=3.2.0
+
+# Terminal UI
+rich>=13.7.0
+loguru>=0.7.0
+
+# Templating
+jinja2>=3.1.0
+
+# Configuration
+python-dotenv>=1.0.0
+
+# User agent rotation
+fake-useragent>=1.4.0
+
+# Captcha solving (optional - stubs work without)
+# 2captcha-python>=1.2.0
+# python-anticaptcha>=1.0.0
+
+# Development/testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+ruff>=0.1.0
+
+# Optional: For proxy scraping
+# requests>=2.31.0
+
+# Note: playwright requires browser binaries
+# Run: playwright install chromium
