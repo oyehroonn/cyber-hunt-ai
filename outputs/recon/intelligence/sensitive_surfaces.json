@@ -1,17 +1,203 @@
 {
   "_meta": {
-    "generated_at": "2026-03-16T04:23:52.019116",
-    "target_url": "https://example.com",
+    "generated_at": "2026-03-16T05:01:49.336144",
+    "target_url": "https://www.digitalsoftwaremarkett.com",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
   },
-  "surfaces": [],
-  "by_classification": {},
+  "surfaces": [
+    {
+      "path": "/robots.txt",
+      "status_code": 200,
+      "response_size": 312,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=hcdn"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/sitemap_index.xml",
+      "status_code": 200,
+      "response_size": 1396,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:x-powered-by=PHP/8.3.16",
+        "header:server=hcdn"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.git",
+      "status_code": 403,
+      "response_size": 787,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=hcdn"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.git/config",
+      "status_code": 403,
+      "response_size": 787,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=hcdn"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.git/HEAD",
+      "status_code": 403,
+      "response_size": 787,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=hcdn"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.htaccess",
+      "status_code": 403,
+      "response_size": 787,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=hcdn"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/dev",
+      "status_code": 200,
+      "response_size": 408206,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:x-powered-by=PHP/8.3.16",
+        "header:server=hcdn"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/sql",
+      "status_code": 200,
+      "response_size": 157824,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:x-powered-by=PHP/8.3.16",
+        "header:server=hcdn"
+      ],
+      "classification": "LEAKS_METADATA"
+    }
+  ],
+  "by_classification": {
+    "LEAKS_METADATA": [
+      {
+        "path": "/robots.txt",
+        "status_code": 200,
+        "response_size": 312,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=hcdn"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/sitemap_index.xml",
+        "status_code": 200,
+        "response_size": 1396,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:x-powered-by=PHP/8.3.16",
+          "header:server=hcdn"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.git",
+        "status_code": 403,
+        "response_size": 787,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=hcdn"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.git/config",
+        "status_code": 403,
+        "response_size": 787,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=hcdn"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.git/HEAD",
+        "status_code": 403,
+        "response_size": 787,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=hcdn"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.htaccess",
+        "status_code": 403,
+        "response_size": 787,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=hcdn"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/dev",
+        "status_code": 200,
+        "response_size": 408206,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:x-powered-by=PHP/8.3.16",
+          "header:server=hcdn"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/sql",
+        "status_code": 200,
+        "response_size": 157824,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:x-powered-by=PHP/8.3.16",
+          "header:server=hcdn"
+        ],
+        "classification": "LEAKS_METADATA"
+      }
+    ]
+  },
   "summary": {
     "total_probed": 136,
-    "total_found": 0,
-    "leaking_metadata": 0,
+    "total_found": 8,
+    "leaking_metadata": 8,
     "open_access": 0,
     "blocked": 0
   }

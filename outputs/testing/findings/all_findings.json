@@ -1,0 +1,275 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T05:04:49.939831",
+    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "phase": "testing",
+    "version": "1.0.0",
+    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+  },
+  "findings": [
+    {
+      "id": "b687c301-27a8-4932-b5ed-e507fc1bae0b",
+      "title": "Potential IDOR at /api/g/1",
+      "severity": "high",
+      "category": "authz",
+      "asset": "/api/g/1",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET /api/g/1 with ID from another user",
+          "request": null,
+          "expected_result": null,
+          "actual_result": "Access granted (200)",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": null,
+      "response_proof": null,
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 0.0,
+      "root_cause": "Missing ownership validation",
+      "impact_types": [],
+      "cvss_score": null,
+      "cwe_id": null,
+      "discovered_at": "2026-03-16 05:03:32.962968",
+      "test_plan_id": null,
+      "raw_evidence": {}
+    },
+    {
+      "id": "d1e9b3a7-a8ac-4c3f-9816-ae880b6e6776",
+      "title": "Potential IDOR at /api/g/2",
+      "severity": "high",
+      "category": "authz",
+      "asset": "/api/g/2",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET /api/g/2 with ID from another user",
+          "request": null,
+          "expected_result": null,
+          "actual_result": "Access granted (200)",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": null,
+      "response_proof": null,
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 0.0,
+      "root_cause": "Missing ownership validation",
+      "impact_types": [],
+      "cvss_score": null,
+      "cwe_id": null,
+      "discovered_at": "2026-03-16 05:03:39.328887",
+      "test_plan_id": null,
+      "raw_evidence": {}
+    },
+    {
+      "id": "57976c84-a42d-429a-9690-9122a180237e",
+      "title": "Potential IDOR at /api/g/100",
+      "severity": "high",
+      "category": "authz",
+      "asset": "/api/g/100",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET /api/g/100 with ID from another user",
+          "request": null,
+          "expected_result": null,
+          "actual_result": "Access granted (200)",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": null,
+      "response_proof": null,
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 0.0,
+      "root_cause": "Missing ownership validation",
+      "impact_types": [],
+      "cvss_score": null,
+      "cwe_id": null,
+      "discovered_at": "2026-03-16 05:03:44.575147",
+      "test_plan_id": null,
+      "raw_evidence": {}
+    },
+    {
+      "id": "e8196bb3-ff80-4dd2-aa73-0548c7c6f4d9",
+      "title": "Potential IDOR at /api/g/999",
+      "severity": "high",
+      "category": "authz",
+      "asset": "/api/g/999",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET /api/g/999 with ID from another user",
+          "request": null,
+          "expected_result": null,
+          "actual_result": "Access granted (200)",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": null,
+      "response_proof": null,
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 0.0,
+      "root_cause": "Missing ownership validation",
+      "impact_types": [],
+      "cvss_score": null,
+      "cwe_id": null,
+      "discovered_at": "2026-03-16 05:03:48.869102",
+      "test_plan_id": null,
+      "raw_evidence": {}
+    },
+    {
+      "id": "466828a9-86b4-4fce-847b-dee3607f1941",
+      "title": "Potential IDOR at /api/app/1",
+      "severity": "high",
+      "category": "authz",
+      "asset": "/api/app/1",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET /api/app/1 with ID from another user",
+          "request": null,
+          "expected_result": null,
+          "actual_result": "Access granted (200)",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": null,
+      "response_proof": null,
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 0.0,
+      "root_cause": "Missing ownership validation",
+      "impact_types": [],
+      "cvss_score": null,
+      "cwe_id": null,
+      "discovered_at": "2026-03-16 05:03:59.031602",
+      "test_plan_id": null,
+      "raw_evidence": {}
+    },
+    {
+      "id": "b62025a7-f632-4e88-9339-87f52d0fa9aa",
+      "title": "Potential IDOR at /api/app/2",
+      "severity": "high",
+      "category": "authz",
+      "asset": "/api/app/2",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET /api/app/2 with ID from another user",
+          "request": null,
+          "expected_result": null,
+          "actual_result": "Access granted (200)",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": null,
+      "response_proof": null,
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 0.0,
+      "root_cause": "Missing ownership validation",
+      "impact_types": [],
+      "cvss_score": null,
+      "cwe_id": null,
+      "discovered_at": "2026-03-16 05:04:04.714245",
+      "test_plan_id": null,
+      "raw_evidence": {}
+    },
+    {
+      "id": "19ded4ae-450c-4db2-8c2f-72b95dcca810",
+      "title": "Potential IDOR at /api/app/100",
+      "severity": "high",
+      "category": "authz",
+      "asset": "/api/app/100",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET /api/app/100 with ID from another user",
+          "request": null,
+          "expected_result": null,
+          "actual_result": "Access granted (200)",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": null,
+      "response_proof": null,
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 0.0,
+      "root_cause": "Missing ownership validation",
+      "impact_types": [],
+      "cvss_score": null,
+      "cwe_id": null,
+      "discovered_at": "2026-03-16 05:04:10.115827",
+      "test_plan_id": null,
+      "raw_evidence": {}
+    },
+    {
+      "id": "c1dd86b3-b9a5-45e9-86ef-1215879d7caf",
+      "title": "Potential IDOR at /api/app/999",
+      "severity": "high",
+      "category": "authz",
+      "asset": "/api/app/999",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET /api/app/999 with ID from another user",
+          "request": null,
+          "expected_result": null,
+          "actual_result": "Access granted (200)",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": null,
+      "response_proof": null,
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 0.0,
+      "root_cause": "Missing ownership validation",
+      "impact_types": [],
+      "cvss_score": null,
+      "cwe_id": null,
+      "discovered_at": "2026-03-16 05:04:15.854267",
+      "test_plan_id": null,
+      "raw_evidence": {}
+    }
+  ],
+  "total": 8,
+  "by_severity": {
+    "critical": 0,
+    "high": 8,
+    "medium": 0,
+    "low": 0,
+    "info": 0
+  }
+}

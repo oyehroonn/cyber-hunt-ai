@@ -1,10 +1,66 @@
 {
   "_meta": {
-    "generated_at": "2026-03-16T04:23:31.117005",
-    "target_url": "https://example.com",
+    "generated_at": "2026-03-16T04:58:09.522667",
+    "target_url": "https://www.digitalsoftwaremarkett.com",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
   },
-  "hidden_routes": []
+  "hidden_routes": [
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/s",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/?s=",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    }
+  ]
 }

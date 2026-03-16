@@ -76,12 +76,14 @@ class AsyncHTTPClient:
                 if proxy_str:
                     proxy = f"http://{proxy_str}"
             
-            self._client = httpx.AsyncClient(
-                timeout=httpx.Timeout(self.timeout),
-                follow_redirects=True,
-                proxies=proxy,
-                limits=httpx.Limits(max_connections=100, max_keepalive_connections=20),
-            )
+            client_kw: dict[str, Any] = {
+                "timeout": httpx.Timeout(self.timeout),
+                "follow_redirects": True,
+                "limits": httpx.Limits(max_connections=100, max_keepalive_connections=20),
+            }
+            if proxy:
+                client_kw["proxy"] = proxy
+            self._client = httpx.AsyncClient(**client_kw)
         return self._client
     
     async def close(self) -> None:

@@ -1,0 +1,4 @@
+2026-03-16 05:43:04.332 | INFO     | __main__:setup_logging:48 - Starting verify phase with run_id: 08db5712-a1fd-4aa1-bb49-c4aa7d23f6c2
+2026-03-16 05:43:04.333 | INFO     | cyberAI.verification.pipeline:deduplicate:58 - Deduplicated 0 -> 0 findings
+2026-03-16 05:43:04.333 | INFO     | cyberAI.verification.pipeline:run_verification:103 - Verifying 0 findings...
+2026-03-16 05:43:04.333 | INFO     | cyberAI.verification.pipeline:run_verification:119 - Verification complete: 0 confirmed, 0 likely, 0 need more data, 0 false positives

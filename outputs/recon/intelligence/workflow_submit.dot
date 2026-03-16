@@ -1,0 +1,5 @@
+digraph submit {
+    rankdir=LR;
+    node [shape=box, style=filled, fillcolor=lightblue];
+    "step_0" [fillcolor=lightgreen];
+}

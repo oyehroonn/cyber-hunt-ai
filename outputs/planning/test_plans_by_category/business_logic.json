@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T05:03:21.741118",
+    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "phase": "planning",
+    "version": "1.0.0",
+    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+  },
+  "plans": [
+    {
+      "id": "2f2f2316-6a8f-4d94-9af2-5e02dd0af41d",
+      "category": "business_logic",
+      "name": "test_workflow_skip_checkout",
+      "description": "Skip workflow steps in checkout",
+      "target_endpoint": null,
+      "target_object": null,
+      "target_role": null,
+      "required_state": null,
+      "preconditions": {
+        "description": "",
+        "setup_steps": [],
+        "required_accounts": [],
+        "required_data": {}
+      },
+      "expected_safe_behavior": "Workflow steps cannot be skipped",
+      "attack_vector": "Workflow bypass",
+      "payloads": [],
+      "confidence_score": 0.7,
+      "priority": 2,
+      "is_destructive": false,
+      "is_noisy": false,
+      "is_state_altering": false,
+      "estimated_requests": 1,
+      "rollback_strategy": null
+    },
+    {
+      "id": "087fcb5f-2ed3-4332-9e54-22738266f7db",
+      "category": "business_logic",
+      "name": "test_duplicate_submission",
+      "description": "Submit same form twice rapidly, check idempotency",
+      "target_endpoint": null,
+      "target_object": null,
+      "target_role": null,
+      "required_state": null,
+      "preconditions": {
+        "description": "",
+        "setup_steps": [],
+        "required_accounts": [],
+        "required_data": {}
+      },
+      "expected_safe_behavior": "Duplicate submissions are handled safely",
+      "attack_vector": "Race condition / duplicate submission",
+      "payloads": [],
+      "confidence_score": 0.6,
+      "priority": 3,
+      "is_destructive": false,
+      "is_noisy": false,
+      "is_state_altering": false,
+      "estimated_requests": 1,
+      "rollback_strategy": null
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+2026-03-16 05:53:27.102 | INFO     | __main__:setup_logging:48 - Starting test phase with run_id: c2e17087-42b3-4e9f-848a-692eba9b4fc4
+2026-03-16 05:53:27.105 | INFO     | cyberAI.testing.runner:run_category:118 - Running 2 tests for category: authz
+2026-03-16 05:53:27.183 | WARNING  | cyberAI.utils.http_client:request:196 - HTTP error: Request URL is missing an 'http://' or 'https://' protocol., retrying (1/3)
+2026-03-16 05:53:27.202 | WARNING  | cyberAI.utils.http_client:request:196 - HTTP error: Request URL is missing an 'http://' or 'https://' protocol., retrying (1/3)
+2026-03-16 05:53:28.185 | WARNING  | cyberAI.utils.http_client:request:196 - HTTP error: Request URL is missing an 'http://' or 'https://' protocol., retrying (2/3)
+2026-03-16 05:53:28.204 | WARNING  | cyberAI.utils.http_client:request:196 - HTTP error: Request URL is missing an 'http://' or 'https://' protocol., retrying (2/3)
+2026-03-16 05:53:30.202 | ERROR    | cyberAI.testing.runner:_run_single_test:103 - Test failed: test_horizontal_idor_assets - Request URL is missing an 'http://' or 'https://' protocol.
+2026-03-16 05:53:30.205 | ERROR    | cyberAI.testing.runner:_run_single_test:103 - Test failed: test_horizontal_idor_g1xhudg7fomynwieipgjj - Request URL is missing an 'http://' or 'https://' protocol.
+2026-03-16 05:53:30.205 | INFO     | cyberAI.testing.runner:run_category:118 - Running 5 tests for category: auth
+2026-03-16 05:53:30.243 | WARNING  | cyberAI.utils.http_client:request:196 - HTTP error: Request URL is missing an 'http://' or 'https://' protocol., retrying (1/3)
+2026-03-16 05:53:30.264 | WARNING  | cyberAI.utils.http_client:request:196 - HTTP error: Request URL is missing an 'http://' or 'https://' protocol., retrying (1/3)
+2026-03-16 05:53:31.244 | WARNING  | cyberAI.utils.http_client:request:196 - HTTP error: Request URL is missing an 'http://' or 'https://' protocol., retrying (2/3)
+2026-03-16 05:53:31.265 | WARNING  | cyberAI.utils.http_client:request:196 - HTTP error: Request URL is missing an 'http://' or 'https://' protocol., retrying (2/3)
+2026-03-16 05:53:33.247 | ERROR    | cyberAI.testing.runner:_run_single_test:103 - Test failed: test_login_flows - Request URL is missing an 'http://' or 'https://' protocol.
+2026-03-16 05:53:33.266 | ERROR    | cyberAI.testing.runner:_run_single_test:103 - Test failed: test_password_reset - Request URL is missing an 'http://' or 'https://' protocol.

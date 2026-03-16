@@ -1,0 +1,376 @@
+2026-03-16 05:39:03.622 | INFO     | __main__:setup_logging:48 - Starting recon phase with run_id: ad43d428-e474-4752-a81a-8aabcea1f5e8
+2026-03-16 05:39:05.662 | INFO     | cyberAI.utils.browser:initialize:82 - Browser pool initialized
+2026-03-16 05:39:05.722 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: None
+2026-03-16 05:39:05.722 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.github.com (role: None)
+2026-03-16 05:39:05.982 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.github.com
+2026-03-16 05:39:17.789 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:39:17.822 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:39:19.281 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:39:19.366 | INFO     | cyberAI.recon.core_discovery:save_routes:563 - Saved 1 routes to outputs/recon/intelligence/routes.json
+2026-03-16 05:39:19.400 | INFO     | cyberAI.recon.network_intelligence:save_intelligence:420 - Saved 22 requests and 22 endpoints
+2026-03-16 05:39:22.532 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/39250-d8a25e2693e66f05.js
+2026-03-16 05:39:22.570 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/high-contrast-cookie-fed1d93364101384.js
+2026-03-16 05:39:22.693 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/87774-361ab683ce12e20b.js
+2026-03-16 05:39:22.767 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/60481-19fcf1c5670a41f1.js
+2026-03-16 05:39:22.855 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/22445-66cdb57aa2f9e31c.js
+2026-03-16 05:39:22.988 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/63991-125a5c660965e63e.js
+2026-03-16 05:39:23.525 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/95150-3f6eef28aa8b5664.js
+2026-03-16 05:39:23.578 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/notifications-global-3413132b6df94f22.js
+2026-03-16 05:39:24.110 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/28305-b663b70eeeaeea9c.js
+2026-03-16 05:39:24.416 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/element-registry-6e5cd1fec7eff27a.js
+2026-03-16 05:39:27.260 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/46740-6606b1026a237412.js
+2026-03-16 05:39:27.302 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/99328-5e06da57c4622e21.js
+2026-03-16 05:39:28.494 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/48527-864c32c33c6ed02a.js
+2026-03-16 05:39:28.852 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/27493-fc2daf7119ca7d8f.js
+2026-03-16 05:39:28.892 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/55077-5c9ca4985817e0f1.js
+2026-03-16 05:39:29.060 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/49957-e3bf0e20ef9a29eb.js
+2026-03-16 05:39:29.243 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/9211-24bfb6c5e4af0b0c.js
+2026-03-16 05:39:29.265 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/marketing-essentials-adf3f723a79e1e59.js
+2026-03-16 05:39:29.411 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/41013-7a6deee6d6ff15eb.js
+2026-03-16 05:39:29.618 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/17383-e0b14a829f4de8f1.js
+2026-03-16 05:39:29.791 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/26533-2961d590db2a09c3.js
+2026-03-16 05:39:30.097 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/85897-3ad598f4215adaa8.js
+2026-03-16 05:39:30.230 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/18728-664614aa8ee76cdd.js
+2026-03-16 05:39:30.510 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/68751-fe5cb40b5547c377.js
+2026-03-16 05:39:30.625 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/63225-0b2c29213bdfc714.js
+2026-03-16 05:39:31.657 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/34287-bac1f47505665056.js
+2026-03-16 05:39:31.912 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/global-banner-disable-c5d230875ac0a28a.js
+2026-03-16 05:39:31.975 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/85924-e131bec5f99667e1.js
+2026-03-16 05:39:32.033 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/34646-e68f26aaba7f2b0d.js
+2026-03-16 05:39:32.078 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/2498-7a413c8209222158.js
+2026-03-16 05:39:32.140 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/79039-2565b539a6ebc09b.js
+2026-03-16 05:39:32.202 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/57073-554787e8d9e6aaa0.js
+2026-03-16 05:39:32.227 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/runtime-helpers-3bb6f7d6b7a2f531.js
+2026-03-16 05:39:32.437 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/28703-fdd40492379f8963.js
+2026-03-16 05:39:32.472 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/2887-47ac9a4b8862e6bf.js
+2026-03-16 05:39:32.643 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/46287-7b500b5354119a88.js
+2026-03-16 05:39:32.744 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/56889-2c7872f585064a5f.js
+2026-03-16 05:39:32.786 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/2013-1d12b562c98f0fa4.js
+2026-03-16 05:39:32.827 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/12734-63fa4aadaafd4358.js
+2026-03-16 05:39:35.522 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/primer-react-30639dc6aed6f824.js
+2026-03-16 05:39:35.746 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/github-elements-d8ee5508ed7e2c69.js
+2026-03-16 05:39:35.790 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/15625-6adfa29b510538fc.js
+2026-03-16 05:39:35.887 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/91184-06e912d0593ac0f3.js
+2026-03-16 05:39:35.925 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/81564-2e90400b9da06ade.js
+2026-03-16 05:39:36.120 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/wp-runtime-b9e660709d6ed4c9.js
+2026-03-16 05:39:36.171 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/77313-f439c46a2769a1fe.js
+2026-03-16 05:39:36.239 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/28839-734cb6d8a7150172.js
+2026-03-16 05:39:36.292 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/38302-841b0fa97d5950a1.js
+2026-03-16 05:39:36.352 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/43444-636052f37ac382a0.js
+2026-03-16 05:39:36.880 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/46752-46c707717fcbe6a9.js
+2026-03-16 05:39:36.975 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/90018-d35ce3c32806d709.js
+2026-03-16 05:39:37.219 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/96232-c2cf4a34762f0169.js
+2026-03-16 05:39:38.697 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/6572-01263ee51465ffb1.js
+2026-03-16 05:39:38.876 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/84552-4169475d74e2de0c.js
+2026-03-16 05:39:39.113 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/93308-c21d6ff736807846.js
+2026-03-16 05:39:40.222 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/74071-93ba74c3d7e6b111.js
+2026-03-16 05:39:41.003 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/behaviors-855cb2fba42664cf.js
+2026-03-16 05:39:42.169 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/61110-93cf7706e5dc8bfa.js
+2026-03-16 05:39:42.252 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/71236-ed1398bff632952c.js
+2026-03-16 05:39:42.389 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/sessions-e5a020fb258986c3.js
+2026-03-16 05:39:43.553 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/landing-pages-13c4073e34d94b2c.js
+2026-03-16 05:39:45.677 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/react-lib-a4cf89fce9a1300a.js
+2026-03-16 05:39:46.347 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/18382-3d41da96c8d4b890.js
+2026-03-16 05:39:47.264 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/react-core-ee01a646fed07a36.js
+2026-03-16 05:39:47.338 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/89155-5186ca7ca875b304.js
+2026-03-16 05:39:48.542 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/octicons-react-6e60bcde38f313de.js
+2026-03-16 05:39:49.369 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/37826-b3ebde81e7762221.js
+2026-03-16 05:39:50.083 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/70641-5a6ec3de78151c22.js
+2026-03-16 05:39:50.249 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/7053-544130013a51e287.js
+2026-03-16 05:39:50.325 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/2966-f6796bfd155feae1.js
+2026-03-16 05:39:50.847 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/environment-054f5aad5dd15bfc.js
+2026-03-16 05:39:52.653 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/48761-4941fce410205fe2.js
+2026-03-16 05:39:52.892 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/51210-3abb7238871a5b29.js
+2026-03-16 05:39:53.625 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://github.githubassets.com/assets/97232-49462d987e3cc4b7.js
+2026-03-16 05:39:53.635 | INFO     | cyberAI.recon.frontend_parser:fetch_js_bundles:109 - Downloaded 74 JS bundles
+2026-03-16 05:39:53.668 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/39250-d8a25e2693e66f05.js
+2026-03-16 05:39:53.697 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/high-contrast-cookie-fed1d93364101384.js
+2026-03-16 05:39:53.698 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/87774-361ab683ce12e20b.js
+2026-03-16 05:39:53.704 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/60481-19fcf1c5670a41f1.js
+2026-03-16 05:39:53.709 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/22445-66cdb57aa2f9e31c.js
+2026-03-16 05:39:53.718 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/63991-125a5c660965e63e.js
+2026-03-16 05:39:53.721 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/95150-3f6eef28aa8b5664.js
+2026-03-16 05:39:53.727 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/notifications-global-3413132b6df94f22.js
+2026-03-16 05:39:53.732 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/28305-b663b70eeeaeea9c.js
+2026-03-16 05:39:53.736 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/element-registry-6e5cd1fec7eff27a.js
+2026-03-16 05:39:53.767 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/46740-6606b1026a237412.js
+2026-03-16 05:39:53.776 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/99328-5e06da57c4622e21.js
+2026-03-16 05:39:53.780 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/48527-864c32c33c6ed02a.js
+2026-03-16 05:39:53.786 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/27493-fc2daf7119ca7d8f.js
+2026-03-16 05:39:53.793 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/55077-5c9ca4985817e0f1.js
+2026-03-16 05:39:53.804 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/49957-e3bf0e20ef9a29eb.js
+2026-03-16 05:39:53.839 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/9211-24bfb6c5e4af0b0c.js
+2026-03-16 05:39:53.878 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/marketing-essentials-adf3f723a79e1e59.js
+2026-03-16 05:39:53.878 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/41013-7a6deee6d6ff15eb.js
+2026-03-16 05:39:53.885 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/17383-e0b14a829f4de8f1.js
+2026-03-16 05:39:53.919 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/26533-2961d590db2a09c3.js
+2026-03-16 05:39:53.950 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/85897-3ad598f4215adaa8.js
+2026-03-16 05:39:53.978 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/18728-664614aa8ee76cdd.js
+2026-03-16 05:39:53.990 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/68751-fe5cb40b5547c377.js
+2026-03-16 05:39:53.996 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/63225-0b2c29213bdfc714.js
+2026-03-16 05:39:54.010 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/34287-bac1f47505665056.js
+2026-03-16 05:39:54.033 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/global-banner-disable-c5d230875ac0a28a.js
+2026-03-16 05:39:54.034 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/85924-e131bec5f99667e1.js
+2026-03-16 05:39:54.039 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/34646-e68f26aaba7f2b0d.js
+2026-03-16 05:39:54.045 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/2498-7a413c8209222158.js
+2026-03-16 05:39:54.049 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/79039-2565b539a6ebc09b.js
+2026-03-16 05:39:54.056 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/57073-554787e8d9e6aaa0.js
+2026-03-16 05:39:54.062 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/runtime-helpers-3bb6f7d6b7a2f531.js
+2026-03-16 05:39:54.064 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/28703-fdd40492379f8963.js
+2026-03-16 05:39:54.067 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/2887-47ac9a4b8862e6bf.js
+2026-03-16 05:39:54.070 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/46287-7b500b5354119a88.js
+2026-03-16 05:39:54.085 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/56889-2c7872f585064a5f.js
+2026-03-16 05:39:54.090 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/2013-1d12b562c98f0fa4.js
+2026-03-16 05:39:54.094 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/12734-63fa4aadaafd4358.js
+2026-03-16 05:39:54.097 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/primer-react-30639dc6aed6f824.js
+2026-03-16 05:39:54.354 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/github-elements-d8ee5508ed7e2c69.js
+2026-03-16 05:39:54.374 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/15625-6adfa29b510538fc.js
+2026-03-16 05:39:54.380 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/91184-06e912d0593ac0f3.js
+2026-03-16 05:39:54.389 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/81564-2e90400b9da06ade.js
+2026-03-16 05:39:54.392 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/wp-runtime-b9e660709d6ed4c9.js
+2026-03-16 05:39:54.408 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/77313-f439c46a2769a1fe.js
+2026-03-16 05:39:54.413 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/28839-734cb6d8a7150172.js
+2026-03-16 05:39:54.421 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/38302-841b0fa97d5950a1.js
+2026-03-16 05:39:54.426 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/43444-636052f37ac382a0.js
+2026-03-16 05:39:54.437 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/46752-46c707717fcbe6a9.js
+2026-03-16 05:39:54.465 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/90018-d35ce3c32806d709.js
+2026-03-16 05:39:54.473 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/96232-c2cf4a34762f0169.js
+2026-03-16 05:39:54.477 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/6572-01263ee51465ffb1.js
+2026-03-16 05:39:54.695 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/84552-4169475d74e2de0c.js
+2026-03-16 05:39:54.724 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/93308-c21d6ff736807846.js
+2026-03-16 05:39:54.732 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/74071-93ba74c3d7e6b111.js
+2026-03-16 05:39:54.824 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/behaviors-855cb2fba42664cf.js
+2026-03-16 05:39:54.862 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/61110-93cf7706e5dc8bfa.js
+2026-03-16 05:39:54.866 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/71236-ed1398bff632952c.js
+2026-03-16 05:39:54.871 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/sessions-e5a020fb258986c3.js
+2026-03-16 05:39:54.878 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/landing-pages-13c4073e34d94b2c.js
+2026-03-16 05:39:55.245 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/react-lib-a4cf89fce9a1300a.js
+2026-03-16 05:39:55.434 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/18382-3d41da96c8d4b890.js
+2026-03-16 05:39:55.482 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/react-core-ee01a646fed07a36.js
+2026-03-16 05:39:55.576 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/89155-5186ca7ca875b304.js
+2026-03-16 05:39:55.585 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/octicons-react-6e60bcde38f313de.js
+2026-03-16 05:39:55.721 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/37826-b3ebde81e7762221.js
+2026-03-16 05:39:55.831 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/70641-5a6ec3de78151c22.js
+2026-03-16 05:39:56.093 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/7053-544130013a51e287.js
+2026-03-16 05:39:56.097 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/2966-f6796bfd155feae1.js
+2026-03-16 05:39:56.110 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/environment-054f5aad5dd15bfc.js
+2026-03-16 05:39:56.128 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/48761-4941fce410205fe2.js
+2026-03-16 05:39:56.331 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/51210-3abb7238871a5b29.js
+2026-03-16 05:39:56.337 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://github.githubassets.com/assets/97232-49462d987e3cc4b7.js
+2026-03-16 05:39:56.343 | INFO     | cyberAI.recon.frontend_parser:save_analysis:544 - Found 10 hidden routes
+2026-03-16 05:39:56.344 | INFO     | cyberAI.recon.frontend_parser:save_analysis:557 - Saved frontend analysis with 11 routes, 2 API endpoints
+2026-03-16 05:39:56.507 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:03.626 | INFO     | cyberAI.recon.account_state:discover_states_for_role:231 - Detected states: ['trial', 'paid', 'active', 'published']
+2026-03-16 05:40:03.699 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: unverified
+2026-03-16 05:40:03.731 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:03.731 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.github.com (role: user)
+2026-03-16 05:40:03.749 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:04.257 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.github.com
+2026-03-16 05:40:13.685 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:40:13.712 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:40:14.983 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:40:15.049 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: verified
+2026-03-16 05:40:15.072 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:15.072 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.github.com (role: user)
+2026-03-16 05:40:15.092 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:15.703 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.github.com
+2026-03-16 05:40:21.753 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:40:21.791 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:40:23.060 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:40:23.135 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: trial
+2026-03-16 05:40:23.155 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:23.155 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.github.com (role: user)
+2026-03-16 05:40:23.172 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:23.243 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.github.com
+2026-03-16 05:40:31.709 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:40:31.741 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:40:32.979 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:40:33.041 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: paid
+2026-03-16 05:40:33.062 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:33.062 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.github.com (role: user)
+2026-03-16 05:40:33.078 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:33.134 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.github.com
+2026-03-16 05:40:42.584 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:40:42.623 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:40:43.908 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:40:43.961 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: free
+2026-03-16 05:40:43.993 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:43.993 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.github.com (role: user)
+2026-03-16 05:40:44.037 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:40:44.096 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.github.com
+2026-03-16 05:41:14.120 | WARNING  | cyberAI.recon.core_discovery:_process_page:356 - Timeout loading https://www.github.com, continuing with partial content
+2026-03-16 05:41:17.341 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:41:17.374 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:41:18.776 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:41:19.006 | INFO     | cyberAI.recon.account_state:save_state_diff:302 - Saved state diff with 5 states analyzed
+2026-03-16 05:41:19.006 | INFO     | cyberAI.recon.sensitive_surfaces:probe_all_paths:354 - Probing 136 sensitive paths...
+2026-03-16 05:41:19.210 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.410 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /export: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.411 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /internal/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.411 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /billing/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.411 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /exports: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.411 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /import: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.411 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /billing: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.411 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /internal: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.411 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /administrator: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.411 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /admin/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.613 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /imports: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.823 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.827 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphql/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.828 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /audit/logs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.828 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /audit-logs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.828 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /audit: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.828 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphql/playground: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.829 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/tokens: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.832 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api-tokens: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:19.841 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /tokens: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.034 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphiql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.236 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api-docs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.236 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger-ui.html: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.236 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger-ui/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.236 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /openapi.yaml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.237 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger-ui: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.237 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/docs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.237 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /openapi.json: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.238 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.238 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.440 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /docs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.641 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /metrics: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.641 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /debug/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.642 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /health/ready: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.642 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /debug: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.642 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /healthz: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.643 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /health/live: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.643 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /health: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.644 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /prometheus: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.644 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /redoc: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:20.845 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.well-known/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.046 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /sitemap.xml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.048 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /sitemap_index.xml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.049 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /staff/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.049 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /__admin/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.049 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /staff: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.050 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /robots.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.050 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /__admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.050 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.well-known/openid-configuration: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.050 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.well-known/security.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.252 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /superuser: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.453 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /manage/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.454 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/private: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.454 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/v1/admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.454 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /management: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.454 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /manage: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.454 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/internal: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.455 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/v2/admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.455 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /console/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.455 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /console: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.656 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.env: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.858 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /config: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.859 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.htaccess: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.859 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.git/HEAD: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.859 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /config/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.859 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.gitignore: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.860 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /configuration: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.860 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /settings: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.860 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.git/config: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:21.861 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.git: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.064 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /system: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.264 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /trace: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.265 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /phpinfo.php: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.266 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /elmah.axd: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.267 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/beans: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.268 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/mappings: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.268 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/env: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.268 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/info: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.269 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/health: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.269 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.470 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /info.php: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.671 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /development: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.671 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /backup: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.671 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /backups: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.671 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /staging: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.671 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /dump: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.671 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /dev: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.671 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /testing: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.671 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /test/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.671 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /test: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:22.873 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /sql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.074 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /phpmyadmin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.075 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /status: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.075 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /_debug: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.075 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /server-status: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.075 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /server-info: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.075 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /pma: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.076 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /adminer: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.076 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /db: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.076 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /database: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.277 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /_profiler: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.479 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/health: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.479 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/version: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.479 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/info: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.481 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /version: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.481 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /changelog: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.481 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/status: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.481 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/debug: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.481 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /version.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.481 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /profiler: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.683 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /CHANGELOG.md: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.883 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /Gemfile: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.884 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /package.json: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.884 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /LICENSE: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.884 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /composer.json: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.884 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.dockerenv: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.884 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /requirements.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.884 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /webpack.config.js: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.884 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /license: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:23.884 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /README.md: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.101 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /Dockerfile: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.305 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.308 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /callbacks: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.308 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.308 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /callback: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.309 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth/token: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.309 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth/authorize: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.309 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /webhooks: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.309 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/webhooks: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.311 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /docker-compose.yml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.512 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.aws/credentials: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.714 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /private: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.714 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /restricted: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.714 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /secrets: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.715 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /confidential: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.715 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /credentials: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.716 | INFO     | cyberAI.recon.sensitive_surfaces:probe_all_paths:371 - Found 0 interesting surfaces
+2026-03-16 05:41:24.724 | INFO     | cyberAI.recon.sensitive_surfaces:save_surfaces:422 - Saved 0 sensitive surfaces
+2026-03-16 05:41:24.731 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:24.932 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /graphql/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:25.133 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /api/graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:25.333 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /api/graphql/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:25.536 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /v1/graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:25.736 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /query: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:25.937 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /gql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:41:25.937 | INFO     | cyberAI.recon.graphql_discovery:discover:399 - No GraphQL endpoint found
+2026-03-16 05:41:25.939 | INFO     | cyberAI.recon.graphql_discovery:save_intel:463 - Saved GraphQL intelligence
+2026-03-16 05:41:27.550 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /ws: InvalidURI
+2026-03-16 05:41:27.844 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /ws/: InvalidURI
+2026-03-16 05:41:28.679 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /websocket: InvalidURI
+2026-03-16 05:41:29.099 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /socket: InvalidURI
+2026-03-16 05:41:29.337 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /socket.io/: InvalidURI
+2026-03-16 05:41:29.491 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /sockjs/: InvalidURI
+2026-03-16 05:41:29.641 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /cable: InvalidURI
+2026-03-16 05:41:29.860 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /realtime: InvalidURI
+2026-03-16 05:41:30.161 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /live: InvalidURI
+2026-03-16 05:41:30.751 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /events: InvalidURI
+2026-03-16 05:41:31.971 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /stream: InvalidURI
+2026-03-16 05:41:32.484 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /notifications: InvalidURI
+2026-03-16 05:41:33.055 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /api/ws: InvalidURI
+2026-03-16 05:41:33.896 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /api/websocket: InvalidURI
+2026-03-16 05:41:33.902 | INFO     | cyberAI.recon.websocket_discovery:save_intel:342 - Saved WebSocket intelligence for 0 endpoints
+2026-03-16 05:41:33.928 | INFO     | cyberAI.recon.async_flow_discovery:save_flows:354 - Saved 0 async flows
+2026-03-16 05:41:33.974 | INFO     | cyberAI.recon.object_model:save_object_graph:406 - Saved 2 object models
+2026-03-16 05:41:34.033 | INFO     | cyberAI.recon.permission_inference:save_matrix:298 - Saved permission matrix with 0 entries
+2026-03-16 05:41:34.035 | INFO     | cyberAI.recon.workflow_mapper:save_workflows:360 - Saved 1 workflows
+2026-03-16 05:41:34.035 | INFO     | cyberAI.recon.input_schema:save_schemas:340 - Saved 0 input schemas
+2026-03-16 05:41:34.041 | INFO     | cyberAI.recon.security_controls:save_report:360 - Saved security controls report
+2026-03-16 05:41:34.130 | INFO     | cyberAI.recon.intelligence_outputs:save_all_outputs:376 - Saved 4 intelligence output files
+2026-03-16 05:41:34.326 | INFO     | cyberAI.utils.browser:close:101 - Browser pool closed

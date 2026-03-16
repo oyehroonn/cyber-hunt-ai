@@ -261,7 +261,7 @@ class WorkflowGraph(BaseModel):
 
 class TestPrecondition(BaseModel):
     """Precondition required for a test."""
-    description: str
+    description: str = ""
     setup_steps: list[str] = Field(default_factory=list)
     required_accounts: list[str] = Field(default_factory=list)
     required_data: dict[str, Any] = Field(default_factory=dict)

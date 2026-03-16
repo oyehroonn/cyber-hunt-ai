@@ -1,0 +1,10 @@
+2026-03-16 05:42:52.425 | INFO     | __main__:setup_logging:48 - Starting test phase with run_id: 457979cc-4f2d-4b4a-88bc-d6c3db6afa0c
+2026-03-16 05:42:52.427 | INFO     | cyberAI.testing.runner:run_category:118 - Running 5 tests for category: auth
+2026-03-16 05:42:52.427 | WARNING  | cyberAI.testing.runner:_run_single_test:78 - No tester registered for category: auth
+2026-03-16 05:42:52.427 | WARNING  | cyberAI.testing.runner:_run_single_test:78 - No tester registered for category: auth
+2026-03-16 05:42:52.427 | WARNING  | cyberAI.testing.runner:_run_single_test:78 - No tester registered for category: auth
+2026-03-16 05:42:52.427 | WARNING  | cyberAI.testing.runner:_run_single_test:78 - No tester registered for category: auth
+2026-03-16 05:42:52.427 | WARNING  | cyberAI.testing.runner:_run_single_test:78 - No tester registered for category: auth
+2026-03-16 05:42:52.427 | INFO     | cyberAI.testing.runner:run_category:118 - Running 2 tests for category: authz
+2026-03-16 05:42:52.427 | WARNING  | cyberAI.testing.runner:_run_single_test:78 - No tester registered for category: authz
+2026-03-16 05:42:52.427 | WARNING  | cyberAI.testing.runner:_run_single_test:78 - No tester registered for category: authz

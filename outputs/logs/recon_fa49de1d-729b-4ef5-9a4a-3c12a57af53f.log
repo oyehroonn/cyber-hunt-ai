@@ -1,0 +1,132 @@
+2026-03-16 05:57:12.707 | INFO     | __main__:setup_logging:48 - Starting recon phase with run_id: fa49de1d-729b-4ef5-9a4a-3c12a57af53f
+2026-03-16 05:57:14.431 | INFO     | cyberAI.utils.browser:initialize:82 - Browser pool initialized
+2026-03-16 05:57:14.489 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: None
+2026-03-16 05:57:14.489 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.digitalsoftwaremarkett.com (role: None)
+2026-03-16 05:57:14.797 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.digitalsoftwaremarkett.com
+2026-03-16 05:57:44.694 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:57:44.717 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:57:44.974 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:57:45.211 | INFO     | cyberAI.recon.core_discovery:save_routes:563 - Saved 1 routes to outputs/recon/intelligence/routes.json
+2026-03-16 05:57:45.246 | INFO     | cyberAI.recon.network_intelligence:save_intelligence:420 - Saved 21 requests and 21 endpoints
+2026-03-16 05:57:45.821 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://www.google-analytics.com/analytics.js
+2026-03-16 05:57:46.441 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://snap.licdn.com/li.lms-analytics/insight.min.js
+2026-03-16 05:57:47.466 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://scripts.clarity.ms/0.8.57/clarity.js
+2026-03-16 05:57:47.833 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-3ea2c7ce.js
+2026-03-16 05:57:47.891 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-2d0da3af.js
+2026-03-16 05:57:48.681 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-main.js
+2026-03-16 05:57:51.039 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://bat.bing.com/p/action/26347777.js
+2026-03-16 05:57:52.187 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://connect.facebook.net/en_US/fbevents.js
+2026-03-16 05:57:52.246 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-app.js
+2026-03-16 05:57:52.655 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-2d224aff.js
+2026-03-16 05:57:54.070 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-common.js
+2026-03-16 05:57:54.664 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://bat.bing.com/bat.js
+2026-03-16 05:57:55.569 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-6289ff8e.js
+2026-03-16 05:57:56.369 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-7941cc06.js
+2026-03-16 05:57:56.564 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-4fe9d5dd.js
+2026-03-16 05:57:56.610 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-2d0c8092.js
+2026-03-16 05:57:57.675 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://digitalsoftwaremarkett.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4
+2026-03-16 05:57:57.722 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-2d0d2b7c.js
+2026-03-16 05:57:57.753 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-runtime.js
+2026-03-16 05:58:01.689 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://digitalsoftwaremarkett.com/wp-content/litespeed/js/491c705383d3ce5bd7c807bd0b1306f6.js?ver=e55a1
+2026-03-16 05:58:04.268 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://www.googletagmanager.com/gtm.js?id=GTM-WTZ8WCG
+2026-03-16 05:58:06.154 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://digitalsoftwaremarkett.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1
+2026-03-16 05:58:06.853 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-vendor.js
+2026-03-16 05:58:08.251 | DEBUG    | cyberAI.recon.frontend_parser:fetch_js_bundles:104 - Downloaded JS: https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-vendors.js
+2026-03-16 05:58:08.253 | INFO     | cyberAI.recon.frontend_parser:fetch_js_bundles:109 - Downloaded 24 JS bundles
+2026-03-16 05:58:08.253 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://www.google-analytics.com/analytics.js
+2026-03-16 05:58:08.278 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://snap.licdn.com/li.lms-analytics/insight.min.js
+2026-03-16 05:58:08.302 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://scripts.clarity.ms/0.8.57/clarity.js
+2026-03-16 05:58:08.335 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-3ea2c7ce.js
+2026-03-16 05:58:08.337 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-2d0da3af.js
+2026-03-16 05:58:08.343 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-main.js
+2026-03-16 05:58:08.343 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://bat.bing.com/p/action/26347777.js
+2026-03-16 05:58:08.344 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://connect.facebook.net/en_US/fbevents.js
+2026-03-16 05:58:08.517 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-app.js
+2026-03-16 05:58:08.518 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-2d224aff.js
+2026-03-16 05:58:08.524 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-common.js
+2026-03-16 05:58:08.636 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://bat.bing.com/bat.js
+2026-03-16 05:58:08.656 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-6289ff8e.js
+2026-03-16 05:58:08.698 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-7941cc06.js
+2026-03-16 05:58:08.723 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-4fe9d5dd.js
+2026-03-16 05:58:08.724 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-2d0c8092.js
+2026-03-16 05:58:08.727 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://digitalsoftwaremarkett.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4
+2026-03-16 05:58:08.735 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-2d0d2b7c.js
+2026-03-16 05:58:08.739 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-runtime.js
+2026-03-16 05:58:08.740 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://digitalsoftwaremarkett.com/wp-content/litespeed/js/491c705383d3ce5bd7c807bd0b1306f6.js?ver=e55a1
+2026-03-16 05:58:09.078 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://www.googletagmanager.com/gtm.js?id=GTM-WTZ8WCG
+2026-03-16 05:58:09.291 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://digitalsoftwaremarkett.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1
+2026-03-16 05:58:09.327 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-vendor.js
+2026-03-16 05:58:09.366 | DEBUG    | cyberAI.recon.frontend_parser:analyze_all:474 - Analyzing https://embed.tawk.to/_s/v4/app/69967ba6a3b/js/twk-chunk-vendors.js
+2026-03-16 05:58:09.524 | INFO     | cyberAI.recon.frontend_parser:save_analysis:544 - Found 11 hidden routes
+2026-03-16 05:58:09.525 | INFO     | cyberAI.recon.frontend_parser:save_analysis:557 - Saved frontend analysis with 11 routes, 2 API endpoints
+2026-03-16 05:58:09.599 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:58:21.701 | INFO     | cyberAI.recon.account_state:discover_states_for_role:231 - Detected states: ['paid', 'active', 'published', 'empty', 'free']
+2026-03-16 05:58:21.747 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: unverified
+2026-03-16 05:58:21.770 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:58:21.770 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.digitalsoftwaremarkett.com (role: user)
+2026-03-16 05:58:21.785 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:58:22.171 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.digitalsoftwaremarkett.com
+2026-03-16 05:58:36.718 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:58:36.757 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:58:37.025 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:58:37.251 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: verified
+2026-03-16 05:58:37.274 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:58:37.274 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.digitalsoftwaremarkett.com (role: user)
+2026-03-16 05:58:37.289 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:58:37.884 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.digitalsoftwaremarkett.com
+2026-03-16 05:59:01.080 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:59:01.119 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:59:01.379 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:59:01.614 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: trial
+2026-03-16 05:59:01.667 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:59:01.667 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.digitalsoftwaremarkett.com (role: user)
+2026-03-16 05:59:01.702 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:59:02.388 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.digitalsoftwaremarkett.com
+2026-03-16 05:59:20.996 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:59:21.043 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:59:21.357 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:59:21.420 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: paid
+2026-03-16 05:59:21.446 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:59:21.447 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.digitalsoftwaremarkett.com (role: user)
+2026-03-16 05:59:21.470 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:59:22.009 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.digitalsoftwaremarkett.com
+2026-03-16 05:59:38.957 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:59:39.008 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:59:39.269 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:59:39.334 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: free
+2026-03-16 05:59:39.357 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:59:39.357 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://www.digitalsoftwaremarkett.com (role: user)
+2026-03-16 05:59:39.374 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:59:39.515 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://www.digitalsoftwaremarkett.com
+2026-03-16 06:00:02.669 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 06:00:02.717 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 06:00:02.984 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 06:00:03.044 | INFO     | cyberAI.recon.account_state:save_state_diff:302 - Saved state diff with 5 states analyzed
+2026-03-16 06:00:03.044 | INFO     | cyberAI.recon.sensitive_surfaces:probe_all_paths:354 - Probing 136 sensitive paths...
+2026-03-16 06:01:49.331 | INFO     | cyberAI.recon.sensitive_surfaces:probe_all_paths:371 - Found 8 interesting surfaces
+2026-03-16 06:01:49.338 | INFO     | cyberAI.recon.sensitive_surfaces:save_surfaces:422 - Saved 8 sensitive surfaces
+2026-03-16 06:02:39.176 | INFO     | cyberAI.recon.graphql_discovery:discover:399 - No GraphQL endpoint found
+2026-03-16 06:02:39.183 | INFO     | cyberAI.recon.graphql_discovery:save_intel:463 - Saved GraphQL intelligence
+2026-03-16 06:02:42.314 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /ws: InvalidURI
+2026-03-16 06:02:44.508 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /ws/: InvalidURI
+2026-03-16 06:02:46.366 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /websocket: InvalidURI
+2026-03-16 06:02:48.881 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /socket: InvalidURI
+2026-03-16 06:02:51.523 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /socket.io/: InvalidURI
+2026-03-16 06:02:53.316 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /sockjs/: InvalidURI
+2026-03-16 06:02:55.624 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /cable: InvalidURI
+2026-03-16 06:02:59.977 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /realtime: InvalidURI
+2026-03-16 06:03:02.790 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /live: InvalidURI
+2026-03-16 06:03:07.688 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /events: InvalidURI
+2026-03-16 06:03:10.900 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /stream: InvalidURI
+2026-03-16 06:03:13.627 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /notifications: InvalidURI
+2026-03-16 06:03:16.726 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /api/ws: InvalidURI
+2026-03-16 06:03:21.085 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /api/websocket: InvalidURI
+2026-03-16 06:03:21.094 | INFO     | cyberAI.recon.websocket_discovery:save_intel:342 - Saved WebSocket intelligence for 0 endpoints
+2026-03-16 06:03:21.105 | INFO     | cyberAI.recon.async_flow_discovery:save_flows:354 - Saved 0 async flows
+2026-03-16 06:03:21.142 | INFO     | cyberAI.recon.object_model:save_object_graph:406 - Saved 6 object models
+2026-03-16 06:03:21.227 | INFO     | cyberAI.recon.permission_inference:save_matrix:298 - Saved permission matrix with 0 entries
+2026-03-16 06:03:21.230 | INFO     | cyberAI.recon.workflow_mapper:save_workflows:360 - Saved 1 workflows
+2026-03-16 06:03:21.235 | INFO     | cyberAI.recon.input_schema:save_schemas:340 - Saved 2 input schemas
+2026-03-16 06:03:21.239 | INFO     | cyberAI.recon.security_controls:save_report:360 - Saved security controls report
+2026-03-16 06:03:21.368 | INFO     | cyberAI.recon.intelligence_outputs:save_all_outputs:376 - Saved 4 intelligence output files
+2026-03-16 06:03:21.701 | INFO     | cyberAI.utils.browser:close:101 - Browser pool closed

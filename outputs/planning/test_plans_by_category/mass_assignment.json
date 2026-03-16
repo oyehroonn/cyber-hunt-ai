@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T05:03:21.740180",
+    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "phase": "planning",
+    "version": "1.0.0",
+    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+  },
+  "plans": [
+    {
+      "id": "033238ac-de17-498d-8176-99486f5db95f",
+      "category": "mass_assignment",
+      "name": "test_mass_assignment_HttpMethod.POST:",
+      "description": "Add hidden fields to request: ['data', 'ok']",
+      "target_endpoint": "HttpMethod.POST:https://va.tawk.to/v1/session/start",
+      "target_object": null,
+      "target_role": null,
+      "required_state": null,
+      "preconditions": {
+        "description": "",
+        "setup_steps": [],
+        "required_accounts": [],
+        "required_data": {}
+      },
+      "expected_safe_behavior": "Hidden fields are not accepted",
+      "attack_vector": "Mass assignment",
+      "payloads": [
+        "data",
+        "ok"
+      ],
+      "confidence_score": 0.8,
+      "priority": 2,
+      "is_destructive": false,
+      "is_noisy": false,
+      "is_state_altering": false,
+      "estimated_requests": 1,
+      "rollback_strategy": null
+    }
+  ]
+}

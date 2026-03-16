@@ -1,0 +1,3 @@
+2026-03-16 05:34:42.758 | INFO     | __main__:setup_logging:48 - Starting report phase with run_id: 57e7a7c5-3597-4397-a173-e95ba949acd5
+2026-03-16 05:34:42.790 | INFO     | cyberAI.reporting.reporter:save_all_outputs:288 - Generated 7 report files
+2026-03-16 05:34:42.795 | INFO     | cyberAI.reporting.reporter:save_all_outputs:288 - Generated 7 report files

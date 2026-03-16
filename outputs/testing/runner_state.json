@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T05:04:49.942471",
+    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "phase": "testing",
+    "version": "1.0.0",
+    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+  },
+  "stats": {
+    "tests_run": 14,
+    "findings_discovered": 8,
+    "pending": 0,
+    "in_progress": 0,
+    "by_category": {
+      "business_logic": {
+        "run": 2,
+        "findings": 0
+      },
+      "authz": {
+        "run": 7,
+        "findings": 8
+      },
+      "auth": {
+        "run": 5,
+        "findings": 0
+      }
+    }
+  },
+  "completed_at": "2026-03-16T05:04:49.942458"
+}

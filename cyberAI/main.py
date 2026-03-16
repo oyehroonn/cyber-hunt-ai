@@ -256,17 +256,28 @@ async def run_plan(args) -> dict:
 async def run_test(args) -> dict:
     """Run testing phase."""
     from cyberAI.testing import run_tests
-    
+    from cyberAI.utils.helpers import load_json
+
+    config = get_config()
     run_id = args.run_id or generate_run_id()
     setup_logging(run_id, "test")
-    
+
+    # Ensure target URL is set for HTTP client (from args or last recon output)
+    if not config.target_url and hasattr(args, "target") and args.target:
+        config.target_url = args.target
+    if not config.target_url:
+        intel_path = config.get_output_path("recon", "intelligence", "master_intel.json")
+        data = load_json(intel_path)
+        if data and isinstance(data.get("_meta"), dict):
+            config.target_url = data["_meta"].get("target_url") or config.target_url
+
     categories = args.categories.split(",") if args.categories else None
-    
+
     console.print(Panel(
-        f"[bold cyan]Starting Security Testing[/bold cyan]\nCategories: {categories or 'all'}",
+        f"[bold cyan]Starting Security Testing[/bold cyan]\nTarget: {config.target_url or '(none)'}\nCategories: {categories or 'all'}",
         title="CyberAI"
     ))
-    
+
     runner = await run_tests(
         categories=categories,
         max_workers=args.workers,
@@ -449,6 +460,7 @@ def main():
     plan_parser.add_argument("--run-id", help="Specific run ID")
     
     test_parser = subparsers.add_parser("test", help="Run security tests")
+    test_parser.add_argument("--target", "-t", help="Target URL (default: from last recon)")
     test_parser.add_argument("--plan-dir", help="Planning output directory")
     test_parser.add_argument("--categories", "-c", help="Comma-separated categories")
     test_parser.add_argument("--workers", "-w", type=int, default=4, help="Max workers")

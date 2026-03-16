@@ -1,0 +1,3 @@
+2026-03-16 05:54:55.581 | INFO     | __main__:setup_logging:48 - Starting test phase with run_id: e92a5e28-feab-42fc-84a8-84edc0f9291d
+2026-03-16 05:54:55.590 | INFO     | cyberAI.testing.runner:run_category:118 - Running 2 tests for category: authz
+2026-03-16 05:54:59.884 | INFO     | cyberAI.testing.runner:run_category:118 - Running 5 tests for category: auth

@@ -1,12 +1,31 @@
 {
   "_meta": {
-    "generated_at": "2026-03-16T04:23:57.201152",
-    "target_url": "https://example.com",
+    "generated_at": "2026-03-16T05:03:21.229450",
+    "target_url": "https://www.digitalsoftwaremarkett.com",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
   },
-  "workflows": {},
+  "workflows": {
+    "checkout": {
+      "id": "2367cac9-30bf-4759-bbcd-f3941c241869",
+      "name": "checkout",
+      "description": null,
+      "nodes": [
+        {
+          "id": "checkout_step_0",
+          "state": "step_0",
+          "description": "Home - DSM - Digital Software Market - DSM Digital",
+          "is_initial": true,
+          "is_terminal": true,
+          "required_role": null
+        }
+      ],
+      "edges": [],
+      "object_type": null,
+      "suspicious_transitions": []
+    }
+  },
   "observed_transitions": [],
   "suspicious_transitions": []
 }

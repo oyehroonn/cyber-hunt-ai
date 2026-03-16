@@ -1,0 +1,3 @@
+2026-03-16 06:03:21.716 | INFO     | __main__:setup_logging:48 - Starting plan phase with run_id: fa49de1d-729b-4ef5-9a4a-3c12a57af53f
+2026-03-16 06:03:21.728 | INFO     | cyberAI.planning.test_planner:generate_all_plans:429 - Generated 17 test plans
+2026-03-16 06:03:21.747 | INFO     | cyberAI.planning.test_planner:save_plans:488 - Saved 17 test plans

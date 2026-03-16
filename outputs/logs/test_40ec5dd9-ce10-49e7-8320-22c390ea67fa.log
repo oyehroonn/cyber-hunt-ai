@@ -1,0 +1,7 @@
+2026-03-16 05:52:57.810 | INFO     | __main__:setup_logging:48 - Starting test phase with run_id: 40ec5dd9-ce10-49e7-8320-22c390ea67fa
+2026-03-16 05:52:57.815 | INFO     | cyberAI.testing.runner:run_category:118 - Running 5 tests for category: auth
+2026-03-16 05:52:57.817 | ERROR    | cyberAI.testing.runner:_run_single_test:103 - Test failed: test_login_flows - AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:52:57.822 | ERROR    | cyberAI.testing.runner:_run_single_test:103 - Test failed: test_password_reset - AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:52:57.822 | INFO     | cyberAI.testing.runner:run_category:118 - Running 2 tests for category: authz
+2026-03-16 05:52:57.824 | ERROR    | cyberAI.testing.runner:_run_single_test:103 - Test failed: test_horizontal_idor_assets - AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:52:57.825 | ERROR    | cyberAI.testing.runner:_run_single_test:103 - Test failed: test_horizontal_idor_g1xhudg7fomynwieipgjj - AsyncClient.__init__() got an unexpected keyword argument 'proxies'

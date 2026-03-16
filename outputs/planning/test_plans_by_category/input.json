@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T05:03:21.746736",
+    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "phase": "planning",
+    "version": "1.0.0",
+    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+  },
+  "plans": [
+    {
+      "id": "e92e8b94-8c29-4ee9-a150-bc37530fc7d9",
+      "category": "input",
+      "name": "test_input_mutation_HttpMethod.POST:",
+      "description": "Mutate inputs for https://va.tawk.to/v1/session/start",
+      "target_endpoint": "HttpMethod.POST:https://va.tawk.to/v1/session/start",
+      "target_object": null,
+      "target_role": null,
+      "required_state": null,
+      "preconditions": {
+        "description": "",
+        "setup_steps": [],
+        "required_accounts": [],
+        "required_data": {}
+      },
+      "expected_safe_behavior": "Invalid inputs are rejected with proper validation",
+      "attack_vector": "Input validation bypass",
+      "payloads": [
+        "p",
+        "w",
+        "platform",
+        "tzo",
+        "url",
+        "vss",
+        "consent",
+        "wss",
+        "uik",
+        "data"
+      ],
+      "confidence_score": 0.7,
+      "priority": 2,
+      "is_destructive": false,
+      "is_noisy": false,
+      "is_state_altering": false,
+      "estimated_requests": 1,
+      "rollback_strategy": null
+    },
+    {
+      "id": "79308bfa-fedf-4587-b796-1a8489c9ca94",
+      "category": "input",
+      "name": "test_input_mutation_HttpMethod.POST:",
+      "description": "Mutate inputs for https://va.tawk.to/log-performance/v3",
+      "target_endpoint": "HttpMethod.POST:https://va.tawk.to/log-performance/v3",
+      "target_object": null,
+      "target_role": null,
+      "required_state": null,
+      "preconditions": {
+        "description": "",
+        "setup_steps": [],
+        "required_accounts": [],
+        "required_data": {}
+      },
+      "expected_safe_behavior": "Invalid inputs are rejected with proper validation",
+      "attack_vector": "Input validation bypass",
+      "payloads": [
+        "logData",
+        "role",
+        "is_admin",
+        "isAdmin",
+        "admin",
+        "owner_id",
+        "ownerId",
+        "user_id",
+        "userId",
+        "org_id"
+      ],
+      "confidence_score": 0.7,
+      "priority": 2,
+      "is_destructive": false,
+      "is_noisy": false,
+      "is_state_altering": false,
+      "estimated_requests": 1,
+      "rollback_strategy": null
+    }
+  ]
+}

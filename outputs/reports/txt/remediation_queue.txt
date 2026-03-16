@@ -1,0 +1,11 @@
+Remediation Queue
+==================================================
+
+1. Fix Potential IDOR at /api/g/1
+2. Fix Potential IDOR at /api/g/2
+3. Fix Potential IDOR at /api/g/100
+4. Fix Potential IDOR at /api/g/999
+5. Fix Potential IDOR at /api/app/1
+6. Fix Potential IDOR at /api/app/2
+7. Fix Potential IDOR at /api/app/100
+8. Fix Potential IDOR at /api/app/999

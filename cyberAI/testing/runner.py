@@ -244,6 +244,46 @@ class TestRunner:
         console.print(table)
 
 
+def _register_all_testers(runner: TestRunner, run_id: Optional[str] = None) -> None:
+    """Register all category testers with the runner so plans are executed."""
+    from cyberAI.testing.auth_testing import AuthTester
+    from cyberAI.testing.authorization_testing import AuthorizationTester
+    from cyberAI.testing.business_logic import BusinessLogicTester
+    from cyberAI.testing.input_mutation import InputMutationTester
+    from cyberAI.testing.mass_assignment import MassAssignmentTester
+    from cyberAI.testing.race_conditions import RaceConditionTester
+    from cyberAI.testing.multi_session import MultiSessionTester
+    from cyberAI.testing.stored_payload import StoredPayloadTester
+    from cyberAI.testing.file_upload import FileUploadTester
+    from cyberAI.testing.graphql_testing import GraphQLTester
+    from cyberAI.testing.websocket_testing import WebSocketTester
+    from cyberAI.testing.async_testing import AsyncTester
+    from cyberAI.testing.search_filter import SearchFilterTester
+    from cyberAI.testing.export_import import ExportImportTester
+    from cyberAI.testing.billing_testing import BillingTester
+    from cyberAI.testing.notification_testing import NotificationTester
+    from cyberAI.testing.config_testing import ConfigTester
+
+    r_id = run_id or runner.run_id
+    runner.register_tester("auth", AuthTester(run_id=r_id))
+    runner.register_tester("authz", AuthorizationTester(run_id=r_id))
+    runner.register_tester("business_logic", BusinessLogicTester(run_id=r_id))
+    runner.register_tester("input", InputMutationTester(run_id=r_id))
+    runner.register_tester("mass_assignment", MassAssignmentTester(run_id=r_id))
+    runner.register_tester("race", RaceConditionTester(run_id=r_id))
+    runner.register_tester("multi_session", MultiSessionTester(run_id=r_id))
+    runner.register_tester("stored_payload", StoredPayloadTester(run_id=r_id))
+    runner.register_tester("file_upload", FileUploadTester(run_id=r_id))
+    runner.register_tester("graphql", GraphQLTester(run_id=r_id))
+    runner.register_tester("websocket", WebSocketTester(run_id=r_id))
+    runner.register_tester("async", AsyncTester(run_id=r_id))
+    runner.register_tester("search", SearchFilterTester(run_id=r_id))
+    runner.register_tester("export_import", ExportImportTester(run_id=r_id))
+    runner.register_tester("billing", BillingTester(run_id=r_id))
+    runner.register_tester("notification", NotificationTester(run_id=r_id))
+    runner.register_tester("config", ConfigTester(run_id=r_id))
+
+
 async def run_tests(
     categories: Optional[list[str]] = None,
     max_workers: int = None,
@@ -262,6 +302,7 @@ async def run_tests(
     """
     runner = TestRunner(run_id=run_id)
     runner.load_test_plans(categories)
+    _register_all_testers(runner, run_id=run_id)
     await runner.run_all(max_workers, categories)
     runner.print_summary()
     return runner
