@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T04:23:57.115212",
+    "target_url": "https://example.com",
+    "phase": "recon",
+    "version": "1.0.0",
+    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+  },
+  "flows": [],
+  "guessable_flows": [],
+  "observed_patterns": {},
+  "summary": {
+    "total_flows": 0,
+    "guessable_count": 0,
+    "with_signed_urls": 0
+  }
+}

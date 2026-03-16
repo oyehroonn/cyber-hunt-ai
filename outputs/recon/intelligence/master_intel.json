@@ -1,0 +1,218 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T04:23:57.226951",
+    "target_url": "https://example.com",
+    "phase": "recon",
+    "version": "1.0.0",
+    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+  },
+  "meta": {
+    "generated_at": "2026-03-16 04:23:57.226770",
+    "target_url": "",
+    "phase": "",
+    "version": "1.0.0",
+    "run_id": "a86267e4-a50a-432b-9e74-e7f9a16ed160"
+  },
+  "routes": [
+    {
+      "id": "c05212aa-78e0-4dc0-9fef-fd3113468694",
+      "slug": "home",
+      "url": "https://example.com",
+      "method": "GET",
+      "screenshot_path": "outputs/recon/screenshots/home_0.png",
+      "dom_path": "outputs/recon/dom_snapshots/home_0.html",
+      "actions": [
+        {
+          "action_type": "navigate",
+          "selector": "a",
+          "text": "Learn more",
+          "href": "https://iana.org/domains/example",
+          "form_fields": []
+        }
+      ],
+      "linked_requests": [],
+      "discovered_at": "2026-03-16 04:23:30.751263",
+      "role_context": null,
+      "state_context": null,
+      "page_title": "Example Domain",
+      "is_hidden": false,
+      "source": "crawl",
+      "raw_state": {
+        "has_error": false,
+        "is_empty": false,
+        "is_loading": false,
+        "has_form": false,
+        "is_login_page": false,
+        "has_toast": false,
+        "indicators": []
+      },
+      "modals_found": 0
+    }
+  ],
+  "endpoints": [
+    {
+      "id": "5229d18b-511c-4bfe-ac2f-03d683e69858",
+      "method": "GET",
+      "url": "https://example.com/",
+      "path_pattern": "example.com/",
+      "params": {},
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0",
+        "sec-ch-ua": "\"Chromium\";v=\"124\", \"HeadlessChrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      },
+      "body_schema": [],
+      "response_schema": [],
+      "auth_context": null,
+      "sensitivity_label": "low",
+      "classification": "read",
+      "rate_limited": false,
+      "rate_limit_info": null,
+      "discovered_at": "2026-03-16 04:23:29.118806",
+      "source": "intercept",
+      "role_access": {}
+    }
+  ],
+  "objects": [],
+  "permission_matrix": {
+    "entries": [],
+    "roles": [],
+    "objects": [
+      "unknown"
+    ],
+    "actions": [
+      "read"
+    ],
+    "unknown_count": 0
+  },
+  "workflows": [],
+  "graphql_intel": null,
+  "websocket_intel": [],
+  "async_flows": [],
+  "security_controls": {
+    "controls": [
+      {
+        "control_type": "csp",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": "Missing CSP header",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "hsts",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": "Missing HSTS header",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "x_frame_options",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": "Missing X-Frame-Options",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "x_content_type_options",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "rate_limit",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": "No rate limiting headers detected",
+        "affected_endpoints": []
+      }
+    ],
+    "csp_policy": null,
+    "cors_origins": [],
+    "csrf_mechanism": null,
+    "token_storage": null,
+    "missing_controls": [
+      "rate_limit",
+      "hsts",
+      "x_content_type_options",
+      "csp",
+      "x_frame_options"
+    ],
+    "weak_controls": [
+      "rate_limit",
+      "hsts",
+      "x_content_type_options",
+      "csp",
+      "x_frame_options"
+    ]
+  },
+  "sensitive_surfaces": [],
+  "role_diffs": [],
+  "state_diffs": [
+    {
+      "state": "unverified",
+      "available_actions": [
+        "Learn more"
+      ],
+      "available_endpoints": [],
+      "visible_ui_elements": [
+        "Example Domain"
+      ],
+      "transitions_allowed": []
+    },
+    {
+      "state": "verified",
+      "available_actions": [
+        "Learn more"
+      ],
+      "available_endpoints": [],
+      "visible_ui_elements": [
+        "Example Domain"
+      ],
+      "transitions_allowed": []
+    },
+    {
+      "state": "trial",
+      "available_actions": [
+        "Learn more"
+      ],
+      "available_endpoints": [],
+      "visible_ui_elements": [
+        "Example Domain"
+      ],
+      "transitions_allowed": []
+    },
+    {
+      "state": "paid",
+      "available_actions": [
+        "Learn more"
+      ],
+      "available_endpoints": [],
+      "visible_ui_elements": [
+        "Example Domain"
+      ],
+      "transitions_allowed": []
+    },
+    {
+      "state": "free",
+      "available_actions": [
+        "Learn more"
+      ],
+      "available_endpoints": [],
+      "visible_ui_elements": [
+        "Example Domain"
+      ],
+      "transitions_allowed": []
+    }
+  ],
+  "input_schemas": [],
+  "hidden_routes": [],
+  "comparison_results": []
+}

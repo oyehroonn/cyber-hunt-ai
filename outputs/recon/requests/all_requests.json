@@ -1,0 +1,46 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T04:23:31.005919",
+    "target_url": "https://example.com",
+    "phase": "recon",
+    "version": "1.0.0",
+    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+  },
+  "requests": [
+    {
+      "id": "4a2473a9-8db9-475f-9096-5dc1fc5f59ae",
+      "method": "GET",
+      "url": "https://example.com/",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0",
+        "sec-ch-ua": "\"Chromium\";v=\"124\", \"HeadlessChrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      },
+      "cookies": {},
+      "body": null,
+      "body_json": null,
+      "response_status": 200,
+      "response_headers": {
+        "age": "3718",
+        "allow": "GET, HEAD",
+        "cf-cache-status": "HIT",
+        "cf-ray": "9dd0fb955b1bc505-MAD",
+        "content-encoding": "gzip",
+        "content-type": "text/html",
+        "date": "Mon, 16 Mar 2026 04:23:28 GMT",
+        "last-modified": "Wed, 11 Mar 2026 19:08:51 GMT",
+        "server": "cloudflare",
+        "vary": "Accept-Encoding"
+      },
+      "response_body": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style></head><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.</p><p><a href=\"https://iana.org/domains/example\">Learn more</a></p></div></body></html>\n",
+      "response_json": null,
+      "timestamp": "2026-03-16 04:23:29.112021",
+      "role_context": null,
+      "state_context": null,
+      "duration_ms": null,
+      "endpoint_id": null
+    }
+  ]
+}

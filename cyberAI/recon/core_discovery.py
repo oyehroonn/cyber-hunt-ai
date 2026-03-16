@@ -7,11 +7,14 @@ import asyncio
 import re
 from collections import deque
 from datetime import datetime
-from typing import Optional
+from typing import TYPE_CHECKING, Any, Optional
+
+if TYPE_CHECKING:
+    from cyberAI.recon.network_intelligence import NetworkIntelligence
 from urllib.parse import urljoin, urlparse
 
 from loguru import logger
-from playwright.async_api import Page, TimeoutError as PlaywrightTimeout
+from playwright.async_api import BrowserContext, Page, TimeoutError as PlaywrightTimeout
 
 from cyberAI.config import get_config
 from cyberAI.models import Action, Route
@@ -170,7 +173,7 @@ class CoreDiscovery:
     async def _extract_links(self, page: Page) -> list[str]:
         """Extract all links from the current page."""
         try:
-            links = await page.evaluate('''() => {
+            links = await page.evaluate(r'''() => {
                 const links = new Set();
                 
                 // Regular links
@@ -402,6 +405,8 @@ class CoreDiscovery:
         role: Optional[str] = None,
         max_depth: Optional[int] = None,
         max_pages: Optional[int] = None,
+        context: Optional[BrowserContext] = None,
+        network_intel: Optional["NetworkIntelligence"] = None,
     ) -> list[Route]:
         """
         Perform BFS crawl starting from the given URL.
@@ -411,6 +416,8 @@ class CoreDiscovery:
             role: Role context for this crawl
             max_depth: Maximum crawl depth
             max_pages: Maximum pages to crawl
+            context: Optional existing browser context (caller owns it; not closed here).
+            network_intel: Optional NetworkIntelligence to attach to context to capture requests.
             
         Returns:
             List of discovered Route objects
@@ -425,8 +432,15 @@ class CoreDiscovery:
         
         logger.info(f"Starting crawl from {start_url} (role: {role})")
         
-        browser_pool = get_browser_pool()
-        context = await browser_pool.get_browser_context(role=role)
+        own_context = False
+        if context is None:
+            browser_pool = get_browser_pool()
+            context = await browser_pool.get_browser_context(role=role)
+            own_context = True
+        
+        if network_intel is not None:
+            await network_intel.attach_to_context(context, role)
+        
         page = await context.new_page()
         
         try:
@@ -467,7 +481,8 @@ class CoreDiscovery:
             
         finally:
             await page.close()
-            await context.close()
+            if own_context:
+                await context.close()
         
         return self._routes
     
@@ -558,6 +573,8 @@ async def run_core_discovery(
     target_url: str,
     role: Optional[str] = None,
     run_id: Optional[str] = None,
+    context: Optional[BrowserContext] = None,
+    network_intel: Optional["NetworkIntelligence"] = None,
 ) -> list[Route]:
     """
     Run core discovery on target URL.
@@ -566,12 +583,16 @@ async def run_core_discovery(
         target_url: URL to start crawling from
         role: Role context
         run_id: Run ID for this execution
+        context: Optional browser context (e.g. with network intel attached); not closed by this function.
+        network_intel: Optional NetworkIntelligence to capture requests during crawl.
         
     Returns:
         List of discovered Route objects
     """
     discovery = CoreDiscovery(run_id=run_id)
-    routes = await discovery.crawl(target_url, role=role)
+    routes = await discovery.crawl(
+        target_url, role=role, context=context, network_intel=network_intel
+    )
     discovery.save_routes()
     return routes
 

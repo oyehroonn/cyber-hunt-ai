@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T04:23:31.007038",
+    "target_url": "https://example.com",
+    "phase": "recon",
+    "version": "1.0.0",
+    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+  },
+  "endpoints": [
+    {
+      "id": "5229d18b-511c-4bfe-ac2f-03d683e69858",
+      "method": "GET",
+      "url": "https://example.com/",
+      "path_pattern": "example.com/",
+      "params": {},
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0",
+        "sec-ch-ua": "\"Chromium\";v=\"124\", \"HeadlessChrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      },
+      "body_schema": [],
+      "response_schema": [],
+      "auth_context": null,
+      "sensitivity_label": "low",
+      "classification": "read",
+      "rate_limited": false,
+      "rate_limit_info": null,
+      "discovered_at": "2026-03-16 04:23:29.118806",
+      "source": "intercept",
+      "role_access": {}
+    }
+  ],
+  "extracted_ids": {
+    "uuid": [],
+    "integer_id": [],
+    "slug": [
+      "domains"
+    ],
+    "base64_id": []
+  },
+  "tenant_identifiers": {},
+  "feature_flags": {},
+  "role_info": {},
+  "rate_limit_info": {},
+  "error_fingerprints": {}
+}

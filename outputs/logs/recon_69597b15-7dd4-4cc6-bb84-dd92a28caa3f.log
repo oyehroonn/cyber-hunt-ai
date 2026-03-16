@@ -1,0 +1,312 @@
+2026-03-16 05:08:08.806 | INFO     | __main__:setup_logging:48 - Starting recon phase with run_id: 69597b15-7dd4-4cc6-bb84-dd92a28caa3f
+2026-03-16 05:08:11.237 | INFO     | cyberAI.utils.browser:initialize:82 - Browser pool initialized
+2026-03-16 05:08:11.241 | INFO     | cyberAI.recon.core_discovery:crawl:426 - Starting crawl from https://www.techrealm.online (role: None)
+2026-03-16 05:08:11.296 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: None
+2026-03-16 05:08:11.556 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [0]: https://www.techrealm.online
+2026-03-16 05:08:22.027 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:08:22.036 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:08:22.261 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/location-london.html
+2026-03-16 05:08:25.020 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/location-london.html_1.png
+2026-03-16 05:08:25.032 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/location-london.html_1.html
+2026-03-16 05:08:25.252 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/about/about.html
+2026-03-16 05:08:29.724 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/about_about.html_1.png
+2026-03-16 05:08:29.734 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/about_about.html_1.html
+2026-03-16 05:08:29.959 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/service-details.html
+2026-03-16 05:08:32.353 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/service-details.html_1.png
+2026-03-16 05:08:32.365 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/service-details.html_1.html
+2026-03-16 05:08:32.903 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/location-dubai.html
+2026-03-16 05:08:35.485 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/location-dubai.html_1.png
+2026-03-16 05:08:35.496 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/location-dubai.html_1.html
+2026-03-16 05:08:35.717 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/contact/contact.html
+2026-03-16 05:08:40.464 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/contact_contact.html_1.png
+2026-03-16 05:08:40.475 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/contact_contact.html_1.html
+2026-03-16 05:08:40.707 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/faq.html
+2026-03-16 05:08:43.235 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/faq.html_1.png
+2026-03-16 05:08:43.244 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/faq.html_1.html
+2026-03-16 05:08:43.465 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/services.html
+2026-03-16 05:08:46.366 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/services.html_1.png
+2026-03-16 05:08:46.376 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/services.html_1.html
+2026-03-16 05:08:46.600 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/index.html
+2026-03-16 05:08:50.148 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/index.html_1.png
+2026-03-16 05:08:50.157 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/index.html_1.html
+2026-03-16 05:08:50.384 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/location-newyork.html
+2026-03-16 05:08:52.720 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/location-newyork.html_1.png
+2026-03-16 05:08:52.740 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/location-newyork.html_1.html
+2026-03-16 05:08:52.986 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/pricing.html
+2026-03-16 05:08:55.639 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/pricing.html_1.png
+2026-03-16 05:08:55.654 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/pricing.html_1.html
+2026-03-16 05:08:55.874 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/portfolio/folio.html
+2026-03-16 05:08:59.573 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/portfolio_folio.html_1.png
+2026-03-16 05:08:59.597 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/portfolio_folio.html_1.html
+2026-03-16 05:08:59.819 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [1]: https://www.techrealm.online/services/service.html
+2026-03-16 05:09:05.692 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/services_service.html_1.png
+2026-03-16 05:09:05.702 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/services_service.html_1.html
+2026-03-16 05:09:05.922 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/about/team-member.html
+2026-03-16 05:09:08.844 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/about_team-member.html_2.png
+2026-03-16 05:09:08.885 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/about_team-member.html_2.html
+2026-03-16 05:09:09.122 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/about/service-details.html
+2026-03-16 05:09:12.321 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/about_service-details.html_2.png
+2026-03-16 05:09:12.334 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/about_service-details.html_2.html
+2026-03-16 05:09:12.566 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/about/faq.html
+2026-03-16 05:09:14.866 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/about_faq.html_2.png
+2026-03-16 05:09:14.880 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/about_faq.html_2.html
+2026-03-16 05:09:15.202 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/about/pricing.html
+2026-03-16 05:09:18.304 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/about_pricing.html_2.png
+2026-03-16 05:09:18.375 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/about_pricing.html_2.html
+2026-03-16 05:09:18.610 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/about/services.html
+2026-03-16 05:09:20.885 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/about_services.html_2.png
+2026-03-16 05:09:20.892 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/about_services.html_2.html
+2026-03-16 05:09:21.119 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/about/
+2026-03-16 05:09:23.628 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/about_2.png
+2026-03-16 05:09:23.646 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/about_2.html
+2026-03-16 05:09:23.877 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/about/location-newyork.html
+2026-03-16 05:09:26.363 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/about_location-newyork.html_2.png
+2026-03-16 05:09:26.372 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/about_location-newyork.html_2.html
+2026-03-16 05:09:26.599 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/about/location-london.html
+2026-03-16 05:09:29.359 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/about_location-london.html_2.png
+2026-03-16 05:09:29.373 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/about_location-london.html_2.html
+2026-03-16 05:09:29.604 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/about/location-dubai.html
+2026-03-16 05:09:32.547 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/about_location-dubai.html_2.png
+2026-03-16 05:09:32.562 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/about_location-dubai.html_2.html
+2026-03-16 05:09:32.786 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/contact/faq.html
+2026-03-16 05:09:35.575 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/contact_faq.html_2.png
+2026-03-16 05:09:35.598 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/contact_faq.html_2.html
+2026-03-16 05:09:35.837 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/contact/services.html
+2026-03-16 05:09:38.276 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/contact_services.html_2.png
+2026-03-16 05:09:38.286 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/contact_services.html_2.html
+2026-03-16 05:09:38.509 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/contact/
+2026-03-16 05:09:40.877 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/contact_2.png
+2026-03-16 05:09:40.887 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/contact_2.html
+2026-03-16 05:09:41.107 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/contact/service-details.html
+2026-03-16 05:09:43.460 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/contact_service-details.html_2.png
+2026-03-16 05:09:43.476 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/contact_service-details.html_2.html
+2026-03-16 05:09:43.698 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/contact/location-newyork.html
+2026-03-16 05:09:46.184 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/contact_location-newyork.html_2.png
+2026-03-16 05:09:46.199 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/contact_location-newyork.html_2.html
+2026-03-16 05:09:46.423 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/contact/location-london.html
+2026-03-16 05:09:49.128 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/contact_location-london.html_2.png
+2026-03-16 05:09:49.143 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/contact_location-london.html_2.html
+2026-03-16 05:09:49.474 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/contact/location-dubai.html
+2026-03-16 05:09:52.581 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/contact_location-dubai.html_2.png
+2026-03-16 05:09:52.648 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/contact_location-dubai.html_2.html
+2026-03-16 05:09:52.897 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/contact/pricing.html
+2026-03-16 05:09:55.725 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/contact_pricing.html_2.png
+2026-03-16 05:09:55.748 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/contact_pricing.html_2.html
+2026-03-16 05:09:55.979 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/portfolio/service-details.html
+2026-03-16 05:09:58.736 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/portfolio_service-details.html_2.png
+2026-03-16 05:09:58.753 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/portfolio_service-details.html_2.html
+2026-03-16 05:09:59.008 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/portfolio/location-newyork.html
+2026-03-16 05:10:01.823 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/portfolio_location-newyork.html_2.png
+2026-03-16 05:10:01.842 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/portfolio_location-newyork.html_2.html
+2026-03-16 05:10:02.069 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/portfolio/portfolio-post02.html
+2026-03-16 05:10:07.348 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/portfolio_portfolio-post02.html_2.png
+2026-03-16 05:10:07.372 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/portfolio_portfolio-post02.html_2.html
+2026-03-16 05:10:07.614 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/portfolio/services.html
+2026-03-16 05:10:10.205 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/portfolio_services.html_2.png
+2026-03-16 05:10:10.221 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/portfolio_services.html_2.html
+2026-03-16 05:10:10.449 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/portfolio/location-london.html
+2026-03-16 05:10:13.056 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/portfolio_location-london.html_2.png
+2026-03-16 05:10:13.085 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/portfolio_location-london.html_2.html
+2026-03-16 05:10:13.320 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/portfolio/pricing.html
+2026-03-16 05:10:15.787 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/portfolio_pricing.html_2.png
+2026-03-16 05:10:15.807 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/portfolio_pricing.html_2.html
+2026-03-16 05:10:16.041 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/portfolio/location-dubai.html
+2026-03-16 05:10:19.126 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/portfolio_location-dubai.html_2.png
+2026-03-16 05:10:19.156 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/portfolio_location-dubai.html_2.html
+2026-03-16 05:10:19.397 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/portfolio/faq.html
+2026-03-16 05:10:22.255 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/portfolio_faq.html_2.png
+2026-03-16 05:10:22.347 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/portfolio_faq.html_2.html
+2026-03-16 05:10:22.607 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/portfolio/
+2026-03-16 05:10:26.240 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/portfolio_2.png
+2026-03-16 05:10:26.257 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/portfolio_2.html
+2026-03-16 05:10:26.484 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/services/location-dubai.html
+2026-03-16 05:10:28.889 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/services_location-dubai.html_2.png
+2026-03-16 05:10:28.906 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/services_location-dubai.html_2.html
+2026-03-16 05:10:29.134 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/services/
+2026-03-16 05:10:32.274 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/services_2.png
+2026-03-16 05:10:32.306 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/services_2.html
+2026-03-16 05:10:32.568 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/services/location-newyork.html
+2026-03-16 05:10:35.158 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/services_location-newyork.html_2.png
+2026-03-16 05:10:35.176 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/services_location-newyork.html_2.html
+2026-03-16 05:10:35.408 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/services/faq.html
+2026-03-16 05:10:38.102 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/services_faq.html_2.png
+2026-03-16 05:10:38.175 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/services_faq.html_2.html
+2026-03-16 05:10:38.546 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/services/services.html
+2026-03-16 05:10:41.103 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/services_services.html_2.png
+2026-03-16 05:10:41.119 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/services_services.html_2.html
+2026-03-16 05:10:41.341 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/services/service-details.html
+2026-03-16 05:10:44.231 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/services_service-details.html_2.png
+2026-03-16 05:10:44.249 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/services_service-details.html_2.html
+2026-03-16 05:10:44.476 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/services/pricing.html
+2026-03-16 05:10:47.542 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/services_pricing.html_2.png
+2026-03-16 05:10:47.583 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/services_pricing.html_2.html
+2026-03-16 05:10:47.873 | INFO     | cyberAI.recon.core_discovery:crawl:450 - Crawling [2]: https://www.techrealm.online/services/location-london.html
+2026-03-16 05:10:50.348 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/services_location-london.html_2.png
+2026-03-16 05:10:50.363 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/services_location-london.html_2.html
+2026-03-16 05:10:50.607 | INFO     | cyberAI.recon.core_discovery:crawl:466 - Crawl complete. Discovered 47 routes.
+2026-03-16 05:10:50.745 | INFO     | cyberAI.recon.core_discovery:save_routes:548 - Saved 47 routes to outputs/recon/intelligence/routes.json
+2026-03-16 05:10:50.746 | INFO     | cyberAI.recon.sensitive_surfaces:probe_all_paths:354 - Probing 136 sensitive paths...
+2026-03-16 05:10:50.954 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.153 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /billing/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.154 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /import: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.154 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /export: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.154 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /billing: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.154 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /internal/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.154 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /exports: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.155 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /internal: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.155 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /administrator: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.156 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /admin/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.357 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /imports: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.558 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphql/playground: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.558 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphql/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.558 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /audit: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.559 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.559 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /audit-logs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.559 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/tokens: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.559 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /audit/logs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.560 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api-tokens: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.560 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /tokens: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.761 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphiql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.963 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger-ui/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.963 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger-ui.html: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.963 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger-ui: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.963 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /openapi.json: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.963 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api-docs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.963 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/docs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.963 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /openapi.yaml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.963 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:51.963 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.165 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /docs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.365 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /healthz: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.365 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /metrics: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.365 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /health/live: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.366 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /prometheus: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.366 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /debug/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.366 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /health: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.366 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /debug: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.366 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /health/ready: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.366 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /redoc: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.567 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.well-known/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.768 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /__admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.768 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /staff: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.768 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /staff/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.768 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /sitemap_index.xml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.769 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /__admin/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.769 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /sitemap.xml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.769 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /robots.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.769 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.well-known/openid-configuration: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.769 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.well-known/security.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:52.970 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /superuser: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.171 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/v1/admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.171 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/private: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.171 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /management: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.171 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /manage: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.171 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /manage/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.172 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/internal: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.172 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/v2/admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.172 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /console/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.172 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /console: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.373 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.env: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.574 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /settings: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.575 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.htaccess: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.575 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /config: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.575 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /configuration: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.575 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /config/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.575 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.gitignore: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.575 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.git/config: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.576 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.git/HEAD: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.576 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.git: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.777 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /system: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.978 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /elmah.axd: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.979 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/beans: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.979 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /trace: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.979 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/info: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.980 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /phpinfo.php: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.980 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/health: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.980 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/mappings: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.981 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/env: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:53.981 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.182 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /info.php: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.383 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /development: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.384 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /dump: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.384 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /staging: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.384 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /backups: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.384 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /dev: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.384 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /test/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.384 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /backup: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.385 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /testing: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.385 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /test: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.586 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /sql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.787 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /_debug: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.789 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /server-info: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.789 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /status: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.790 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /server-status: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.790 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /adminer: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.790 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /phpmyadmin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.790 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /pma: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.790 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /db: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.791 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /database: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:54.992 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /_profiler: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.193 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/version: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.194 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /version: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.194 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/info: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.194 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /changelog: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.194 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/health: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.195 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /version.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.195 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/debug: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.195 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /profiler: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.195 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/status: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.396 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /CHANGELOG.md: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.598 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /composer.json: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.598 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /webpack.config.js: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.599 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /requirements.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.599 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /package.json: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.599 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /Gemfile: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.599 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.dockerenv: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.599 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /LICENSE: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.600 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /license: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.600 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /README.md: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:55.802 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /Dockerfile: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.003 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth/token: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.004 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /callback: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.004 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.004 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.004 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /callbacks: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.004 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /webhooks: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.005 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth/authorize: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.005 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/webhooks: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.005 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /docker-compose.yml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.207 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.aws/credentials: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.407 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /confidential: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.408 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /private: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.408 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /secrets: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.408 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /restricted: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.408 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /credentials: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.409 | INFO     | cyberAI.recon.sensitive_surfaces:probe_all_paths:371 - Found 0 interesting surfaces
+2026-03-16 05:10:56.412 | INFO     | cyberAI.recon.sensitive_surfaces:save_surfaces:422 - Saved 0 sensitive surfaces
+2026-03-16 05:10:56.416 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.617 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /graphql/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:56.818 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /api/graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:57.019 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /api/graphql/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:57.221 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /v1/graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:57.420 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /query: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:57.622 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /gql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:10:57.622 | INFO     | cyberAI.recon.graphql_discovery:discover:399 - No GraphQL endpoint found
+2026-03-16 05:10:57.623 | INFO     | cyberAI.recon.graphql_discovery:save_intel:463 - Saved GraphQL intelligence
+2026-03-16 05:10:58.844 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /ws: InvalidStatus
+2026-03-16 05:10:59.072 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /ws/: InvalidStatus
+2026-03-16 05:10:59.377 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /websocket: InvalidStatus
+2026-03-16 05:11:00.197 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /socket: InvalidStatus
+2026-03-16 05:11:00.555 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /socket.io/: InvalidStatus
+2026-03-16 05:11:01.136 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /sockjs/: InvalidStatus
+2026-03-16 05:11:01.433 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /cable: InvalidStatus
+2026-03-16 05:11:01.670 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /realtime: InvalidStatus
+2026-03-16 05:11:02.164 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /live: InvalidStatus
+2026-03-16 05:11:02.459 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /events: InvalidStatus
+2026-03-16 05:11:02.768 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /stream: InvalidStatus
+2026-03-16 05:11:03.701 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /notifications: InvalidStatus
+2026-03-16 05:11:04.228 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /api/ws: InvalidStatus
+2026-03-16 05:11:04.521 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /api/websocket: InvalidStatus
+2026-03-16 05:11:04.524 | INFO     | cyberAI.recon.websocket_discovery:save_intel:342 - Saved WebSocket intelligence for 0 endpoints
+2026-03-16 05:11:04.725 | INFO     | cyberAI.recon.intelligence_outputs:save_all_outputs:376 - Saved 4 intelligence output files
+2026-03-16 05:11:04.813 | INFO     | cyberAI.utils.browser:close:101 - Browser pool closed

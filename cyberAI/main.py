@@ -66,68 +66,158 @@ def write_crash_report(error: Exception, run_id: str) -> None:
 
 
 async def run_recon(args) -> dict:
-    """Run reconnaissance phase."""
+    """Run full reconnaissance phase (all 16 steps)."""
+    from pathlib import Path
+
     from cyberAI.recon import (
+        run_account_state_discovery,
+        run_async_flow_discovery,
+        run_comparison_engine,
         run_core_discovery,
+        run_frontend_parser,
+        run_input_schema_analysis,
+        run_intelligence_aggregation,
+        run_object_model_builder,
+        run_permission_inference,
+        run_role_discovery,
+        run_security_controls_analysis,
         run_sensitive_surfaces_discovery,
         run_graphql_discovery,
         run_websocket_discovery,
-        run_intelligence_aggregation,
+        run_workflow_mapper,
     )
     from cyberAI.recon.network_intelligence import NetworkIntelligence
-    from cyberAI.recon.frontend_parser import FrontendParser
-    from cyberAI.recon.object_model import ObjectModelBuilder
-    from cyberAI.recon.permission_inference import PermissionInference
-    from cyberAI.recon.security_controls import SecurityControlsAnalyzer
     from cyberAI.utils.browser import get_browser_pool
-    
+
     run_id = args.run_id or generate_run_id()
     setup_logging(run_id, "recon")
-    
+
+    config = get_config()
+    config.target_url = args.target or config.target_url or ""
+
     console.print(Panel(f"[bold cyan]Starting Reconnaissance[/bold cyan]\nTarget: {args.target}", title="CyberAI"))
-    
+
     results = {"phase": "recon", "run_id": run_id, "target": args.target}
-    
+
+    browser_pool = get_browser_pool()
+    await browser_pool.initialize()
+
+    total_steps = 18
     with Progress() as progress:
-        task = progress.add_task("[cyan]Running recon phases...", total=10)
-        
-        browser_pool = get_browser_pool()
-        await browser_pool.initialize()
-        
-        progress.update(task, description="[cyan]Core discovery...")
-        routes = await run_core_discovery(args.target, run_id=run_id)
+        task = progress.add_task("[cyan]Running recon phases...", total=total_steps)
+
+        # Step 1: Core discovery with network intel attached to capture requests
+        progress.update(task, description="[cyan]Core discovery (crawl + network capture)...")
+        context = await browser_pool.get_browser_context(role=None)
+        network_intel = NetworkIntelligence(run_id=run_id)
+        await network_intel.attach_to_context(context, None)
+        routes = await run_core_discovery(
+            args.target, role=None, run_id=run_id, context=context, network_intel=network_intel
+        )
+        await context.close()
+        network_intel.save_intelligence()
         results["routes_discovered"] = len(routes)
         progress.advance(task)
-        
+
+        requests = network_intel.get_requests()
+        endpoints = network_intel.get_endpoints()
+
+        # Step 2: Network intelligence already captured above; endpoints/requests saved
+        progress.update(task, description="[cyan]Network intelligence (saved)...")
+        progress.advance(task)
+
+        # Step 3: Frontend parser (HTML from first route DOM if available)
+        progress.update(task, description="[cyan]Frontend parser...")
+        if routes and routes[0].dom_path and Path(routes[0].dom_path).exists():
+            html_content = Path(routes[0].dom_path).read_text()
+        else:
+            html_content = "<html><head></head><body></body></html>"
+        base_url = args.target.rstrip("/") if args.target else ""
+        await run_frontend_parser(html_content, base_url, crawled_routes=routes, run_id=run_id)
+        progress.advance(task)
+
+        # Step 4: Role discovery (optional; only if role accounts configured)
+        role_diffs = []
+        if config.role_accounts:
+            progress.update(task, description="[cyan]Role discovery...")
+            role_discovery = await run_role_discovery(args.target, run_id=run_id)
+            role_diffs = role_discovery._role_diffs
+            progress.advance(task)
+        else:
+            progress.update(task, description="[cyan]Role discovery (skipped, no accounts)...")
+            progress.advance(task)
+
+        # Step 5: Account state (optional)
+        progress.update(task, description="[cyan]Account state discovery...")
+        try:
+            await run_account_state_discovery(args.target, run_id=run_id)
+        except Exception:
+            pass
+        progress.advance(task)
+
+        # Step 6: Sensitive surfaces
         progress.update(task, description="[cyan]Sensitive surfaces...")
         await run_sensitive_surfaces_discovery(args.target, run_id=run_id)
         progress.advance(task)
-        
+
+        # Step 7: GraphQL discovery
         progress.update(task, description="[cyan]GraphQL discovery...")
         await run_graphql_discovery(args.target, run_id=run_id)
         progress.advance(task)
-        
+
+        # Step 8: WebSocket discovery
         progress.update(task, description="[cyan]WebSocket discovery...")
         await run_websocket_discovery(args.target, run_id=run_id)
         progress.advance(task)
-        
+
+        # Step 9: Async flow discovery
+        progress.update(task, description="[cyan]Async flow discovery...")
+        await run_async_flow_discovery(requests, run_id=run_id)
+        progress.advance(task)
+
+        # Step 10: Object model
         progress.update(task, description="[cyan]Building object models...")
+        object_builder = run_object_model_builder(requests, endpoints, run_id=run_id)
+        objects = object_builder.get_objects()
         progress.advance(task)
-        
+
+        # Step 11: Permission inference
         progress.update(task, description="[cyan]Inferring permissions...")
+        run_permission_inference(role_diffs, endpoints, objects, run_id=run_id)
         progress.advance(task)
-        
+
+        # Step 12: Workflow mapper
+        progress.update(task, description="[cyan]Workflow mapper...")
+        run_workflow_mapper(routes, requests, run_id=run_id)
+        progress.advance(task)
+
+        # Step 13: Input schema analysis
+        progress.update(task, description="[cyan]Input schema analysis...")
+        run_input_schema_analysis(requests, endpoints, run_id=run_id)
+        progress.advance(task)
+
+        # Step 14: Security controls
         progress.update(task, description="[cyan]Analyzing security controls...")
+        run_security_controls_analysis(requests, run_id=run_id)
         progress.advance(task)
-        
+
+        # Step 15: Comparison engine (optional; needs roles)
+        if config.role_accounts and endpoints:
+            progress.update(task, description="[cyan]Comparison engine...")
+            roles = [acc.role for acc in config.role_accounts]
+            await run_comparison_engine(endpoints, roles, run_id=run_id)
+        else:
+            progress.update(task, description="[cyan]Comparison engine (skipped)...")
+        progress.advance(task)
+
+        # Step 16: Intelligence aggregation
         progress.update(task, description="[cyan]Aggregating intelligence...")
         run_intelligence_aggregation(run_id=run_id)
         progress.advance(task)
-        
+
         await cleanup_browser_pool()
         progress.advance(task)
-        progress.advance(task)
-    
+
     console.print("[green]Reconnaissance complete![/green]")
     return results
 

@@ -1,0 +1,83 @@
+2026-03-16 05:27:29.481 | INFO     | __main__:setup_logging:48 - Starting plan phase with run_id: 75d6c691-b0d2-482a-a823-4e427f6600e0
+2026-03-16 05:27:29.491 | ERROR    | __main__:write_crash_report:65 - Crash report written to outputs/logs/crash_49aa95f3-adf7-4714-a2c1-a3601c2b75b6.json
+2026-03-16 05:27:29.493 | ERROR    | __main__:main:520 - Unhandled exception
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/Users/oyehroonn/Downloads/cyber-hunt/cyber-hunt-ai/cyberAI/main.py", line 525, in <module>
+    main()
+    └ <function main at 0x103fccd60>
+
+> File "/Users/oyehroonn/Downloads/cyber-hunt/cyber-hunt-ai/cyberAI/main.py", line 504, in main
+    asyncio.run(run_plan(args))
+    │       │   │        └ Namespace(command='plan', env=None, recon_dir=None, run_id=None)
+    │       │   └ <function run_plan at 0x102f6a8e0>
+    │       └ <function run at 0x100ae7f60>
+    └ <module 'asyncio' from '/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/__init__.py'>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object run_plan at 0x103e6be00>
+           │      └ <function Runner.run at 0x100c73e20>
+           └ <asyncio.runners.Runner object at 0x103ae9f70>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │                        └ <Task finished name='Task-1' coro=<run_plan() done, defined at /Users/oyehroonn/Downloads/cyber-hunt/cyber-hunt-ai/cyberAI/ma...
+           │    └ None
+           └ <asyncio.runners.Runner object at 0x103ae9f70>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<run_plan() done, defined at /Users/oyehroonn/Downloads/cyber-hunt/cyber-hunt-ai/cyberAI/ma...
+
+  File "/Users/oyehroonn/Downloads/cyber-hunt/cyber-hunt-ai/cyberAI/main.py", line 234, in run_plan
+    planner = run_test_planner(run_id=run_id)
+              │                       └ '75d6c691-b0d2-482a-a823-4e427f6600e0'
+              └ <function run_test_planner at 0x103fce700>
+
+  File "/Users/oyehroonn/Downloads/cyber-hunt/cyber-hunt-ai/cyberAI/planning/test_planner.py", line 505, in run_test_planner
+    planner.generate_all_plans()
+    │       └ <function TestPlanner.generate_all_plans at 0x103fceca0>
+    └ <cyberAI.planning.test_planner.TestPlanner object at 0x103e9e000>
+
+  File "/Users/oyehroonn/Downloads/cyber-hunt/cyber-hunt-ai/cyberAI/planning/test_planner.py", line 411, in generate_all_plans
+    self._test_plans.extend(self._generate_auth_tests())
+    │    │           │      │    └ <function TestPlanner._generate_auth_tests at 0x103fcd620>
+    │    │           │      └ <cyberAI.planning.test_planner.TestPlanner object at 0x103e9e000>
+    │    │           └ <method 'extend' of 'list' objects>
+    │    └ []
+    └ <cyberAI.planning.test_planner.TestPlanner object at 0x103e9e000>
+
+  File "/Users/oyehroonn/Downloads/cyber-hunt/cyber-hunt-ai/cyberAI/planning/test_planner.py", line 90, in _generate_auth_tests
+    plans.append(TestPlan(
+    │     │      └ <class 'cyberAI.models.TestPlan'>
+    │     └ <method 'append' of 'list' objects>
+    └ []
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     │    │                      │               │                   └ TestPlan()
+                     │    │                      │               └ {'category': <TestCategory.AUTH: 'auth'>, 'name': 'test_login_flows', 'description': 'Test all login paths including SSO, mag...
+                     │    │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+                     │    └ SchemaValidator(title="TestPlan", validator=Model(
+                     │          ModelValidator {
+                     │              revalidate: Never,
+                     │              validator: ModelFi...
+                     └ TestPlan()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     │    │                      │               │                   └ TestPrecondition()
+                     │    │                      │               └ {}
+                     │    │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+                     │    └ SchemaValidator(title="TestPrecondition", validator=Model(
+                     │          ModelValidator {
+                     │              revalidate: Never,
+                     │              validator:...
+                     └ TestPrecondition()
+
+pydantic_core._pydantic_core.ValidationError: 1 validation error for TestPrecondition
+description
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing

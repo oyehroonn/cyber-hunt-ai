@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T04:23:53.229872",
+    "target_url": "https://example.com",
+    "phase": "recon",
+    "version": "1.0.0",
+    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+  },
+  "intel": null,
+  "observed_operations": [],
+  "endpoints_found": []
+}

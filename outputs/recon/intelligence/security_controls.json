@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T04:23:57.203051",
+    "target_url": "https://example.com",
+    "phase": "recon",
+    "version": "1.0.0",
+    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+  },
+  "report": {
+    "controls": [
+      {
+        "control_type": "csp",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": "Missing CSP header",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "hsts",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": "Missing HSTS header",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "x_frame_options",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": "Missing X-Frame-Options",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "x_content_type_options",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "rate_limit",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": "No rate limiting headers detected",
+        "affected_endpoints": []
+      }
+    ],
+    "csp_policy": null,
+    "cors_origins": [],
+    "csrf_mechanism": null,
+    "token_storage": null,
+    "missing_controls": [
+      "rate_limit",
+      "hsts",
+      "x_content_type_options",
+      "csp",
+      "x_frame_options"
+    ],
+    "weak_controls": [
+      "rate_limit",
+      "hsts",
+      "x_content_type_options",
+      "csp",
+      "x_frame_options"
+    ]
+  },
+  "cookie_analysis": {},
+  "summary": {
+    "total_controls_checked": 5,
+    "missing_controls": 5,
+    "weak_controls": 5
+  }
+}

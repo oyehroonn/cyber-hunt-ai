@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T04:23:52.019116",
+    "target_url": "https://example.com",
+    "phase": "recon",
+    "version": "1.0.0",
+    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+  },
+  "surfaces": [],
+  "by_classification": {},
+  "summary": {
+    "total_probed": 136,
+    "total_found": 0,
+    "leaking_metadata": 0,
+    "open_access": 0,
+    "blocked": 0
+  }
+}

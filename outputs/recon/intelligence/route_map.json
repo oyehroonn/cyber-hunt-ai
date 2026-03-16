@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T04:23:57.227838",
+    "target_url": "https://example.com",
+    "phase": "recon",
+    "version": "1.0.0",
+    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+  },
+  "routes": [
+    {
+      "slug": "home",
+      "url": "https://example.com",
+      "screenshot_path": "outputs/recon/screenshots/home_0.png",
+      "dom_path": "outputs/recon/dom_snapshots/home_0.html",
+      "actions": [
+        {
+          "action_type": "navigate",
+          "selector": "a",
+          "text": "Learn more",
+          "href": "https://iana.org/domains/example",
+          "form_fields": []
+        }
+      ],
+      "linked_requests": [],
+      "role_context": null,
+      "is_hidden": false
+    }
+  ]
+}

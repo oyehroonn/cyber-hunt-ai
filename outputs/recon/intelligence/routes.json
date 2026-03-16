@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T04:23:30.983364",
+    "target_url": "https://example.com",
+    "phase": "recon",
+    "version": "1.0.0",
+    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+  },
+  "routes": [
+    {
+      "id": "c05212aa-78e0-4dc0-9fef-fd3113468694",
+      "slug": "home",
+      "url": "https://example.com",
+      "method": "GET",
+      "screenshot_path": "outputs/recon/screenshots/home_0.png",
+      "dom_path": "outputs/recon/dom_snapshots/home_0.html",
+      "actions": [
+        {
+          "action_type": "navigate",
+          "selector": "a",
+          "text": "Learn more",
+          "href": "https://iana.org/domains/example",
+          "form_fields": []
+        }
+      ],
+      "linked_requests": [],
+      "discovered_at": "2026-03-16 04:23:30.751263",
+      "role_context": null,
+      "state_context": null,
+      "page_title": "Example Domain",
+      "is_hidden": false,
+      "source": "crawl",
+      "raw_state": {
+        "has_error": false,
+        "is_empty": false,
+        "is_loading": false,
+        "has_form": false,
+        "is_login_page": false,
+        "has_toast": false,
+        "indicators": []
+      },
+      "modals_found": 0
+    }
+  ]
+}

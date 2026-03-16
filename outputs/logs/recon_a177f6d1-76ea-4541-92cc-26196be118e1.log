@@ -1,0 +1,227 @@
+2026-03-16 05:21:51.911 | INFO     | __main__:setup_logging:48 - Starting recon phase with run_id: a177f6d1-76ea-4541-92cc-26196be118e1
+2026-03-16 05:21:53.759 | INFO     | cyberAI.utils.browser:initialize:82 - Browser pool initialized
+2026-03-16 05:21:53.811 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: None
+2026-03-16 05:21:53.812 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://example.com (role: None)
+2026-03-16 05:21:54.057 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://example.com
+2026-03-16 05:21:56.060 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:21:56.066 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:21:56.286 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:21:56.309 | INFO     | cyberAI.recon.core_discovery:save_routes:563 - Saved 1 routes to outputs/recon/intelligence/routes.json
+2026-03-16 05:21:56.322 | INFO     | cyberAI.recon.network_intelligence:save_intelligence:420 - Saved 1 requests and 1 endpoints
+2026-03-16 05:21:56.463 | INFO     | cyberAI.recon.frontend_parser:fetch_js_bundles:109 - Downloaded 0 JS bundles
+2026-03-16 05:21:56.465 | INFO     | cyberAI.recon.frontend_parser:save_analysis:544 - Found 0 hidden routes
+2026-03-16 05:21:56.466 | INFO     | cyberAI.recon.frontend_parser:save_analysis:557 - Saved frontend analysis with 0 routes, 0 API endpoints
+2026-03-16 05:21:56.485 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:21:59.150 | INFO     | cyberAI.recon.account_state:discover_states_for_role:231 - Detected states: []
+2026-03-16 05:21:59.176 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: unverified
+2026-03-16 05:21:59.196 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:21:59.196 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://example.com (role: user)
+2026-03-16 05:21:59.213 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:21:59.279 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://example.com
+2026-03-16 05:22:01.774 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:22:01.779 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:22:02.001 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:22:02.031 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: verified
+2026-03-16 05:22:02.048 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:22:02.048 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://example.com (role: user)
+2026-03-16 05:22:02.063 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:22:02.116 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://example.com
+2026-03-16 05:22:04.426 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:22:04.431 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:22:04.650 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:22:04.688 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: trial
+2026-03-16 05:22:04.707 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:22:04.707 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://example.com (role: user)
+2026-03-16 05:22:04.723 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:22:04.776 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://example.com
+2026-03-16 05:22:07.352 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:22:07.383 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:22:07.627 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:22:07.664 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: paid
+2026-03-16 05:22:07.684 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:22:07.684 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://example.com (role: user)
+2026-03-16 05:22:07.699 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:22:07.822 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://example.com
+2026-03-16 05:22:09.716 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:22:09.722 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:22:09.943 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:22:09.977 | INFO     | cyberAI.recon.account_state:discover_state:183 - Starting discovery for state: free
+2026-03-16 05:22:09.993 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:22:09.993 | INFO     | cyberAI.recon.core_discovery:crawl:433 - Starting crawl from https://example.com (role: user)
+2026-03-16 05:22:10.008 | DEBUG    | cyberAI.utils.browser:get_browser_context:170 - Created browser context for role: user
+2026-03-16 05:22:10.063 | INFO     | cyberAI.recon.core_discovery:crawl:464 - Crawling [0]: https://example.com
+2026-03-16 05:22:11.806 | DEBUG    | cyberAI.utils.browser:take_screenshot:307 - Screenshot saved: outputs/recon/screenshots/home_0.png
+2026-03-16 05:22:11.811 | DEBUG    | cyberAI.utils.browser:dump_dom:329 - DOM snapshot saved: outputs/recon/dom_snapshots/home_0.html
+2026-03-16 05:22:12.031 | INFO     | cyberAI.recon.core_discovery:crawl:480 - Crawl complete. Discovered 1 routes.
+2026-03-16 05:22:12.061 | INFO     | cyberAI.recon.account_state:save_state_diff:302 - Saved state diff with 5 states analyzed
+2026-03-16 05:22:12.061 | INFO     | cyberAI.recon.sensitive_surfaces:probe_all_paths:354 - Probing 136 sensitive paths...
+2026-03-16 05:22:12.265 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.466 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /export: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.466 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /billing: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.467 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /billing/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.467 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /import: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.467 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /exports: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.467 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /internal: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.467 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /internal/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.467 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /administrator: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.467 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /admin/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.669 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /imports: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.870 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphql/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.870 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /audit/logs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.872 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.873 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphql/playground: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.873 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /audit-logs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.873 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /audit: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.874 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/tokens: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.874 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api-tokens: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:12.874 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /tokens: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.076 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /graphiql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.277 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger-ui/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.277 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api-docs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.277 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger-ui: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.277 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/docs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.278 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger-ui.html: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.278 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /openapi.yaml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.278 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /openapi.json: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.278 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.278 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /swagger: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.479 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /docs: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.680 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /health/ready: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.681 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /metrics: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.681 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /health/live: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.681 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /prometheus: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.681 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /debug: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.681 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /healthz: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.681 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /debug/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.681 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /health: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.681 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /redoc: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:13.883 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.well-known/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.084 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /staff/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.084 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /__admin/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.084 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /staff: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.084 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /__admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.084 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /sitemap_index.xml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.084 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.well-known/openid-configuration: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.084 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /sitemap.xml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.084 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.well-known/security.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.084 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /robots.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.285 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /superuser: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.486 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/private: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.486 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /manage/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.486 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /manage: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.486 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/v2/admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.486 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /management: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.487 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/internal: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.487 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /console/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.487 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/v1/admin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.487 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /console: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.688 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.env: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.890 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /config/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.890 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.gitignore: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.890 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /settings: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.890 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.htaccess: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.890 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.git/HEAD: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.890 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /configuration: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.890 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /config: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.890 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.git/config: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:14.890 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.git: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.090 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /system: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.292 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /trace: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.292 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /elmah.axd: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.292 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/info: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.292 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/beans: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.292 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/env: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.292 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/mappings: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.292 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator/health: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.292 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /phpinfo.php: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.292 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /actuator: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.494 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /info.php: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.695 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /backup: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.695 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /backups: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.695 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /dump: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.696 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /testing: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.696 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /dev: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.697 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /staging: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.697 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /development: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.697 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /test/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.697 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /test: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:15.898 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /sql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.100 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /status: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.100 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /adminer: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.100 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /pma: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.100 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /server-status: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.100 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /phpmyadmin: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.100 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /server-info: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.100 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /_debug: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.100 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /db: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.100 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /database: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.302 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /_profiler: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.502 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/version: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.502 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /changelog: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.503 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /version.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.503 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/status: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.503 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /version: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.503 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/health: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.504 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/debug: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.505 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/info: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.505 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /profiler: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.706 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /CHANGELOG.md: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.907 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /requirements.txt: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.908 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /Gemfile: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.908 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /webpack.config.js: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.908 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /composer.json: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.908 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /LICENSE: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.908 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.dockerenv: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.908 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /license: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.909 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /package.json: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:16.909 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /README.md: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.110 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /Dockerfile: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.311 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.311 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth/authorize: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.311 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.312 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /callbacks: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.312 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /oauth/token: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.312 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /callback: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.312 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /webhooks: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.312 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /api/webhooks: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.312 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /docker-compose.yml: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.513 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /.aws/credentials: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.715 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /restricted: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.715 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /confidential: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.716 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /private: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.716 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /secrets: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.716 | DEBUG    | cyberAI.recon.sensitive_surfaces:probe_path:334 - Error probing /credentials: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.716 | INFO     | cyberAI.recon.sensitive_surfaces:probe_all_paths:371 - Found 0 interesting surfaces
+2026-03-16 05:22:17.721 | INFO     | cyberAI.recon.sensitive_surfaces:save_surfaces:422 - Saved 0 sensitive surfaces
+2026-03-16 05:22:17.729 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:17.929 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /graphql/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:18.130 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /api/graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:18.331 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /api/graphql/: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:18.531 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /v1/graphql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:18.732 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /query: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:18.934 | DEBUG    | cyberAI.recon.graphql_discovery:detect_graphql_endpoint:155 - Error probing /gql: AsyncClient.__init__() got an unexpected keyword argument 'proxies'
+2026-03-16 05:22:18.934 | INFO     | cyberAI.recon.graphql_discovery:discover:399 - No GraphQL endpoint found
+2026-03-16 05:22:18.935 | INFO     | cyberAI.recon.graphql_discovery:save_intel:463 - Saved GraphQL intelligence
+2026-03-16 05:22:19.374 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /ws: SSLCertVerificationError
+2026-03-16 05:22:19.620 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /ws/: SSLCertVerificationError
+2026-03-16 05:22:20.142 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /websocket: SSLCertVerificationError
+2026-03-16 05:22:20.201 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /socket: SSLCertVerificationError
+2026-03-16 05:22:20.264 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /socket.io/: SSLCertVerificationError
+2026-03-16 05:22:20.325 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /sockjs/: SSLCertVerificationError
+2026-03-16 05:22:20.382 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /cable: SSLCertVerificationError
+2026-03-16 05:22:20.453 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /realtime: SSLCertVerificationError
+2026-03-16 05:22:20.607 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /live: SSLCertVerificationError
+2026-03-16 05:22:20.662 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /events: SSLCertVerificationError
+2026-03-16 05:22:20.731 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /stream: SSLCertVerificationError
+2026-03-16 05:22:20.790 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /notifications: SSLCertVerificationError
+2026-03-16 05:22:20.851 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /api/ws: SSLCertVerificationError
+2026-03-16 05:22:20.906 | DEBUG    | cyberAI.recon.websocket_discovery:detect_websocket_endpoints:91 - WebSocket probe failed for /api/websocket: SSLCertVerificationError
+2026-03-16 05:22:20.908 | INFO     | cyberAI.recon.websocket_discovery:save_intel:342 - Saved WebSocket intelligence for 0 endpoints
+2026-03-16 05:22:20.917 | INFO     | cyberAI.recon.async_flow_discovery:save_flows:354 - Saved 0 async flows
+2026-03-16 05:22:20.918 | INFO     | cyberAI.recon.object_model:save_object_graph:406 - Saved 0 object models
+2026-03-16 05:22:20.981 | INFO     | cyberAI.recon.permission_inference:save_matrix:298 - Saved permission matrix with 0 entries
+2026-03-16 05:22:20.982 | INFO     | cyberAI.recon.workflow_mapper:save_workflows:360 - Saved 0 workflows
+2026-03-16 05:22:20.984 | INFO     | cyberAI.recon.input_schema:save_schemas:340 - Saved 0 input schemas
+2026-03-16 05:22:20.986 | INFO     | cyberAI.recon.security_controls:save_report:360 - Saved security controls report
+2026-03-16 05:22:21.001 | INFO     | cyberAI.recon.intelligence_outputs:save_all_outputs:376 - Saved 4 intelligence output files
+2026-03-16 05:22:21.111 | INFO     | cyberAI.utils.browser:close:101 - Browser pool closed

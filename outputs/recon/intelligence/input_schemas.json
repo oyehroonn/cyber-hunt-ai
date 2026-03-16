@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "generated_at": "2026-03-16T04:23:57.201976",
+    "target_url": "https://example.com",
+    "phase": "recon",
+    "version": "1.0.0",
+    "run_id": "721d959a-e94d-4443-b0c1-3fe7181091bb"
+  },
+  "schemas": {},
+  "validation_differences": {},
+  "summary": {
+    "total_endpoints": 0,
+    "with_hidden_fields": 0,
+    "validation_mismatches": 0
+  }
+}

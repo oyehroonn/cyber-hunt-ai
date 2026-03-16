@@ -117,6 +117,8 @@ class Route(BaseModel):
     page_title: Optional[str] = None
     is_hidden: bool = False
     source: str = "crawl"  # crawl, js_bundle, graphql, etc.
+    raw_state: Optional[dict[str, Any]] = None  # Page state indicators from _detect_page_state
+    modals_found: int = 0  # Count of modals/drawers discovered on this page
 
 
 class FieldSchema(BaseModel):
