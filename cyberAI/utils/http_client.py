@@ -4,9 +4,10 @@ Async HTTP client with proxy rotation, UA rotation, and request recording.
 
 import asyncio
 import json
+import hashlib
 from datetime import datetime
 from typing import Any, Optional
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import httpx
 from fake_useragent import UserAgent
@@ -16,6 +17,14 @@ from cyberAI.config import get_config
 from cyberAI.models import HttpMethod, RequestRecord
 from cyberAI.utils.helpers import parse_rate_limit_headers
 from cyberAI.utils.proxy_manager import get_proxy_manager
+
+try:
+    from cyberAI.governance.scope import get_scope_validator
+    from cyberAI.governance.rate_limiter import get_global_rate_limiter
+    from urllib.parse import urlparse
+except ImportError:
+    get_scope_validator = None
+    get_global_rate_limiter = None
 
 
 class AsyncHTTPClient:
@@ -141,6 +150,7 @@ class AsyncHTTPClient:
         role_context: Optional[str] = None,
         state_context: Optional[str] = None,
         record: bool = True,
+        follow_redirects: Optional[bool] = None,
     ) -> tuple[httpx.Response, Optional[RequestRecord]]:
         """
         Make an HTTP request.
@@ -165,6 +175,38 @@ class AsyncHTTPClient:
         if not url.startswith(("http://", "https://")):
             url = urljoin(self.base_url, url)
         
+        # ASRTS: scope check before any request
+        if get_scope_validator is not None:
+            validator = get_scope_validator()
+            if validator is not None:
+                allowed, reason = validator.is_in_scope(url, method.upper())
+                if not allowed:
+                    logger.warning(f"Scope check denied request: {url} reason={reason}")
+                    # Return a synthetic "blocked" response so callers don't get None
+                    class BlockedResponse:
+                        def __init__(self, u: str):
+                            self.status_code = 403
+                            self.url = u
+                            self.headers = {}
+                            self.history = []
+                            self.cookies = {}
+                        def json(self): return {}
+                        @property
+                        def text(self): return ""
+                        @property
+                        def content_type(self): return "application/octet-stream"
+                    return BlockedResponse(url), None
+        
+        # ASRTS: per-host rate limit when engagement config is loaded
+        if get_global_rate_limiter is not None and urlparse is not None:
+            limiter = get_global_rate_limiter()
+            if limiter is not None:
+                try:
+                    parsed = urlparse(url)
+                    await limiter.acquire(parsed.netloc or "unknown")
+                except Exception as e:
+                    logger.debug(f"Rate limiter acquire: {e}")
+        
         request_headers = self._build_headers(headers)
         
         client = await self._get_client()
@@ -183,6 +225,7 @@ class AsyncHTTPClient:
                     data=data,
                     content=content,
                     cookies=self._cookies,
+                    follow_redirects=follow_redirects if follow_redirects is not None else True,
                 )
                 break
             except httpx.TimeoutException:
@@ -263,9 +306,24 @@ class AsyncHTTPClient:
         """
         response_body = None
         response_json = None
+        content_type = response.headers.get("content-type", "")
+        body_preview = None
+        body_hash = None
+        redirect_chain: list[dict[str, Any]] = []
+
+        try:
+            for h in response.history:
+                redirect_chain.append(
+                    {
+                        "status_code": getattr(h, "status_code", None),
+                        "url": str(getattr(h, "url", "")),
+                        "location": h.headers.get("location"),
+                    }
+                )
+        except Exception:
+            pass
         
         try:
-            content_type = response.headers.get("content-type", "")
             if "application/json" in content_type:
                 response_json = response.json()
                 response_body = response.text
@@ -276,6 +334,13 @@ class AsyncHTTPClient:
                 response_body = response.text[:50000]
             except Exception:
                 pass
+
+        try:
+            if response_body:
+                body_preview = response_body[:2000]
+                body_hash = hashlib.sha256(response_body.encode("utf-8", errors="ignore")).hexdigest()
+        except Exception:
+            pass
         
         duration_ms = None
         if start_time:
@@ -284,14 +349,19 @@ class AsyncHTTPClient:
         record = RequestRecord(
             method=HttpMethod(method.upper()),
             url=url,
+            final_url=str(getattr(response, "url", url)) if response is not None else url,
+            redirect_chain=redirect_chain,
             headers=headers,
             cookies=dict(response.cookies),
             body=body,
             body_json=body_json,
             response_status=response.status_code,
+            response_content_type=content_type,
             response_headers=dict(response.headers),
             response_body=response_body,
             response_json=response_json,
+            response_body_hash=body_hash,
+            response_body_preview=body_preview,
             timestamp=start_time or datetime.utcnow(),
             role_context=role_context,
             state_context=state_context,

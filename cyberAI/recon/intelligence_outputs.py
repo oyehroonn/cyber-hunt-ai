@@ -160,6 +160,16 @@ class IntelligenceAggregator:
                     is_hidden=True,
                     source=r.get("source", "js_bundle"),
                 ))
+
+        wp_hidden_data = self._load_from_file("wp_routes.json")
+        if wp_hidden_data and "hidden_routes" in wp_hidden_data:
+            for r in wp_hidden_data["hidden_routes"]:
+                hidden_routes.append(Route(
+                    slug=r.get("path", "").strip("/").replace("/", "_"),
+                    url=r.get("path", ""),
+                    is_hidden=True,
+                    source=r.get("source", "sitemap"),
+                ))
         
         role_diff_data = self._load_from_file("role_diff.json")
         role_diffs = []

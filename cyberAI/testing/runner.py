@@ -110,6 +110,18 @@ class TestRunner:
         max_concurrent: int = 5,
     ) -> list[Finding]:
         """Run all tests for a category."""
+        # ASRTS §4.2: optional api_fuzz category (no plans required)
+        if category == "api_fuzz":
+            try:
+                from cyberAI.testing.api_fuzzer import run_api_fuzzer
+                return await run_api_fuzzer(
+                    self.config.target_url or "",
+                    run_id=self.config.run_id,
+                )
+            except Exception as e:
+                logger.debug(f"API fuzzer: {e}")
+                return []
+
         plans = [p for p in self._test_plans if p.category.value == category]
         
         if not plans:
@@ -129,6 +141,21 @@ class TestRunner:
         
         for result in results:
             findings.extend(result)
+        
+        # ASRTS Phase 2.5: differential auth when we have multiple role accounts
+        if category == "authz" and len(self.config.role_accounts) >= 2:
+            tester = self._testers.get("authz")
+            if tester and hasattr(tester, "test_differential_auth"):
+                roles = [acc.role for acc in self.config.role_accounts]
+                try:
+                    diff_findings = await tester.test_differential_auth(
+                        role_high=roles[0],
+                        role_low=roles[1],
+                        engagement_id=self.config.run_id or "default",
+                    )
+                    findings.extend(diff_findings)
+                except Exception as e:
+                    logger.debug(f"Differential auth test: {e}")
         
         return findings
     
@@ -155,6 +182,8 @@ class TestRunner:
         all_categories = set(p.category.value for p in self._test_plans)
         if categories:
             all_categories = all_categories & set(categories)
+            if "api_fuzz" in categories:
+                all_categories.add("api_fuzz")
         
         with Progress() as progress:
             main_task = progress.add_task("[cyan]Running security tests...", total=len(all_categories))

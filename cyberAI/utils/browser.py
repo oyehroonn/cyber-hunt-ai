@@ -27,6 +27,11 @@ from cyberAI.models import HttpMethod, RequestRecord
 from cyberAI.utils.helpers import atomic_write_text, safe_filename
 from cyberAI.utils.proxy_manager import get_proxy_manager
 
+try:
+    from cyberAI.governance.scope import get_scope_validator
+except ImportError:
+    get_scope_validator = None
+
 
 class RequestInterceptor:
     """Captures and stores intercepted network requests."""
@@ -156,6 +161,20 @@ class BrowserPool:
         context = await self._browser.new_context(**context_options)
         context._role = role
         context._interceptor = RequestInterceptor() if intercept_requests else None
+
+        # ASRTS: abort out-of-scope requests before they are sent
+        if get_scope_validator is not None:
+            validator = get_scope_validator()
+            if validator is not None:
+                async def scope_route(route):
+                    req = route.request
+                    allowed, reason = validator.is_in_scope(req.url, req.method)
+                    if not allowed:
+                        logger.debug(f"Browser scope abort: {req.url} reason={reason}")
+                        await route.abort()
+                    else:
+                        await route.continue_()
+                await context.route("**/*", scope_route)
         
         if intercept_requests:
             context.on("request", lambda req: asyncio.create_task(self._on_request(context, req)))

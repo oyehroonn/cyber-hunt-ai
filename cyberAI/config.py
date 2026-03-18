@@ -63,7 +63,10 @@ class Config:
     run_id: str = ""
     ignore_robots: bool = False
     dry_run: bool = False
-    
+
+    # ASRTS engagement config (optional): path to YAML/JSON for scope and rate limits
+    engagement_config_path: Optional[str] = None
+
     # Logging
     log_level: str = "INFO"
     verbose: bool = False
@@ -90,6 +93,8 @@ class Config:
             "reports/csv",
             "reports/txt",
             "logs",
+            "warc",  # ASRTS: WARC evidence store
+            "sessions",  # ASRTS: session store (file-backed)
         ]
         for subdir in subdirs:
             (self.output_dir / subdir).mkdir(parents=True, exist_ok=True)
@@ -143,6 +148,7 @@ class Config:
             output_dir=Path(os.getenv("OUTPUT_DIR", "outputs")),
             ignore_robots=os.getenv("IGNORE_ROBOTS", "false").lower() == "true",
             dry_run=os.getenv("DRY_RUN", "false").lower() == "true",
+            engagement_config_path=os.getenv("ENGAGEMENT_CONFIG_PATH") or None,
             log_level=os.getenv("LOG_LEVEL", "INFO"),
             verbose=os.getenv("VERBOSE", "false").lower() == "true",
         )

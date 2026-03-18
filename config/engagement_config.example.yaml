@@ -1,0 +1,28 @@
+# ASRTS Engagement Configuration (example)
+# Copy to engagement_config.yaml and set target_domains to your in-scope base URLs.
+# When ENGAGEMENT_CONFIG_PATH is set (or this file is at outputs/engagement_config.yaml),
+# all HTTP and browser requests are checked against scope; out-of-scope requests are blocked.
+
+engagement_id: default
+name: Example engagement
+target_domains:
+  - https://example.com
+  # - https://api.example.com
+out_of_scope_patterns:
+  - "*.staging.*"
+  - "*/admin/delete/*"
+allowed_schemes:
+  - https
+test_identities: []
+rate_limits:
+  per_host_rps: 10
+  global_rps: 50
+  backoff_on_5xx: exponential
+data_retention:
+  raw_capture_ttl_days: 90
+  structured_ttl_days: 365
+  permitted_data_classes:
+    - request_response_meta
+    - finding_evidence
+    - insertion_point_schema
+incident_contacts: []

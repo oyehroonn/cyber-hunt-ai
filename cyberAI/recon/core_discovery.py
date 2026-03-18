@@ -4,8 +4,8 @@ Discovers routes, captures screenshots, DOM snapshots, and actions.
 """
 
 import asyncio
+import heapq
 import re
-from collections import deque
 from datetime import datetime
 from typing import TYPE_CHECKING, Any, Optional
 
@@ -28,8 +28,17 @@ from cyberAI.utils.helpers import (
     add_meta_to_output,
     atomic_write_json,
     generate_run_id,
+    load_json,
     safe_filename,
 )
+
+try:
+    from cyberAI.recon.priority_scorer import score_url_security_relevance, path_template_for_novelty
+except ImportError:
+    def score_url_security_relevance(url: str) -> float:
+        return 0.5
+    def path_template_for_novelty(url: str) -> str:
+        return url
 
 
 class CoreDiscovery:
@@ -58,7 +67,16 @@ class CoreDiscovery:
         """Check if URL belongs to the target domain."""
         try:
             parsed = urlparse(url)
-            return self._base_domain in parsed.netloc
+            base = (self._base_domain or "").lower()
+            netloc = (parsed.netloc or "").lower()
+
+            # Treat www.<domain> and <domain> as same-site.
+            if base.startswith("www."):
+                base_alt = base.removeprefix("www.")
+            else:
+                base_alt = "www." + base if base else base
+
+            return netloc == base or netloc == base_alt or netloc.endswith("." + base) or netloc.endswith("." + base_alt)
         except Exception:
             return False
     
@@ -398,6 +416,83 @@ class CoreDiscovery:
         route.modals_found = len(modals)
         
         return route, links
+
+    async def _inject_session_into_context(
+        self, context: BrowserContext, role: str, start_url: str
+    ) -> None:
+        """Load session from store and add cookies to context (ASRTS 2.4.5)."""
+        try:
+            from cyberAI.identity.session_store import SessionStore
+            store_path = self.config.get_output_path("sessions", "sessions.json")
+            store = SessionStore(store_path)
+            engagement_id = self.config.run_id or "default"
+            session = store.get(engagement_id, role)
+            if not session or not session.get("cookies"):
+                return
+            parsed = urlparse(start_url)
+            domain = parsed.netloc or ""
+            cookies_list = [
+                {"name": k, "value": v, "domain": domain, "path": "/"}
+                for k, v in session["cookies"].items()
+            ]
+            if cookies_list:
+                await context.add_cookies(cookies_list)
+                logger.debug(f"Injected session for role {role} ({len(cookies_list)} cookies)")
+        except Exception as e:
+            logger.debug(f"Session inject: {e}")
+
+    async def _check_and_repair_session(
+        self,
+        context: BrowserContext,
+        page: Page,
+        role: str,
+        start_url: str,
+    ) -> None:
+        """Re-check session health; if unhealthy, run repair and re-inject (ASRTS 2.4.5)."""
+        try:
+            from cyberAI.identity.session_store import SessionStore
+            from cyberAI.identity.session_health import SessionHealthChecker, SessionRepairRunner
+            from cyberAI.identity.login_sequence import load_login_sequence
+            from pathlib import Path
+            store_path = self.config.get_output_path("sessions", "sessions.json")
+            store = SessionStore(store_path)
+            engagement_id = self.config.run_id or "default"
+            session = store.get(engagement_id, role)
+            if not session or not session.get("cookies"):
+                return
+            checker = SessionHealthChecker(start_url)
+            if await checker.is_healthy(session["cookies"]):
+                return
+            logger.info(f"Session unhealthy for {role}; attempting repair")
+            acc = self.config.get_role_account(role) if getattr(self.config, "get_role_account", None) else None
+            credentials = {"username": acc.username, "password": acc.password} if acc else {}
+            login_sequence_path = None
+            try:
+                from cyberAI.governance.loader import load_engagement_config
+                engagement = load_engagement_config(self.config.engagement_config_path)
+                if engagement and engagement.test_identities:
+                    for ti in engagement.test_identities:
+                        if ti.role == role and ti.login_sequence_ref:
+                            base = Path(self.config.engagement_config_path).parent if getattr(self.config, "engagement_config_path", None) else self.config.output_dir
+                            login_sequence_path = (base / ti.login_sequence_ref).resolve()
+                            break
+            except Exception:
+                pass
+            if not login_sequence_path or not login_sequence_path.is_file():
+                for name in (f"login_{role}.json", "login_sequence.json"):
+                    p = self.config.get_output_path("recon", "intelligence", name)
+                    if p and p.is_file():
+                        login_sequence_path = p
+                        break
+            repair = SessionRepairRunner(
+                store, engagement_id, role,
+                login_sequence_path=login_sequence_path,
+                credentials=credentials,
+            )
+            if await repair.run(page):
+                await self._inject_session_into_context(context, role, start_url)
+        except Exception as e:
+            logger.debug(f"Session check/repair: {e}")
     
     async def crawl(
         self,
@@ -407,6 +502,7 @@ class CoreDiscovery:
         max_pages: Optional[int] = None,
         context: Optional[BrowserContext] = None,
         network_intel: Optional["NetworkIntelligence"] = None,
+        seed_urls: Optional[list[str]] = None,
     ) -> list[Route]:
         """
         Perform BFS crawl starting from the given URL.
@@ -443,42 +539,75 @@ class CoreDiscovery:
         
         page = await context.new_page()
         
+        # ASRTS 2.4.5: Inject session cookies when crawling as a role
+        if role:
+            await self._inject_session_into_context(context, role, start_url)
+        
         try:
-            queue = deque([(start_url, 0)])
-            
-            while queue and len(self._routes) < self._max_pages:
-                url, depth = queue.popleft()
-                
+            # ASRTS Phase 2.2: priority queue (heap) so high-value URLs are crawled first
+            novelty = None
+            try:
+                from cyberAI.recon.novelty_index import NoveltyIndex
+                novelty_path = self.config.get_output_path("recon", "intelligence", "novelty_index.json")
+                novelty = NoveltyIndex(novelty_path)
+                novelty.load()
+            except ImportError:
+                pass
+
+            def _priority(url: str, depth: int, is_novel: bool) -> float:
+                rel = score_url_security_relevance(url)
+                depth_penalty = 0.05 * depth
+                novelty_boost = 0.2 if is_novel else 0.0
+                return rel + novelty_boost - depth_penalty
+
+            seq = 0
+            start_priority = _priority(start_url, 0, novelty.add_from_canonical("GET", path_template_for_novelty(start_url), []) if novelty else False)
+            heap: list[tuple[float, int, str, int]] = [(-start_priority, seq, start_url, 0)]
+            seq += 1
+            if seed_urls:
+                for u in seed_urls:
+                    if u and isinstance(u, str) and self._is_valid_crawl_url(u):
+                        is_nov = novelty.add_from_canonical("GET", path_template_for_novelty(u), []) if novelty else False
+                        p = _priority(u, 0, is_nov)
+                        heapq.heappush(heap, (-p, seq, u, 0))
+                        seq += 1
+
+            while heap and len(self._routes) < self._max_pages:
+                _neg_pri, _s, url, depth = heapq.heappop(heap)
                 normalized = self._normalize_url(url)
                 if normalized in self._visited_urls:
                     continue
-                
                 if depth > self._max_depth:
                     continue
-                
                 if not self._is_valid_crawl_url(url):
                     continue
-                
                 self._visited_urls.add(normalized)
-                
-                logger.info(f"Crawling [{depth}]: {url}")
-                
+                logger.info(f"Crawling [{depth}] (pri={-_neg_pri:.2f}): {url}")
                 try:
                     route, new_links = await self._process_page(page, url, depth, role)
                     self._routes.append(route)
-                    
+                    # ASRTS 2.4.5: Health re-check every 20 pages; repair and re-inject if needed
+                    if role and len(self._routes) % 20 == 0:
+                        await self._check_and_repair_session(context, page, role, start_url)
                     for link in new_links:
-                        if self._normalize_url(link) not in self._visited_urls:
-                            queue.append((link, depth + 1))
-                    
+                        norm_link = self._normalize_url(link)
+                        if norm_link in self._visited_urls:
+                            continue
+                        if not self._is_valid_crawl_url(link):
+                            continue
+                        new_depth = depth + 1
+                        path_tpl = path_template_for_novelty(link)
+                        is_novel = novelty.add_from_canonical("GET", path_tpl, []) if novelty else False
+                        pri = _priority(link, new_depth, is_novel)
+                        heapq.heappush(heap, (-pri, seq, link, new_depth))
+                        seq += 1
+                    if novelty is not None:
+                        novelty.save()
                     await asyncio.sleep(self.config.request_delay_ms / 1000)
-                    
                 except Exception as e:
                     logger.warning(f"Error processing {url}: {e}")
                     continue
-            
             logger.info(f"Crawl complete. Discovered {len(self._routes)} routes.")
-            
         finally:
             await page.close()
             if own_context:
@@ -575,6 +704,7 @@ async def run_core_discovery(
     run_id: Optional[str] = None,
     context: Optional[BrowserContext] = None,
     network_intel: Optional["NetworkIntelligence"] = None,
+    seed_urls: Optional[list[str]] = None,
 ) -> list[Route]:
     """
     Run core discovery on target URL.
@@ -591,7 +721,7 @@ async def run_core_discovery(
     """
     discovery = CoreDiscovery(run_id=run_id)
     routes = await discovery.crawl(
-        target_url, role=role, context=context, network_intel=network_intel
+        target_url, role=role, context=context, network_intel=network_intel, seed_urls=seed_urls
     )
     discovery.save_routes()
     return routes

@@ -161,19 +161,64 @@ class RequestRecord(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid4()))
     method: HttpMethod
     url: str
+    final_url: Optional[str] = None
+    redirect_chain: list[dict[str, Any]] = Field(default_factory=list)  # [{status_code, url, location}]
     headers: dict[str, str] = Field(default_factory=dict)
     cookies: dict[str, str] = Field(default_factory=dict)
     body: Optional[str] = None
     body_json: Optional[dict[str, Any]] = None
     response_status: int
+    response_content_type: Optional[str] = None
     response_headers: dict[str, str] = Field(default_factory=dict)
     response_body: Optional[str] = None
     response_json: Optional[dict[str, Any]] = None
+    response_body_hash: Optional[str] = None
+    response_body_preview: Optional[str] = None  # truncated preview for quick triage
     timestamp: datetime = Field(default_factory=datetime.utcnow)
     role_context: Optional[str] = None
     state_context: Optional[str] = None
     duration_ms: Optional[float] = None
     endpoint_id: Optional[str] = None
+    warc_ref: Optional[str] = None  # WARC capture ID for evidence (ASRTS)
+
+
+class CanonicalRequest(BaseModel):
+    """Normalized request structure for insertion point extraction (ASRTS)."""
+    request_id: str = Field(default_factory=lambda: str(uuid4()))
+    method: str
+    url_template: str  # path with {id} placeholders
+    query_params: list[dict[str, str]] = Field(default_factory=list)  # [{name, value_placeholder}]
+    headers: dict[str, str] = Field(default_factory=dict)
+    body_ast: Optional[dict[str, Any]] = None  # tree with placeholders
+    warc_ref: Optional[str] = None
+
+
+class InsertionPoint(BaseModel):
+    """A single place where user input is accepted (ASRTS)."""
+    request_id: str
+    location: str  # e.g. path_segment_2, query.q, body.user.id, header.X-Role
+    encoding_layers: list[str] = Field(default_factory=list)  # e.g. ["json", "base64"]
+    inferred_type: str = "string"  # id, string, token, etc.
+
+
+class CrawlState(BaseModel):
+    """Single state in state-flow (Crawljax-style) crawl (ASRTS §2.3)."""
+    state_id: str
+    dom_hash: str
+    url: str
+    warc_ref: Optional[str] = None
+    discovered_at: datetime = Field(default_factory=datetime.utcnow)
+    screenshot_path: Optional[str] = None
+    dom_path: Optional[str] = None
+
+
+class CrawlTransition(BaseModel):
+    """Edge: from_state -> to_state via event (ASRTS §2.3)."""
+    from_state_id: str
+    to_state_id: str
+    event_type: str  # click, submit, input
+    selector: Optional[str] = None
+    payload_preview: Optional[str] = None
 
 
 class ObjectField(BaseModel):
@@ -323,6 +368,7 @@ class Finding(BaseModel):
     discovered_at: datetime = Field(default_factory=datetime.utcnow)
     test_plan_id: Optional[str] = None
     raw_evidence: dict[str, Any] = Field(default_factory=dict)
+    evidence_warc_refs: list[str] = Field(default_factory=list)  # WARC refs for evidence pack (ASRTS)
 
 
 class VerifiedFinding(Finding):

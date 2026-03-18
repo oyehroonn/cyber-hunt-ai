@@ -41,6 +41,15 @@ See request proof below.
 No request proof captured.
 {% endif %}
 
+## Evidence (WARC refs)
+{% if finding.evidence_warc_refs %}
+{% for ref in finding.evidence_warc_refs %}
+- `{{ ref }}`
+{% endfor %}
+{% else %}
+No WARC evidence refs (run recon with WARC enabled).
+{% endif %}
+
 ## State Changes
 {% if finding.before_state and finding.after_state %}
 | Property | Before | After |

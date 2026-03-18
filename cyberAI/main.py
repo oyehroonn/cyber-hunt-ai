@@ -28,7 +28,7 @@ from rich.progress import Progress
 from rich.table import Table
 
 from cyberAI.config import Config, get_config
-from cyberAI.utils.helpers import atomic_write_json, generate_run_id
+from cyberAI.utils.helpers import add_meta_to_output, atomic_write_json, generate_run_id
 from cyberAI.utils.browser import cleanup_browser_pool
 from cyberAI.utils.http_client import cleanup_http_client
 
@@ -85,6 +85,7 @@ async def run_recon(args) -> dict:
         run_graphql_discovery,
         run_websocket_discovery,
         run_workflow_mapper,
+        run_wp_discovery,
     )
     from cyberAI.recon.network_intelligence import NetworkIntelligence
     from cyberAI.utils.browser import get_browser_pool
@@ -94,6 +95,20 @@ async def run_recon(args) -> dict:
 
     config = get_config()
     config.target_url = args.target or config.target_url or ""
+    config.run_id = run_id
+
+    # ASRTS Phase 1: Load engagement config and set scope validator + rate limiter
+    try:
+        from cyberAI.governance.loader import load_engagement_config
+        from cyberAI.governance.scope import ScopeValidator, set_scope_validator
+        from cyberAI.governance.rate_limiter import RateLimiter, set_global_rate_limiter
+        engagement = load_engagement_config(config.engagement_config_path)
+        if engagement is not None:
+            set_scope_validator(ScopeValidator(engagement))
+            set_global_rate_limiter(RateLimiter.from_engagement(engagement))
+            logger.info("Engagement config loaded: scope and rate limits active")
+    except ImportError:
+        pass
 
     console.print(Panel(f"[bold cyan]Starting Reconnaissance[/bold cyan]\nTarget: {args.target}", title="CyberAI"))
 
@@ -102,31 +117,184 @@ async def run_recon(args) -> dict:
     browser_pool = get_browser_pool()
     await browser_pool.initialize()
 
-    total_steps = 18
+    # ASRTS Phase 2.4: Populate sessions for role accounts (login then save to SessionStore)
+    if config.role_accounts:
+        try:
+            from cyberAI.identity import ensure_sessions_for_roles
+            n = await ensure_sessions_for_roles(
+                browser_pool,
+                config=config,
+                engagement_id=run_id,
+                target_url=args.target or config.target_url,
+            )
+            if n:
+                logger.info(f"Sessions populated for {n} role(s)")
+        except Exception as e:
+            logger.debug(f"Session populate: {e}")
+
+    total_steps = 25
     with Progress() as progress:
         task = progress.add_task("[cyan]Running recon phases...", total=total_steps)
 
-        # Step 1: Core discovery with network intel attached to capture requests
+        # Step 1: WP/Woo discovery (sitemap + wp-json) - best effort, non-destructive
+        progress.update(task, description="[cyan]WP/Woo discovery (sitemap/wp-json)...")
+        wp_seed_urls = []
+        try:
+            wp_result = await run_wp_discovery(args.target, run_id=run_id)
+            wp_seed_urls = (wp_result.get("sitemap_targets") or [])[:500]
+        except Exception:
+            pass
+        progress.advance(task)
+
+        # Step 2: Core discovery with network intel attached to capture requests
         progress.update(task, description="[cyan]Core discovery (crawl + network capture)...")
         context = await browser_pool.get_browser_context(role=None)
         network_intel = NetworkIntelligence(run_id=run_id)
         await network_intel.attach_to_context(context, None)
         routes = await run_core_discovery(
-            args.target, role=None, run_id=run_id, context=context, network_intel=network_intel
+            args.target,
+            role=None,
+            run_id=run_id,
+            context=context,
+            network_intel=network_intel,
+            seed_urls=wp_seed_urls,
         )
         await context.close()
-        network_intel.save_intelligence()
+        # ASRTS 2.4.5: Optional authenticated crawl for first role (session injected in core_discovery)
+        if config.role_accounts:
+            from cyberAI.recon.core_discovery import CoreDiscovery
+            for acc in config.role_accounts[:1]:
+                ctx_role = await browser_pool.get_browser_context(role=acc.role)
+                await network_intel.attach_to_context(ctx_role, acc.role)
+                discovery_role = CoreDiscovery(run_id=run_id)
+                routes_role = await discovery_role.crawl(
+                    args.target,
+                    role=acc.role,
+                    context=ctx_role,
+                    network_intel=network_intel,
+                    seed_urls=wp_seed_urls,
+                )
+                routes.extend(routes_role)
+                await ctx_role.close()
+        results["routes_discovered"] = len(routes)
+        # ASRTS Phase 1: WARC writer for evidence-grade capture
+        warc_writer = None
+        try:
+            from cyberAI.storage.warc_writer import WARCWriter
+            warc_writer = WARCWriter(config.output_dir, run_id, enabled=True)
+        except ImportError:
+            pass
+        try:
+            network_intel.save_intelligence(warc_writer=warc_writer)
+        finally:
+            if warc_writer is not None:
+                warc_writer.close()
         results["routes_discovered"] = len(routes)
         progress.advance(task)
 
         requests = network_intel.get_requests()
         endpoints = network_intel.get_endpoints()
 
-        # Step 2: Network intelligence already captured above; endpoints/requests saved
+        # Step 2.5: ASRTS insertion point extraction (canonical + novelty)
+        progress.update(task, description="[cyan]Insertion point extraction...")
+        try:
+            from cyberAI.recon.insertion_point_extractor import (
+                RequestCanonicalizer,
+                InsertionPointExtractor,
+                ast_param_names,
+            )
+            from cyberAI.recon.novelty_index import NoveltyIndex
+            canonicalizer = RequestCanonicalizer()
+            extractor = InsertionPointExtractor()
+            novelty = NoveltyIndex(config.get_output_path("recon", "intelligence", "novelty_index.json"))
+            novelty.load()
+            canonicals: list[dict] = []
+            insertion_points: list[dict] = []
+            for r in requests:
+                try:
+                    canonical, points = extractor.extract_from_record(r)
+                    canonicals.append(canonical.model_dump())
+                    insertion_points.extend(p.model_dump() for p in points)
+                    param_names = [p.get("name") for p in canonical.query_params if p.get("name")]
+                    if canonical.body_ast:
+                        param_names.extend(ast_param_names(canonical.body_ast))
+                    novelty.add_from_canonical(canonical.method, canonical.url_template, param_names)
+                except Exception as e:
+                    logger.debug(f"Insertion point extract: {e}")
+            novelty.save()
+            intel_path = config.get_output_path("recon", "intelligence", "insertion_points.json")
+            intel_path.parent.mkdir(parents=True, exist_ok=True)
+            atomic_write_json(intel_path, add_meta_to_output(
+                {"canonical_requests": canonicals, "insertion_points": insertion_points},
+                target_url=config.target_url,
+                phase="recon",
+                run_id=run_id,
+            ))
+        except ImportError:
+            pass
+        progress.advance(task)
+
+        # Step 2.6: ASRTS state-flow crawl (SPA states, Crawljax-style)
+        progress.update(task, description="[cyan]State-flow crawl (SPA states)...")
+        try:
+            from cyberAI.recon.state_flow import run_state_flow_crawl
+            sf_context = await browser_pool.get_browser_context(role=None)
+            await network_intel.attach_to_context(sf_context, None)
+            await run_state_flow_crawl(
+                sf_context,
+                args.target,
+                run_id=run_id,
+                network_intel=network_intel,
+                max_states=500,
+            )
+            await sf_context.close()
+            network_intel.save_intelligence(warc_writer=None)  # append any state-flow requests
+        except Exception as e:
+            logger.debug(f"State-flow crawl: {e}")
+        progress.advance(task)
+
+        # Step 3: Network intelligence already captured above; endpoints/requests saved
         progress.update(task, description="[cyan]Network intelligence (saved)...")
         progress.advance(task)
 
-        # Step 3: Frontend parser (HTML from first route DOM if available)
+        # Step 3.5: ASRTS form mining (deep web forms)
+        progress.update(task, description="[cyan]Form mining...")
+        try:
+            from cyberAI.recon.form_mining import run_form_mining
+            await run_form_mining(
+                routes,
+                args.target or config.target_url or "",
+                run_id=run_id,
+                network_intel=network_intel,
+                max_submissions_per_form=10,
+            )
+        except Exception as e:
+            logger.debug(f"Form mining: {e}")
+        progress.advance(task)
+
+        # Step 3.6: ASRTS API spec discovery (OpenAPI/Swagger)
+        progress.update(task, description="[cyan]API spec discovery...")
+        try:
+            from cyberAI.recon.api_spec_discovery import run_api_spec_discovery
+            await run_api_spec_discovery(
+                args.target or config.target_url or "",
+                run_id=run_id,
+                network_intel=network_intel,
+            )
+        except Exception as e:
+            logger.debug(f"API spec discovery: {e}")
+        progress.advance(task)
+
+        # Step 3.7: ASRTS sensitive exposure (lexical PII/creds in responses)
+        progress.update(task, description="[cyan]Sensitive exposure scan...")
+        try:
+            from cyberAI.recon.sensitive_exposure import run_sensitive_exposure
+            run_sensitive_exposure(network_intel.get_requests(), run_id=run_id)
+        except Exception as e:
+            logger.debug(f"Sensitive exposure: {e}")
+        progress.advance(task)
+
+        # Step 4: Frontend parser (HTML from first route DOM if available)
         progress.update(task, description="[cyan]Frontend parser...")
         if routes and routes[0].dom_path and Path(routes[0].dom_path).exists():
             html_content = Path(routes[0].dom_path).read_text()
@@ -136,7 +304,7 @@ async def run_recon(args) -> dict:
         await run_frontend_parser(html_content, base_url, crawled_routes=routes, run_id=run_id)
         progress.advance(task)
 
-        # Step 4: Role discovery (optional; only if role accounts configured)
+        # Step 5: Role discovery (optional; only if role accounts configured)
         role_diffs = []
         if config.role_accounts:
             progress.update(task, description="[cyan]Role discovery...")
@@ -160,9 +328,21 @@ async def run_recon(args) -> dict:
         await run_sensitive_surfaces_discovery(args.target, run_id=run_id)
         progress.advance(task)
 
-        # Step 7: GraphQL discovery
+        # Step 7: GraphQL discovery (normalize to Endpoint + InsertionPoint)
         progress.update(task, description="[cyan]GraphQL discovery...")
-        await run_graphql_discovery(args.target, run_id=run_id)
+        graphql_discovery = await run_graphql_discovery(args.target, run_id=run_id)
+        gql_endpoints, gql_insertion_points = graphql_discovery.to_endpoints_and_insertion_points()
+        for ep in gql_endpoints:
+            network_intel.add_endpoint(ep)
+        if gql_insertion_points:
+            intel_path = config.get_output_path("recon", "intelligence", "insertion_points.json")
+            if intel_path.exists():
+                from cyberAI.utils.helpers import load_json
+                data = load_json(intel_path) or {}
+                existing = data.get("insertion_points") or []
+                existing.extend(p.model_dump() for p in gql_insertion_points)
+                data["insertion_points"] = existing
+                atomic_write_json(intel_path, data)
         progress.advance(task)
 
         # Step 8: WebSocket discovery
@@ -213,6 +393,15 @@ async def run_recon(args) -> dict:
         # Step 16: Intelligence aggregation
         progress.update(task, description="[cyan]Aggregating intelligence...")
         run_intelligence_aggregation(run_id=run_id)
+        progress.advance(task)
+
+        # Step 17: ASRTS knowledge graph (file-based nodes/edges)
+        progress.update(task, description="[cyan]Knowledge graph...")
+        try:
+            from cyberAI.storage.graph_builder import run_graph_builder
+            run_graph_builder(run_id=run_id)
+        except Exception as e:
+            logger.debug(f"Knowledge graph: {e}")
         progress.advance(task)
 
         await cleanup_browser_pool()
@@ -474,6 +663,12 @@ def main():
     report_parser.add_argument("--verified-dir", help="Verified findings directory")
     report_parser.add_argument("--run-id", help="Specific run ID")
     
+    retention_parser = subparsers.add_parser("retention", help="Run data retention (delete/redact by TTL)")
+    retention_parser.add_argument("--engagement-config", help="Path to engagement config (for TTL)")
+    retention_parser.add_argument("--raw-ttl-days", type=int, help="WARC raw capture TTL days")
+    retention_parser.add_argument("--structured-ttl-days", type=int, help="Structured data TTL days")
+    retention_parser.add_argument("--dry-run", action="store_true", help="List what would be deleted")
+
     full_parser = subparsers.add_parser("full", help="Run full assessment")
     full_parser.add_argument("--target", "-t", required=True, help="Target URL")
     full_parser.add_argument("--proxy", action="store_true", help="Enable proxy rotation")
@@ -520,6 +715,15 @@ def main():
             asyncio.run(run_verify(args))
         elif args.command == "report":
             asyncio.run(run_report(args))
+        elif args.command == "retention":
+            from cyberAI.governance.retention import run_retention_job
+            result = run_retention_job(
+                engagement_config_path=getattr(args, "engagement_config", None),
+                raw_ttl_days=getattr(args, "raw_ttl_days", None),
+                structured_ttl_days=getattr(args, "structured_ttl_days", None),
+                dry_run=getattr(args, "dry_run", False),
+            )
+            console.print(f"[green]Retention: {len(result['deleted'])} items deleted[/green]" + (" (dry run)" if result.get("dry_run") else ""))
         elif args.command == "full":
             asyncio.run(run_full(args))
             

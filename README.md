@@ -209,18 +209,28 @@ The recon pipeline has 16 conceptual steps; the main orchestrator in `main.py` w
      - Finds GraphQL endpoints, fragments, operations
    - Writes `recon/intelligence/frontend_analysis.json` and `hidden_routes.json`.
 
-4. **Role discovery (`role_discovery.py`)**
+4. **WP/Woo discovery (`wp_discovery.py`)**
+   - Best-effort enrichment for WordPress / WooCommerce-style targets:
+     - Fetches and parses `robots.txt`
+     - Fetches and parses `sitemap.xml` / `sitemap_index.xml` to extract canonical URLs (up to a safe cap)
+     - Fetches `/wp-json/` and enumerates public routes when available
+   - Writes:
+     - `recon/intelligence/wp_discovery.json`
+     - `recon/intelligence/wp_routes.json` (extra crawl targets; aggregated into `hidden_routes` in `master_intel.json`)
+   - **Purpose:** maximize coverage on CMS targets without destructive actions or anti-bot evasion.
+
+5. **Role discovery (`role_discovery.py`)**
    - Optional, if `ROLE_ACCOUNTS` configured:
      - Logs in as different roles (guest/user/admin, etc.)
      - Crawls per-role variants, collecting routes and endpoints
      - Compares access fields to derive `RoleDiff`s and permission hints
    - Writes `recon/intelligence/role_diff.json` and per-role route/endpoint files.
 
-5. **Account state discovery (`account_state.py`)**
+6. **Account state discovery (`account_state.py`)**
    - Explores application “states” (trial, paid, active, etc.) per role using repeated crawls.
    - Writes `recon/intelligence/state_diff.json`.
 
-6. **Sensitive surfaces (`sensitive_surfaces.py`)**
+7. **Sensitive surfaces (`sensitive_surfaces.py`)**
    - Probes common sensitive paths:
      - `/admin`, `/backup`, `/debug`, `/actuator`, etc.
    - Classifies responses; flags potential exposures.
@@ -347,6 +357,13 @@ Each tester:
 - Produces `Finding` objects via the runner’s `add_finding` or return values.
 
 The `test` CLI command (`python -m cyberAI.main test --categories auth,authz`) runs this phase.
+
+### Accuracy guardrails (important)
+
+To reduce false positives and improve evidence quality:
+- **Authz / IDOR tests** disable redirects for probes and require **JSON API responses** before emitting HIGH-severity findings.
+- **Requests are evidence-first**: findings can carry `request_proof` and a truncated `response_proof` preview for rapid human validation.
+- The HTTP recording layer stores redirect chains, content-type, and response hashes/previews to make verification and triage easier.
 
 ---
 

@@ -363,7 +363,22 @@ class NetworkIntelligence:
     def get_requests(self) -> list[RequestRecord]:
         """Get all captured requests."""
         return self._requests
-    
+
+    def add_requests(
+        self,
+        records: list[RequestRecord],
+        role_context: Optional[str] = None,
+    ) -> None:
+        """Append request records and update endpoints (e.g. from form mining, API spec)."""
+        for r in records:
+            self._requests.append(r)
+            self.process_request(r, role_context)
+
+    def add_endpoint(self, endpoint: Endpoint) -> None:
+        """Register an endpoint (e.g. from API spec) without a request record."""
+        key = self._make_endpoint_key(endpoint.method.value, endpoint.url)
+        self._endpoints[key] = endpoint
+
     def get_extracted_ids(self) -> dict[str, list[str]]:
         """Get all extracted IDs."""
         return {k: list(set(v)) for k, v in self._extracted_ids.items()}
@@ -380,13 +395,32 @@ class NetworkIntelligence:
         """Get role information from JWT tokens."""
         return self._role_info
     
-    def save_intelligence(self) -> tuple[str, str]:
+    def save_intelligence(self, warc_writer=None) -> tuple[str, str]:
         """
         Save all captured intelligence to files.
-        
+        If warc_writer is provided (ASRTS), writes each request/response to WARC and sets warc_ref.
+
         Returns:
             Tuple of (requests_path, endpoints_path)
         """
+        if warc_writer is not None:
+            for i, r in enumerate(self._requests):
+                try:
+                    req_body = r.body.encode("utf-8", errors="replace") if r.body else None
+                    resp_body = r.response_body.encode("utf-8", errors="replace") if isinstance(r.response_body, str) else (r.response_body if r.response_body else None)
+                    ref = warc_writer.write_record(
+                        method=r.method.value,
+                        url=r.url,
+                        request_headers=r.headers,
+                        request_body=req_body,
+                        response_status=r.response_status,
+                        response_headers=r.response_headers,
+                        response_body=resp_body,
+                    )
+                    if ref:
+                        self._requests[i] = r.model_copy(update={"warc_ref": ref})
+                except Exception as e:
+                    logger.debug(f"WARC write for request {r.url}: {e}")
         requests_path = self.config.get_output_path(
             "recon", "requests", "all_requests.json"
         )

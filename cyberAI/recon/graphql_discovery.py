@@ -10,7 +10,15 @@ from typing import Any, Optional
 from loguru import logger
 
 from cyberAI.config import get_config
-from cyberAI.models import GraphQLIntel, GraphQLOperation
+from cyberAI.models import (
+    Endpoint,
+    EndpointClassification,
+    FieldSchema,
+    GraphQLIntel,
+    GraphQLOperation,
+    HttpMethod,
+    InsertionPoint,
+)
 from cyberAI.utils.http_client import AsyncHTTPClient
 from cyberAI.utils.helpers import (
     add_meta_to_output,
@@ -463,6 +471,41 @@ class GraphQLDiscovery:
         logger.info(f"Saved GraphQL intelligence")
         
         return str(output_path)
+
+    def to_endpoints_and_insertion_points(self) -> tuple[list[Endpoint], list[InsertionPoint]]:
+        """
+        Normalize GraphQL introspection into Endpoint + InsertionPoint (ASRTS 3.3.3).
+        Returns (endpoints, insertion_points) for merging into network intel and insertion_points.json.
+        """
+        endpoints = []
+        insertion_points = []
+        if not self._intel or not self._intel.operations:
+            return endpoints, insertion_points
+        url = self._intel.endpoint_url
+        for op in self._intel.operations:
+            request_id = f"graphql:{op.operation_type}:{op.name}"
+            path_pattern = f"GraphQL:{op.operation_type}:{op.name}"
+            params = {}
+            for arg_name, type_str in (op.arguments or {}).items():
+                params[arg_name] = FieldSchema(name=arg_name, field_type="string", required=False)
+                insertion_points.append(
+                    InsertionPoint(
+                        request_id=request_id,
+                        location=f"body.variables.{arg_name}",
+                        encoding_layers=["json"],
+                        inferred_type="id" if "id" in arg_name.lower() or "Id" in type_str else "string",
+                    )
+                )
+            ep = Endpoint(
+                method=HttpMethod.POST,
+                url=url,
+                path_pattern=path_pattern,
+                params=params,
+                source="graphql",
+                classification=EndpointClassification.OTHER,
+            )
+            endpoints.append(ep)
+        return endpoints, insertion_points
 
 
 async def run_graphql_discovery(
