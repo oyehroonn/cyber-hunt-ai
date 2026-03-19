@@ -1,37 +1,26 @@
 {
   "_meta": {
-    "generated_at": "2026-03-16T05:03:21.146159",
-    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "generated_at": "2026-03-18T22:42:11.043391",
+    "target_url": "https://example.com",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+    "run_id": "test_run_2"
   },
   "matrix": {
     "entries": [],
     "roles": [],
     "objects": [
-      "j",
-      "app",
-      "unknown",
-      "v4",
-      "emoji",
-      "start",
-      "g",
-      "images",
-      "litespeed",
-      "css",
-      "shoptimizer"
+      "unknown"
     ],
     "actions": [
-      "create",
       "read"
     ],
     "unknown_count": 0
   },
   "summary": {
     "roles": 0,
-    "objects": 11,
-    "actions": 2,
+    "objects": 1,
+    "actions": 1,
     "total_entries": 0,
     "unknown_count": 0
   }

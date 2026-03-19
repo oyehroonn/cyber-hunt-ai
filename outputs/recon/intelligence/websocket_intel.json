@@ -1,10 +1,10 @@
 {
   "_meta": {
-    "generated_at": "2026-03-16T05:03:21.089245",
-    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "generated_at": "2026-03-18T22:42:11.037005",
+    "target_url": "https://example.com",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+    "run_id": "test_run_2"
   },
   "endpoints": [],
   "intel": [],

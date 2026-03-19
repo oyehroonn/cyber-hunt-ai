@@ -1,66 +1,10 @@
 {
   "_meta": {
-    "generated_at": "2026-03-16T04:58:09.522667",
-    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "generated_at": "2026-03-18T22:41:37.085364",
+    "target_url": "https://example.com",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+    "run_id": "test_run_2"
   },
-  "hidden_routes": [
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/s",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/?s=",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    }
-  ]
+  "hidden_routes": []
 }

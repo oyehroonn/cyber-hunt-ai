@@ -420,8 +420,8 @@ async def wait_for_network_idle(page: Page, timeout: int = 5000) -> None:
     """Wait for network to be idle."""
     try:
         await page.wait_for_load_state("networkidle", timeout=timeout)
-    except Exception:
-        pass
+    except Exception as e:
+        logger.debug(f"Network idle wait timed out or failed: {e}")
 
 
 async def execute_js(page: Page, script: str) -> Any:

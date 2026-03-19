@@ -1,19 +1,19 @@
 {
   "_meta": {
-    "generated_at": "2026-03-16T05:03:21.238394",
-    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "generated_at": "2026-03-18T22:42:11.372210",
+    "target_url": "https://example.com",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+    "run_id": "test_run_2"
   },
   "report": {
     "controls": [
       {
         "control_type": "csp",
-        "present": true,
-        "value": "upgrade-insecure-requests",
+        "present": false,
+        "value": null,
         "is_weak": true,
-        "weakness_reason": "Missing default-src or script-src",
+        "weakness_reason": "Missing CSP header",
         "affected_endpoints": []
       },
       {
@@ -22,30 +22,6 @@
         "value": null,
         "is_weak": true,
         "weakness_reason": "Missing HSTS header",
-        "affected_endpoints": []
-      },
-      {
-        "control_type": "x_frame_options",
-        "present": true,
-        "value": "SAMEORIGIN",
-        "is_weak": false,
-        "weakness_reason": null,
-        "affected_endpoints": []
-      },
-      {
-        "control_type": "x_content_type_options",
-        "present": true,
-        "value": "nosniff",
-        "is_weak": false,
-        "weakness_reason": null,
-        "affected_endpoints": []
-      },
-      {
-        "control_type": "rate_limit",
-        "present": true,
-        "value": null,
-        "is_weak": false,
-        "weakness_reason": null,
         "affected_endpoints": []
       },
       {
@@ -65,30 +41,84 @@
         "affected_endpoints": []
       },
       {
-        "control_type": "csp",
+        "control_type": "rate_limit",
         "present": false,
         "value": null,
         "is_weak": true,
-        "weakness_reason": "Missing CSP header",
+        "weakness_reason": "No rate limiting headers detected",
         "affected_endpoints": []
       },
       {
-        "control_type": "cors",
+        "control_type": "csp",
         "present": true,
-        "value": "https://digitalsoftwaremarkett.com",
+        "value": "upgrade-insecure-requests; default-src 'self' https://*.iana.org; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://cse.google.com https://clients1.google.com; style-src 'self' 'unsafe-inline' https://www.google.com; child-src 'self' https://www.youtube.com https://clients1.google.com https://cse.google.com https://www.google.com/; img-src 'self' https://data.iana.org https://www.iana.org https://www.google.com https://www.googleapis.com https://clients1.google.com h",
+        "is_weak": true,
+        "weakness_reason": "script-src allows 'unsafe-inline'; script-src allows 'unsafe-eval'; style-src allows 'unsafe-inline'",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "hsts",
+        "present": true,
+        "value": "max-age=48211200; preload",
         "is_weak": false,
         "weakness_reason": null,
         "affected_endpoints": []
       },
       {
-        "control_type": "csrf",
-        "present": false,
-        "value": null,
+        "control_type": "x_frame_options",
+        "present": true,
+        "value": "SAMEORIGIN",
+        "is_weak": false,
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "x_frame_options",
+        "present": true,
+        "value": "DENY",
+        "is_weak": false,
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "x_content_type_options",
+        "present": true,
+        "value": "nosniff\nnosniff",
         "is_weak": true,
-        "weakness_reason": "No CSRF protection detected on state-changing endpoint",
-        "affected_endpoints": [
-          "https://region1.analytics.google.com/g/collect?v=2&tid=G-7NVFWPKDEN&gtm=45je63c0h2v884789844za200zd884789844&_p=1773637039890&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&cid=291501347.1773637051&ecid=1933853888&ul=en-us&sr=1920x1080&uaa=arm&uab=64&uafvl=Chromium%3B124.0.6367.29%7CHeadlessChrome%3B124.0.6367.29%7CNot-A.Brand%3B99.0.0.0&uamb=0&uam=&uap=iOS&uapv=17_0&uaw=0&frm=0&pscdl=noapi&ec_mode=a&_eu=AAAAAGA&_s=1&tag_exp=103116026~103200004~115616986~115938466~115938469~116024733~117484252&sid=1773637050&sct=1&seg=0&dl=https%3A%2F%2Fdigitalsoftwaremarkett.com%2F&dt=Home%20-%20DSM%20-%20Digital%20Software%20Market%20-%20DSM%20Digital&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=15837"
-        ]
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "x_content_type_options",
+        "present": true,
+        "value": "nosniff",
+        "is_weak": false,
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "csp",
+        "present": true,
+        "value": "object-src 'none';base-uri 'self';script-src 'nonce-ER3ldbGk5qfKkmj73F_HDw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other",
+        "is_weak": true,
+        "weakness_reason": "script-src allows 'unsafe-inline'; script-src allows 'unsafe-eval'",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "csp",
+        "present": true,
+        "value": "default-src 'self' 'unsafe-inline' data: https://datatracker.ietf.org/ https://www.ietf.org/ http://ietf.org/ https://analytics.ietf.org https://static.ietf.org; frame-ancestors 'self' ietf.org *.ietf.org meetecho.com *.meetecho.com",
+        "is_weak": true,
+        "weakness_reason": "default-src allows 'unsafe-inline'; default-src allows data:",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "hsts",
+        "present": true,
+        "value": "max-age=3600; includeSubDomains",
+        "is_weak": true,
+        "weakness_reason": "max-age too short (3600s, should be >= 1 year)",
+        "affected_endpoints": []
       },
       {
         "control_type": "cors",
@@ -99,66 +129,40 @@
         "affected_endpoints": []
       },
       {
-        "control_type": "hsts",
+        "control_type": "x_content_type_options",
         "present": true,
-        "value": "max-age=31536000; includeSubDomains; preload",
-        "is_weak": false,
-        "weakness_reason": null,
-        "affected_endpoints": []
-      },
-      {
-        "control_type": "cors",
-        "present": false,
-        "value": "",
-        "is_weak": false,
-        "weakness_reason": null,
-        "affected_endpoints": []
-      },
-      {
-        "control_type": "hsts",
-        "present": true,
-        "value": "max-age=31536000; includeSubDomains",
-        "is_weak": false,
-        "weakness_reason": null,
-        "affected_endpoints": []
-      },
-      {
-        "control_type": "hsts",
-        "present": true,
-        "value": "max-age=0; includeSubDomains; preload",
+        "value": "nosniff, nosniff",
         "is_weak": true,
-        "weakness_reason": "max-age too short (0s, should be >= 1 year)",
+        "weakness_reason": null,
         "affected_endpoints": []
       }
     ],
-    "csp_policy": "upgrade-insecure-requests",
+    "csp_policy": "upgrade-insecure-requests; default-src 'self' https://*.iana.org; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://cse.google.com https://clients1.google.com; style-src 'self' 'unsafe-inline' https://www.google.com; child-src 'self' https://www.youtube.com https://clients1.google.com https://cse.google.com https://www.google.com/; img-src 'self' https://data.iana.org https://www.iana.org https://www.google.com https://www.googleapis.com https://clients1.google.com https://*.gstatic.com;",
     "cors_origins": [
-      "*",
-      "https://digitalsoftwaremarkett.com"
+      "*"
     ],
     "csrf_mechanism": null,
     "token_storage": null,
     "missing_controls": [
-      "cors",
-      "csp",
-      "csrf",
-      "hsts",
       "x_content_type_options",
-      "x_frame_options"
+      "x_frame_options",
+      "hsts",
+      "rate_limit",
+      "csp"
     ],
     "weak_controls": [
-      "cors",
-      "csp",
-      "csrf",
-      "hsts",
       "x_content_type_options",
-      "x_frame_options"
+      "x_frame_options",
+      "hsts",
+      "cors",
+      "rate_limit",
+      "csp"
     ]
   },
   "cookie_analysis": {},
   "summary": {
-    "total_controls_checked": 15,
-    "missing_controls": 6,
+    "total_controls_checked": 16,
+    "missing_controls": 5,
     "weak_controls": 6
   }
 }

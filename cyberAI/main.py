@@ -240,17 +240,24 @@ async def run_recon(args) -> dict:
             from cyberAI.recon.state_flow import run_state_flow_crawl
             sf_context = await browser_pool.get_browser_context(role=None)
             await network_intel.attach_to_context(sf_context, None)
-            await run_state_flow_crawl(
-                sf_context,
-                args.target,
-                run_id=run_id,
-                network_intel=network_intel,
-                max_states=500,
+            # Reduced max_states to 20 for faster testing (default was 500)
+            # Increase this for production runs once you verify it works
+            await asyncio.wait_for(
+                run_state_flow_crawl(
+                    sf_context,
+                    args.target,
+                    run_id=run_id,
+                    network_intel=network_intel,
+                    max_states=20,
+                ),
+                timeout=120.0  # 2 minute overall timeout for state-flow phase
             )
             await sf_context.close()
             network_intel.save_intelligence(warc_writer=None)  # append any state-flow requests
+        except asyncio.TimeoutError:
+            logger.warning("State-flow crawl timed out after 120s")
         except Exception as e:
-            logger.debug(f"State-flow crawl: {e}")
+            logger.error(f"State-flow crawl failed: {e}", exc_info=True)
         progress.advance(task)
 
         # Step 3: Network intelligence already captured above; endpoints/requests saved

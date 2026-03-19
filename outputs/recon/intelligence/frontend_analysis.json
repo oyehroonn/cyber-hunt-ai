@@ -1,115 +1,17 @@
 {
   "_meta": {
-    "generated_at": "2026-03-16T04:58:09.524626",
-    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "generated_at": "2026-03-18T22:41:37.086712",
+    "target_url": "https://example.com",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+    "run_id": "test_run_2"
   },
-  "routes": [
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/s",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    },
-    {
-      "path": "/?s=",
-      "source": "react_router",
-      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
-    }
-  ],
-  "api_endpoints": [
-    {
-      "url": "idempotency_key",
-      "method": "GET",
-      "source": "fetch/axios"
-    },
-    {
-      "url": "https://www.google.com/ccm/geo",
-      "method": "GET",
-      "source": "fetch/axios"
-    }
-  ],
-  "role_constants": {
-    "permission_DENIED": true
-  },
-  "feature_flags": {
-    "bot_blocking_client_side_block_enabled": true,
-    "page_locale_metadata_enabled": true,
-    "disablesb": true,
-    "is_enabled": true,
-    "voice_search_enabled": true,
-    "conversion_linker_enabled": true,
-    "malware_disabled": true,
-    "auto_detection_enabled": true,
-    "conversion_linker_disabled": true,
-    "_protected_audience_enabled": true,
-    "euid_mode_enabled": true,
-    "is_google_signals_enabled": true
-  },
+  "routes": [],
+  "api_endpoints": [],
+  "role_constants": {},
+  "feature_flags": {},
   "graphql_operations": [],
-  "websocket_events": [
-    "wav",
-    "mp3",
-    "ogg",
-    "open",
-    "error",
-    "message",
-    "close"
-  ],
-  "upload_endpoints": [
-    "/upload/handle?_t=",
-    "/images/default-profile.svg",
-    "/upload/visitor-chat/visitor?handle=",
-    "https://upload.tawk.to",
-    "/images/default-profile.svg",
-    "https:\\/\\/digitalsoftwaremarkett.com\\/wp-content\\/uploads",
-    "/images/default-profile.svg"
-  ],
+  "websocket_events": [],
+  "upload_endpoints": [],
   "validation_schemas": []
 }

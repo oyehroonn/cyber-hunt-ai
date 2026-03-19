@@ -89,6 +89,9 @@ class AsyncHTTPClient:
                 "timeout": httpx.Timeout(self.timeout),
                 "follow_redirects": True,
                 "limits": httpx.Limits(max_connections=100, max_keepalive_connections=20),
+                # Disable SSL verification to match browser's ignore_https_errors=True
+                # This prevents SSL cert errors when testing against self-signed/expired certs
+                "verify": False,
             }
             if proxy:
                 client_kw["proxy"] = proxy
