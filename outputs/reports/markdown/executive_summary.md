@@ -1,58 +1,23 @@
 # Security Assessment - Executive Summary
 
-**Target:** https://www.digitalsoftwaremarkett.com
-**Assessment Date:** 2026-03-16
+**Target:** https://example.com
+**Assessment Date:** 2026-03-24
 
 ## Overview
 
-This automated security assessment identified **8** potential vulnerabilities across the target application.
+This automated security assessment identified **0** potential vulnerabilities across the target application.
 
 ## Risk Summary
 
 | Severity | Count |
 |----------|-------|
 | Critical | 0 |
-| High | 8 |
+| High | 0 |
 | Medium | 0 |
 | Low | 0 |
 | Info | 0 |
 
 ## Top Priority Issues
-
-
-### 1. Potential IDOR at /api/g/1
-
-- **Severity:** HIGH
-- **Asset:** `/api/g/1`
-- **Impact:** Potential security compromise
-
-
-### 2. Potential IDOR at /api/g/2
-
-- **Severity:** HIGH
-- **Asset:** `/api/g/2`
-- **Impact:** Potential security compromise
-
-
-### 3. Potential IDOR at /api/g/100
-
-- **Severity:** HIGH
-- **Asset:** `/api/g/100`
-- **Impact:** Potential security compromise
-
-
-### 4. Potential IDOR at /api/g/999
-
-- **Severity:** HIGH
-- **Asset:** `/api/g/999`
-- **Impact:** Potential security compromise
-
-
-### 5. Potential IDOR at /api/app/1
-
-- **Severity:** HIGH
-- **Asset:** `/api/app/1`
-- **Impact:** Potential security compromise
 
 
 

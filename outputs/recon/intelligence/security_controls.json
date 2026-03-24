@@ -1,10 +1,10 @@
 {
   "_meta": {
-    "generated_at": "2026-03-18T22:42:11.372210",
+    "generated_at": "2026-03-24T23:22:35.248124",
     "target_url": "https://example.com",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "test_run_2"
+    "run_id": "full_1"
   },
   "report": {
     "controls": [
@@ -99,7 +99,7 @@
       {
         "control_type": "csp",
         "present": true,
-        "value": "object-src 'none';base-uri 'self';script-src 'nonce-ER3ldbGk5qfKkmj73F_HDw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other",
+        "value": "object-src 'none';base-uri 'self';script-src 'nonce-S0fuBzAd9O-wB5b4Z-GRtw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other",
         "is_weak": true,
         "weakness_reason": "script-src allows 'unsafe-inline'; script-src allows 'unsafe-eval'",
         "affected_endpoints": []
@@ -129,6 +129,16 @@
         "affected_endpoints": []
       },
       {
+        "control_type": "csrf",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": "No CSRF protection detected on state-changing endpoint",
+        "affected_endpoints": [
+          "https://datatracker.ietf.org/cdn-cgi/challenge-platform/h/g/jsd/oneshot/ea2d291c0fdc/0.9568618113276082:1774392077:M_BS_GiXnPxGGYUYdQa2kMbN0CUOCCFrab1mI3smpAg/9e1968e278b40267"
+        ]
+      },
+      {
         "control_type": "x_content_type_options",
         "present": true,
         "value": "nosniff, nosniff",
@@ -144,25 +154,27 @@
     "csrf_mechanism": null,
     "token_storage": null,
     "missing_controls": [
-      "x_content_type_options",
+      "csp",
+      "csrf",
       "x_frame_options",
-      "hsts",
+      "x_content_type_options",
       "rate_limit",
-      "csp"
+      "hsts"
     ],
     "weak_controls": [
-      "x_content_type_options",
+      "csp",
+      "csrf",
       "x_frame_options",
-      "hsts",
       "cors",
+      "x_content_type_options",
       "rate_limit",
-      "csp"
+      "hsts"
     ]
   },
   "cookie_analysis": {},
   "summary": {
-    "total_controls_checked": 16,
-    "missing_controls": 5,
-    "weak_controls": 6
+    "total_controls_checked": 17,
+    "missing_controls": 6,
+    "weak_controls": 7
   }
 }

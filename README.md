@@ -11,46 +11,41 @@ It is designed to:
 
 The system is built so it runs completely **without** an LLM; a RAG/LLM layer can be plugged in later to enrich hypotheses, summaries, and remediation advice.
 
+**Full pipeline & output inventory:** see [`docs/PIPELINE_AND_OUTPUTS.md`](docs/PIPELINE_AND_OUTPUTS.md) for every phase, artifact path, and data-flow diagram (intended for UI/integrations and second-pass tooling).
+
 ---
 
 ## High-Level Architecture
 
-The pipeline has five main phases, orchestrated by `cyberAI/main.py`:
+The assessment is orchestrated by `cyberAI/main.py` in **five phases**. Each phase reads/writes under `outputs/` (or `OUTPUT_DIR` from `.env`). JSON outputs include `_meta` (`target_url`, `phase`, `run_id`, etc.) where implemented.
 
-1. **Reconnaissance (`recon`)**  
-   - Crawl the target using a headless browser (Playwright)  
-   - Capture DOM, screenshots, actions, and basic page state  
-   - Intercept network traffic to build an endpoint inventory  
-   - Discover sensitive surfaces, GraphQL, WebSockets, async flows  
-   - Build object models, permission hints, workflows, and security control analysis  
-   - Aggregate everything into a single `master_intel.json`
+| Phase | CLI | Primary inputs | Primary outputs |
+|-------|-----|----------------|-----------------|
+| **1. Recon** | `recon` | Target URL, optional engagement config | `recon/intelligence/master_intel.json`, routes, endpoints, requests, insertion points, state-flow, screenshots, … |
+| **2. Plan** | `plan` | `master_intel.json` | `planning/test_plans.json`, `planning/test_plans_by_category/*.json` |
+| **3. Test** | `test` | `test_plans.json` | `testing/findings/all_findings.json`, `runner_state.json` |
+| **4. Verify** | `verify` | `all_findings.json` | `verification/confirmed/verified_findings.json`, per-finding JSON for confirmed |
+| **5. Report** | `report` | `verified_findings.json` | `reports/markdown/*`, `reports/json/*`, `reports/csv/*`, `reports/txt/*` |
 
-2. **Planning (`plan`)**  
-   - Read `master_intel.json` and other recon outputs  
-   - Generate a set of structured `TestPlan` objects per category (auth, authz, business_logic, etc.)  
-   - Write `planning/test_plans.json` and category-specific splits
+**Full run:** `full --target <url>` runs all five phases with one generated `run_id`.
 
-3. **Testing (`test`)**  
-   - Load `TestPlan`s and dispatch them to category-specific testers  
-   - Use an async HTTP client and (when needed) a browser to execute real requests  
-   - Record responses and evidence as `Finding` objects in `outputs/testing/findings`
+### ASRTS / enterprise hooks (recon)
 
-4. **Verification (`verify`)**  
-   - De-duplicate findings  
-   - Run additional checks (false-positive reduction, state validation, cross-role checks, exploit-chain reasoning)  
-   - Tag findings with verification status and reliability scores  
-   - Persist confirmed/likely findings in `outputs/verification`
+- **Governance:** Optional engagement YAML/JSON (`ENGAGEMENT_CONFIG_PATH` or default paths) loads **scope** (`ScopeValidator`) and **rate limits** (`RateLimiter`) so HTTP and Playwright traffic can be restricted to approved hosts/paths.
+- **Evidence:** WARC capture (`outputs/warc/`), session store (`outputs/sessions/`) when identity flows run.
+- **Deep recon:** Insertion-point extraction, SPA **state-flow** crawl, form mining, API spec discovery, sensitive exposure scan, knowledge graph — all wired in `run_recon()` in `main.py` (see the doc above for the exact order).
 
-5. **Reporting (`report`)**  
-   - Load verified findings and severity breakdowns  
-   - Produce:
-     - Executive summary (MD + TXT)
-     - Engineering handoff (MD)
-     - Per-finding markdown pages
-     - JSON exports and CSV for analysis
-     - Remediation queue TXT
+### End-to-end data flow (concise)
 
-Each phase can be run independently or via a single `full` command.
+```text
+recon → master_intel.json
+  → plan → test_plans.json
+    → test → all_findings.json
+      → verify → verified_findings.json
+        → report → executive_summary.md, engineering_handoff.md, CSV/JSON, …
+```
+
+Use the **same `--run-id`** across commands so logs (`outputs/logs/<phase>_<run_id>.log`) and `_meta` line up.
 
 ---
 
@@ -59,20 +54,25 @@ Each phase can be run independently or via a single `full` command.
 At the root:
 
 - `cyberAI/` – main Python package  
-  - `main.py` – CLI orchestrator for all phases  
-  - `config.py` – configuration loading (`.env` + environment)  
-  - `models.py` – all core Pydantic v2 data models (Routes, Endpoints, Findings, TestPlan, etc.)  
-  - `recon/` – steps 1–16 (discovery and intelligence)
-  - `planning/` – test planning logic
-  - `testing/` – test runner and category-specific testers
-  - `verification/` – verification and scoring pipeline
-  - `reporting/` – report generation
-  - `utils/` – browser/http/proxy/attack-graph helpers
-  - `llm/` – stubs for future RAG/LLM integration
-- `outputs/` – default output directory (recon, planning, testing, verification, reports, logs)
-- `requirements.txt` – Python dependencies
+  - `main.py` – CLI orchestrator for all phases (`recon`, `plan`, `test`, `verify`, `report`, `full`, `retention`)  
+  - `config.py` – configuration (`.env` + environment, `OUTPUT_DIR`, `ENGAGEMENT_CONFIG_PATH`, …)  
+  - `models.py` – Pydantic v2 models (`Route`, `Endpoint`, `TestPlan`, `Finding`, `MasterIntelligence`, …)  
+  - `recon/` – discovery modules (crawl, network intel, WP, state-flow, forms, GraphQL, …)  
+  - `planning/` – `TestPlanner` → `test_plans.json`  
+  - `testing/` – `TestRunner` + category testers  
+  - `verification/` – `VerificationPipeline` + optional verifier modules  
+  - `reporting/` – `ReportGenerator`, Jinja2 templates  
+  - `governance/` – engagement config, scope, rate limit, retention  
+  - `identity/` – session population helpers (when `ROLE_ACCOUNTS` is set)  
+  - `storage/` – WARC writer, knowledge graph builder  
+  - `utils/` – browser, HTTP client, helpers, proxy, attack graph  
+  - `llm/` – stubs for future RAG/LLM integration  
+- `config/` – example engagement config (`engagement_config.example.yaml`)  
+- `docs/` – pipeline documentation (`PIPELINE_AND_OUTPUTS.md`, implementation notes)  
+- `outputs/` – **canonical** runtime output directory (recon, planning, testing, verification, reports, logs, warc, sessions)  
+- `cyberAI/requirements.txt` – Python dependencies (`pip install -r cyberAI/requirements.txt`)
 
-> Note: There is also a `cyberAI/outputs` directory which mirrors the structure but the canonical outputs used by the CLI live under `outputs/` at the repository root (managed by `Config.output_dir`).
+> Note: If a `cyberAI/outputs` directory exists from older runs, the CLI still uses `outputs/` at the repo root unless `OUTPUT_DIR` is changed.
 
 ---
 
@@ -139,8 +139,10 @@ Defined in `cyberAI/models.py`:
   - `role_accounts` – list of `RoleAccount {role, username, password, mfa_secret}`
 - **Paths**
   - `output_dir` – defaults to `outputs`, plus helpers like `get_output_path("recon", "intelligence", "routes.json")`
+- **Governance (optional)**
+  - `engagement_config_path` / `ENGAGEMENT_CONFIG_PATH` – YAML or JSON engagement file for **in-scope domains**, rate limits, retention (see `config/engagement_config.example.yaml`)
 
-`.env` (see `.env.example`) and environment variables feed into `Config.load`.
+`.env` (see `cyberAI/.env.example`) and environment variables feed into `Config.load`. You can pass `--env /path/to/.env` on any CLI invocation.
 
 ---
 
@@ -159,13 +161,11 @@ Defined in `cyberAI/models.py`:
 - `http_client.py`
   - `AsyncHTTPClient` built on **httpx.AsyncClient**:
     - Base URL from `Config.target_url`
+    - TLS verification is disabled (`verify=False`) to align with Playwright’s `ignore_https_errors` and to reduce friction on lab/self-signed targets (use only on authorized systems).
     - Optional proxy rotation via `proxy_manager`
     - UA rotation via `fake_useragent`
-    - `get/post/request` methods that:
-      - Apply rate limiting
-      - Send requests
-      - Wrap responses into `RequestRecord` instances when `record=True`
-    - Central place where tests make HTTP calls.
+    - Optional **scope** and **rate-limit** checks when engagement governance is loaded
+    - `get/post/request` methods that apply rate limiting, send requests, and wrap responses into `RequestRecord` when `record=True`
 
 - `proxy_manager.py`
   - Fetches and rotates proxies from a configured source.
@@ -184,111 +184,25 @@ Defined in `cyberAI/models.py`:
 
 ## Reconnaissance Pipeline (`recon/`)
 
-The recon pipeline has 16 conceptual steps; the main orchestrator in `main.py` wires them in a practical sequence:
+`run_recon()` in `cyberAI/main.py` executes a **fixed progress-tracked sequence** (not the older “step 1–16” narrative only). Conceptually it covers:
 
-1. **Core discovery (`core_discovery.py`)**
-   - BFS crawl using Playwright:
-     - Starts from `target_url`
-     - Keeps track of `Route` objects and visited URLs
-     - Captures screenshots, DOM snapshots, available actions, basic page “state”
-   - Can attach a `NetworkIntelligence` instance to the browser context to capture network requests during the crawl.
-   - Writes `recon/intelligence/routes.json`.
+| Area | Modules (examples) | Notable outputs |
+|------|--------------------|-----------------|
+| **CMS / seed URLs** | `wp_discovery.py` | `wp_discovery.json`, `wp_routes.json` |
+| **Crawl + traffic** | `core_discovery.py`, `network_intelligence.py` | `routes.json`, `all_requests.json`, `endpoints.json`, screenshots, DOM |
+| **Attack surface parameters** | `insertion_point_extractor.py`, `novelty_index.py` | `insertion_points.json`, `novelty_index.json` |
+| **SPA states** | `state_flow.py` | `state_flow.json` (may follow links off-origin unless scope is enforced) |
+| **Forms / specs / leaks** | `form_mining.py`, `api_spec_discovery.py`, `sensitive_exposure.py` | (captured into network intel + intel JSONs) |
+| **Client-side** | `frontend_parser.py` | `frontend_analysis.json`, `hidden_routes.json`, `js_bundles/` |
+| **Roles & states** | `role_discovery.py`, `account_state.py` | `role_diff.json`, `state_diff.json` (when configured) |
+| **Surfaces & APIs** | `sensitive_surfaces.py`, `graphql_discovery.py`, `websocket_discovery.py` | `sensitive_surfaces.json`, `graphql_intel.json`, `websocket_intel.json` |
+| **Models & workflows** | `object_model.py`, `permission_inference.py`, `workflow_mapper.py`, `input_schema.py`, `security_controls.py`, `comparison_engine.py` | `object_graph.json`, `permission_matrix.json`, `workflows.json`, `input_schemas.json`, `security_controls.json`, `comparison_diffs.json` |
+| **Roll-up** | `intelligence_outputs.py` | **`master_intel.json`**, `route_map.json`, `endpoint_inventory.json`, `hidden_surface_report.md`, optional `role_state_matrix.csv` |
+| **Graph** | `storage/graph_builder.py` | Knowledge graph files for visualization/debug |
 
-2. **Network intelligence (`network_intelligence.py`)**
-   - Intercepts requests and responses:
-     - Builds `RequestRecord`s and deduplicated `Endpoint`s
-     - Infers sensitivity, schema (`FieldSchema`), JWT details, tenant IDs, rate limits, error fingerprints
-   - Writes:
-     - `recon/requests/all_requests.json`
-     - `recon/intelligence/endpoints.json`
+**CLI:** `python -m cyberAI.main recon --target https://target [--run-id <id>]`
 
-3. **Frontend parser (`frontend_parser.py`)**
-   - Parses HTML and downloaded JS bundles:
-     - Extracts additional routes (e.g. client-side routers)
-     - Locates API endpoints embedded in JS
-     - Finds GraphQL endpoints, fragments, operations
-   - Writes `recon/intelligence/frontend_analysis.json` and `hidden_routes.json`.
-
-4. **WP/Woo discovery (`wp_discovery.py`)**
-   - Best-effort enrichment for WordPress / WooCommerce-style targets:
-     - Fetches and parses `robots.txt`
-     - Fetches and parses `sitemap.xml` / `sitemap_index.xml` to extract canonical URLs (up to a safe cap)
-     - Fetches `/wp-json/` and enumerates public routes when available
-   - Writes:
-     - `recon/intelligence/wp_discovery.json`
-     - `recon/intelligence/wp_routes.json` (extra crawl targets; aggregated into `hidden_routes` in `master_intel.json`)
-   - **Purpose:** maximize coverage on CMS targets without destructive actions or anti-bot evasion.
-
-5. **Role discovery (`role_discovery.py`)**
-   - Optional, if `ROLE_ACCOUNTS` configured:
-     - Logs in as different roles (guest/user/admin, etc.)
-     - Crawls per-role variants, collecting routes and endpoints
-     - Compares access fields to derive `RoleDiff`s and permission hints
-   - Writes `recon/intelligence/role_diff.json` and per-role route/endpoint files.
-
-6. **Account state discovery (`account_state.py`)**
-   - Explores application “states” (trial, paid, active, etc.) per role using repeated crawls.
-   - Writes `recon/intelligence/state_diff.json`.
-
-7. **Sensitive surfaces (`sensitive_surfaces.py`)**
-   - Probes common sensitive paths:
-     - `/admin`, `/backup`, `/debug`, `/actuator`, etc.
-   - Classifies responses; flags potential exposures.
-   - Writes `recon/intelligence/sensitive_surfaces.json`.
-
-7. **GraphQL discovery (`graphql_discovery.py`)**
-   - Detects GraphQL endpoints:
-     - From requests, HTML, and JS bundles
-   - Probes schema (introspection) where possible.
-   - Writes `recon/intelligence/graphql_intel.json`.
-
-8. **WebSocket discovery (`websocket_discovery.py`)**
-   - Identifies WebSocket endpoints from network captures.
-   - Writes `recon/intelligence/websocket_intel.json`.
-
-9. **Async flow discovery (`async_flow_discovery.py`)**
-   - Analyzes async patterns:
-     - Export jobs, queues, status / download URLs
-   - Writes `recon/intelligence/async_flows.json`.
-
-10. **Object model (`object_model.py`)**
-    - Builds application object models from endpoints and responses:
-      - Entities, relationships, ownership fields, security-critical attributes.
-    - Writes `recon/intelligence/object_graph.json`.
-
-11. **Permission inference (`permission_inference.py`)**
-    - Uses `RoleDiff`s, endpoints, and object models:
-      - Infers a coarse permission matrix across roles, actions, and objects.
-    - Writes `recon/intelligence/permission_matrix.json` (+ CSV).
-
-12. **Workflow mapper (`workflow_mapper.py`)**
-    - Maps multi-step workflows (state transitions, actions).
-    - Writes `recon/intelligence/workflows.json` and optionally DOT graphs.
-
-13. **Input schema analysis (`input_schema.py`)**
-    - Inspects request/response bodies to infer input schemas and hidden fields.
-    - Writes `recon/intelligence/input_schemas.json`.
-
-14. **Security controls analysis (`security_controls.py`)**
-    - Analyzes security headers and cookie attributes from responses:
-      - CSP, HSTS, X-Frame-Options, SameSite, etc.
-    - Attempts to detect token storage mechanisms (localStorage/sessionStorage/cookies) from JS and responses.
-    - Writes `recon/intelligence/security_controls.json`.
-
-15. **Comparison engine (`comparison_engine.py`)**
-    - When roles and endpoints are available:
-      - Compares responses across roles/states to detect inconsistent access.
-    - Writes `recon/intelligence/comparison_diffs.json`.
-
-16. **Intelligence aggregation (`intelligence_outputs.py`)**
-    - `IntelligenceAggregator.aggregate_from_files()` reads all of the above and populates `MasterIntelligence`.
-    - `save_all_outputs()` writes:
-      - `master_intel.json`
-      - `route_map.json`
-      - `endpoint_inventory.json`
-      - CSV and summary artifacts for debugging.
-
-The `recon` CLI command (`python -m cyberAI.main recon --target https://target`) orchestrates these steps and produces the full intelligence set.
+For a **line-by-line step order and every file path**, see [`docs/PIPELINE_AND_OUTPUTS.md`](docs/PIPELINE_AND_OUTPUTS.md).
 
 ---
 
@@ -369,28 +283,17 @@ To reduce false positives and improve evidence quality:
 
 ## Verification Phase (`verification/`)
 
-Located under `verification/`:
+- **`pipeline.py` (wired by the CLI)**  
+  - Loads `testing/findings/all_findings.json`  
+  - `deduplicate()` – merges duplicates by `(asset, category, title)`  
+  - `run_verification()` – assigns each finding a `VerifiedFinding` status using **reliability_score** heuristics (`confirmed` / `likely` / `needs_more_data`)  
+  - Writes:
+    - `verification/confirmed/verified_findings.json` (summary + all verified rows)
+    - `verification/confirmed/finding_<id>.json` for **confirmed** items
 
-- `pipeline.py`
-  - Loads testing findings
-  - `deduplicate()` – merges duplicates
-  - `run_verification()`:
-    - Applies:
-      - `false_positive.py`
-      - `state_validation.py`
-      - `cross_role_validation.py`
-      - `race_confirmation.py`
-      - `stored_confirmation.py`
-      - `control_bypass.py`
-      - `impact_proof.py`
-      - `boundary_verification.py`
-      - `exploit_chain.py`
-    - Produces a final set of verified findings with:
-      - statuses (`confirmed`, `likely`, `needs_more_data`, `false_positive`)
-      - reliability scores
-  - Writes outputs in `outputs/verification`.
+- **Additional modules** (`false_positive.py`, `state_validation.py`, `cross_role_validation.py`, `race_confirmation.py`, `stored_confirmation.py`, `control_bypass.py`, `impact_proof.py`, `boundary_verification.py`, `exploit_chain.py`, etc.) are available under `cyberAI/verification/` for richer verification logic; the default `VerificationPipeline` is the orchestration path used by `python -m cyberAI.main verify` today.
 
-The `verify` CLI command (`python -m cyberAI.main verify`) runs this phase.
+The `verify` CLI command (`python -m cyberAI.main verify [--run-id <id>]`) runs this phase.
 
 ---
 
@@ -490,38 +393,37 @@ Commands:
   - `--dry-run`
   - `--ignore-robots`
 
+- `retention` – apply TTL / cleanup to raw and structured evidence (see `cyberAI/governance/retention.py`)
+  - `--engagement-config`, `--raw-ttl-days`, `--structured-ttl-days`, `--dry-run`
+
 All commands also accept `--env` at the top level to point to a specific `.env` file.
 
 ---
 
 ## Typical End-to-End Run
 
-From the repository root:
+From the repository root (after `pip install -r cyberAI/requirements.txt` and `playwright install chromium`):
 
 ```bash
-# 1) Recon
-python3 -m cyberAI.main recon --target https://example.com
+# Use one run id for traceability across logs and _meta
+export RUN_ID=my_assessment_1
 
-# 2) Plan
-python3 -m cyberAI.main plan
-
-# 3) Test (auth + authz)
-python3 -m cyberAI.main test --categories auth,authz
-
-# 4) Verify
-python3 -m cyberAI.main verify
-
-# 5) Report
-python3 -m cyberAI.main report
+python3 -m cyberAI.main recon  --target https://example.com --run-id "$RUN_ID"
+python3 -m cyberAI.main plan    --run-id "$RUN_ID"
+python3 -m cyberAI.main test    --target https://example.com --categories auth,authz --run-id "$RUN_ID"
+python3 -m cyberAI.main verify  --run-id "$RUN_ID"
+python3 -m cyberAI.main report  --run-id "$RUN_ID"
 ```
 
-Or in one shot:
+Or in one shot (generates its own run id):
 
 ```bash
-python3 -m cyberAI.main full --target https://example.com
+python3 -m cyberAI.main full --target https://example.com --workers 4
 ```
 
-Outputs will be written under `outputs/` (or the directory configured via `OUTPUT_DIR`).
+Outputs are written under `outputs/` unless `OUTPUT_DIR` is set. Phase logs: `outputs/logs/<phase>_<run_id>.log`.
+
+**Optional data retention cleanup:** `python3 -m cyberAI.main retention [--dry-run] [--engagement-config ...]`
 
 ---
 
@@ -548,4 +450,6 @@ Outputs will be written under `outputs/` (or the directory configured via `OUTPU
 
 This tool is intended **only** for authorized security testing and research.  
 Always obtain explicit permission from the application owner before running any recon, testing, or exploitation activities. The authors are not responsible for misuse.
+
+**Scope:** Without an engagement config, crawlers may follow links to **third-party origins** (e.g. documentation sites). For production assessments, configure **engagement scope** (`ENGAGEMENT_CONFIG_PATH` / `config/engagement_config.example.yaml`) so traffic stays within approved domains.
 

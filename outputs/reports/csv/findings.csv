@@ -1,9 +1,1 @@
-id,title,severity,affected_asset,affected_roles,preconditions,reliability_score,impact_type,confirmed
-b687c301-27a8-4932-b5ed-e507fc1bae0b,Potential IDOR at /api/g/1,high,/api/g/1,,,0.0,,needs_more_data
-d1e9b3a7-a8ac-4c3f-9816-ae880b6e6776,Potential IDOR at /api/g/2,high,/api/g/2,,,0.0,,needs_more_data
-57976c84-a42d-429a-9690-9122a180237e,Potential IDOR at /api/g/100,high,/api/g/100,,,0.0,,needs_more_data
-e8196bb3-ff80-4dd2-aa73-0548c7c6f4d9,Potential IDOR at /api/g/999,high,/api/g/999,,,0.0,,needs_more_data
-466828a9-86b4-4fce-847b-dee3607f1941,Potential IDOR at /api/app/1,high,/api/app/1,,,0.0,,needs_more_data
-b62025a7-f632-4e88-9339-87f52d0fa9aa,Potential IDOR at /api/app/2,high,/api/app/2,,,0.0,,needs_more_data
-19ded4ae-450c-4db2-8c2f-72b95dcca810,Potential IDOR at /api/app/100,high,/api/app/100,,,0.0,,needs_more_data
-c1dd86b3-b9a5-45e9-86ef-1215879d7caf,Potential IDOR at /api/app/999,high,/api/app/999,,,0.0,,needs_more_data
+

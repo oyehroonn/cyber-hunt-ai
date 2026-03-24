@@ -1,14 +1,14 @@
 {
   "_meta": {
-    "generated_at": "2026-03-16T05:03:21.730873",
-    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "generated_at": "2026-03-24T23:22:54.761318",
+    "target_url": "https://example.com",
     "phase": "planning",
     "version": "1.0.0",
-    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+    "run_id": "full_1"
   },
   "plans": [
     {
-      "id": "c622db44-8182-4f2d-99ef-160b7ffaf93b",
+      "id": "dc2c4750-6124-4165-bd42-fe020606c0ad",
       "category": "auth",
       "name": "test_login_flows",
       "description": "Test all login paths including SSO, magic link, invite redemption",
@@ -34,7 +34,7 @@
       "rollback_strategy": null
     },
     {
-      "id": "31f79a17-2d17-423e-94f7-d00452a08f80",
+      "id": "afdcdec4-0291-44cc-b822-9bd666b79f49",
       "category": "auth",
       "name": "test_password_reset",
       "description": "Test reset token guessability, expiry, reuse, cross-account use",
@@ -60,62 +60,7 @@
       "rollback_strategy": null
     },
     {
-      "id": "7ea3cf34-d886-4c2c-9511-6a9ddc66d2a8",
-      "category": "authz",
-      "name": "test_vertical_escalation_dc145968",
-      "description": "Access admin endpoint as basic user: https://digitalsoftwaremarkett.com/wp-admin/admin-ajax.php",
-      "target_endpoint": "dc145968-de75-491f-9cf5-4d57b63075e3",
-      "target_object": null,
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Non-admin users cannot access admin endpoints",
-      "attack_vector": "Vertical privilege escalation",
-      "payloads": [],
-      "confidence_score": 0.6,
-      "priority": 1,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "033238ac-de17-498d-8176-99486f5db95f",
-      "category": "mass_assignment",
-      "name": "test_mass_assignment_HttpMethod.POST:",
-      "description": "Add hidden fields to request: ['data', 'ok']",
-      "target_endpoint": "HttpMethod.POST:https://va.tawk.to/v1/session/start",
-      "target_object": null,
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Hidden fields are not accepted",
-      "attack_vector": "Mass assignment",
-      "payloads": [
-        "data",
-        "ok"
-      ],
-      "confidence_score": 0.8,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "6d858310-40c0-4715-b930-fee04142e32f",
+      "id": "973d586c-3ab1-4fc1-805a-6e5042ccd566",
       "category": "auth",
       "name": "test_session_rotation",
       "description": "Verify session token changes after login and privilege change",
@@ -141,7 +86,7 @@
       "rollback_strategy": null
     },
     {
-      "id": "2eb5173a-d272-4c3b-9084-cd2d1c8c269f",
+      "id": "f28426fe-568b-4cd3-af56-35e6324441f9",
       "category": "auth",
       "name": "test_stale_session_reuse",
       "description": "Use token from session A after logout; try expired tokens",
@@ -167,107 +112,7 @@
       "rollback_strategy": null
     },
     {
-      "id": "2f2f2316-6a8f-4d94-9af2-5e02dd0af41d",
-      "category": "business_logic",
-      "name": "test_workflow_skip_checkout",
-      "description": "Skip workflow steps in checkout",
-      "target_endpoint": null,
-      "target_object": null,
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Workflow steps cannot be skipped",
-      "attack_vector": "Workflow bypass",
-      "payloads": [],
-      "confidence_score": 0.7,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "e92e8b94-8c29-4ee9-a150-bc37530fc7d9",
-      "category": "input",
-      "name": "test_input_mutation_HttpMethod.POST:",
-      "description": "Mutate inputs for https://va.tawk.to/v1/session/start",
-      "target_endpoint": "HttpMethod.POST:https://va.tawk.to/v1/session/start",
-      "target_object": null,
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Invalid inputs are rejected with proper validation",
-      "attack_vector": "Input validation bypass",
-      "payloads": [
-        "p",
-        "w",
-        "platform",
-        "tzo",
-        "url",
-        "vss",
-        "consent",
-        "wss",
-        "uik",
-        "data"
-      ],
-      "confidence_score": 0.7,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "79308bfa-fedf-4587-b796-1a8489c9ca94",
-      "category": "input",
-      "name": "test_input_mutation_HttpMethod.POST:",
-      "description": "Mutate inputs for https://va.tawk.to/log-performance/v3",
-      "target_endpoint": "HttpMethod.POST:https://va.tawk.to/log-performance/v3",
-      "target_object": null,
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Invalid inputs are rejected with proper validation",
-      "attack_vector": "Input validation bypass",
-      "payloads": [
-        "logData",
-        "role",
-        "is_admin",
-        "isAdmin",
-        "admin",
-        "owner_id",
-        "ownerId",
-        "user_id",
-        "userId",
-        "org_id"
-      ],
-      "confidence_score": 0.7,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "b119f7c7-59e3-464f-8c7c-ebe6424eb361",
+      "id": "20b2710c-630b-44a1-85a7-e329f70a10a2",
       "category": "auth",
       "name": "test_mfa_bypass",
       "description": "Skip MFA step, replay MFA token, use token after expiry",
@@ -293,163 +138,7 @@
       "rollback_strategy": null
     },
     {
-      "id": "4e12e4d7-e9e0-4096-ba67-124f9b3d5edd",
-      "category": "authz",
-      "name": "test_horizontal_idor_css",
-      "description": "Test IDOR for css: access other users' objects",
-      "target_endpoint": null,
-      "target_object": "css",
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Users cannot access other users' css",
-      "attack_vector": "Horizontal privilege escalation (IDOR)",
-      "payloads": [],
-      "confidence_score": 0.44999999999999996,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "e238e129-dfcc-42e1-81b4-272a951ea9ac",
-      "category": "authz",
-      "name": "test_horizontal_idor_shoptimizer",
-      "description": "Test IDOR for shoptimizer: access other users' objects",
-      "target_endpoint": null,
-      "target_object": "shoptimizer",
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Users cannot access other users' shoptimizer",
-      "attack_vector": "Horizontal privilege escalation (IDOR)",
-      "payloads": [],
-      "confidence_score": 0.44999999999999996,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "b9c4ff4e-2cee-4161-b74d-c613ae9f1461",
-      "category": "authz",
-      "name": "test_horizontal_idor_g",
-      "description": "Test IDOR for g: access other users' objects",
-      "target_endpoint": null,
-      "target_object": "g",
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Users cannot access other users' g",
-      "attack_vector": "Horizontal privilege escalation (IDOR)",
-      "payloads": [],
-      "confidence_score": 0.44999999999999996,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "6d819f23-4179-44e5-b46f-e31ed4d52bf0",
-      "category": "authz",
-      "name": "test_horizontal_idor_emoji",
-      "description": "Test IDOR for emoji: access other users' objects",
-      "target_endpoint": null,
-      "target_object": "emoji",
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Users cannot access other users' emoji",
-      "attack_vector": "Horizontal privilege escalation (IDOR)",
-      "payloads": [],
-      "confidence_score": 0.44999999999999996,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "5d6a4984-b851-4154-b48d-656a2e835c88",
-      "category": "authz",
-      "name": "test_horizontal_idor_j",
-      "description": "Test IDOR for j: access other users' objects",
-      "target_endpoint": null,
-      "target_object": "j",
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Users cannot access other users' j",
-      "attack_vector": "Horizontal privilege escalation (IDOR)",
-      "payloads": [],
-      "confidence_score": 0.44999999999999996,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "e1af0dcd-5ca3-4fc8-85f0-3d5409cfffb3",
-      "category": "authz",
-      "name": "test_horizontal_idor_app",
-      "description": "Test IDOR for app: access other users' objects",
-      "target_endpoint": null,
-      "target_object": "app",
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Users cannot access other users' app",
-      "attack_vector": "Horizontal privilege escalation (IDOR)",
-      "payloads": [],
-      "confidence_score": 0.44999999999999996,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "087fcb5f-2ed3-4332-9e54-22738266f7db",
+      "id": "fa5558ef-9780-4921-bc98-7c53e0d2c85e",
       "category": "business_logic",
       "name": "test_duplicate_submission",
       "description": "Submit same form twice rapidly, check idempotency",
@@ -475,20 +164,10 @@
       "rollback_strategy": null
     }
   ],
-  "total_plans": 17,
+  "total_plans": 6,
   "by_category": {
     "auth": 5,
-    "authz": 7,
-    "mass_assignment": 1,
-    "business_logic": 2,
-    "input": 2
+    "business_logic": 1
   },
-  "rollback_strategies": {
-    "css": "Delete test css objects after testing",
-    "shoptimizer": "Delete test shoptimizer objects after testing",
-    "g": "Delete test g objects after testing",
-    "emoji": "Delete test emoji objects after testing",
-    "j": "Delete test j objects after testing",
-    "app": "Delete test app objects after testing"
-  }
+  "rollback_strategies": {}
 }

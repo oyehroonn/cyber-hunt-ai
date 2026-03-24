@@ -1,14 +1,14 @@
 {
   "_meta": {
-    "generated_at": "2026-03-18T22:39:34.088184",
+    "generated_at": "2026-03-24T23:20:27.494107",
     "target_url": "https://example.com",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "test_run_2"
+    "run_id": "full_1"
   },
   "routes": [
     {
-      "id": "0d13c3b7-63d6-42b9-a8c4-66272f4ac7fd",
+      "id": "d3a57afe-506c-4f2a-a8fb-61fde5da5bd4",
       "slug": "home",
       "url": "https://example.com",
       "method": "GET",
@@ -24,7 +24,7 @@
         }
       ],
       "linked_requests": [],
-      "discovered_at": "2026-03-18 22:39:33.869898",
+      "discovered_at": "2026-03-24 23:20:27.282071",
       "role_context": null,
       "state_context": null,
       "page_title": "Example Domain",
