@@ -1,0 +1,25 @@
+{
+  "title": "PayloadsAllTheThings: Carriage Return Line Feed",
+  "vuln_class": "XSS",
+  "cwe": "CWE-93",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Carriage Return Line Feed\nCRLF Injection is a web security vulnerability that arises when an attacker injects unexpected Carriage Return (CR) (\\r) and Line Feed (LF) (\\n) characters into an application. These characters are used to signify the end of a line and the start of a new one in network protocols like HTTP, SMTP, and others. In the HTTP protocol, the CR-LF sequence is always used to terminate a line.\nSummary\nMethodology\nSession Fixation\nCross Site Scripting\nOpen Redirect\nFilter Bypass\nLa",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "58a4af355e96",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/CRLF%20Injection/",
+  "processed_at": "2026-03-15T23:08:39.503824"
+}

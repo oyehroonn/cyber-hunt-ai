@@ -1,0 +1,29 @@
+{
+  "id": "GHSA-m69h-jm2f-2pv8",
+  "source": "github",
+  "title": "OpenClaw: Feishu reaction events could bypass group authorization and mention gating",
+  "url": "https://github.com/advisories/GHSA-m69h-jm2f-2pv8",
+  "scraped_at": "2026-03-15T23:26:49.741877",
+  "severity": "medium",
+  "vuln_type": "Broken Access Control",
+  "cwe": null,
+  "cvss_score": null,
+  "affected_component": "npm:openclaw",
+  "description": "OpenClaw: Feishu reaction events could bypass group authorization and mention gating",
+  "body": "### Summary\n\nA Feishu reaction-originated synthetic event could misclassify a group conversation as `p2p` when the inbound reaction payload omitted `chat_type`. Authorization and mention-gating logic keyed off that incorrect chat type and evaluated the event as a direct message instead of a group message.\n\n### Impact\n\nThis could bypass `groupAllowFrom` and `requireMention` protections for reaction-derived events in Feishu group chats.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.11`\n\n### Patch\n\nFixed in `openclaw` `2026.3.12`. Reaction events now preserve the correct group context before authorization and mention-gate evaluation. Users should update to `2026.3.12` or later.",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:54:30Z",
+  "metadata": {
+    "ghsa_id": "GHSA-m69h-jm2f-2pv8",
+    "cve_id": null,
+    "cwe_ids": [],
+    "cvss_vector": null,
+    "affected_packages": [
+      "npm:openclaw"
+    ],
+    "references": [],
+    "credits": [
+      "zpbrent"
+    ]
+  }
+}

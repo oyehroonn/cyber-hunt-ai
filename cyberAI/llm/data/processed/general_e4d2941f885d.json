@@ -1,0 +1,23 @@
+{
+  "title": "Vulnerable Dependency Management Cheat Sheet¶",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Vulnerable Dependency Management Cheat Sheet\n¶\nIntroduction\n¶\nThe objective of the cheat sheet is to provide a proposal of approach regarding the handling of vulnerable third-party dependencies when they are detected, and this, depending on different situation.\nThe cheat sheet is not tools oriented but it contains a\ntools\nsection informing the reader about free and commercial solutions that can be used to detect vulnerable dependencies, depending on the level of support on the technologies at ha",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "e4d2941f885d",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.614068"
+}

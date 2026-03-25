@@ -1,0 +1,25 @@
+{
+  "title": "Stored XSS",
+  "vuln_class": "XSS",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nCross-site scripting\nStored\nStored XSS\nIn this section, we'll explain stored cross-site scripting, describe the impact of stored XSS attacks, and spell out how to find stored XSS vulnerabilities.\nWhat is stored cross-site scripting?\nStored cross-site scripting (also known as second-order or persistent XSS) arises when an application receives data from an untrusted source and includes that data within its later HTTP responses in an unsafe way.\nSuppose a website allows users t",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "8f448da6e010",
+  "original_url": "https://portswigger.net/web-security/cross-site-scripting/stored",
+  "processed_at": "2026-03-16T03:34:38.527306"
+}

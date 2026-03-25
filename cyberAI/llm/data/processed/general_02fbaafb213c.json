@@ -1,0 +1,23 @@
+{
+  "title": "Deserialization Cheat Sheet¶",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-502",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Deserialization Cheat Sheet\n¶\nIntroduction\n¶\nThis article is focused on providing clear, actionable guidance for safely deserializing untrusted data in your applications.\nWhat is Deserialization\n¶\nSerialization\nis the process of turning some object into a data format that can be restored later. People often serialize objects in order to save them for storage, or to send as part of communications.\nDeserialization\nis the reverse of that process, taking data structured in some format, and rebuildin",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "02fbaafb213c",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.640155"
+}

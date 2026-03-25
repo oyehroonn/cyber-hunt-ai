@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: Business Logic",
+  "vuln_class": "Business Logic",
+  "cwe": "CWE-840",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nBusiness logic vulnerabilities\nBusiness logic vulnerabilities\nIn this section, we'll introduce the concept of business logic vulnerabilities and explain how they can arise due to flawed assumptions about user behavior. We'll discuss the potential impact of logic flaws and teach you how they can be exploited. You can also practice what you've learned using our interactive labs, which are based on real bugs that we've encountered in the wild. Finally, we'll provide some genera",
+  "root_cause": "Insufficient business logic protection",
+  "impact": "Attacker could exploit business logic vulnerability",
+  "remediation": "Implement proper business logic controls",
+  "test_hints": [
+    "Test workflow sequences",
+    "Check boundary conditions",
+    "Verify state transitions"
+  ],
+  "keywords": [
+    "business logic",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "d8aba92568e2",
+  "original_url": "https://portswigger.net/web-security/logic-flaws",
+  "processed_at": "2026-03-16T03:34:38.659274"
+}

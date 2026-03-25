@@ -1,0 +1,25 @@
+{
+  "title": "HackTricks",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Spring Actuators\nTip\nLearn & practice AWS Hacking:\nHackTricks Training AWS Red Team Expert (ARTE)\nLearn & practice GCP Hacking:\nHackTricks Training GCP Red Team Expert (GRTE)\nLearn & practice Az Hacking:\nHackTricks Training Azure Red Team Expert (AzRTE)\nSupport HackTricks\nCheck the\nsubscription plans\n!\nJoin the\n💬\nDiscord group\nor the\ntelegram group\nor\nfollow\nus on\nTwitter\n🐦\n@hacktricks_live\n.\nShare hacking tricks by submitting PRs to the\nHackTricks\nand\nHackTricks Cloud\ngithub repos.\nSpring Auth ",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "0526706bae69",
+  "original_url": "https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/spring-actuators.html",
+  "processed_at": "2026-03-15T23:08:39.591853"
+}

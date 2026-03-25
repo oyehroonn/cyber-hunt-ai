@@ -1,0 +1,23 @@
+{
+  "title": "OpenClaw: Feishu webhook mode accepted forged events when only `verificationToken` was configured",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": 8.6,
+  "severity": "high",
+  "affected_component": "npm:openclaw",
+  "attack_vector": "OpenClaw: Feishu webhook mode accepted forged events when only `verificationToken` was configured",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-g353-mgv3-8pcj",
+  "original_url": "https://github.com/advisories/GHSA-g353-mgv3-8pcj",
+  "processed_at": "2026-03-16T03:34:38.300582"
+}

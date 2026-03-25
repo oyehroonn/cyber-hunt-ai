@@ -1,14 +1,40 @@
 {
   "_meta": {
-    "generated_at": "2026-03-24T23:22:54.765009",
+    "generated_at": "2026-03-25T02:57:51.029985",
     "target_url": "https://example.com",
     "phase": "planning",
     "version": "1.0.0",
-    "run_id": "full_1"
+    "run_id": "juice_steps_20260325_034629"
   },
   "plans": [
     {
-      "id": "fa5558ef-9780-4921-bc98-7c53e0d2c85e",
+      "id": "015e0972-7e99-4244-ac4c-420a165ba062",
+      "category": "business_logic",
+      "name": "test_workflow_skip_submit",
+      "description": "Skip workflow steps in submit",
+      "target_endpoint": null,
+      "target_object": null,
+      "target_role": null,
+      "required_state": null,
+      "preconditions": {
+        "description": "",
+        "setup_steps": [],
+        "required_accounts": [],
+        "required_data": {}
+      },
+      "expected_safe_behavior": "Workflow steps cannot be skipped",
+      "attack_vector": "Workflow bypass",
+      "payloads": [],
+      "confidence_score": 0.7,
+      "priority": 2,
+      "is_destructive": false,
+      "is_noisy": false,
+      "is_state_altering": false,
+      "estimated_requests": 1,
+      "rollback_strategy": null
+    },
+    {
+      "id": "372fdf04-b0e1-42bc-8f45-695fa104d602",
       "category": "business_logic",
       "name": "test_duplicate_submission",
       "description": "Submit same form twice rapidly, check idempotency",

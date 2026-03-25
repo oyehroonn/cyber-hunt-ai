@@ -1,0 +1,20 @@
+{
+  "id": "2f1d69d17bb4",
+  "source": "general",
+  "title": "HackTricks",
+  "url": "https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/tomcat/",
+  "scraped_at": "2026-03-15T22:47:33.956913",
+  "severity": "medium",
+  "vuln_type": null,
+  "cwe": null,
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "Document not found (404)\nThis URL is invalid, sorry. Please use the navigation bar or search to continue.",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "source_name": "hacktricks_web_2f1d69",
+    "source_type": "single_page"
+  }
+}

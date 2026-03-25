@@ -1,0 +1,25 @@
+{
+  "title": "GraphQL Cheat Sheet¶",
+  "vuln_class": "IDOR",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "GraphQL Cheat Sheet\n¶\nIntroduction\n¶\nGraphQL\nis an open source query language originally developed by Facebook that can be used to build APIs as an alternative to REST and SOAP. It has gained popularity since its inception in 2012 because of the native flexibility it offers to those building and calling the API. There are GraphQL servers and clients implemented in various languages.\nMany companies\nuse GraphQL including GitHub, Credit Karma, Intuit, and PayPal.\nThis Cheat Sheet provides guidance ",
+  "root_cause": "Insufficient idor protection",
+  "impact": "Attacker could exploit idor vulnerability",
+  "remediation": "Implement proper idor controls",
+  "test_hints": [
+    "Test changing object IDs in requests",
+    "Check if user A can access user B's resources",
+    "Enumerate sequential IDs"
+  ],
+  "keywords": [
+    "idor",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "b5bba6e5da8d",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.561870"
+}

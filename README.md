@@ -66,7 +66,7 @@ At the root:
   - `identity/` – session population helpers (when `ROLE_ACCOUNTS` is set)  
   - `storage/` – WARC writer, knowledge graph builder  
   - `utils/` – browser, HTTP client, helpers, proxy, attack graph  
-  - `llm/` – stubs for future RAG/LLM integration  
+  - `llm/` – RAG engine, ChromaDB knowledge base, `llm_client`  
 - `config/` – example engagement config (`engagement_config.example.yaml`)  
 - `docs/` – pipeline documentation (`PIPELINE_AND_OUTPUTS.md`, implementation notes)  
 - `outputs/` – **canonical** runtime output directory (recon, planning, testing, verification, reports, logs, warc, sessions)  
@@ -328,25 +328,18 @@ The `report` CLI command (`python -m cyberAI.main report`) runs this phase.
 
 ---
 
-## LLM / RAG Integration (`llm/`)
+## LLM / RAG Integration (`cyberAI/llm/`)
 
-Current status: **stubs only**.
+RAG lives under **`cyberAI/llm/`** (imported as top-level `llm` after `cyberAI` is on `PYTHONPATH`). It includes:
 
-- `llm/llm_client.py` defines but does not implement:
-  - `call_llm(prompt, context=[])`
-  - `summarize_finding(finding_dict)`
-  - `generate_attack_hypothesis(intel_dict)`
-  - `suggest_test_cases(object_model, permission_matrix)`
-  - `analyze_code_for_vulnerabilities(code, language)`
-  - `generate_remediation_advice(finding_dict)`
-  - `explain_impact(finding_dict, business_context="")`
+- `cyberAI/llm/llm_client.py` – `call_llm`, `summarize_finding`, `generate_attack_hypothesis`, `suggest_test_cases`, etc.
+- `cyberAI/llm/rag_engine.py` – retrieval + generation (DeepSeek API, OpenRouter-compatible base URL, or Ollama)
+- `cyberAI/llm/data/` – processed reports and ChromaDB store
 
 By design:
-- The system works fully without any LLM.
-- When you are ready to integrate a RAG/LLM backend:
-  1. Replace stub bodies with calls into your client.
-  2. Set `LLM_ENABLED=true` in `.env`.
-  3. Wire LLM calls into planning/reporting where appropriate (e.g. use `summarize_finding` when generating markdown).
+
+- The system works fully without any LLM (`LLM_ENABLED=false`).
+- To enable generation and RAG tests: set `LLM_ENABLED=true` and configure `DEEPSEEK_API_KEY` (and optional `DEEPSEEK_BASE_URL` / `DEEPSEEK_MODEL`) or run Ollama locally. See `cyberAI/llm/README_RAG.md`.
 
 ---
 
@@ -441,8 +434,8 @@ Outputs are written under `outputs/` unless `OUTPUT_DIR` is set. Phase logs: `ou
   - Update `TestPlanner` to emit `TestPlan`s for the new category.
 
 - **Integrate LLM/RAG**
-  - Replace implementations in `llm/llm_client.py`
-  - Call LLM helpers from planning/reporting where you want richer summaries, hypotheses, or remediation advice.
+  - Extend or tune `cyberAI/llm/llm_client.py` / `rag_engine.py` as needed
+  - Call LLM helpers from planning/reporting where you want richer summaries, hypotheses, or remediation advice
 
 ---
 

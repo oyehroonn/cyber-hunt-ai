@@ -1,0 +1,25 @@
+{
+  "title": "CWE-352: Cross-Site Request Forgery (CSRF)",
+  "vuln_class": "XSS",
+  "cwe": "CWE-352",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The web application does not, or cannot, sufficiently verify whether a request was intentionally provided by the user who sent the request, which could have originated from an unauthorized actor.",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-352",
+  "original_url": "https://cwe.mitre.org/data/definitions/352.html",
+  "processed_at": "2026-03-15T23:08:39.650315"
+}

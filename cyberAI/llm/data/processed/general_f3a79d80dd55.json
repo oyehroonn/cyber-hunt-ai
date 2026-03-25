@@ -1,0 +1,23 @@
+{
+  "title": "Docker Security Cheat Sheet¶",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Docker Security Cheat Sheet\n¶\nIntroduction\n¶\nDocker is the most popular containerization technology. When used correctly, it can enhance security compared to running applications directly on the host system. However, certain misconfigurations can reduce security levels or introduce new vulnerabilities.\nThe aim of this cheat sheet is to provide a straightforward list of common security errors and best practices to assist in securing your Docker containers.\nRules\n¶\nRULE #0 - Keep Host and Docker u",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "f3a79d80dd55",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.585962"
+}

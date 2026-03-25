@@ -1,0 +1,23 @@
+{
+  "title": "PayloadsAllTheThings: Web Cache Deception",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Web Cache Deception\nWeb Cache Deception (WCD) is a security vulnerability that occurs when a web server or caching proxy misinterprets a client's request for a web resource and subsequently serves a different resource, which may often be more sensitive or private, after caching it.\nSummary\nTools\nMethodology\nCaching Sensitive Data\nCaching Custom JavaScript\nCloudFlare Caching\nLabs\nReferences\nTools\nPortSwigger/param-miner\n- Web Cache Poisoning Burp Extension\nMethodology\nExample of Web Cache Decepti",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "6ab0744a50e5",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Web%20Cache%20Deception/",
+  "processed_at": "2026-03-15T23:08:39.609824"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Dangling markup injection",
+  "vuln_class": "XSS",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nCross-site scripting\nDangling markup\nDangling markup injection\nIn this section, we'll explain dangling markup injection, how a typical exploit works, and how to prevent dangling markup attacks.\nWhat is dangling markup injection?\nDangling markup injection is a technique for capturing data cross-domain in situations where a full cross-site scripting attack isn't possible.\nSuppose an application embeds attacker-controllable data into its responses in an unsafe way:\n<input type=",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "9fd8e975ce83",
+  "original_url": "https://portswigger.net/web-security/cross-site-scripting/dangling-markup",
+  "processed_at": "2026-03-16T03:34:39.015975"
+}

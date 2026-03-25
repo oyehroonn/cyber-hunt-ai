@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: Race Condition",
+  "vuln_class": "Race Condition",
+  "cwe": "CWE-362",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nRace conditions\nRace conditions\nRace conditions are a common type of vulnerability closely related to business logic flaws. They occur when websites process requests concurrently without adequate safeguards. This can lead to multiple distinct threads interacting with the same data at the same time, resulting in a \"collision\" that causes unintended behavior in the application. A race condition attack uses carefully timed requests to cause intentional collisions and exploit th",
+  "root_cause": "Insufficient race condition protection",
+  "impact": "Attacker could exploit race condition vulnerability",
+  "remediation": "Implement proper race condition controls",
+  "test_hints": [
+    "Send concurrent requests",
+    "Test coupon/discount codes",
+    "Check atomic operations"
+  ],
+  "keywords": [
+    "race condition",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "f1ee2f402c6b",
+  "original_url": "https://portswigger.net/web-security/race-conditions",
+  "processed_at": "2026-03-15T23:08:39.565993"
+}

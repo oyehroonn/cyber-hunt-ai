@@ -1,0 +1,23 @@
+{
+  "title": "DEPRECATED: Access Control Cheatsheet¶",
+  "vuln_class": "Other",
+  "cwe": "CWE-284",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "DEPRECATED: Access Control Cheatsheet\n¶\nThe Access Control cheatsheet has been deprecated.\nPlease visit the\nAuthorization Cheatsheet\ninstead.",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "8150ecf91561",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.580256"
+}

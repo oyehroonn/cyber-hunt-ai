@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: Prototype Pollution",
+  "vuln_class": "XSS",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nPrototype pollution\nWhat is prototype pollution?\nPrototype pollution is a JavaScript vulnerability that enables an attacker to add arbitrary properties to global object prototypes, which may then be inherited by user-defined objects.\nAlthough prototype pollution is often unexploitable as a standalone vulnerability, it lets an attacker control properties of objects that would otherwise be inaccessible. If the application subsequently handles an attacker-controlled property in",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "c32da3690c6c",
+  "original_url": "https://portswigger.net/web-security/prototype-pollution",
+  "processed_at": "2026-03-15T23:08:39.497416"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "5ce91f6180d9",
+  "source": "payloads",
+  "title": "PayloadsAllTheThings: Insecure Deserialization",
+  "url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Insecure%20Deserialization/",
+  "scraped_at": "2026-03-15T23:07:39.419419",
+  "severity": "critical",
+  "vuln_type": "Insecure Deserialization",
+  "cwe": "CWE-502",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": "Insecure Deserialization\nSerialization is the process of turning some object into a data format that can be restored later. People often serialize objects in order to save them to storage, or to send as part of communications. Deserialization is the reverse of that process -- taking data structured from some format, and rebuilding it into an object - OWASP\nSummary\nDeserialization Identifier\nPOP Gadgets\nLabs\nReferences\nDeserialization Identifier\nCheck the following sub-sections, located in other ",
+  "body": "Insecure Deserialization\nSerialization is the process of turning some object into a data format that can be restored later. People often serialize objects in order to save them to storage, or to send as part of communications. Deserialization is the reverse of that process -- taking data structured from some format, and rebuilding it into an object - OWASP\nSummary\nDeserialization Identifier\nPOP Gadgets\nLabs\nReferences\nDeserialization Identifier\nCheck the following sub-sections, located in other chapters :\nJava deserialization : ysoserial, ...\nPHP (Object injection) : phpggc, ...\nRuby : universal rce gadget, ...\nPython : pickle, PyYAML, ...\n.NET : ysoserial.net, ...\nObject Type\nHeader (Hex)\nHeader (Base64)\nIndicators\n.NET ViewState\nFF 01\n/w\nCommonly found inside hidden inputs around HTML forms\nBinaryFormatter\n0001 0000 00FF FFFF FF01\nAAEAAAD\nBase64 decode and check for the long\nFF FF FF FF\nsequence.\nJava Serialized\nAC ED\nrO\nBase64 decode and check first bytes.\nPHP Serialized\n4F 3A\nTz\nPrefixes like\nO:, a:, s:, i:, b:\nand length indicators.\nPython Pickle\n80 04 95\ngASV\nText: opcodes like\n(lp0, S'Test'\n.\nRuby Marshal\n04 08\nBAgK\nBase64 decode and look for\n\\x04\\x08\nat the start.\nPOP Gadgets\nA POP (Property Oriented Programming) gadget is a piece of code implemented by an application's class, that can be called during the deserialization process.\nPOP gadgets characteristics:\nCan be serialized\nHas public/accessible properties\nImplements specific vulnerable methods\nHas access to other \"callable\" classes\nLabs\nPortSwigger - Modifying serialized objects\nPortSwigger - Modifying serialized data types\nPortSwigger - Using application functionality to exploit insecure deserialization\nPortSwigger - Arbitrary object injection in PHP\nPortSwigger - Exploiting Java deserialization with Apache Commons\nPortSwigger - Exploiting PHP deserialization with a pre-built gadget chain\nPortSwigger - Exploiting Ruby deserialization using a documented gadget chain\nPortSwigger - Developing a custom gadget chain for Java deserialization\nPortSwigger - Developing a custom gadget chain for PHP deserialization\nPortSwigger - Using PHAR deserialization to deploy a custom gadget chain\nNickstaDB - DeserLab\nReferences\nExploitDB Introduction - Abdelazim Mohammed(@intx0x80) - May 27, 2018\nExploiting insecure deserialization vulnerabilities - PortSwigger - July 25, 2020\nInstagram's Million Dollar Bug - Wesley Wineberg - December 17, 2015\nShare this content\nBack to top",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "category": "Insecure Deserialization",
+    "source_repo": "swisskyrepo/PayloadsAllTheThings"
+  }
+}

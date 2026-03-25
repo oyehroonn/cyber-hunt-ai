@@ -1,0 +1,23 @@
+{
+  "title": "OpenClaw: Command-authorized non-owners could reach owner-only `/config` and `/debug` surfaces",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": 8.8,
+  "severity": "high",
+  "affected_component": "npm:openclaw",
+  "attack_vector": "OpenClaw: Command-authorized non-owners could reach owner-only `/config` and `/debug` surfaces",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-r7vr-gr74-94p8",
+  "original_url": "https://github.com/advisories/GHSA-r7vr-gr74-94p8",
+  "processed_at": "2026-03-16T03:34:38.697520"
+}

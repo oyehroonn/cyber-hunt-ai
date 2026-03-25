@@ -1,0 +1,120 @@
+Generate attack hypotheses based on the following application analysis.
+
+## Object Model
+{object_model}
+
+## Permission Matrix
+{permission_matrix}
+
+## Workflow Map
+{workflow_map}
+
+## Similar Vulnerability Patterns
+{similar_patterns}
+
+## Task: Generate Attack Hypotheses
+
+Analyze the object model, permission matrix, and workflows to identify potential security invariant violations. Focus on:
+
+### 1. Access Control Analysis
+- Can User A access User B's resources?
+- Can a lower-privileged user access higher-privileged functions?
+- Are there horizontal privilege escalation opportunities?
+- Are there vertical privilege escalation paths?
+
+### 2. Business Logic Analysis
+- Can workflow steps be skipped or reordered?
+- Can state transitions be manipulated?
+- Are there race conditions in multi-step processes?
+- Can pricing, discounts, or limits be bypassed?
+
+### 3. Data Flow Analysis
+- Where does sensitive data flow?
+- Are there data exposure points?
+- Can data be manipulated between steps?
+- Are there injection points in data processing?
+
+### 4. Authentication/Session Analysis
+- How are sessions managed?
+- Are there session fixation opportunities?
+- Can authentication be bypassed?
+- Are there token manipulation possibilities?
+
+## Output Format
+
+Respond with a JSON object containing attack hypotheses:
+
+```json
+{{
+  "analysis_summary": "Brief overview of the security model",
+  "identified_invariants": [
+    {{
+      "invariant": "Description of the security rule that should hold",
+      "components_involved": ["object1", "object2"],
+      "potential_violation": "How this invariant might be violated"
+    }}
+  ],
+  "hypotheses": [
+    {{
+      "id": "H001",
+      "title": "Short descriptive title",
+      "vulnerability_class": "IDOR|Auth Bypass|Race Condition|Business Logic|etc",
+      "target_object": "The object/resource being targeted",
+      "target_action": "The action being exploited",
+      "description": "Detailed description of the hypothesis",
+      "attack_scenario": "Step-by-step attack scenario",
+      "rationale": {{
+        "observation": "What we observed that suggests this",
+        "pattern_match": "Similar patterns from knowledge base",
+        "logic": "Why this attack should work"
+      }},
+      "test_procedure": [
+        "Step 1: Setup",
+        "Step 2: Execute",
+        "Step 3: Verify"
+      ],
+      "expected_outcome": {{
+        "if_vulnerable": "What happens if vulnerable",
+        "if_not_vulnerable": "What happens if protected"
+      }},
+      "severity_estimate": {{
+        "likelihood": "high|medium|low",
+        "impact": "critical|high|medium|low",
+        "overall": "critical|high|medium|low"
+      }},
+      "priority": "P1|P2|P3"
+    }}
+  ],
+  "attack_chains": [
+    {{
+      "chain_id": "C001",
+      "name": "Chain description",
+      "steps": ["H001", "H003"],
+      "combined_impact": "What the chain achieves",
+      "likelihood": "high|medium|low"
+    }}
+  ],
+  "testing_order": [
+    {{
+      "phase": 1,
+      "hypotheses": ["H001", "H002"],
+      "rationale": "Why test these first"
+    }}
+  ]
+}}
+```
+
+## Hypothesis Generation Guidelines
+
+1. **Be Specific**: Reference exact objects, actions, and parameters
+2. **Think Adversarially**: What would a determined attacker try?
+3. **Consider Context**: Business impact matters as much as technical severity
+4. **Look for Chains**: Single issues that combine for greater impact
+5. **Prioritize Wisely**: P1 = likely vulnerable AND high impact
+
+### Priority Definitions
+- **P1**: High likelihood + High/Critical impact - Test immediately
+- **P2**: Medium likelihood + Medium+ impact OR High likelihood + Low impact - Test soon
+- **P3**: Low likelihood OR informational - Test if time permits
+
+Generate comprehensive attack hypotheses now:

@@ -1,18 +1,18 @@
 {
   "_meta": {
-    "generated_at": "2026-03-16T05:03:21.746736",
-    "target_url": "https://www.digitalsoftwaremarkett.com",
+    "generated_at": "2026-03-25T02:57:51.030565",
+    "target_url": "https://example.com",
     "phase": "planning",
     "version": "1.0.0",
-    "run_id": "fa49de1d-729b-4ef5-9a4a-3c12a57af53f"
+    "run_id": "juice_steps_20260325_034629"
   },
   "plans": [
     {
-      "id": "e92e8b94-8c29-4ee9-a150-bc37530fc7d9",
+      "id": "e56549aa-3537-4886-8c49-92eedac64e80",
       "category": "input",
       "name": "test_input_mutation_HttpMethod.POST:",
-      "description": "Mutate inputs for https://va.tawk.to/v1/session/start",
-      "target_endpoint": "HttpMethod.POST:https://va.tawk.to/v1/session/start",
+      "description": "Mutate inputs for https://www.youtube.com/youtubei/v1/account/get_setting_values?prettyPrint=false",
+      "target_endpoint": "HttpMethod.POST:https://www.youtube.com/youtubei/v1/account/get_setting_values?prettyPrint=false",
       "target_object": null,
       "target_role": null,
       "required_state": null,
@@ -25,53 +25,16 @@
       "expected_safe_behavior": "Invalid inputs are rejected with proper validation",
       "attack_vector": "Input validation bypass",
       "payloads": [
-        "p",
-        "w",
-        "platform",
-        "tzo",
-        "url",
-        "vss",
-        "consent",
-        "wss",
-        "uik",
-        "data"
-      ],
-      "confidence_score": 0.7,
-      "priority": 2,
-      "is_destructive": false,
-      "is_noisy": false,
-      "is_state_altering": false,
-      "estimated_requests": 1,
-      "rollback_strategy": null
-    },
-    {
-      "id": "79308bfa-fedf-4587-b796-1a8489c9ca94",
-      "category": "input",
-      "name": "test_input_mutation_HttpMethod.POST:",
-      "description": "Mutate inputs for https://va.tawk.to/log-performance/v3",
-      "target_endpoint": "HttpMethod.POST:https://va.tawk.to/log-performance/v3",
-      "target_object": null,
-      "target_role": null,
-      "required_state": null,
-      "preconditions": {
-        "description": "",
-        "setup_steps": [],
-        "required_accounts": [],
-        "required_data": {}
-      },
-      "expected_safe_behavior": "Invalid inputs are rejected with proper validation",
-      "attack_vector": "Input validation bypass",
-      "payloads": [
-        "logData",
-        "role",
-        "is_admin",
-        "isAdmin",
-        "admin",
-        "owner_id",
-        "ownerId",
-        "user_id",
-        "userId",
-        "org_id"
+        "context.client.hl",
+        "context.client.gl",
+        "context.client.remoteHost",
+        "context.client.deviceMake",
+        "context.client.deviceModel",
+        "context.client.visitorData",
+        "context.client.userAgent",
+        "context.client.clientName",
+        "context.client.clientVersion",
+        "context.client.osName"
       ],
       "confidence_score": 0.7,
       "priority": 2,

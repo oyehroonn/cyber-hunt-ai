@@ -1,0 +1,17 @@
+{
+  "id": "01a0f8153110",
+  "source": "bugcrowd",
+  "title": "Inside the Mind of a Hacker",
+  "url": "https://www.bugcrowd.com/resources/report/inside-the-mind-of-a-hacker/",
+  "scraped_at": "2026-03-15T23:27:02.492194",
+  "severity": "medium",
+  "vuln_type": "RCE",
+  "cwe": null,
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "Report\nInside the Mind of a Hacker\nDownload Report\nThe preemptive shift in modern hacking\nInside the Mind of a Hacker\nreveals how today’s hackers actually think and work—and why understanding those shifts is critical for staying ahead of real-world risk.\nHacking isn’t static. Motivations change. Collaboration is increasing. AI is reshaping how vulnerabilities are found. This report breaks down those changes and shows how security teams can respond more effectively right now.\nWhat’s inside:\nWhat motivates hackers and how to tailor your program to appeal to more hackers\nWhy more hackers are hacking in teams and how that benefits organizations\nThe top ways hackers are using AI to preemptively discover vulnerabilities\nDownload the Report\nWhat are hackers finding?\n71%\nhave found a new vulnerability in the past 12 months\n85%\nbelieve reporting a critical vulnerability is more important than making money from it\n65%\nhave chosen not to disclose a vulnerability because there was no clear pathway to report it\nHow do hackers work?\n61%\nfind more critical vulnerabilities when hacking in teams\n82%\nuse AI as part of their hacking workflow\n74%\nbelieve AI has increased the value of hacking\nWho are hackers?\n92%\nare 34 years old or younger\n69%\ngraduated from college\n81%\nwork full-time in a security-related field\n“Security is a race where the finish line keeps moving forward and the only way to stay ahead is to run faster than everyone else. By utilizing AI, the pack not only gets ‘smarter’ but also quicker, running on a relentless 24/7 schedule.”\n– OxMoose\nDownload Report\nBack to resources\nMore resources\nReport\nInside the Mind of a CISO\nRead More\nGuide\nGuide to Working with Hackers\nRead More\nGuide\nUltimate Guide to AI Safety and Security\nRead More\nGet Started with\nBugcrowd\nEvery minute that goes by, your unknown vulnerabilities leave you more exposed to cyber attacks.\nTry Bugcrowd\nContact Us",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {}
+}

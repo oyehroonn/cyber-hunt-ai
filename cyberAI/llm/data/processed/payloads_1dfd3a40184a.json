@@ -1,0 +1,25 @@
+{
+  "title": "PayloadsAllTheThings: NoSQL Injection",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-943",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "NoSQL Injection\nNoSQL databases provide looser consistency restrictions than traditional SQL databases. By requiring fewer relational constraints and consistency checks, NoSQL databases often offer performance and scaling benefits. Yet these databases are still potentially vulnerable to injection attacks, even if they aren't using the traditional SQL syntax.\nSummary\nTools\nMethodology\nOperator Injection\nAuthentication Bypass\nExtract Length Information\nExtract Data Information\nWAF and Filters\nBlin",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "1dfd3a40184a",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/NoSQL%20Injection/",
+  "processed_at": "2026-03-15T23:08:39.545540"
+}

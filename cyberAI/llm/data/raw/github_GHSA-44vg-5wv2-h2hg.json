@@ -1,0 +1,30 @@
+{
+  "id": "GHSA-44vg-5wv2-h2hg",
+  "source": "github",
+  "title": "SimpleEval: Objects (including modules) can leak dangerous modules through to direct access inside the sandbox",
+  "url": "https://github.com/advisories/GHSA-44vg-5wv2-h2hg",
+  "scraped_at": "2026-03-15T23:26:49.735707",
+  "severity": "high",
+  "vuln_type": null,
+  "cwe": null,
+  "cvss_score": null,
+  "affected_component": "pip:simpleeval",
+  "description": "SimpleEval: Objects (including modules) can leak dangerous modules through to direct access inside the sandbox",
+  "body": "### Impact\nIf the objects passed in as `names` to SimpleEval have modules or other disallowed / dangerous objects available as attrs.\nAdditionally, dangerous functions or modules could be accessed by passing them as callbacks to other safe functions to call.\n\nExamples (found by @ByamB4):\n\nAny module where non-underscore attribute chains reach os or sys:\n- os.path, pathlib, shutil, glob (direct .os / .sys attributes)\n- statistics (has .sys)\n- numpy (has .ctypeslib.os and .f2py.sys)\n- urllib.parse (has .warnings.sys)\n\n### Patches\nThe latest version 1.0.5 has this issue fixed.\n\n### Workarounds\nDon't pass in objects or modules which have direct attributes to potentially dangerous items.\nUse a wrapper to wrap the potentially vulnerable items (See the ModuleWrapper in version 1.0.5)",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:56:26Z",
+  "metadata": {
+    "ghsa_id": "GHSA-44vg-5wv2-h2hg",
+    "cve_id": "CVE-2026-32640",
+    "cwe_ids": [],
+    "cvss_vector": null,
+    "affected_packages": [
+      "pip:simpleeval"
+    ],
+    "references": [],
+    "credits": [
+      "ByamB4",
+      "danthedeckie"
+    ]
+  }
+}

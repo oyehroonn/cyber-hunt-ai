@@ -1,0 +1,23 @@
+{
+  "title": "PortSwigger: Command Injection",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-78",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nOS command injection\nOS command injection\nIn this section, we explain what OS command injection is, and describe how vulnerabilities can be detected and exploited. We also show you some useful commands and techniques for different operating systems, and describe how to prevent OS command injection.\nLabs\nIf you're familiar with the basic concepts behind OS command injection vulnerabilities and want to practice exploiting them on some realistic, deliberately vulnerable targets",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "09cab0d4e6c8",
+  "original_url": "https://portswigger.net/web-security/os-command-injection",
+  "processed_at": "2026-03-15T23:08:39.586983"
+}

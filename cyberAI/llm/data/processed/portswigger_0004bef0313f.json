@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: SQL Injection",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-89",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nNoSQL injection\nNoSQL injection\nNoSQL injection is a vulnerability where an attacker is able to interfere with the queries that an application makes to a NoSQL database. NoSQL injection may enable an attacker to:\nBypass authentication or protection mechanisms.\nExtract or edit data.\nCause a denial of service.\nExecute code on the server.\nNoSQL databases store and retrieve data in a format other than traditional SQL relational tables. They use a wide range of query languages in",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "0004bef0313f",
+  "original_url": "https://portswigger.net/web-security/nosql-injection",
+  "processed_at": "2026-03-15T23:08:39.623834"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Clickjacking Defense Cheat Sheet¶",
+  "vuln_class": "CSRF",
+  "cwe": "CWE-1021",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Clickjacking Defense Cheat Sheet\n¶\nIntroduction\n¶\nThis cheat sheet is intended to provide guidance for developers on how to defend against\nClickjacking\n, also known as UI redress attacks.\nThere are three main mechanisms that can be used to defend against these attacks:\nPreventing the browser from loading the page in frame using the\nX-Frame-Options\nor\nContent Security Policy (frame-ancestors)\nHTTP headers.\nPreventing session cookies from being included when the page is loaded in a frame using the",
+  "root_cause": "Insufficient csrf protection",
+  "impact": "Attacker could exploit csrf vulnerability",
+  "remediation": "Implement proper csrf controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "csrf",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "fba716fbd807",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.596615"
+}

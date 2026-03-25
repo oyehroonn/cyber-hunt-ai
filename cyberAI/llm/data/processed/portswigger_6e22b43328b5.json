@@ -1,0 +1,23 @@
+{
+  "title": "Using Burp Scanner during manual testing",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nEssential skills\nUsing Burp Scanner during manual testing\nUsing Burp Scanner during manual testing\nIn this section, we'll show you a number of ways you can optimize your manual testing workflow by using Burp Scanner to supplement your own knowledge and intuition. Not only will this help you cover more ground, you'll be able to spend your time where it matters rather than on tedious preliminary work.\nScanning a specific request\nWhen you come across an interesting function or ",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "6e22b43328b5",
+  "original_url": "https://portswigger.net/web-security/essential-skills/using-burp-scanner-during-manual-testing",
+  "processed_at": "2026-03-16T03:34:38.317072"
+}

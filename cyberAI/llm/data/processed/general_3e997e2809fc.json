@@ -1,0 +1,23 @@
+{
+  "title": "Error Handling Cheat Sheet¶",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Error Handling Cheat Sheet\n¶\nIntroduction\n¶\nError handling is a part of the overall security of an application. Except in movies, an attack always begins with a\nReconnaissance\nphase in which the attacker will try to gather as much technical information (often\nname\nand\nversion\nproperties) as possible about the target, such as the application server, frameworks, libraries, etc.\nUnhandled errors can assist an attacker in this initial phase, which is very important for the rest of the attack.\nThe fo",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "3e997e2809fc",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.557965"
+}

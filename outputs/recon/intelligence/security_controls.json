@@ -1,10 +1,10 @@
 {
   "_meta": {
-    "generated_at": "2026-03-24T23:22:35.248124",
-    "target_url": "https://example.com",
+    "generated_at": "2026-03-25T02:56:38.023360",
+    "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "full_1"
+    "run_id": "juice_steps_20260325_034629"
   },
   "report": {
     "controls": [
@@ -17,11 +17,51 @@
         "affected_endpoints": []
       },
       {
+        "control_type": "cors",
+        "present": true,
+        "value": "*",
+        "is_weak": true,
+        "weakness_reason": "Allows all origins",
+        "affected_endpoints": []
+      },
+      {
         "control_type": "hsts",
         "present": false,
         "value": null,
         "is_weak": true,
         "weakness_reason": "Missing HSTS header",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "x_frame_options",
+        "present": true,
+        "value": "SAMEORIGIN",
+        "is_weak": false,
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "x_content_type_options",
+        "present": true,
+        "value": "nosniff",
+        "is_weak": false,
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "rate_limit",
+        "present": false,
+        "value": null,
+        "is_weak": true,
+        "weakness_reason": "No rate limiting headers detected",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "cors",
+        "present": true,
+        "value": "http://localhost:4200",
+        "is_weak": false,
+        "weakness_reason": null,
         "affected_endpoints": []
       },
       {
@@ -41,25 +81,17 @@
         "affected_endpoints": []
       },
       {
-        "control_type": "rate_limit",
-        "present": false,
-        "value": null,
-        "is_weak": true,
-        "weakness_reason": "No rate limiting headers detected",
-        "affected_endpoints": []
-      },
-      {
         "control_type": "csp",
         "present": true,
-        "value": "upgrade-insecure-requests; default-src 'self' https://*.iana.org; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://cse.google.com https://clients1.google.com; style-src 'self' 'unsafe-inline' https://www.google.com; child-src 'self' https://www.youtube.com https://clients1.google.com https://cse.google.com https://www.google.com/; img-src 'self' https://data.iana.org https://www.iana.org https://www.google.com https://www.googleapis.com https://clients1.google.com h",
+        "value": "default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.v",
         "is_weak": true,
-        "weakness_reason": "script-src allows 'unsafe-inline'; script-src allows 'unsafe-eval'; style-src allows 'unsafe-inline'",
+        "weakness_reason": "img-src allows data:; style-src allows 'unsafe-inline'",
         "affected_endpoints": []
       },
       {
         "control_type": "hsts",
         "present": true,
-        "value": "max-age=48211200; preload",
+        "value": "max-age=31536000; includeSubdomains; preload",
         "is_weak": false,
         "weakness_reason": null,
         "affected_endpoints": []
@@ -67,9 +99,65 @@
       {
         "control_type": "x_frame_options",
         "present": true,
-        "value": "SAMEORIGIN",
+        "value": "deny",
         "is_weak": false,
         "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "hsts",
+        "present": true,
+        "value": "max-age=31536000",
+        "is_weak": false,
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "csp",
+        "present": true,
+        "value": "default-src 'none'; img-src data:; style-src 'unsafe-inline'",
+        "is_weak": true,
+        "weakness_reason": "img-src allows data:; style-src allows 'unsafe-inline'",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "hsts",
+        "present": true,
+        "value": "max-age=31536000; includeSubDomains",
+        "is_weak": false,
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "cors",
+        "present": false,
+        "value": "",
+        "is_weak": false,
+        "weakness_reason": null,
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "csp",
+        "present": true,
+        "value": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/youtube-main-app-web-scs-key",
+        "is_weak": true,
+        "weakness_reason": "Missing default-src or script-src",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "csp",
+        "present": true,
+        "value": "script-src 'unsafe-eval' 'self' 'unsafe-inline' https://www.google.com https://apis.google.com https://ssl.gstatic.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.youtube.com https://*.google.com https://*.gstatic.com https://youtube.com https://www.youtube.com https://google.com https://*.doubleclick.net https://*.googleapis.com https://www.googleadservices.com https://tpc.googlesyndication.com https://www.youtubekids.com https://www.youtu",
+        "is_weak": true,
+        "weakness_reason": "script-src allows 'unsafe-inline'; script-src allows 'unsafe-eval'",
+        "affected_endpoints": []
+      },
+      {
+        "control_type": "csp",
+        "present": true,
+        "value": "script-src 'report-sample' 'nonce-I7ZUuP3S-n213WWfZXYGdw' 'unsafe-inline' 'unsafe-eval';object-src 'none';base-uri 'self';report-uri /cspreport\nrequire-trusted-types-for 'script';report-uri /cspreport",
+        "is_weak": true,
+        "weakness_reason": "script-src allows 'unsafe-inline'; script-src allows 'unsafe-eval'",
         "affected_endpoints": []
       },
       {
@@ -81,17 +169,27 @@
         "affected_endpoints": []
       },
       {
-        "control_type": "x_content_type_options",
-        "present": true,
-        "value": "nosniff\nnosniff",
+        "control_type": "csrf",
+        "present": false,
+        "value": null,
         "is_weak": true,
-        "weakness_reason": null,
+        "weakness_reason": "No CSRF protection detected on state-changing endpoint",
+        "affected_endpoints": [
+          "https://www.youtube.com/youtubei/v1/account/get_setting_values?prettyPrint=false"
+        ]
+      },
+      {
+        "control_type": "csp",
+        "present": true,
+        "value": "script-src 'report-sample' 'nonce-q-uxqwd1xWyd6L7p7uAzlw' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /v3/signin/_/AccountsSignInUi/cspreport;worker-src 'self'\nscript-src 'unsafe-inline' 'unsafe-eval' blob: data: 'self' https://apis.google.com https://ssl.gstatic.com https://www.google.com https://www.googletagmanager.com https://www.gstatic.com https://www.google-analytics.com https://www.google.com/tools/feedback/ https://www.gstatic.com/feedback/js/ https://www.gstatic.com/in",
+        "is_weak": true,
+        "weakness_reason": "script-src allows 'unsafe-inline'; worker-src allows 'unsafe-inline'; worker-src allows 'unsafe-eval'; worker-src allows data:",
         "affected_endpoints": []
       },
       {
-        "control_type": "x_content_type_options",
+        "control_type": "cors",
         "present": true,
-        "value": "nosniff",
+        "value": "https://www.youtube.com",
         "is_weak": false,
         "weakness_reason": null,
         "affected_endpoints": []
@@ -99,82 +197,68 @@
       {
         "control_type": "csp",
         "present": true,
-        "value": "object-src 'none';base-uri 'self';script-src 'nonce-S0fuBzAd9O-wB5b4Z-GRtw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other",
+        "value": "script-src 'report-sample' 'nonce-1sns31DiflHdfMCS_h0c-w' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/ConsentUi/cspreport;worker-src 'self'\nscript-src 'unsafe-inline' 'unsafe-eval' blob: data: 'self' https://apis.google.com https://ssl.gstatic.com https://www.google.com https://www.googletagmanager.com https://www.gstatic.com https://www.google-analytics.com https://ssl.gstatic.com/external_hosted/lottie/lottie_light.js https://www.google.com/tools/feedback/ https://www.gstat",
         "is_weak": true,
-        "weakness_reason": "script-src allows 'unsafe-inline'; script-src allows 'unsafe-eval'",
+        "weakness_reason": "script-src allows 'unsafe-inline'; worker-src allows 'unsafe-inline'; worker-src allows 'unsafe-eval'; worker-src allows data:",
         "affected_endpoints": []
       },
       {
         "control_type": "csp",
         "present": true,
-        "value": "default-src 'self' 'unsafe-inline' data: https://datatracker.ietf.org/ https://www.ietf.org/ http://ietf.org/ https://analytics.ietf.org https://static.ietf.org; frame-ancestors 'self' ietf.org *.ietf.org meetecho.com *.meetecho.com",
+        "value": "require-trusted-types-for 'script';report-uri /_/ConsentUi/cspreport",
         "is_weak": true,
-        "weakness_reason": "default-src allows 'unsafe-inline'; default-src allows data:",
+        "weakness_reason": "Missing default-src or script-src",
         "affected_endpoints": []
       },
       {
-        "control_type": "hsts",
+        "control_type": "cookie_flags",
         "present": true,
-        "value": "max-age=3600; includeSubDomains",
-        "is_weak": true,
-        "weakness_reason": "max-age too short (3600s, should be >= 1 year)",
-        "affected_endpoints": []
-      },
-      {
-        "control_type": "cors",
-        "present": true,
-        "value": "*",
-        "is_weak": true,
-        "weakness_reason": "Allows all origins",
-        "affected_endpoints": []
-      },
-      {
-        "control_type": "csrf",
-        "present": false,
-        "value": null,
-        "is_weak": true,
-        "weakness_reason": "No CSRF protection detected on state-changing endpoint",
-        "affected_endpoints": [
-          "https://datatracker.ietf.org/cdn-cgi/challenge-platform/h/g/jsd/oneshot/ea2d291c0fdc/0.9568618113276082:1774392077:M_BS_GiXnPxGGYUYdQa2kMbN0CUOCCFrab1mI3smpAg/9e1968e278b40267"
-        ]
-      },
-      {
-        "control_type": "x_content_type_options",
-        "present": true,
-        "value": "nosniff, nosniff",
-        "is_weak": true,
+        "value": "_gh_sess: Secure=True, HttpOnly=True, SameSite=lax",
+        "is_weak": false,
         "weakness_reason": null,
         "affected_endpoints": []
       }
     ],
-    "csp_policy": "upgrade-insecure-requests; default-src 'self' https://*.iana.org; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://cse.google.com https://clients1.google.com; style-src 'self' 'unsafe-inline' https://www.google.com; child-src 'self' https://www.youtube.com https://clients1.google.com https://cse.google.com https://www.google.com/; img-src 'self' https://data.iana.org https://www.iana.org https://www.google.com https://www.googleapis.com https://clients1.google.com https://*.gstatic.com;",
+    "csp_policy": "default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net productionresultssa1.blob.core.windows.net productionresultssa2.blob.core.windows.net productionresultssa3.blob.core.windows.net productionresultssa4.blob.core.windows.net productionresultssa5.blob.core.windows.net productionresultssa6.blob.core.windows.net productionresultssa7.blob.core.windows.net productionresultssa8.blob.core.windows.net productionresultssa9.blob.core.windows.net productionresultssa10.blob.core.windows.net productionresultssa11.blob.core.windows.net productionresultssa12.blob.core.windows.net productionresultssa13.blob.core.windows.net productionresultssa14.blob.core.windows.net productionresultssa15.blob.core.windows.net productionresultssa16.blob.core.windows.net productionresultssa17.blob.core.windows.net productionresultssa18.blob.core.windows.net productionresultssa19.blob.core.windows.net github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com user-images.githubusercontent.com private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com secured-user-images.githubusercontent.com private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/",
     "cors_origins": [
-      "*"
+      "*",
+      "http://localhost:4200",
+      "https://www.youtube.com"
     ],
     "csrf_mechanism": null,
     "token_storage": null,
     "missing_controls": [
-      "csp",
       "csrf",
+      "cors",
       "x_frame_options",
-      "x_content_type_options",
+      "csp",
       "rate_limit",
-      "hsts"
+      "hsts",
+      "x_content_type_options"
     ],
     "weak_controls": [
-      "csp",
       "csrf",
-      "x_frame_options",
       "cors",
-      "x_content_type_options",
+      "x_frame_options",
+      "csp",
       "rate_limit",
-      "hsts"
+      "hsts",
+      "x_content_type_options"
     ]
   },
-  "cookie_analysis": {},
+  "cookie_analysis": {
+    "_gh_sess": {
+      "name": "_gh_sess",
+      "secure": true,
+      "httponly": true,
+      "samesite": "lax",
+      "is_weak": false,
+      "weaknesses": []
+    }
+  },
   "summary": {
-    "total_controls_checked": 17,
-    "missing_controls": 6,
+    "total_controls_checked": 26,
+    "missing_controls": 7,
     "weak_controls": 7
   }
 }

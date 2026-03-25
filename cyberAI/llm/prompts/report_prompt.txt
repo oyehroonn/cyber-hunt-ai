@@ -1,0 +1,206 @@
+Generate a professional security vulnerability report for the following confirmed finding.
+
+## Finding Details
+{finding}
+
+## Evidence
+{evidence}
+
+## Similar Historical Reports
+{similar_reports}
+
+## Task: Generate Security Report
+
+Create a comprehensive, professional security report suitable for:
+- Technical security teams
+- Development teams
+- Management stakeholders
+
+The report should be clear, actionable, and follow industry best practices.
+
+## Output Format
+
+Generate a Markdown report with the following structure:
+
+```markdown
+# {title}
+
+## Executive Summary
+
+[2-3 sentences summarizing the vulnerability, its impact, and urgency]
+
+**Severity**: [Critical/High/Medium/Low]
+**CVSS Score**: [X.X]
+**CWE**: [CWE-XXX - Name]
+**Status**: Confirmed
+
+---
+
+## Vulnerability Details
+
+### Description
+
+[Detailed description of the vulnerability - what it is, where it exists, why it's a security issue]
+
+### Affected Component
+
+- **Endpoint/Function**: [specific location]
+- **Parameter/Field**: [affected input]
+- **Version/Environment**: [if applicable]
+
+### Vulnerability Classification
+
+| Property | Value |
+|----------|-------|
+| Vulnerability Type | [IDOR/SQL Injection/etc] |
+| Attack Vector | [Network/Adjacent/Local] |
+| Attack Complexity | [Low/High] |
+| Privileges Required | [None/Low/High] |
+| User Interaction | [None/Required] |
+| Scope | [Unchanged/Changed] |
+| Confidentiality Impact | [None/Low/High] |
+| Integrity Impact | [None/Low/High] |
+| Availability Impact | [None/Low/High] |
+
+---
+
+## Technical Analysis
+
+### Root Cause
+
+[Explanation of the underlying technical issue that makes this vulnerability possible]
+
+### Attack Vector
+
+[Step-by-step explanation of how an attacker would exploit this vulnerability]
+
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+...
+
+### Impact Analysis
+
+**What an attacker can achieve:**
+- [Impact 1]
+- [Impact 2]
+- [Impact 3]
+
+**Business Impact:**
+- [Business consequence 1]
+- [Business consequence 2]
+
+---
+
+## Proof of Concept
+
+### Prerequisites
+- [Required access/conditions]
+
+### Steps to Reproduce
+
+1. [Detailed step 1]
+2. [Detailed step 2]
+3. [Detailed step 3]
+...
+
+### Request/Response Evidence
+
+**Malicious Request:**
+```http
+[HTTP request demonstrating the attack]
+```
+
+**Response:**
+```http
+[Response showing successful exploitation]
+```
+
+### Screenshots/Evidence
+
+[Description of any visual evidence]
+
+---
+
+## Remediation
+
+### Recommended Fix
+
+[Detailed technical recommendation for fixing this vulnerability]
+
+### Code Example (if applicable)
+
+**Vulnerable Code:**
+```[language]
+// Example of vulnerable pattern
+```
+
+**Secure Code:**
+```[language]
+// Example of secure implementation
+```
+
+### Short-term Mitigation
+
+[Immediate actions to reduce risk while a permanent fix is developed]
+
+### Long-term Recommendations
+
+1. [Recommendation 1]
+2. [Recommendation 2]
+3. [Recommendation 3]
+
+---
+
+## References
+
+### Similar Vulnerabilities
+- [Reference 1 from knowledge base]
+- [Reference 2 from knowledge base]
+
+### External References
+- [CWE link]
+- [OWASP reference]
+- [Other relevant resources]
+
+---
+
+## Timeline
+
+| Date | Event |
+|------|-------|
+| [Date] | Vulnerability discovered |
+| [Date] | Verified and confirmed |
+| [Date] | Report generated |
+
+---
+
+## Appendix
+
+### Additional Technical Details
+
+[Any additional technical information that supports the finding]
+
+### Testing Environment
+
+- **Target**: [Application/System name]
+- **Environment**: [Production/Staging/Development]
+- **Testing Tool**: [Automated Security Platform]
+```
+
+## Report Guidelines
+
+1. **Be Professional**: This report may be shared with executives and external parties
+2. **Be Precise**: Use exact URLs, parameters, and technical details
+3. **Be Actionable**: Remediation should be clear enough for developers to implement
+4. **Be Thorough**: Include enough detail for independent verification
+5. **Be Balanced**: Accurately represent both impact and likelihood
+
+### Severity Guidelines
+
+- **Critical**: Immediate action required, significant business impact
+- **High**: Urgent attention needed, considerable risk
+- **Medium**: Should be addressed in normal security cycle
+- **Low**: Fix when convenient, minimal risk
+
+Generate the professional security report now:

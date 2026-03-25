@@ -1,0 +1,23 @@
+{
+  "title": "CWE-611: Improper Restriction of XML External Entity Reference",
+  "vuln_class": "XXE",
+  "cwe": "CWE-611",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.",
+  "root_cause": "Insufficient xxe protection",
+  "impact": "Attacker could exploit xxe vulnerability",
+  "remediation": "Implement proper xxe controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "xxe",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-611",
+  "original_url": "https://cwe.mitre.org/data/definitions/611.html",
+  "processed_at": "2026-03-15T23:08:39.648695"
+}

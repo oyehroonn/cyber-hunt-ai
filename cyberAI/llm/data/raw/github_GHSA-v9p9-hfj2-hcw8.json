@@ -1,0 +1,32 @@
+{
+  "id": "GHSA-v9p9-hfj2-hcw8",
+  "source": "github",
+  "title": "Undici has Unhandled Exception in WebSocket Client Due to Invalid server_max_window_bits Validation",
+  "url": "https://github.com/advisories/GHSA-v9p9-hfj2-hcw8",
+  "scraped_at": "2026-03-15T23:26:49.748069",
+  "severity": "high",
+  "vuln_type": null,
+  "cwe": null,
+  "cvss_score": 7.5,
+  "affected_component": "npm:undici, npm:undici",
+  "description": "Undici has Unhandled Exception in WebSocket Client Due to Invalid server_max_window_bits Validation",
+  "body": "### Impact\n\nThe undici WebSocket client is vulnerable to a denial-of-service attack due to improper validation of the `server_max_window_bits` parameter in the permessage-deflate extension. When a WebSocket client connects to a server, it automatically advertises support for permessage-deflate compression. A malicious server can respond with an out-of-range `server_max_window_bits` value (outside zlib's valid range of 8-15). When the server subsequently sends a compressed frame, the client attempts to create a zlib InflateRaw instance with the invalid windowBits value, causing a synchronous RangeError exception that is not caught, resulting in immediate process termination.\n\nThe vulnerability exists because:\n\n1. The `isValidClientWindowBits()` function only validates that the value contains ASCII digits, not that it falls within the valid range 8-15\n2. The `createInflateRaw()` call is not wrapped in a try-catch block\n3. The resulting exception propagates up through the call stack and crashes the Node.js process\n\n### Patches\n_Has the problem been patched? What versions should users upgrade to?_\n\n### Workarounds\n_Is there a way for users to fix or remediate the vulnerability without upgrading?_",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:41:41Z",
+  "metadata": {
+    "ghsa_id": "GHSA-v9p9-hfj2-hcw8",
+    "cve_id": "CVE-2026-2229",
+    "cwe_ids": [],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "affected_packages": [
+      "npm:undici",
+      "npm:undici"
+    ],
+    "references": [],
+    "credits": [
+      "aisle-research",
+      "mcollina",
+      "UlisesGascon"
+    ]
+  }
+}

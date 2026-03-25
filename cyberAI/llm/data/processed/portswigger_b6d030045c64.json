@@ -1,0 +1,23 @@
+{
+  "title": "Preventing prototype pollution vulnerabilities",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nPrototype pollution\nPreventing\nPreventing prototype pollution vulnerabilities\nWe recommend patching any prototype pollution vulnerabilities you identify in your websites, regardless of whether these are coupled with exploitable gadgets. Even if you're confident that you haven't missed any, there's no guarantee that future updates to your own code or any libraries you use won't introduce new gadgets, paving the way for viable exploits.\nIn this section, we'll provide some high",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "b6d030045c64",
+  "original_url": "https://portswigger.net/web-security/prototype-pollution/preventing",
+  "processed_at": "2026-03-16T03:34:39.000092"
+}

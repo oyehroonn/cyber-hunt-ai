@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: SSRF",
+  "vuln_class": "SSRF",
+  "cwe": "CWE-918",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nSSRF\nServer-side request forgery (SSRF)\nIn this section we explain what server-side request forgery (SSRF) is, and describe some common examples. We also show you how to find and exploit SSRF vulnerabilities.\nWhat is SSRF?\nServer-side request forgery is a web security vulnerability that allows an attacker to cause the server-side application to make requests to an unintended location.\nIn a typical SSRF attack, the attacker might cause the server to make a connection to inter",
+  "root_cause": "Insufficient ssrf protection",
+  "impact": "Attacker could exploit ssrf vulnerability",
+  "remediation": "Implement proper ssrf controls",
+  "test_hints": [
+    "Test internal IP addresses",
+    "Check URL parameters",
+    "Try cloud metadata endpoints"
+  ],
+  "keywords": [
+    "ssrf",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "cfb90e69f25e",
+  "original_url": "https://portswigger.net/web-security/ssrf",
+  "processed_at": "2026-03-15T23:08:39.560210"
+}

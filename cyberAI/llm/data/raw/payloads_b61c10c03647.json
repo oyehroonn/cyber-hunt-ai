@@ -1,0 +1,20 @@
+{
+  "id": "b61c10c03647",
+  "source": "payloads",
+  "title": "PayloadsAllTheThings: Mass Assignment",
+  "url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Mass%20Assignment/",
+  "scraped_at": "2026-03-15T23:08:07.087860",
+  "severity": "high",
+  "vuln_type": "Mass Assignment",
+  "cwe": "CWE-915",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": "Mass Assignment\nA mass assignment attack is a security vulnerability that occurs when a web application automatically assigns user-supplied input values to properties or variables of a program object. This can become an issue if a user is able to modify attributes they should not have access to, like a user's permissions or an admin flag.\nSummary\nMethodology\nLabs\nReferences\nMethodology\nMass assignment vulnerabilities are most common in web applications that use Object-Relational Mapping (ORM) te",
+  "body": "Mass Assignment\nA mass assignment attack is a security vulnerability that occurs when a web application automatically assigns user-supplied input values to properties or variables of a program object. This can become an issue if a user is able to modify attributes they should not have access to, like a user's permissions or an admin flag.\nSummary\nMethodology\nLabs\nReferences\nMethodology\nMass assignment vulnerabilities are most common in web applications that use Object-Relational Mapping (ORM) techniques or functions to map user input to object properties, where properties can be updated all at once instead of individually. Many popular web development frameworks such as Ruby on Rails, Django, and Laravel (PHP) offer this functionality.\nFor instance, consider a web application that uses an ORM and has a user object with the attributes\nusername\n,\nemail\n,\npassword\n, and\nisAdmin\n. In a normal scenario, a user might be able to update their own username, email, and password through a form, which the server then assigns to the user object.\nHowever, an attacker may attempt to add an\nisAdmin\nparameter to the incoming data like so:\n{\n\"username\"\n:\n\"attacker\"\n,\n\"email\"\n:\n\"attacker@email.com\"\n,\n\"password\"\n:\n\"unsafe_password\"\n,\n\"isAdmin\"\n:\ntrue\n}\nIf the web application is not checking which parameters are allowed to be updated in this way, it might set the\nisAdmin\nattribute based on the user-supplied input, giving the attacker admin privileges\nLabs\nPentesterAcademy - Mass Assignment I\nPentesterAcademy - Mass Assignment II\nRoot Me - API - Mass Assignment\nReferences\nHunting for Mass Assignment - Shivam Bathla - August 12, 2021\nMass Assignment Cheat Sheet - OWASP - March 15, 2021\nWhat is Mass Assignment? Attacks and Security Tips - Yoan MONTOYA - June 15, 2023\nShare this content\nBack to top",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "category": "Mass Assignment",
+    "source_repo": "swisskyrepo/PayloadsAllTheThings"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "43aa1d2297d2",
+  "source": "general",
+  "title": "HackTricks",
+  "url": "https://book.hacktricks.xyz/pentesting-web/ssrf-server-side-request-forgery",
+  "scraped_at": "2026-03-15T23:07:20.224930",
+  "severity": "medium",
+  "vuln_type": "SSRF",
+  "cwe": "CWE-918",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "Document not found (404)\nThis URL is invalid, sorry. Please use the navigation bar or search to continue.",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "source_name": "hacktricks_ssrf",
+    "source_type": "single_page"
+  }
+}

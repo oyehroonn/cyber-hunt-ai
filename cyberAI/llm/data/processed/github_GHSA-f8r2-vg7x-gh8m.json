@@ -1,0 +1,23 @@
+{
+  "title": "OpenClaw: Exec approval allowlist patterns overmatched on POSIX paths",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": "npm:openclaw",
+  "attack_vector": "OpenClaw: Exec approval allowlist patterns overmatched on POSIX paths",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-f8r2-vg7x-gh8m",
+  "original_url": "https://github.com/advisories/GHSA-f8r2-vg7x-gh8m",
+  "processed_at": "2026-03-16T03:34:38.313192"
+}

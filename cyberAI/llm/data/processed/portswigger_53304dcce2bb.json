@@ -1,0 +1,23 @@
+{
+  "title": "JavaScript prototypes and inheritance",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nPrototype pollution\nJavaScript prototypes and inheritance\nJavaScript prototypes and inheritance\nJavaScript uses a prototypal inheritance model, which is quite different from the class-based model used by many other languages. In this section, we'll provide a basic overview of how this works, which should give you enough of an understanding to follow our learning materials on\nprototype pollution vulnerabilities\n.\nWhat is an object in JavaScript?\nA JavaScript object is essenti",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "53304dcce2bb",
+  "original_url": "https://portswigger.net/web-security/prototype-pollution/javascript-prototypes-and-inheritance",
+  "processed_at": "2026-03-16T03:34:38.466665"
+}

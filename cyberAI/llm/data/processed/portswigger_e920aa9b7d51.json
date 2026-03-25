@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: XXE",
+  "vuln_class": "SSRF",
+  "cwe": "CWE-611",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nXXE injection\nXML external entity (XXE) injection\nIn this section, we'll explain what XML external entity injection is, describe some common examples, explain how to find and exploit various kinds of XXE injection, and summarize how to prevent XXE injection attacks.\nWhat is XML external entity injection?\nXML external entity injection (also known as XXE) is a web security vulnerability that allows an attacker to interfere with an application's processing of XML data. It often",
+  "root_cause": "Insufficient ssrf protection",
+  "impact": "Attacker could exploit ssrf vulnerability",
+  "remediation": "Implement proper ssrf controls",
+  "test_hints": [
+    "Test internal IP addresses",
+    "Check URL parameters",
+    "Try cloud metadata endpoints"
+  ],
+  "keywords": [
+    "ssrf",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "e920aa9b7d51",
+  "original_url": "https://portswigger.net/web-security/xxe",
+  "processed_at": "2026-03-15T23:08:39.643776"
+}

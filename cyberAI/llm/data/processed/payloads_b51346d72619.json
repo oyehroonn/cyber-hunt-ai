@@ -1,0 +1,23 @@
+{
+  "title": "PayloadsAllTheThings: Request Smuggling",
+  "vuln_class": "Other",
+  "cwe": "CWE-444",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Request Smuggling\nHTTP Request smuggling occurs when multiple \"things\" process a request, but differ on how they determine where the request starts/ends. This disagreement can be used to interfere with another user's request/response or to bypass security controls. It normally occurs due to prioritising different HTTP headers (Content-Length vs Transfer-Encoding), differences in handling malformed headers (eg whether to ignore headers with unexpected whitespace), due to downgrading requests from",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "b51346d72619",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Request%20Smuggling/",
+  "processed_at": "2026-03-15T23:08:39.656019"
+}

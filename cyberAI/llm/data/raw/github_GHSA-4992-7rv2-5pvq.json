@@ -1,0 +1,31 @@
+{
+  "id": "GHSA-4992-7rv2-5pvq",
+  "source": "github",
+  "title": "Undici has CRLF Injection in undici via `upgrade` option",
+  "url": "https://github.com/advisories/GHSA-4992-7rv2-5pvq",
+  "scraped_at": "2026-03-15T23:26:49.748453",
+  "severity": "medium",
+  "vuln_type": null,
+  "cwe": null,
+  "cvss_score": 4.6,
+  "affected_component": "npm:undici, npm:undici",
+  "description": "Undici has CRLF Injection in undici via `upgrade` option",
+  "body": "### Impact\n\nWhen an application passes user-controlled input to the `upgrade` option of `client.request()`, an attacker can inject CRLF sequences (`\\r\\n`) to:\n\n1. Inject arbitrary HTTP headers\n2. Terminate the HTTP request prematurely and smuggle raw data to non-HTTP services (Redis, Memcached, Elasticsearch)\n\nThe vulnerability exists because undici writes the `upgrade` value directly to the socket without validating for invalid header characters:\n\n```javascript\n// lib/dispatcher/client-h1.js:1121\nif (upgrade) {\n  header += `connection: upgrade\\r\\nupgrade: ${upgrade}\\r\\n`\n}\n```\n\n### Patches\n\n Patched in the undici version v7.24.0 and v6.24.0. Users should upgrade to this version or later.\n\n### Workarounds\n\nSanitize the `upgrade` option string before passing to undici:\n\n```javascript\nfunction sanitizeUpgrade(value) {\n  if (/[\\r\\n]/.test(value)) {\n    throw new Error('Invalid upgrade value')\n  }\n  return value\n}\n\nclient.request({\n  upgrade: sanitizeUpgrade(userInput)\n})\n```",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:41:26Z",
+  "metadata": {
+    "ghsa_id": "GHSA-4992-7rv2-5pvq",
+    "cve_id": "CVE-2026-1527",
+    "cwe_ids": [],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N",
+    "affected_packages": [
+      "npm:undici",
+      "npm:undici"
+    ],
+    "references": [],
+    "credits": [
+      "mcollina",
+      "UlisesGascon"
+    ]
+  }
+}

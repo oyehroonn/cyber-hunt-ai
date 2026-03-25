@@ -1,0 +1,23 @@
+{
+  "title": "Bugcrowd policy changes to address “AI slop” submissions",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Unsolved\nCyber Mysteries\nHear the real stories of everyday people who were swept up in extraordinary breaches, unexplained leaks, and outbreaks of sensitive data in Bugcrowd’s chilling new docuseries.\nRead the Blog\nBugcrowd News\nBugcrowd policy changes to address “AI slop” submissions\nBy Trey Ford, Mar 10, 2026\nRead more\nThought Leadership\nThree AI security assumptions that will break in 2026\nBy Trey Ford, Mar 10, 2026\nRead more\nBugcrowd News\nBugcrowd’s FedRAMP authorization: Frequently asked qu",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "bugcrowd"
+  ],
+  "source": "bugcrowd",
+  "original_id": "fc0cfc9b7109",
+  "original_url": "https://www.bugcrowd.com/blog/category/bugcrowd-news/",
+  "processed_at": "2026-03-16T03:34:38.319935"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Examining the database in SQL injection attacks",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-89",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nSQL injection\nExamining the database\nExamining the database in SQL injection attacks\nTo exploit SQL injection vulnerabilities, it's often necessary to find information about the database. This includes:\nThe type and version of the database software.\nThe tables and columns that the database contains.\nQuerying the database type and version\nYou can potentially identify both the database type and version by injecting provider-specific queries to see if one works\nThe following ar",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "dccd1dfe7975",
+  "original_url": "https://portswigger.net/web-security/sql-injection/examining-the-database",
+  "processed_at": "2026-03-16T03:34:38.590096"
+}

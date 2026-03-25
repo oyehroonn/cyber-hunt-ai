@@ -1,0 +1,25 @@
+{
+  "title": "Unvalidated Redirects and Forwards Cheat Sheet¶",
+  "vuln_class": "SSRF",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Unvalidated Redirects and Forwards Cheat Sheet\n¶\nIntroduction\n¶\nUnvalidated redirects and forwards are possible when a web application accepts untrusted input that could cause the web application to redirect the request to a URL contained within untrusted input. By modifying untrusted URL input to a malicious site, an attacker may successfully launch a phishing scam and steal user credentials.\nBecause the server name in the modified link is identical to the original site, phishing attempts may h",
+  "root_cause": "Insufficient ssrf protection",
+  "impact": "Attacker could exploit ssrf vulnerability",
+  "remediation": "Implement proper ssrf controls",
+  "test_hints": [
+    "Test internal IP addresses",
+    "Check URL parameters",
+    "Try cloud metadata endpoints"
+  ],
+  "keywords": [
+    "ssrf",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "3545bf41d771",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.615045"
+}

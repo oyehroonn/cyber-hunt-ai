@@ -1,0 +1,23 @@
+{
+  "title": "PayloadsAllTheThings: Command Injection",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-78",
+  "cvss_score": null,
+  "severity": "critical",
+  "affected_component": null,
+  "attack_vector": "Command Injection\nCommand injection is a security vulnerability that allows an attacker to execute arbitrary commands inside a vulnerable application.\nSummary\nTools\nMethodology\nBasic Commands\nChaining Commands\nArgument Injection\nInside A Command\nFilter Bypasses\nBypass Without Space\nBypass With A Line Return\nBypass With Backslash Newline\nBypass With Tilde Expansion\nBypass With Brace Expansion\nBypass Characters Filter\nBypass Characters Filter Via Hex Encoding\nBypass With Single Quote\nBypass With D",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "d035ee32f109",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Command%20Injection/",
+  "processed_at": "2026-03-15T23:08:39.602210"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Essential skills",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nEssential skills\nEssential skills\nWe design the labs for the Web Security Academy to be as realistic as possible, but you should keep in mind that each lab demonstrates just one possible variation of a given vulnerability. In practice, it's important to be able to recognize subtly different occurrences of the same underlying bugs and know how to adapt the techniques you've learned accordingly.\nIn this section, you'll learn some broadly applicable skills that will help you to",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "7379cc0296c3",
+  "original_url": "https://portswigger.net/web-security/essential-skills",
+  "processed_at": "2026-03-16T03:34:38.947597"
+}

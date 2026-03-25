@@ -1,0 +1,23 @@
+{
+  "title": "PayloadsAllTheThings: LDAP Injection",
+  "vuln_class": "Other",
+  "cwe": "CWE-90",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "LDAP Injection\nLDAP Injection is an attack used to exploit web based applications that construct LDAP statements based on user input. When an application fails to properly sanitize user input, it's possible to modify LDAP statements using a local proxy.\nSummary\nMethodology\nAuthentication Bypass\nBlind Exploitation\nDefaults Attributes\nExploiting userPassword Attribute\nScripts\nDiscover Valid LDAP Fields\nSpecial Blind LDAP Injection\nLabs\nReferences\nMethodology\nLDAP Injection is a vulnerability that ",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "091ca5a476c4",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/LDAP%20Injection/",
+  "processed_at": "2026-03-15T23:08:39.604470"
+}

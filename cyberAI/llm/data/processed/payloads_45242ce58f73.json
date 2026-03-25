@@ -1,0 +1,25 @@
+{
+  "title": "PayloadsAllTheThings: GraphQL Injection",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "GraphQL Injection\nGraphQL is a query language for APIs and a runtime for fulfilling those queries with existing data. A GraphQL service is created by defining types and fields on those types, then providing functions for each field on each type\nSummary\nTools\nEnumeration\nCommon GraphQL Endpoints\nIdentify An Injection Point\nEnumerate Database Schema via Introspection\nEnumerate Database Schema via Suggestions\nEnumerate Types Definition\nList Path To Reach A Type\nMethodology\nExtract Data\nExtract Data",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "45242ce58f73",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/GraphQL%20Injection/",
+  "processed_at": "2026-03-15T23:08:39.532868"
+}

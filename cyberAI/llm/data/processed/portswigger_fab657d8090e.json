@@ -1,0 +1,25 @@
+{
+  "title": "Web LLM attacks",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nWeb LLM attacks\nWeb LLM attacks\nOrganizations are rushing to integrate Large Language Models (LLMs) in order to improve their online customer experience. This exposes them to web LLM attacks that take advantage of the model's access to data, APIs, or user information that an attacker cannot access directly. For example, an attack may:\nRetrieve data that the LLM has access to. Common sources of such data include the LLM's prompt, training set, and APIs provided to the model.\n",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "fab657d8090e",
+  "original_url": "https://portswigger.net/web-security/llm-attacks",
+  "processed_at": "2026-03-16T03:34:38.575019"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "HackTricks",
+  "vuln_class": "CSRF",
+  "cwe": "CWE-362",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Race Condition\nTip\nLearn & practice AWS Hacking:\nHackTricks Training AWS Red Team Expert (ARTE)\nLearn & practice GCP Hacking:\nHackTricks Training GCP Red Team Expert (GRTE)\nLearn & practice Az Hacking:\nHackTricks Training Azure Red Team Expert (AzRTE)\nSupport HackTricks\nCheck the\nsubscription plans\n!\nJoin the\n💬\nDiscord group\nor the\ntelegram group\nor\nfollow\nus on\nTwitter\n🐦\n@hacktricks_live\n.\nShare hacking tricks by submitting PRs to the\nHackTricks\nand\nHackTricks Cloud\ngithub repos.\nWarning\nFor ob",
+  "root_cause": "Insufficient csrf protection",
+  "impact": "Attacker could exploit csrf vulnerability",
+  "remediation": "Implement proper csrf controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "csrf",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "e60259435452",
+  "original_url": "https://book.hacktricks.xyz/pentesting-web/race-condition",
+  "processed_at": "2026-03-15T23:08:39.568177"
+}

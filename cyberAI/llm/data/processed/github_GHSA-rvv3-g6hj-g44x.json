@@ -1,0 +1,23 @@
+{
+  "title": "AutoMapper Vulnerable to Denial of Service (DoS) via Uncontrolled Recursion",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": 7.5,
+  "severity": "high",
+  "affected_component": "nuget:AutoMapper",
+  "attack_vector": "AutoMapper Vulnerable to Denial of Service (DoS) via Uncontrolled Recursion",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-rvv3-g6hj-g44x",
+  "original_url": "https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
+  "processed_at": "2026-03-16T03:34:38.410090"
+}

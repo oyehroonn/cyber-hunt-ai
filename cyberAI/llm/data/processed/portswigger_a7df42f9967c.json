@@ -1,0 +1,25 @@
+{
+  "title": "Exploiting cross-site scripting vulnerabilities",
+  "vuln_class": "XSS",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nCross-site scripting\nExploiting\nExploiting cross-site scripting vulnerabilities\nThe traditional way to prove that you've found a cross-site scripting vulnerability is to create a popup using the\nalert()\nfunction. This isn't because XSS has anything to do with popups; it's simply a way to prove that you can execute arbitrary JavaScript on a given domain. You might notice some people using\nalert(document.domain)\n. This is a way of making it explicit which domain the JavaScript",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "a7df42f9967c",
+  "original_url": "https://portswigger.net/web-security/cross-site-scripting/exploiting",
+  "processed_at": "2026-03-16T03:34:39.017593"
+}

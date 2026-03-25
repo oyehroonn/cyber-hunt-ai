@@ -1,0 +1,25 @@
+{
+  "title": "CWE-20: Improper Input Validation",
+  "vuln_class": "Business Logic",
+  "cwe": "CWE-20",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product receives input or data, but it does\n        not validate or incorrectly validates that the input has the\n        properties that are required to process the data safely and\n        correctly.",
+  "root_cause": "Insufficient business logic protection",
+  "impact": "Attacker could exploit business logic vulnerability",
+  "remediation": "Implement proper business logic controls",
+  "test_hints": [
+    "Test workflow sequences",
+    "Check boundary conditions",
+    "Verify state transitions"
+  ],
+  "keywords": [
+    "business logic",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-20",
+  "original_url": "https://cwe.mitre.org/data/definitions/20.html",
+  "processed_at": "2026-03-15T23:08:39.644696"
+}

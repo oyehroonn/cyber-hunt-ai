@@ -1,0 +1,25 @@
+{
+  "title": "CWE-942: Permissive Cross-domain Security Policy with Untrusted Domains",
+  "vuln_class": "XSS",
+  "cwe": "CWE-942",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "The product uses a web-client protection\n         mechanism such as a Content Security Policy (CSP) or\n         cross-domain policy file, but the policy includes untrusted\n         domains with which the web client is allowed to\n         communicate.",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-942",
+  "original_url": "https://cwe.mitre.org/data/definitions/942.html",
+  "processed_at": "2026-03-15T23:08:39.651984"
+}

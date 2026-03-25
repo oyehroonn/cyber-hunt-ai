@@ -1,0 +1,22 @@
+{
+  "id": "dccd1dfe7975",
+  "source": "portswigger",
+  "title": "Examining the database in SQL injection attacks",
+  "url": "https://portswigger.net/web-security/sql-injection/examining-the-database",
+  "scraped_at": "2026-03-16T03:19:55.195875",
+  "severity": "high",
+  "vuln_type": "SQL Injection",
+  "cwe": "CWE-89",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "Web Security Academy\nSQL injection\nExamining the database\nExamining the database in SQL injection attacks\nTo exploit SQL injection vulnerabilities, it's often necessary to find information about the database. This includes:\nThe type and version of the database software.\nThe tables and columns that the database contains.\nQuerying the database type and version\nYou can potentially identify both the database type and version by injecting provider-specific queries to see if one works\nThe following are some queries to determine the database version for some popular database types:\nDatabase type\nQuery\nMicrosoft, MySQL\nSELECT @@version\nOracle\nSELECT * FROM v$version\nPostgreSQL\nSELECT version()\nFor example, you could use a\nUNION\nattack with the following input:\n' UNION SELECT @@version--\nThis might return the following output. In this case, you can confirm that the database is Microsoft SQL Server and see the version used:\nMicrosoft SQL Server 2016 (SP2) (KB4052908) - 13.0.5026.0 (X64)\nMar 18 2018 09:11:49\nCopyright (c) Microsoft Corporation\nStandard Edition (64-bit) on Windows Server 2016 Standard 10.0 <X64> (Build 14393: ) (Hypervisor)\nListing the contents of the database\nMost database types (except Oracle) have a set of views called the information schema. This provides information about the database.\nFor example, you can query\ninformation_schema.tables\nto list the tables in the database:\nSELECT * FROM information_schema.tables\nThis returns output like the following:\nTABLE_CATALOG  TABLE_SCHEMA  TABLE_NAME  TABLE_TYPE\n=====================================================\nMyDatabase     dbo           Products    BASE TABLE\nMyDatabase     dbo           Users       BASE TABLE\nMyDatabase     dbo           Feedback    BASE TABLE\nThis output indicates that there are three tables, called\nProducts\n,\nUsers\n, and\nFeedback\n.\nYou can then query\ninformation_schema.columns\nto list the columns in individual tables:\nSELECT * FROM information_schema.columns WHERE table_name = 'Users'\nThis returns output like the following:\nTABLE_CATALOG  TABLE_SCHEMA  TABLE_NAME  COLUMN_NAME  DATA_TYPE\n=================================================================\nMyDatabase     dbo           Users       UserId       int\nMyDatabase     dbo           Users       Username     varchar\nMyDatabase     dbo           Users       Password     varchar\nThis output shows the columns in the specified table and the data type of each column.\nListing the contents of an Oracle database\nOn Oracle, you can find the same information as follows:\nYou can list tables by querying\nall_tables\n:\nSELECT * FROM all_tables\nYou can list columns by querying\nall_tab_columns\n:\nSELECT * FROM all_tab_columns WHERE table_name = 'USERS'\nFind SQL injection vulnerabilities using Burp Suite\nTry for free",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "type": "material",
+    "solution": null,
+    "attack_vector": null,
+    "remediation": null
+  }
+}

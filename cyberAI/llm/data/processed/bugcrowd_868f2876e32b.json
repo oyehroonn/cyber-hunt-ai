@@ -1,0 +1,23 @@
+{
+  "title": "UnsolvedCyber Mysteries",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Unsolved\nCyber Mysteries\nHear the real stories of everyday people who were swept up in extraordinary breaches, unexplained leaks, and outbreaks of sensitive data in Bugcrowd’s chilling new docuseries.\nRead the Blog\nHacker Spotlight\nInternational Women’s Day Spotlight: The HackHer Network\nBy Erica Azad, Mar 05, 2026\nRead more\nHacker Spotlight\nHacker spotlight: Meet an elite hacking team\nBy Erica Azad, Feb 10, 2026\nRead more\nCommunity Spotlight\nCISO + hacker spotlight: Meet Aaron Guzman\nBy Erica A",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "bugcrowd"
+  ],
+  "source": "bugcrowd",
+  "original_id": "868f2876e32b",
+  "original_url": "https://www.bugcrowd.com/blog/category/hacker-spotlight",
+  "processed_at": "2026-03-16T03:34:38.584637"
+}

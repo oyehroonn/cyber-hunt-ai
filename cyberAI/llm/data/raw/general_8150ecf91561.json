@@ -1,0 +1,20 @@
+{
+  "id": "8150ecf91561",
+  "source": "general",
+  "title": "DEPRECATED: Access Control Cheatsheet¶",
+  "url": "https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html",
+  "scraped_at": "2026-03-15T22:47:53.141081",
+  "severity": "medium",
+  "vuln_type": "Broken Access Control",
+  "cwe": "CWE-284",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "DEPRECATED: Access Control Cheatsheet\n¶\nThe Access Control cheatsheet has been deprecated.\nPlease visit the\nAuthorization Cheatsheet\ninstead.",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "source_name": "owasp_access_control",
+    "source_type": "single_page"
+  }
+}

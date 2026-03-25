@@ -1,10 +1,10 @@
 {
   "_meta": {
-    "generated_at": "2026-03-24T23:22:34.064220",
-    "target_url": "https://example.com",
+    "generated_at": "2026-03-25T02:56:17.013366",
+    "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "full_1"
+    "run_id": "juice_steps_20260325_034629"
   },
   "intel": null,
   "observed_operations": [],

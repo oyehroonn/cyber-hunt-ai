@@ -1,0 +1,23 @@
+{
+  "title": "github.com/ctfer-io/monitoring Vulnerable to Improper Access Control",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": "go:github.com/ctfer-io/monitoring",
+  "attack_vector": "github.com/ctfer-io/monitoring Vulnerable to Improper Access Control",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-7x23-j8gv-v54x",
+  "original_url": "https://github.com/advisories/GHSA-7x23-j8gv-v54x",
+  "processed_at": "2026-03-16T03:34:38.945735"
+}

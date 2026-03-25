@@ -1,0 +1,23 @@
+{
+  "title": "CWE-917: Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-917",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product constructs all or part of an expression language (EL) statement in a framework such as a Java Server Page (JSP) using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended EL statement before it is executed.",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-917",
+  "original_url": "https://cwe.mitre.org/data/definitions/917.html",
+  "processed_at": "2026-03-15T23:08:39.528780"
+}

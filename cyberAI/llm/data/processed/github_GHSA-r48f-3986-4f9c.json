@@ -1,0 +1,23 @@
+{
+  "title": "fickling modules linecache, difflib and gc are missing from the unsafe modules blocklist",
+  "vuln_class": "Insecure Deserialization",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": "pip:fickling",
+  "attack_vector": "fickling modules linecache, difflib and gc are missing from the unsafe modules blocklist",
+  "root_cause": "Insufficient insecure deserialization protection",
+  "impact": "Attacker could exploit insecure deserialization vulnerability",
+  "remediation": "Implement proper insecure deserialization controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "insecure deserialization",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-r48f-3986-4f9c",
+  "original_url": "https://github.com/advisories/GHSA-r48f-3986-4f9c",
+  "processed_at": "2026-03-16T03:34:39.034010"
+}

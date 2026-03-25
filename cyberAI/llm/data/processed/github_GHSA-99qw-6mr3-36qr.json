@@ -1,0 +1,23 @@
+{
+  "title": "OpenClaw: Workspace plugin auto-discovery allowed code execution from cloned repositories",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": "npm:openclaw",
+  "attack_vector": "OpenClaw: Workspace plugin auto-discovery allowed code execution from cloned repositories",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-99qw-6mr3-36qr",
+  "original_url": "https://github.com/advisories/GHSA-99qw-6mr3-36qr",
+  "processed_at": "2026-03-16T03:34:39.027620"
+}

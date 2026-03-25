@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: WebSocket Vulnerabilities",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nWebSockets\nTesting for WebSockets security vulnerabilities\nIn this section, we'll explain how to manipulate WebSocket messages and connections, describe the kinds of security vulnerabilities that can arise with WebSockets, and give some examples of exploiting WebSockets vulnerabilities.\nWebSockets\nWebSockets are widely used in modern web applications. They are initiated over HTTP and provide long-lived connections with asynchronous communication in both directions.\nWebSocket",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "bcac1ad476d0",
+  "original_url": "https://portswigger.net/web-security/websockets",
+  "processed_at": "2026-03-16T03:34:38.653487"
+}

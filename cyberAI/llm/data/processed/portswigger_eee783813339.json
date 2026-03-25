@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: CORS Misconfiguration",
+  "vuln_class": "XSS",
+  "cwe": "CWE-942",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nCORS\nCross-origin resource sharing (CORS)\nIn this section, we will explain what cross-origin resource sharing (CORS) is, describe some common examples of cross-origin resource sharing based attacks, and discuss how to protect against these attacks. This topic was written\n\tin collaboration with PortSwigger Research, who popularized this attack class with the presentation\nExploiting CORS misconfigurations for Bitcoins and bounties\n.\nWhat is CORS (cross-origin resource sharing)",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "eee783813339",
+  "original_url": "https://portswigger.net/web-security/cors",
+  "processed_at": "2026-03-15T23:08:39.495920"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Three AI security assumptions that will break in 2026",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Thought Leadership\nThree AI security assumptions that will break in 2026\nMarch 10, 2026 | By\nTrey Ford\nBack to blog\nOver the past couple of years, the RSAC show floor has been dominated by AI buzz. This year will be no different, but most of the conversation will focus on tools, not the deeper structural risks AI is already creating.\nAs the Chief Strategy and Trust Officer at Bugcrowd, I spend a lot of time hearing from my network and thinking about common AI assumptions. As we head into the con",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "bugcrowd"
+  ],
+  "source": "bugcrowd",
+  "original_id": "0e2b1d6505dd",
+  "original_url": "https://www.bugcrowd.com/blog/three-ai-security-assumptions-that-will-break-in-2026",
+  "processed_at": "2026-03-16T03:34:38.379380"
+}

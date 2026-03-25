@@ -1,0 +1,25 @@
+{
+  "title": "NodeJS Security Cheat Sheet¶",
+  "vuln_class": "Race Condition",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "NodeJS Security Cheat Sheet\n¶\nIntroduction\n¶\nThis cheat sheet lists actions developers can take to develop secure Node.js applications. Each item has a brief explanation and solution that is specific to the Node.js environment.\nContext\n¶\nNode.js applications are increasing in number and they are no different from other frameworks and programming languages. Node.js applications are prone to all kinds of web application vulnerabilities.\nObjective\n¶\nThis cheat sheet aims to provide a list of best p",
+  "root_cause": "Insufficient race condition protection",
+  "impact": "Attacker could exploit race condition vulnerability",
+  "remediation": "Implement proper race condition controls",
+  "test_hints": [
+    "Send concurrent requests",
+    "Test coupon/discount codes",
+    "Check atomic operations"
+  ],
+  "keywords": [
+    "race condition",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "4da321709762",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.655016"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: Template Injection",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nServer-side template injection\nServer-side template injection\nThis technique was first documented by PortSwigger Research in the conference presentation\nServer-Side Template Injection: RCE for the Modern Web App\n.\nIn this section, we'll discuss what server-side template injection is and outline the basic methodology for exploiting server-side template injection vulnerabilities. We'll also suggest ways of making sure that your own use of templates doesn't expose you to server",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "95e03a5a7fec",
+  "original_url": "https://portswigger.net/web-security/server-side-template-injection",
+  "processed_at": "2026-03-16T03:34:38.785931"
+}

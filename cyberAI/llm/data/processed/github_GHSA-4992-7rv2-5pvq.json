@@ -1,0 +1,23 @@
+{
+  "title": "Undici has CRLF Injection in undici via `upgrade` option",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": 4.6,
+  "severity": "medium",
+  "affected_component": "npm:undici, npm:undici",
+  "attack_vector": "Undici has CRLF Injection in undici via `upgrade` option",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-4992-7rv2-5pvq",
+  "original_url": "https://github.com/advisories/GHSA-4992-7rv2-5pvq",
+  "processed_at": "2026-03-16T03:34:38.589107"
+}

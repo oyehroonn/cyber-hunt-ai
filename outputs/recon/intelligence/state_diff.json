@@ -1,64 +1,54 @@
 {
   "_meta": {
-    "generated_at": "2026-03-24T23:22:25.047660",
-    "target_url": "https://example.com",
+    "generated_at": "2026-03-25T01:01:27.208888",
+    "target_url": "https://demo.owasp-juice.shop/",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "full_1"
+    "run_id": "juice_demo_1"
   },
   "state_diffs": {
     "unverified": {
       "state": "unverified",
-      "available_actions": [
-        "Learn more"
-      ],
+      "available_actions": [],
       "available_endpoints": [],
       "visible_ui_elements": [
-        "Example Domain"
+        "503 Service Unavailable"
       ],
       "transitions_allowed": []
     },
     "verified": {
       "state": "verified",
-      "available_actions": [
-        "Learn more"
-      ],
+      "available_actions": [],
       "available_endpoints": [],
       "visible_ui_elements": [
-        "Example Domain"
+        "503 Service Unavailable"
       ],
       "transitions_allowed": []
     },
     "trial": {
       "state": "trial",
-      "available_actions": [
-        "Learn more"
-      ],
+      "available_actions": [],
       "available_endpoints": [],
       "visible_ui_elements": [
-        "Example Domain"
+        "503 Service Unavailable"
       ],
       "transitions_allowed": []
     },
     "paid": {
       "state": "paid",
-      "available_actions": [
-        "Learn more"
-      ],
+      "available_actions": [],
       "available_endpoints": [],
       "visible_ui_elements": [
-        "Example Domain"
+        "503 Service Unavailable"
       ],
       "transitions_allowed": []
     },
     "free": {
       "state": "free",
-      "available_actions": [
-        "Learn more"
-      ],
+      "available_actions": [],
       "available_endpoints": [],
       "visible_ui_elements": [
-        "Example Domain"
+        "503 Service Unavailable"
       ],
       "transitions_allowed": []
     }

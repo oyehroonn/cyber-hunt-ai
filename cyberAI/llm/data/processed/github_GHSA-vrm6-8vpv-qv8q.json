@@ -1,0 +1,23 @@
+{
+  "title": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": 7.5,
+  "severity": "high",
+  "affected_component": "npm:undici, npm:undici",
+  "attack_vector": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-vrm6-8vpv-qv8q",
+  "original_url": "https://github.com/advisories/GHSA-vrm6-8vpv-qv8q",
+  "processed_at": "2026-03-16T03:34:38.346648"
+}

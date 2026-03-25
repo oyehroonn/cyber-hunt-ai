@@ -1,0 +1,25 @@
+{
+  "title": "Server-Side Request Forgery",
+  "vuln_class": "XSS",
+  "cwe": "CWE-918",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Server-Side Request Forgery\nServer Side Request Forgery or SSRF is a vulnerability in which an attacker forces a server to perform requests on their behalf.\nSummary\nTools\nMethodology\nBypassing Filters\nDefault Targets\nBypass Localhost with IPv6 Notation\nBypass Localhost with a Domain Redirect\nBypass Localhost with CIDR\nBypass Using Rare Address\nBypass Using an Encoded IP Address\nBypass Using Different Encoding\nBypassing Using a Redirect\nBypass Using DNS Rebinding\nBypass Abusing URL Parsing Discre",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "6f63d9473c78",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Request%20Forgery/",
+  "processed_at": "2026-03-15T23:08:39.614589"
+}

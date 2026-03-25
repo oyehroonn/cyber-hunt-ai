@@ -1,0 +1,17 @@
+{
+  "id": "868f2876e32b",
+  "source": "bugcrowd",
+  "title": "UnsolvedCyber Mysteries",
+  "url": "https://www.bugcrowd.com/blog/category/hacker-spotlight",
+  "scraped_at": "2026-03-16T02:16:44.414975",
+  "severity": "medium",
+  "vuln_type": "RCE",
+  "cwe": null,
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "Unsolved\nCyber Mysteries\nHear the real stories of everyday people who were swept up in extraordinary breaches, unexplained leaks, and outbreaks of sensitive data in Bugcrowd’s chilling new docuseries.\nRead the Blog\nHacker Spotlight\nInternational Women’s Day Spotlight: The HackHer Network\nBy Erica Azad, Mar 05, 2026\nRead more\nHacker Spotlight\nHacker spotlight: Meet an elite hacking team\nBy Erica Azad, Feb 10, 2026\nRead more\nCommunity Spotlight\nCISO + hacker spotlight: Meet Aaron Guzman\nBy Erica Azad, Feb 03, 2026\nRead more\nHacker Spotlight\nHacker spotlight: Faizan Elahi\nBy Santerra Holler, Dec 23, 2025\nRead more\nHacker Resources\nHow I hacked my way to a million dollars: HX007\nBy Guest Post, Dec 04, 2025\nRead more\nHacker Spotlight\nPentester spotlight: Nitesh Bhatter\nBy Santerra Holler, Nov 06, 2025\nRead more\nHacker Spotlight\nHacker spotlight: Amr\nBy Santerra Holler, Nov 05, 2025\nRead more\nHacker Spotlight\nHacker spotlight: Evan Connelly\nBy Santerra Holler, Oct 24, 2025\nRead more\nHacker Resources\nHackHER Spotlight: Brigitte Lewis\nBy Guest Post, Oct 13, 2025\nRead more\n1\n2\n3\n…\n10\nNext\nSubscribe for updates\nGet Started with\nBugcrowd\nHackers aren’t waiting, so why should you? See how Bugcrowd can quickly improve your security posture.\nTry Bugcrowd\nContact Us",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {}
+}

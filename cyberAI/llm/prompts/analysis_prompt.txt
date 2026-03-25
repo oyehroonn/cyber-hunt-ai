@@ -1,0 +1,82 @@
+Analyze the following reconnaissance data to identify potential security vulnerabilities.
+
+## Reconnaissance Summary
+{recon_summary}
+
+## Similar Historical Vulnerabilities
+The following are relevant vulnerability reports from our knowledge base that may provide context:
+
+{similar_reports}
+
+## Analysis Task
+
+Based on the reconnaissance data and historical vulnerability patterns, perform a comprehensive security analysis:
+
+1. **Identify High-Risk Areas**: What aspects of this application/system are most likely to contain vulnerabilities?
+
+2. **Attack Surface Mapping**: What entry points exist for potential attacks?
+
+3. **Vulnerability Hypothesis**: Based on the patterns in similar reports, what vulnerabilities are most likely present?
+
+4. **Evidence Correlation**: What observations from the recon support each hypothesis?
+
+5. **Priority Ranking**: Order the potential vulnerabilities by risk (likelihood × impact)
+
+## Output Format
+
+Respond with a JSON object:
+
+```json
+{{
+  "summary": "2-3 sentence overview of the security posture",
+  "attack_surface": {{
+    "authentication_endpoints": ["list of auth-related endpoints/functions"],
+    "data_access_points": ["endpoints that access sensitive data"],
+    "file_operations": ["file upload/download functionality"],
+    "external_integrations": ["third-party services, APIs"],
+    "admin_functions": ["administrative capabilities"]
+  }},
+  "high_risk_areas": [
+    {{
+      "area": "Name of the area",
+      "risk_level": "critical|high|medium|low",
+      "reasoning": "Why this is high risk",
+      "similar_vulns": ["references to similar historical vulnerabilities"]
+    }}
+  ],
+  "attack_vectors": [
+    {{
+      "id": "AV001",
+      "name": "Descriptive attack name",
+      "vulnerability_class": "IDOR|SQL Injection|Auth Bypass|etc",
+      "description": "Detailed description of the potential attack",
+      "likelihood": "high|medium|low",
+      "impact": "critical|high|medium|low",
+      "evidence": ["specific observations that support this hypothesis"],
+      "test_approach": ["step-by-step testing procedure"],
+      "reference_vulns": ["similar vulnerabilities from knowledge base"]
+    }}
+  ],
+  "quick_wins": [
+    "Easy-to-test vulnerabilities that should be checked first"
+  ],
+  "requires_investigation": [
+    "Areas that need more reconnaissance before testing"
+  ],
+  "overall_risk_assessment": {{
+    "score": "1-10",
+    "confidence": "high|medium|low",
+    "summary": "Overall security assessment"
+  }}
+}}
+```
+
+## Analysis Guidelines
+
+- Be specific: Reference exact endpoints, parameters, or behaviors observed in the recon
+- Be evidence-based: Every hypothesis should be supported by observations
+- Consider chains: Look for combinations of issues that could lead to higher impact
+- Think like an attacker: What would you target first with limited time?
+- Reference history: How do these patterns match known vulnerability classes?
+
+Provide your analysis now:

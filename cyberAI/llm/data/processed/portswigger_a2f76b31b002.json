@@ -1,0 +1,23 @@
+{
+  "title": "PortSwigger: Unrestricted File Upload",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nFile upload vulnerabilities\nFile upload vulnerabilities\nIn this section, you'll learn how simple file upload functions can be used as a powerful vector for a number of high-severity attacks. We'll show you how to bypass common defense mechanisms in order to upload a web shell, enabling you to take full control of a vulnerable web server. Given how common file upload functions are, knowing how to test them properly is essential knowledge.\nLabs\nIf you're already familiar with ",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "a2f76b31b002",
+  "original_url": "https://portswigger.net/web-security/file-upload",
+  "processed_at": "2026-03-15T23:08:39.537965"
+}

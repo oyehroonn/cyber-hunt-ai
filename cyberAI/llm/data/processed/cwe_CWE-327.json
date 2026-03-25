@@ -1,0 +1,23 @@
+{
+  "title": "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-327",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product uses a broken or risky cryptographic algorithm or protocol.",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-327",
+  "original_url": "https://cwe.mitre.org/data/definitions/327.html",
+  "processed_at": "2026-03-15T23:08:39.538596"
+}

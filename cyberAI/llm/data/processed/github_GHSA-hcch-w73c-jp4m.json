@@ -1,0 +1,25 @@
+{
+  "title": "Statamic vulnerable to privilege escalation via stored cross-site scripting",
+  "vuln_class": "XSS",
+  "cwe": null,
+  "cvss_score": 5.4,
+  "severity": "medium",
+  "affected_component": "composer:statamic/cms",
+  "attack_vector": "Statamic vulnerable to privilege escalation via stored cross-site scripting",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-hcch-w73c-jp4m",
+  "original_url": "https://github.com/advisories/GHSA-hcch-w73c-jp4m",
+  "processed_at": "2026-03-16T03:34:38.601785"
+}

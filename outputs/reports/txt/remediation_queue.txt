@@ -1,2 +1,10 @@
 Remediation Queue
 ==================================================
+
+1. Fix [RAG] SSRF: Tests if the redirect endpoint allows server-side requests to localhost, which c
+2. Fix [RAG] SSRF: Tests for SSRF to access AWS instance metadata, which could leak sensitive cloud
+3. Fix [RAG] Authentication Bypass: Tests direct unauthenticated access to admin configuration endpoint for authenti
+4. Fix [RAG] Authentication Bypass: Tests if challenges API allows unauthorized access to admin-level challenge deta
+5. Fix [RAG] Authentication Bypass: Tests another admin endpoint for authentication bypass via direct unauthenticate
+6. Fix [RAG] IDOR: Tests if unauthenticated users can access admin configuration data, indicating I
+7. Fix [RAG] IDOR: Tests if manipulating the 'name' parameter allows access to challenges not inten

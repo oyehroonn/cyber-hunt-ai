@@ -1,0 +1,23 @@
+{
+  "title": "PayloadsAllTheThings: Mass Assignment",
+  "vuln_class": "Other",
+  "cwe": "CWE-915",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Mass Assignment\nA mass assignment attack is a security vulnerability that occurs when a web application automatically assigns user-supplied input values to properties or variables of a program object. This can become an issue if a user is able to modify attributes they should not have access to, like a user's permissions or an admin flag.\nSummary\nMethodology\nLabs\nReferences\nMethodology\nMass assignment vulnerabilities are most common in web applications that use Object-Relational Mapping (ORM) te",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "b61c10c03647",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Mass%20Assignment/",
+  "processed_at": "2026-03-15T23:08:39.616147"
+}

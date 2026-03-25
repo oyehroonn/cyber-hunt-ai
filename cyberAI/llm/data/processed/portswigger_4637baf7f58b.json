@@ -1,0 +1,23 @@
+{
+  "title": "PortSwigger: Information Disclosure",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-200",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nInformation disclosure\nInformation disclosure vulnerabilities\nIn this section, we'll explain the basics of information disclosure vulnerabilities and describe how you can find and exploit them. We'll also offer some guidance on how you can prevent information disclosure vulnerabilities in your own websites.\nLearning to find and exploit information disclosure is a vital skill for any tester. You are likely to encounter it on a regular basis and, once you know how to exploit i",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "4637baf7f58b",
+  "original_url": "https://portswigger.net/web-security/information-disclosure",
+  "processed_at": "2026-03-15T23:08:39.605770"
+}

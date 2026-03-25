@@ -1,0 +1,23 @@
+{
+  "title": "CWE-613: Insufficient Session Expiration",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-613",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "According to WASC, \"Insufficient Session Expiration is when a web site permits an attacker to reuse old session credentials or session IDs for authorization.\"",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-613",
+  "original_url": "https://cwe.mitre.org/data/definitions/613.html",
+  "processed_at": "2026-03-15T23:08:39.513754"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')",
+  "vuln_class": "XSS",
+  "cwe": "CWE-444",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product acts as an intermediary HTTP agent\n         (such as a proxy or firewall) in the data flow between two\n         entities such as a client and server, but it does not\n         interpret malformed HTTP requests or responses in ways that\n         are consistent with how the messages will be processed by\n         those entities that are at the ultimate destination.",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-444",
+  "original_url": "https://cwe.mitre.org/data/definitions/444.html",
+  "processed_at": "2026-03-15T23:08:39.527722"
+}

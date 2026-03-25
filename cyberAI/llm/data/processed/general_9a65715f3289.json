@@ -1,0 +1,23 @@
+{
+  "title": "OS Command Injection Defense Cheat Sheet¶",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-78",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "OS Command Injection Defense Cheat Sheet\n¶\nIntroduction\n¶\nCommand injection (or OS Command Injection) is a type of injection where software that constructs a system command using externally influenced input does not correctly neutralize the input from special elements that can modify the initially intended command.\nFor example, if the supplied value is:\ncalc\nwhen typed in a Windows command prompt, the application\nCalculator\nis displayed.\nHowever, if the supplied value has been tampered with, and",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "9a65715f3289",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.647357"
+}

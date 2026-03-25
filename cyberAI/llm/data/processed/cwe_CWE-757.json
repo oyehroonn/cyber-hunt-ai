@@ -1,0 +1,23 @@
+{
+  "title": "CWE-757: Selection of Less-Secure Algorithm During Negotiation ('Algorithm Downgrade')",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-757",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "A protocol or its implementation supports interaction between multiple actors and allows those actors to negotiate which algorithm should be used as a protection mechanism such as encryption or authentication, but it does not select the strongest algorithm that is available to both parties.",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-757",
+  "original_url": "https://cwe.mitre.org/data/definitions/757.html",
+  "processed_at": "2026-03-15T23:08:39.536230"
+}

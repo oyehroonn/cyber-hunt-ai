@@ -1,0 +1,23 @@
+{
+  "title": "simplesamlphp/xml-security: Missing AES-GCM Authentication Tag Validation on Encrypted Nodes Allows for Unauthorized Decryption",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": 8.2,
+  "severity": "high",
+  "affected_component": "composer:simplesamlphp/xml-security",
+  "attack_vector": "simplesamlphp/xml-security: Missing AES-GCM Authentication Tag Validation on Encrypted Nodes Allows for Unauthorized Decryption",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-r353-4845-pr5p",
+  "original_url": "https://github.com/advisories/GHSA-r353-4845-pr5p",
+  "processed_at": "2026-03-16T03:34:38.377907"
+}

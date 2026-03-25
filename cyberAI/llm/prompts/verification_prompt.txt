@@ -1,0 +1,141 @@
+Verify whether the following candidate finding represents a real security vulnerability.
+
+## Candidate Finding
+{finding}
+
+## Evidence Collected
+
+### Request/Response Data
+{request_response}
+
+### Before State
+{before_state}
+
+### After State
+{after_state}
+
+## Similar Confirmed Vulnerabilities
+{similar_confirmed}
+
+## Task: Vulnerability Verification
+
+Analyze the evidence to determine if this is a genuine security vulnerability. Consider:
+
+### 1. Evidence Analysis
+- Does the evidence actually demonstrate the claimed vulnerability?
+- Are there alternative explanations for the observed behavior?
+- Is the evidence conclusive or circumstantial?
+- What additional evidence would strengthen the case?
+
+### 2. Reproducibility Assessment
+- Can this be reliably reproduced?
+- Are there specific conditions required?
+- Is the behavior consistent?
+
+### 3. Impact Verification
+- What is the actual security impact?
+- Can sensitive data be accessed?
+- Can unauthorized actions be performed?
+- What is the blast radius?
+
+### 4. False Positive Analysis
+- Could this be intended behavior?
+- Are there mitigating controls?
+- Is the "vulnerability" actually blocked elsewhere?
+
+### 5. Comparison with Known Vulnerabilities
+- How does this compare to similar confirmed vulnerabilities?
+- Are the patterns consistent?
+- What made similar reports valid/invalid?
+
+## Output Format
+
+Respond with a JSON verification result:
+
+```json
+{{
+  "verdict": "confirmed|likely|unlikely|false_positive",
+  "confidence": 0.0-1.0,
+  "reasoning": {{
+    "summary": "One paragraph summary of the analysis",
+    "step_by_step": [
+      "Step 1: Analyzed the request/response...",
+      "Step 2: Compared before/after states...",
+      "Step 3: Evaluated against similar vulns..."
+    ]
+  }},
+  "evidence_analysis": {{
+    "supports_vulnerability": [
+      {{
+        "evidence": "Description of supporting evidence",
+        "weight": "strong|moderate|weak",
+        "explanation": "Why this supports the finding"
+      }}
+    ],
+    "contradicts_vulnerability": [
+      {{
+        "evidence": "Description of contradicting evidence",
+        "weight": "strong|moderate|weak",
+        "explanation": "Why this argues against the finding"
+      }}
+    ],
+    "inconclusive": [
+      {{
+        "evidence": "Description of unclear evidence",
+        "explanation": "Why this doesn't help determine validity"
+      }}
+    ]
+  }},
+  "severity_assessment": {{
+    "confirmed_impact": "What impact has been demonstrated",
+    "potential_impact": "What additional impact might exist",
+    "cvss_estimate": "X.X",
+    "severity": "critical|high|medium|low|informational"
+  }},
+  "comparison_to_known_vulns": {{
+    "similar_patterns": ["Pattern matches to known vulns"],
+    "differences": ["Key differences from known vulns"],
+    "validity_indicators": ["What makes this more/less likely valid"]
+  }},
+  "recommendations": {{
+    "if_confirmed": {{
+      "remediation": "How to fix this",
+      "priority": "immediate|soon|scheduled",
+      "additional_testing": ["Other areas to test based on this finding"]
+    }},
+    "if_needs_more_evidence": {{
+      "additional_tests": ["Specific tests to run"],
+      "evidence_needed": ["What evidence would be conclusive"]
+    }},
+    "if_false_positive": {{
+      "explanation": "Why this isn't a real vulnerability",
+      "related_concerns": ["Any related security concerns"]
+    }}
+  }},
+  "report_ready": true|false,
+  "report_notes": "Notes for the final report if confirmed"
+}}
+```
+
+## Verification Guidelines
+
+### Verdict Definitions
+- **confirmed**: Evidence clearly demonstrates a security vulnerability
+- **likely**: Strong evidence, but needs additional confirmation
+- **unlikely**: Weak evidence, probably not a real vulnerability
+- **false_positive**: Evidence shows this is not a vulnerability
+
+### Confidence Levels
+- **0.9-1.0**: Conclusive evidence, high certainty
+- **0.7-0.9**: Strong evidence, reasonably certain
+- **0.5-0.7**: Moderate evidence, somewhat uncertain
+- **0.3-0.5**: Weak evidence, significant uncertainty
+- **0.0-0.3**: Very weak evidence, mostly uncertain
+
+### Key Questions
+1. Can an attacker actually exploit this?
+2. Does the evidence show actual security impact?
+3. Is this behavior intentional/by design?
+4. What would a skeptical security reviewer think?
+
+Provide your verification analysis now:

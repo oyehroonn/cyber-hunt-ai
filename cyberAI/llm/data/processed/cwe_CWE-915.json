@@ -1,0 +1,23 @@
+{
+  "title": "CWE-915: Improperly Controlled Modification of Dynamically-Determined Object Attributes",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-915",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product receives input from an upstream component that specifies multiple attributes, properties, or fields that are to be initialized or updated in an object, but it does not properly control which attributes can be modified.",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-915",
+  "original_url": "https://cwe.mitre.org/data/definitions/915.html",
+  "processed_at": "2026-03-15T23:08:39.653727"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "4f2359cca9bd",
+  "source": "general",
+  "title": "HackTricks",
+  "url": "https://book.hacktricks.xyz/generic-methodologies-and-resources/external-recon-methodology",
+  "scraped_at": "2026-03-15T22:47:41.423723",
+  "severity": "medium",
+  "vuln_type": "Command Injection",
+  "cwe": "CWE-78",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "Document not found (404)\nThis URL is invalid, sorry. Please use the navigation bar or search to continue.",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "source_name": "hacktricks_techniques",
+    "source_type": "single_page"
+  }
+}

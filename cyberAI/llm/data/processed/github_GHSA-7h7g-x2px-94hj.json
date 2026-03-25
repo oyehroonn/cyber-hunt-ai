@@ -1,0 +1,23 @@
+{
+  "title": "OpenClaw: Pairing setup codes exposed long-lived shared gateway credentials instead of short-lived bootstrap tokens",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": "npm:openclaw",
+  "attack_vector": "OpenClaw: Pairing setup codes exposed long-lived shared gateway credentials instead of short-lived bootstrap tokens",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-7h7g-x2px-94hj",
+  "original_url": "https://github.com/advisories/GHSA-7h7g-x2px-94hj",
+  "processed_at": "2026-03-16T03:34:38.324808"
+}

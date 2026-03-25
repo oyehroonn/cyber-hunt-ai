@@ -1,0 +1,32 @@
+{
+  "id": "GHSA-vrm6-8vpv-qv8q",
+  "source": "github",
+  "title": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
+  "url": "https://github.com/advisories/GHSA-vrm6-8vpv-qv8q",
+  "scraped_at": "2026-03-15T23:26:49.747570",
+  "severity": "high",
+  "vuln_type": null,
+  "cwe": null,
+  "cvss_score": 7.5,
+  "affected_component": "npm:undici, npm:undici",
+  "description": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
+  "body": "## Description\n\nThe undici WebSocket client is vulnerable to a denial-of-service attack via unbounded memory consumption during permessage-deflate decompression. When a WebSocket connection negotiates the permessage-deflate extension, the client decompresses incoming compressed frames without enforcing any limit on the decompressed data size. A malicious WebSocket server can send a small compressed frame (a \"decompression bomb\") that expands to an extremely large size in memory, causing the Node.js process to exhaust available memory and crash or become unresponsive.\n\nThe vulnerability exists in the `PerMessageDeflate.decompress()` method, which accumulates all decompressed chunks in memory and concatenates them into a single Buffer without checking whether the total size exceeds a safe threshold.\n\n## Impact\n\n- Remote denial of service against any Node.js application using undici's WebSocket client\n- A single compressed WebSocket frame of ~6 MB can decompress to ~1 GB or more\n- Memory exhaustion occurs in native/external memory, bypassing V8 heap limits\n- No application-level mitigation is possible as decompression occurs before message delivery\n\n### Patches\n\nUsers should upgrade to fixed versions.\n\n### Workarounds\n\nNo workaround are possible.",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:41:56Z",
+  "metadata": {
+    "ghsa_id": "GHSA-vrm6-8vpv-qv8q",
+    "cve_id": "CVE-2026-1526",
+    "cwe_ids": [],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "affected_packages": [
+      "npm:undici",
+      "npm:undici"
+    ],
+    "references": [],
+    "credits": [
+      "HO-9",
+      "mcollina",
+      "UlisesGascon"
+    ]
+  }
+}

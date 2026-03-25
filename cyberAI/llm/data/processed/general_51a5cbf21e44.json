@@ -1,0 +1,25 @@
+{
+  "title": "JSON Web Token Cheat Sheet for Java¶",
+  "vuln_class": "XSS",
+  "cwe": "CWE-347",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "JSON Web Token Cheat Sheet for Java\n¶\nIntroduction\n¶\nMany applications use\nJSON Web Tokens\n(JWT) to allow the client to indicate its identity for further exchange after authentication.\nFrom\nJWT.IO\n:\nJSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algor",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "51a5cbf21e44",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.632370"
+}

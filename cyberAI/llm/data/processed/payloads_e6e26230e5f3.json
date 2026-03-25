@@ -1,0 +1,25 @@
+{
+  "title": "PayloadsAllTheThings: XPATH Injection",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-643",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "XPATH Injection\nXPath Injection is an attack technique used to exploit applications that construct XPath (XML Path Language) queries from user-supplied input to query or navigate XML documents.\nSummary\nTools\nMethodology\nBlind Exploitation\nOut Of Band Exploitation\nLabs\nReferences\nTools\norf/xcat\n- Automate XPath injection attacks to retrieve documents\nfeakk/xxxpwn\n- Advanced XPath Injection Tool\naayla-secura/xxxpwn_smart\n- A fork of xxxpwn using predictive text\nmicsoftvn/xpath-blind-explorer\nHarsh",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "e6e26230e5f3",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/XPATH%20Injection/",
+  "processed_at": "2026-03-15T23:08:39.612980"
+}

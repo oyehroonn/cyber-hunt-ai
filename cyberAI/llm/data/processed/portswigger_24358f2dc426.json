@@ -1,0 +1,25 @@
+{
+  "title": "Blind SQL injection",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-89",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nSQL injection\nBlind\nBlind SQL injection\nIn this section, we describe techniques for finding and exploiting blind SQL injection vulnerabilities.\nWhat is blind SQL injection?\nBlind SQL injection occurs when an application is vulnerable to SQL injection, but its HTTP responses do not contain the results of the relevant SQL query or the details of any database errors.\nMany techniques such as\nUNION\nattacks\nare not effective with blind SQL injection vulnerabilities. This is becaus",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "24358f2dc426",
+  "original_url": "https://portswigger.net/web-security/sql-injection/blind",
+  "processed_at": "2026-03-16T03:34:38.281878"
+}

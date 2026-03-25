@@ -1,0 +1,43 @@
+{
+  "id": "GHSA-pfjj-6f4p-rvmh",
+  "source": "github",
+  "title": "Apollo Federation vulnerable to prototype pollution via incomplete key sanitization",
+  "url": "https://github.com/advisories/GHSA-pfjj-6f4p-rvmh",
+  "scraped_at": "2026-03-15T23:26:49.744886",
+  "severity": "critical",
+  "vuln_type": "Prototype Pollution",
+  "cwe": null,
+  "cvss_score": 9.9,
+  "affected_component": "npm:@apollo/federation-internals, npm:@apollo/federation-internals, npm:@apollo/federation-internals",
+  "description": "Apollo Federation vulnerable to prototype pollution via incomplete key sanitization",
+  "body": "### Impact\n\nA vulnerability exists in query plan execution within the gateway that may allow pollution of `Object.prototype` in certain scenarios. A malicious client may be able to pollute `Object.prototype` in gateway directly by crafting operations with field aliases and/or variable names that target prototype-inheritable properties. Alternatively, if a subgraph were to be compromised by a malicious actor, they may be able to pollute `Object.prototype` in gateway by crafting JSON response payloads that target prototype-inheritable properties.\n\nBecause `Object.prototype` is shared across the Node.js process, successful exploitation can affect subsequent requests to the gateway instance. This may result in unexpected application behavior, privilege escalation, data integrity issues, or other security impact depending on how polluted properties are subsequently consumed by the application or its dependencies. As of the date of this advisory, Apollo is not aware of any reported exploitation of this vulnerability.\n\n### Patches\nMitigations addressing prototype pollution exposure have been applied in `@apollo/federation-internals`, `@apollo/gateway`, and `@apollo/query-planner` versions `2.9.6`, `2.10.5`, `2.11.6`, `2.12.3`, and `2.13.2`.   Users are encouraged to upgrade to these versions or later at their earliest convenience.\n\n### Workarounds\nA fully effective workaround is not available without a code change. As an interim measure, users who are unable to upgrade immediately may consider placing an input validation layer in front of the gateway to filter operations containing [GraphQL names](https://spec.graphql.org/September2025/#sec-Names) matching known `Object.prototype` pollution patterns (e.g., `__proto__`, `constructor`, `prototype`). Users should also ensure that subgraphs in their federated graph originate from trusted sources.",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:51:10Z",
+  "metadata": {
+    "ghsa_id": "GHSA-pfjj-6f4p-rvmh",
+    "cve_id": "CVE-2026-32621",
+    "cwe_ids": [],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+    "affected_packages": [
+      "npm:@apollo/federation-internals",
+      "npm:@apollo/federation-internals",
+      "npm:@apollo/federation-internals",
+      "npm:@apollo/federation-internals",
+      "npm:@apollo/federation-internals",
+      "npm:@apollo/gateway",
+      "npm:@apollo/gateway",
+      "npm:@apollo/gateway",
+      "npm:@apollo/gateway",
+      "npm:@apollo/gateway",
+      "npm:@apollo/query-planner",
+      "npm:@apollo/query-planner",
+      "npm:@apollo/query-planner",
+      "npm:@apollo/query-planner",
+      "npm:@apollo/query-planner"
+    ],
+    "references": [],
+    "credits": [
+      "r3dbrothers"
+    ]
+  }
+}

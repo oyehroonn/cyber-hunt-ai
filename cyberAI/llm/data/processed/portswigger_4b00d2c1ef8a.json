@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: GraphQL Vulnerabilities",
+  "vuln_class": "IDOR",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nGraphQL API vulnerabilities\nGraphQL API vulnerabilities\nGraphQL vulnerabilities generally arise due to implementation and design flaws. For example, the introspection feature may be left active, enabling attackers to query the API in order to glean information about its schema.\nGraphQL attacks usually take the form of malicious requests that can enable an attacker to obtain data or perform unauthorized actions. These attacks can have a severe impact, especially if the user i",
+  "root_cause": "Insufficient idor protection",
+  "impact": "Attacker could exploit idor vulnerability",
+  "remediation": "Implement proper idor controls",
+  "test_hints": [
+    "Test changing object IDs in requests",
+    "Check if user A can access user B's resources",
+    "Enumerate sequential IDs"
+  ],
+  "keywords": [
+    "idor",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "4b00d2c1ef8a",
+  "original_url": "https://portswigger.net/web-security/graphql",
+  "processed_at": "2026-03-15T23:08:39.611579"
+}

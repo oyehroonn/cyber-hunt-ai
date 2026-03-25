@@ -1,0 +1,23 @@
+{
+  "title": "CWE-347: Improper Verification of Cryptographic Signature",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-347",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product does not verify, or incorrectly verifies, the cryptographic signature for data.",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-347",
+  "original_url": "https://cwe.mitre.org/data/definitions/347.html",
+  "processed_at": "2026-03-15T23:08:39.519010"
+}

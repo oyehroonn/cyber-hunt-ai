@@ -1,0 +1,25 @@
+{
+  "title": "PayloadsAllTheThings: Upload Insecure Files",
+  "vuln_class": "XSS",
+  "cwe": "CWE-434",
+  "cvss_score": null,
+  "severity": "critical",
+  "affected_component": null,
+  "attack_vector": "Upload Insecure Files\nUploaded files may pose a significant risk if not handled correctly. A remote attacker could send a multipart/form-data POST request with a specially-crafted filename or mime type and execute arbitrary code.\nSummary\nTools\nMethodology\nDefaults Extensions\nUpload Tricks\nFilename Vulnerabilities\nPicture Compression\nPicture Metadata\nConfiguration Files\nCVE - ImageMagick\nCVE - FFMpeg HLS\nLabs\nReferences\nTools\nalmandin/fuxploiderFuxploider\n- File upload vulnerability scanner and e",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "870714a7e3f6",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Upload%20Insecure%20Files/",
+  "processed_at": "2026-03-15T23:08:39.579858"
+}

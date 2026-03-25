@@ -1,10 +1,21 @@
 {
   "_meta": {
-    "generated_at": "2026-03-24T23:22:10.787713",
-    "target_url": "https://example.com",
+    "generated_at": "2026-03-25T02:53:43.974872",
+    "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "full_1"
+    "run_id": "juice_steps_20260325_034629"
   },
-  "hidden_routes": []
+  "hidden_routes": [
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
+    {
+      "path": "/engine.io",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    }
+  ]
 }

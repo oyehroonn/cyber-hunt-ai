@@ -1,0 +1,23 @@
+{
+  "title": "OpenClaw: Zalo webhook rate limiting could be bypassed before secret validation",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": "npm:openclaw",
+  "attack_vector": "OpenClaw: Zalo webhook rate limiting could be bypassed before secret validation",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-5m9r-p9g7-679c",
+  "original_url": "https://github.com/advisories/GHSA-5m9r-p9g7-679c",
+  "processed_at": "2026-03-16T03:34:38.561519"
+}

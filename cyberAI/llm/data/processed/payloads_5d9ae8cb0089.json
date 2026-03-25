@@ -1,0 +1,25 @@
+{
+  "title": "PayloadsAllTheThings: Race Condition",
+  "vuln_class": "Race Condition",
+  "cwe": "CWE-362",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Race Condition\nRace conditions may occur when a process is critically or unexpectedly dependent on the sequence or timings of other events. In a web application environment, where multiple requests can be processed at a given time, developers may leave concurrency to be handled by the framework, server, or programming language.\nSummary\nTools\nMethodology\nLimit-overrun\nRate-limit Bypass\nTechniques\nHTTP/1.1 Last-byte Synchronization\nHTTP/2 Single-packet Attack\nTurbo Intruder\nExample 1\nExample 2\nLab",
+  "root_cause": "Insufficient race condition protection",
+  "impact": "Attacker could exploit race condition vulnerability",
+  "remediation": "Implement proper race condition controls",
+  "test_hints": [
+    "Send concurrent requests",
+    "Test coupon/discount codes",
+    "Check atomic operations"
+  ],
+  "keywords": [
+    "race condition",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "5d9ae8cb0089",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Race%20Condition/",
+  "processed_at": "2026-03-15T23:08:39.602670"
+}

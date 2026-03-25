@@ -1,0 +1,23 @@
+{
+  "title": "Kubernetes Security Cheat Sheet¶",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Kubernetes Security Cheat Sheet\n¶\nOverview\n¶\nThis cheat sheet provides a starting point for securing a Kubernetes cluster. It is divided into the following categories:\nReceive Alerts for Kubernetes Updates\nINTRODUCTION: What is Kubernetes?\nSecuring Kubernetes hosts\nSecuring Kubernetes components\nUsing the Kubernetes dashboard\nKubernetes Security Best Practices: Build Phase\nKubernetes Security Best Practices: Deploy Phase\nKubernetes Security Best Practices: Runtime Phase\nFor more information abou",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "f4c7d330ae1e",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Kubernetes_Security_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.507392"
+}

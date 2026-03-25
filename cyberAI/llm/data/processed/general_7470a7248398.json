@@ -1,0 +1,25 @@
+{
+  "title": "Cross Site Scripting",
+  "vuln_class": "XSS",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Cross Site Scripting\nCross-site scripting (XSS) is a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client-side scripts into web pages viewed by other users.\nSummary\nMethodology\nProof of Concept\nData Grabber\nCORS\nUI Redressing\nJavascript Keylogger\nOther Ways\nIdentify an XSS Endpoint\nTools\nXSS in HTML/Applications\nCommon Payloads\nXSS using HTML5 tags\nXSS using a Remote JS\nXSS in Hidden Input\nXSS in Uppercase Output\nDOM Based XSS\nXSS in",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "7470a7248398",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/XSS%20Injection/",
+  "processed_at": "2026-03-15T23:08:39.648393"
+}

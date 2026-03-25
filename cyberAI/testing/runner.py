@@ -122,6 +122,16 @@ class TestRunner:
                 logger.debug(f"API fuzzer: {e}")
                 return []
 
+        # RAG-powered category: generates and executes tests from knowledge base
+        if category == "rag":
+            try:
+                from cyberAI.testing.rag_tester import RAGTester
+                tester = RAGTester(run_id=self.run_id)
+                return await tester.run_rag_tests()
+            except Exception as e:
+                logger.debug(f"RAG tester: {e}")
+                return []
+
         plans = [p for p in self._test_plans if p.category.value == category]
         
         if not plans:
@@ -184,6 +194,13 @@ class TestRunner:
             all_categories = all_categories & set(categories)
             if "api_fuzz" in categories:
                 all_categories.add("api_fuzz")
+            if "rag" in categories:
+                all_categories.add("rag")
+        else:
+            # Always include rag when running all categories (if LLM enabled)
+            from cyberAI.config import get_config
+            if get_config().llm_enabled:
+                all_categories.add("rag")
         
         with Progress() as progress:
             main_task = progress.add_task("[cyan]Running security tests...", total=len(all_categories))

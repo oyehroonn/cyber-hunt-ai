@@ -1,0 +1,25 @@
+{
+  "title": "Prototype pollution via browser APIs",
+  "vuln_class": "XSS",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nPrototype pollution\nClient-side vulnerabilities\nBrowser APIs\nPrototype pollution via browser APIs\nYou may be surprised to learn that there are a number of widespread prototype pollution gadgets in the JavaScript APIs commonly provided in browsers. In this section, we'll show you how to exploit these for\nDOM XSS\n, potentially bypassing flawed prototype pollution defenses implemented by developers.\nPortSwigger research\nThe labs in this section are based on original PortSwigger",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "488c2b1e1a76",
+  "original_url": "https://portswigger.net/web-security/prototype-pollution/client-side/browser-apis",
+  "processed_at": "2026-03-16T03:34:38.265803"
+}

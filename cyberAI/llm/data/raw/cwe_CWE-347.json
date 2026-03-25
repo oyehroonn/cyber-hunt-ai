@@ -1,0 +1,22 @@
+{
+  "id": "CWE-347",
+  "source": "cwe",
+  "title": "CWE-347: Improper Verification of Cryptographic Signature",
+  "url": "https://cwe.mitre.org/data/definitions/347.html",
+  "scraped_at": "2026-03-15T23:05:57.674160",
+  "severity": "high",
+  "vuln_type": "JWT Verification Failure",
+  "cwe": "CWE-347",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": "The product does not verify, or incorrectly verifies, the cryptographic signature for data.",
+  "body": "Description:\nThe product does not verify, or incorrectly verifies, the cryptographic signature for data.\n\nConsequences:\nImpact Details Gain Privileges or Assume Identity; Modify Application Data; Execute Unauthorized Code or Commands Scope: Access Control, Integrity, Confidentiality An attacker could gain access to sensitive data and possibly execute unauthorized code.\n\nDetection Methods:\nMethod\nDetails\nAutomated Static Analysis\nAutomated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)\nEffectiveness: High\n\nExamples:\nExample 1\nIn the following code, a JarFile object is created from a downloaded file.\n(bad code)\nExample Language:\nJava\nFile f = new File(downloadedFilePath);\nJarFile jf = new JarFile(f);\nThe JAR file that was potentially downloaded from an untrusted source is created without verifying the signature (if present). An alternate constructor that accepts a boolean verify parameter should be used instead.",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "cwe_id": "CWE-347",
+    "mitigations": null,
+    "detection": "Method\nDetails\nAutomated Static Analysis\nAutomated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external componen",
+    "consequences": "Impact Details Gain Privileges or Assume Identity; Modify Application Data; Execute Unauthorized Code or Commands Scope: Access Control, Integrity, Confidentiality An attacker could gain access to sensitive data and possibly execute unauthorized code."
+  }
+}

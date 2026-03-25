@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: DOM-based Vulnerabilities",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nDOM-based\nDOM-based vulnerabilities\nIn this section, we will describe what the DOM is, explain how insecure processing of DOM data can introduce vulnerabilities, and suggest how you can prevent DOM-based vulnerabilities on your websites.\nLabs\nIf you're already familiar with the basic concepts behind DOM-based vulnerabilities and just want to practice exploiting them on some realistic, deliberately vulnerable targets, you can access all of the labs in this topic from the link",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "28d314b08a36",
+  "original_url": "https://portswigger.net/web-security/dom-based",
+  "processed_at": "2026-03-16T03:34:38.952375"
+}

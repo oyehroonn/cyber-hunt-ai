@@ -1,0 +1,23 @@
+{
+  "title": "Undici has Unbounded Memory Consumption in its DeduplicationHandler via Response Buffering that leads to DoS",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": 5.9,
+  "severity": "medium",
+  "affected_component": "npm:undici",
+  "attack_vector": "Undici has Unbounded Memory Consumption in its DeduplicationHandler via Response Buffering that leads to DoS",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-phc3-fgpg-7m6h",
+  "original_url": "https://github.com/advisories/GHSA-phc3-fgpg-7m6h",
+  "processed_at": "2026-03-16T03:34:38.943908"
+}

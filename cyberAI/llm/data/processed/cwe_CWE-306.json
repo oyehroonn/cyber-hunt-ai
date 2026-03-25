@@ -1,0 +1,23 @@
+{
+  "title": "CWE-306: Missing Authentication for Critical Function",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-306",
+  "cvss_score": null,
+  "severity": "critical",
+  "affected_component": null,
+  "attack_vector": "The product does not perform any authentication for functionality that requires a provable user identity or consumes a significant amount of resources.",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-306",
+  "original_url": "https://cwe.mitre.org/data/definitions/306.html",
+  "processed_at": "2026-03-15T23:08:39.515349"
+}

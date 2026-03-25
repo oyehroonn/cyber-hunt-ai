@@ -1,0 +1,25 @@
+{
+  "title": "HackTricks",
+  "vuln_class": "XSS",
+  "cwe": "CWE-287",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "OAuth to Account takeover\nTip\nLearn & practice AWS Hacking:\nHackTricks Training AWS Red Team Expert (ARTE)\nLearn & practice GCP Hacking:\nHackTricks Training GCP Red Team Expert (GRTE)\nLearn & practice Az Hacking:\nHackTricks Training Azure Red Team Expert (AzRTE)\nSupport HackTricks\nCheck the\nsubscription plans\n!\nJoin the\n💬\nDiscord group\nor the\ntelegram group\nor\nfollow\nus on\nTwitter\n🐦\n@hacktricks_live\n.\nShare hacking tricks by submitting PRs to the\nHackTricks\nand\nHackTricks Cloud\ngithub repos.\nBas",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "48e834501cee",
+  "original_url": "https://book.hacktricks.xyz/pentesting-web/oauth-to-account-takeover",
+  "processed_at": "2026-03-15T23:08:39.639524"
+}

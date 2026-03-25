@@ -1,0 +1,23 @@
+{
+  "title": "FAQs",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "So long as you have access to a valid, active Burp Suite Professional license at the time of your certification exam, you will be able to use it to take the exam.\nIn addition, we require that you use a project file, which we may request up to a week after you have taken the exam to confirm your certificate or investigate any reported issues.",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "f9c16eadd604",
+  "original_url": "https://portswigger.net/web-security/certification/frequently-asked-questions/index.html",
+  "processed_at": "2026-03-16T03:34:38.585429"
+}

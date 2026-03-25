@@ -1,0 +1,29 @@
+{
+  "id": "GHSA-hcch-w73c-jp4m",
+  "source": "github",
+  "title": "Statamic vulnerable to privilege escalation via stored cross-site scripting",
+  "url": "https://github.com/advisories/GHSA-hcch-w73c-jp4m",
+  "scraped_at": "2026-03-15T23:26:49.745265",
+  "severity": "medium",
+  "vuln_type": "XSS",
+  "cwe": null,
+  "cvss_score": 5.4,
+  "affected_component": "composer:statamic/cms",
+  "description": "Statamic vulnerable to privilege escalation via stored cross-site scripting",
+  "body": "### Impact\n\nStored XSS in the control panel color mode preference allows authenticated users with control panel access to inject malicious JavaScript that executes when a higher-privileged user impersonates their account.\n\n### Patches\n\nThis has been fixed in 6.6.2.",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:50:51Z",
+  "metadata": {
+    "ghsa_id": "GHSA-hcch-w73c-jp4m",
+    "cve_id": "CVE-2026-32612",
+    "cwe_ids": [],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+    "affected_packages": [
+      "composer:statamic/cms"
+    ],
+    "references": [],
+    "credits": [
+      "Shirshaw64p"
+    ]
+  }
+}

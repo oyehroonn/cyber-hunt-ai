@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: Authentication Bypass",
+  "vuln_class": "Auth Bypass",
+  "cwe": "CWE-287",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nAuthentication vulnerabilities\nAuthentication vulnerabilities\nConceptually, authentication vulnerabilities are easy to understand. However, they are usually critical because of the clear relationship between authentication and security.\nAuthentication vulnerabilities can allow attackers to gain access to sensitive data and functionality. They also expose additional attack surface for further exploits. For this reason, it's important to learn how to identify and exploit authe",
+  "root_cause": "Insufficient auth bypass protection",
+  "impact": "Attacker could exploit auth bypass vulnerability",
+  "remediation": "Implement proper auth bypass controls",
+  "test_hints": [
+    "Test direct URL access",
+    "Check session handling",
+    "Try manipulating auth tokens"
+  ],
+  "keywords": [
+    "auth bypass",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "bd458c863692",
+  "original_url": "https://portswigger.net/web-security/authentication",
+  "processed_at": "2026-03-15T23:08:39.594728"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Reflected XSS",
+  "vuln_class": "XSS",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nCross-site scripting\nReflected\nReflected XSS\nIn this section, we'll explain reflected cross-site scripting, describe the impact of reflected XSS attacks, and spell out how to find reflected XSS vulnerabilities.\nWhat is reflected cross-site scripting?\nReflected cross-site scripting (or XSS) arises when an application receives data in an HTTP request and includes that data within the immediate response in an unsafe way.\nSuppose a website has a search function which receives th",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "67ec554915f8",
+  "original_url": "https://portswigger.net/web-security/cross-site-scripting/reflected",
+  "processed_at": "2026-03-16T03:34:38.563432"
+}

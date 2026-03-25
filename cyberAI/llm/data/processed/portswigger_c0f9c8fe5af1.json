@@ -1,0 +1,23 @@
+{
+  "title": "PortSwigger: JWT Vulnerabilities",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-347",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nJWT attacks\nJWT attacks\nIn this section, we'll look at how design issues and flawed handling of JSON web tokens (JWTs) can leave websites vulnerable to a variety of high-severity attacks. As JWTs are most commonly used in authentication, session management, and access control mechanisms, these vulnerabilities can potentially compromise the entire website and its users.\nDon't worry if you're not familiar with JWTs and how they work - we'll cover all of the relevant details as",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "c0f9c8fe5af1",
+  "original_url": "https://portswigger.net/web-security/jwt",
+  "processed_at": "2026-03-15T23:08:39.640804"
+}

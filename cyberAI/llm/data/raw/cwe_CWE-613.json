@@ -1,0 +1,22 @@
+{
+  "id": "CWE-613",
+  "source": "cwe",
+  "title": "CWE-613: Insufficient Session Expiration",
+  "url": "https://cwe.mitre.org/data/definitions/613.html",
+  "scraped_at": "2026-03-15T23:05:52.750503",
+  "severity": "medium",
+  "vuln_type": "Session Expiration Issues",
+  "cwe": "CWE-613",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": "According to WASC, \"Insufficient Session Expiration is when a web site permits an attacker to reuse old session credentials or session IDs for authorization.\"",
+  "body": "Description:\nAccording to WASC, \"Insufficient Session Expiration is when a web site permits an attacker to reuse old session credentials or session IDs for authorization.\"\n\nConsequences:\nImpact Details Bypass Protection Mechanism Scope: Access Control\n\nMitigations:\nPhase(s)\nMitigation\nImplementation\nSet sessions/credentials expiration date.\n\nDetection Methods:\nMethod\nDetails\nAutomated Static Analysis\nAutomated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)\nEffectiveness: High\n\nExamples:\nExample 1\nThe following snippet was taken from a J2EE web.xml deployment descriptor in which the session-timeout parameter is explicitly defined (the default value depends on the container). In this case the value is set to -1, which means that a session will never expire.\n(bad code)\nExample Language:\nJava\n<web-app>\n[...snipped...]\n<session-config>\n<session-timeout>-1</session-timeout>\n</session-config>\n</web-app>",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "cwe_id": "CWE-613",
+    "mitigations": "Phase(s)\nMitigation\nImplementation\nSet sessions/credentials expiration date.",
+    "detection": "Method\nDetails\nAutomated Static Analysis\nAutomated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external componen",
+    "consequences": "Impact Details Bypass Protection Mechanism Scope: Access Control"
+  }
+}

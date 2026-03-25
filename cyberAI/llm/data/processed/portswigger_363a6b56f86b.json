@@ -1,0 +1,23 @@
+{
+  "title": "PortSwigger: Path Traversal",
+  "vuln_class": "Path Traversal",
+  "cwe": "CWE-22",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nPath traversal\nPath traversal\nIn this section, we explain:\nWhat path traversal is.\nHow to carry out path traversal attacks and circumvent common obstacles.\nHow to prevent path traversal vulnerabilities.\nLabs\nIf you're familiar with the basic concepts behind path traversal and want to practice exploiting them on some realistic, deliberately vulnerable targets, you can access labs in this topic from the link below.\nView all path traversal labs\nWhat is path traversal?\nPath trav",
+  "root_cause": "Insufficient path traversal protection",
+  "impact": "Attacker could exploit path traversal vulnerability",
+  "remediation": "Implement proper path traversal controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "path traversal",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "363a6b56f86b",
+  "original_url": "https://portswigger.net/web-security/file-path-traversal",
+  "processed_at": "2026-03-16T03:34:38.950223"
+}

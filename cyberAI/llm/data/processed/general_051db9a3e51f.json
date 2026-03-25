@@ -1,0 +1,25 @@
+{
+  "title": "Cross Site Scripting Prevention Cheat Sheet¶",
+  "vuln_class": "XSS",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Cross Site Scripting Prevention Cheat Sheet\n¶\nIntroduction\n¶\nThis cheat sheet helps developers prevent XSS vulnerabilities.\nCross-Site Scripting (XSS) is a misnomer. Originally this term was derived from early versions of the attack that were primarily focused on stealing data cross-site. Since then, the term has widened to include injection of basically any content. XSS attacks are serious and can lead to account impersonation, observing user behaviour, loading external content, stealing sensit",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "051db9a3e51f",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.526651"
+}

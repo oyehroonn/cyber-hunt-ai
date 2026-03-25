@@ -1,17 +1,3013 @@
 {
   "_meta": {
-    "generated_at": "2026-03-24T23:22:31.365345",
-    "target_url": "https://example.com",
+    "generated_at": "2026-03-25T02:55:28.794938",
+    "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "full_1"
+    "run_id": "juice_steps_20260325_034629"
   },
-  "surfaces": [],
-  "by_classification": {},
+  "surfaces": [
+    {
+      "path": "/admin",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/admin/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/administrator",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/internal",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/internal/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/billing",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/billing/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/export",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/exports",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/import",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/imports",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/tokens",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api-tokens",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/tokens",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/audit",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/audit-logs",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/audit/logs",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/graphql",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/graphql/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/graphql/playground",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/graphiql",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/swagger",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/swagger/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/swagger-ui",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/swagger-ui.html",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/swagger-ui/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/openapi.json",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/openapi.yaml",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/docs",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api-docs",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/docs",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/redoc",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/health",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/healthz",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/health/live",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/health/ready",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/debug",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/debug/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/metrics",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/prometheus",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.well-known/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.well-known/security.txt",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.well-known/openid-configuration",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/robots.txt",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/sitemap_index.xml",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/__admin",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/__admin/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/staff",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/staff/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/superuser",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/console",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/console/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/manage",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/manage/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/management",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/v1/admin",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/v2/admin",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/internal",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/private",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.env",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.git",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.git/config",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.git/HEAD",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.gitignore",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.htaccess",
+      "status_code": 403,
+      "response_size": 239,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Apache/2.4.66 (Unix)"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/config",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/config/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/configuration",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/settings",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/system",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/actuator",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/actuator/health",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/actuator/info",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/actuator/env",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/actuator/beans",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/actuator/mappings",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/trace",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/elmah.axd",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/phpinfo.php",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/info.php",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/test",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/test/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/testing",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/dev",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/development",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/staging",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/backup",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/backups",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/dump",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/sql",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/database",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/db",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/phpmyadmin",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/pma",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/adminer",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/status",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/server-status",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/server-info",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/_debug",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/_profiler",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/profiler",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/debug",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/status",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/health",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/info",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/version",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/version",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/version.txt",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/changelog",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/CHANGELOG.md",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/README.md",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/license",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/LICENSE",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/webpack.config.js",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/package.json",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/composer.json",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/Gemfile",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/requirements.txt",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.dockerenv",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/Dockerfile",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/docker-compose.yml",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/api/webhooks",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/webhooks",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/callback",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/callbacks",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/oauth",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/oauth/",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/oauth/authorize",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/oauth/token",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/.aws/credentials",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/credentials",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/secrets",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/private",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/restricted",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    },
+    {
+      "path": "/confidential",
+      "status_code": 503,
+      "response_size": 567,
+      "redirect_target": null,
+      "leaks_metadata": true,
+      "metadata_leaked": [
+        "header:server=Heroku"
+      ],
+      "classification": "LEAKS_METADATA"
+    }
+  ],
+  "by_classification": {
+    "LEAKS_METADATA": [
+      {
+        "path": "/admin",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/admin/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/administrator",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/internal",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/internal/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/billing",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/billing/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/export",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/exports",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/import",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/imports",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/tokens",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api-tokens",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/tokens",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/audit",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/audit-logs",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/audit/logs",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/graphql",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/graphql/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/graphql/playground",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/graphiql",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/swagger",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/swagger/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/swagger-ui",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/swagger-ui.html",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/swagger-ui/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/openapi.json",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/openapi.yaml",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/docs",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api-docs",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/docs",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/redoc",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/health",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/healthz",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/health/live",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/health/ready",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/debug",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/debug/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/metrics",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/prometheus",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.well-known/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.well-known/security.txt",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.well-known/openid-configuration",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/robots.txt",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/sitemap.xml",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/sitemap_index.xml",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/__admin",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/__admin/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/staff",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/staff/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/superuser",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/console",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/console/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/manage",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/manage/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/management",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/v1/admin",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/v2/admin",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/internal",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/private",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.env",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.git",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.git/config",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.git/HEAD",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.gitignore",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.htaccess",
+        "status_code": 403,
+        "response_size": 239,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Apache/2.4.66 (Unix)"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/config",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/config/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/configuration",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/settings",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/system",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/actuator",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/actuator/health",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/actuator/info",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/actuator/env",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/actuator/beans",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/actuator/mappings",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/trace",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/elmah.axd",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/phpinfo.php",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/info.php",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/test",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/test/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/testing",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/dev",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/development",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/staging",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/backup",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/backups",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/dump",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/sql",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/database",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/db",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/phpmyadmin",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/pma",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/adminer",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/status",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/server-status",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/server-info",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/_debug",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/_profiler",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/profiler",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/debug",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/status",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/health",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/info",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/version",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/version",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/version.txt",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/changelog",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/CHANGELOG.md",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/README.md",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/license",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/LICENSE",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/webpack.config.js",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/package.json",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/composer.json",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/Gemfile",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/requirements.txt",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.dockerenv",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/Dockerfile",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/docker-compose.yml",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/api/webhooks",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/webhooks",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/callback",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/callbacks",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/oauth",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/oauth/",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/oauth/authorize",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/oauth/token",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/.aws/credentials",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/credentials",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/secrets",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/private",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/restricted",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      },
+      {
+        "path": "/confidential",
+        "status_code": 503,
+        "response_size": 567,
+        "redirect_target": null,
+        "leaks_metadata": true,
+        "metadata_leaked": [
+          "header:server=Heroku"
+        ],
+        "classification": "LEAKS_METADATA"
+      }
+    ]
+  },
   "summary": {
     "total_probed": 136,
-    "total_found": 0,
-    "leaking_metadata": 0,
+    "total_found": 136,
+    "leaking_metadata": 136,
     "open_access": 0,
     "blocked": 0
   }

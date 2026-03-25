@@ -1,0 +1,25 @@
+{
+  "title": "Content Security Policy Cheat Sheet¶",
+  "vuln_class": "XSS",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Content Security Policy Cheat Sheet\n¶\nIntroduction\n¶\nThis article brings forth a way to integrate the\ndefense in depth\nconcept to the client-side of web applications. By injecting the Content-Security-Policy (CSP) headers from the server, the browser is aware and capable of protecting the user from dynamic calls that will load content into the page currently being visited.\nContext\n¶\nThe increase in XSS (Cross-Site Scripting), clickjacking, and cross-site leak vulnerabilities demands a more\ndefen",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "3dd88926ab60",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.607442"
+}

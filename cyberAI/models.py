@@ -73,6 +73,7 @@ class TestCategory(str, Enum):
     BILLING = "billing"
     NOTIFICATION = "notification"
     CONFIG = "config"
+    RAG = "rag"
 
 
 class ImpactType(str, Enum):

@@ -1,0 +1,23 @@
+{
+  "title": "Three AI security assumptions that will break in 2026",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Unsolved\nCyber Mysteries\nHear the real stories of everyday people who were swept up in extraordinary breaches, unexplained leaks, and outbreaks of sensitive data in Bugcrowd’s chilling new docuseries.\nRead the Blog\nThought Leadership\nThree AI security assumptions that will break in 2026\nBy Trey Ford, Mar 10, 2026\nRead more\nThought Leadership\nThree years of AI innovation and hacking\nBy Erica Azad, Feb 17, 2026\nRead more\nThought Leadership\nHow vulnerable are vibe-coded apps?\nBy Guest Post, Feb 12,",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "bugcrowd"
+  ],
+  "source": "bugcrowd",
+  "original_id": "2acff0c083c7",
+  "original_url": "https://www.bugcrowd.com/blog/category/thought-leadership/",
+  "processed_at": "2026-03-16T03:34:38.637840"
+}

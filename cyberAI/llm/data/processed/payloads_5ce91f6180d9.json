@@ -1,0 +1,23 @@
+{
+  "title": "PayloadsAllTheThings: Insecure Deserialization",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-502",
+  "cvss_score": null,
+  "severity": "critical",
+  "affected_component": null,
+  "attack_vector": "Insecure Deserialization\nSerialization is the process of turning some object into a data format that can be restored later. People often serialize objects in order to save them to storage, or to send as part of communications. Deserialization is the reverse of that process -- taking data structured from some format, and rebuilding it into an object - OWASP\nSummary\nDeserialization Identifier\nPOP Gadgets\nLabs\nReferences\nDeserialization Identifier\nCheck the following sub-sections, located in other ",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "5ce91f6180d9",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Insecure%20Deserialization/",
+  "processed_at": "2026-03-15T23:08:39.657418"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: Clickjacking",
+  "vuln_class": "XSS",
+  "cwe": "CWE-1021",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nClickjacking\nClickjacking (UI redressing)\nIn this section we will explain what clickjacking is, describe common examples of clickjacking attacks and discuss how to protect against these attacks.\nWhat is clickjacking?\nClickjacking is an interface-based attack in which a user is tricked into clicking on actionable content on a hidden website by clicking on some other content in a decoy website. Consider the following example:\nA web user accesses a decoy website (perhaps this i",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "965b17fdf20d",
+  "original_url": "https://portswigger.net/web-security/clickjacking",
+  "processed_at": "2026-03-16T03:34:38.938887"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Web Service Security Cheat Sheet¶",
+  "vuln_class": "XSS",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Web Service Security Cheat Sheet\n¶\nIntroduction\n¶\nThis article is focused on providing guidance for securing web services and preventing web services related attacks.\nPlease notice that due to the difference in implementation between different frameworks, this cheat sheet is kept at a high level.\nTransport Confidentiality\n¶\nTransport confidentiality protects against eavesdropping and man-in-the-middle attacks against web service communications to/from the server.\nRule\n: All communication with an",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "610b58cfcc60",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Web_Service_Security_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.515914"
+}

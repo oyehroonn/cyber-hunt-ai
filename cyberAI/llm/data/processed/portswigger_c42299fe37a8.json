@@ -1,0 +1,25 @@
+{
+  "title": "Client-side template injection",
+  "vuln_class": "XSS",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nCross-site scripting\nContexts\nClient-side template injection\nClient-side template injection\nIn this section, we'll look at client-side template injection vulnerabilities and how you can exploit them for XSS attacks. This attack technique was pioneered by our research team - read more in\nXSS without HTML: Client-Side Template\n            Injection with AngularJS\n. Although client-side template injection is a generic issue, we'll focus on examples from the AngularJS framework ",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "c42299fe37a8",
+  "original_url": "https://portswigger.net/web-security/cross-site-scripting/contexts/client-side-template-injection",
+  "processed_at": "2026-03-16T03:34:38.269588"
+}

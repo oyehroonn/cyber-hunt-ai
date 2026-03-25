@@ -1,0 +1,31 @@
+{
+  "id": "GHSA-phc3-fgpg-7m6h",
+  "source": "github",
+  "title": "Undici has Unbounded Memory Consumption in its DeduplicationHandler via Response Buffering that leads to DoS",
+  "url": "https://github.com/advisories/GHSA-phc3-fgpg-7m6h",
+  "scraped_at": "2026-03-15T23:26:49.748841",
+  "severity": "medium",
+  "vuln_type": "RCE",
+  "cwe": null,
+  "cvss_score": 5.9,
+  "affected_component": "npm:undici",
+  "description": "Undici has Unbounded Memory Consumption in its DeduplicationHandler via Response Buffering that leads to DoS",
+  "body": "## Impact\nThis is an uncontrolled resource consumption vulnerability (CWE-400) that can lead to Denial of Service (DoS).\n\nIn vulnerable Undici versions, when `interceptors.deduplicate()` is enabled, response data for deduplicated requests could be accumulated in memory for downstream handlers. An attacker-controlled or untrusted upstream endpoint can exploit this with large/chunked responses and concurrent identical requests, causing high memory usage and potential OOM process termination.\n\nImpacted users are applications that use Undici’s deduplication interceptor against endpoints that may produce large or long-lived response bodies.\n\n## Patches\n\nThe issue has been patched by changing deduplication behavior to stream response chunks to downstream handlers as they arrive (instead of full-body accumulation), and by preventing late deduplication when body streaming has already started.\n\nUsers should upgrade to the first official Undici (and Node.js, where applicable) releases that include this patch.\n\n## Workarounds\nIf upgrading immediately is not possible:\n\n- Disable `interceptors.deduplicate()` for affected clients/routes.\n- Use `skipHeaderNames` with a marker header to force high-risk requests to bypass deduplication.\n- Avoid concurrent identical requests to untrusted endpoints that may return very large/chunked bodies.\n- Apply upstream/proxy response-size and timeout limits.",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:37:58Z",
+  "metadata": {
+    "ghsa_id": "GHSA-phc3-fgpg-7m6h",
+    "cve_id": "CVE-2026-2581",
+    "cwe_ids": [],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "affected_packages": [
+      "npm:undici"
+    ],
+    "references": [],
+    "credits": [
+      "jackhax",
+      "mcollina",
+      "UlisesGascon"
+    ]
+  }
+}

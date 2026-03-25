@@ -1,0 +1,23 @@
+{
+  "title": "PayloadsAllTheThings: Directory Traversal",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-22",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Directory Traversal\nPath Traversal, also known as Directory Traversal, is a type of security vulnerability that occurs when an attacker manipulates variables that reference files with “dot-dot-slash (../)” sequences or similar constructs. This can allow the attacker to access arbitrary files and directories stored on the file system.\nSummary\nTools\nMethodology\nURL Encoding\nDouble URL Encoding\nUnicode Encoding\nOverlong UTF-8 Unicode Encoding\nMangled Path\nNULL Bytes\nReverse Proxy URL Implementation",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "6f4307958ec1",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Directory%20Traversal/",
+  "processed_at": "2026-03-15T23:08:39.608334"
+}

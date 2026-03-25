@@ -1,0 +1,25 @@
+{
+  "title": "Query Parameterization Cheat Sheet¶",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Query Parameterization Cheat Sheet\n¶\nIntroduction\n¶\nSQL Injection\nis one of the most dangerous web vulnerabilities. So much so that it was the #1 item in both the OWASP Top 10\n2013 version\n, and\n2017 version\n. As of 2021, it sits at #3 on the\nOWASP Top 10\n.\nIt represents a serious threat because SQL Injection allows evil attacker code to change the structure of a web application's SQL statement in a way that can steal data, modify data, or potentially facilitate command injection to the underlyi",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "816b2dd23e63",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.636251"
+}

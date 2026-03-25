@@ -1,0 +1,23 @@
+{
+  "title": "SimpleEval: Objects (including modules) can leak dangerous modules through to direct access inside the sandbox",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": "pip:simpleeval",
+  "attack_vector": "SimpleEval: Objects (including modules) can leak dangerous modules through to direct access inside the sandbox",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-44vg-5wv2-h2hg",
+  "original_url": "https://github.com/advisories/GHSA-44vg-5wv2-h2hg",
+  "processed_at": "2026-03-16T03:34:38.305902"
+}

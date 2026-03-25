@@ -1,0 +1,25 @@
+{
+  "title": "Server-Side Request Forgery Prevention Cheat Sheet¶",
+  "vuln_class": "SSRF",
+  "cwe": "CWE-918",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Server-Side Request Forgery Prevention Cheat Sheet\n¶\nIntroduction\n¶\nThe objective of the cheat sheet is to provide advices regarding the protection against\nServer Side Request Forgery\n(SSRF) attack.\nThis cheat sheet will focus on the defensive point of view and will not explain how to perform this attack. This\ntalk\nfrom the security researcher\nOrange Tsai\nas well as this\ndocument\nprovide techniques on how to perform this kind of attack.\nContext\n¶\nSSRF is an attack vector that abuses an applicati",
+  "root_cause": "Insufficient ssrf protection",
+  "impact": "Attacker could exploit ssrf vulnerability",
+  "remediation": "Implement proper ssrf controls",
+  "test_hints": [
+    "Test internal IP addresses",
+    "Check URL parameters",
+    "Try cloud metadata endpoints"
+  ],
+  "keywords": [
+    "ssrf",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "7eb820e1e53b",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.621284"
+}

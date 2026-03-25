@@ -1,12 +1,31 @@
 {
   "_meta": {
-    "generated_at": "2026-03-24T23:22:35.242706",
-    "target_url": "https://example.com",
+    "generated_at": "2026-03-25T02:56:38.007729",
+    "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "full_1"
+    "run_id": "juice_steps_20260325_034629"
   },
-  "workflows": {},
+  "workflows": {
+    "submit": {
+      "id": "6b3ebf16-a2ff-4db9-8db9-201df4bfc972",
+      "name": "submit",
+      "description": null,
+      "nodes": [
+        {
+          "id": "submit_step_0",
+          "state": "step_0",
+          "description": "GitHub - juice-shop/juice-shop: OWASP Juice Shop: Probably the most modern and sophisticated insecure web application · GitHub",
+          "is_initial": true,
+          "is_terminal": true,
+          "required_role": null
+        }
+      ],
+      "edges": [],
+      "object_type": null,
+      "suspicious_transitions": []
+    }
+  },
   "observed_transitions": [],
   "suspicious_transitions": []
 }

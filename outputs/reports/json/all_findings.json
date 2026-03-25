@@ -1,10 +1,789 @@
 {
   "_meta": {
-    "generated_at": "2026-03-24T23:23:30.123556",
+    "generated_at": "2026-03-25T03:33:12.886857",
     "target_url": "https://example.com",
     "phase": "reporting",
     "version": "1.0.0",
-    "run_id": "full_1"
+    "run_id": "juice_steps_20260325_034629"
   },
-  "findings": []
+  "findings": [
+    {
+      "id": "42efa4e0-14ae-4155-95e8-d9717b03d204",
+      "title": "[RAG] IDOR: Tests if unauthenticated users can access admin configuration data, indicating I",
+      "severity": "medium",
+      "category": "rag",
+      "asset": "https://demo.owasp-juice.shop/rest/admin/application-configuration",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [
+        "Target application is accessible",
+        "RAG knowledge base contains IDOR patterns"
+      ],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET https://demo.owasp-juice.shop/rest/admin/application-configuration",
+          "request": null,
+          "expected_result": "Should reject or return 403 (not vulnerable to IDOR)",
+          "actual_result": "HTTP 200 — indicator: Unexpected HTTP 200 on sensitive endpoint",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": {
+        "id": "a5e7a916-5a00-40a1-9abe-06f4e643dc63",
+        "method": "GET",
+        "url": "https://demo.owasp-juice.shop/rest/admin/application-configuration",
+        "final_url": null,
+        "redirect_chain": [],
+        "headers": {},
+        "cookies": {},
+        "body": null,
+        "body_json": null,
+        "response_status": 200,
+        "response_content_type": null,
+        "response_headers": {
+          "date": "Wed, 25 Mar 2026 03:20:13 GMT",
+          "server": "Heroku",
+          "access-control-allow-origin": "*",
+          "content-encoding": "gzip",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"550a-OEo3agZPnY9Z7Todze3/X9Rt2J8\"",
+          "feature-policy": "payment 'self'",
+          "nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+          "report-to": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=lYVeqS%2FtuirG6MZUUbV%2B3DJDbeApQCQGMOtENv510WQ%3D\\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\\u0026ts=1774408813\"}],\"max_age\":3600}",
+          "reporting-endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=lYVeqS%2FtuirG6MZUUbV%2B3DJDbeApQCQGMOtENv510WQ%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1774408813\"",
+          "vary": "Accept-Encoding",
+          "via": "1.1 heroku-router",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-recruiting": "/#/jobs",
+          "keep-alive": "timeout=3, max=100",
+          "connection": "Keep-Alive",
+          "transfer-encoding": "chunked"
+        },
+        "response_body": "{\"config\":{\"server\":{\"port\":3000,\"basePath\":\"\",\"baseUrl\":\"http://localhost:3000\"},\"application\":{\"domain\":\"juice-sh.op\",\"name\":\"OWASP Juice Shop\",\"logo\":\"JuiceShop_Logo.png\",\"favicon\":\"favicon_js.ico\",\"theme\":\"bluegrey-lightgreen\",\"showVersionNumber\":true,\"showGitHubLinks\":true,\"localBackupEnabled\":true,\"numberOfRandomFakeUsers\":0,\"altcoinName\":\"Juicycoin\",\"privacyContactEmail\":\"donotreply@owasp-juice.shop\",\"customMetricsPrefix\":\"juiceshop\",\"chatBot\":{\"name\":\"Juicy\",\"greeting\":\"Nice to meet you <customer-name>, I'm <bot-name>\",\"trainingData\":\"botDefaultTrainingData.json\",\"defaultResponse\":\"Sorry I couldn't understand what you were trying to say\",\"avatar\":\"JuicyChatBot.png\"},\"social\":{\"blueSkyUrl\":\"https://bsky.app/profile/owasp-juice.shop\",\"mastodonUrl\":\"https://fosstodon.org/@owasp_juiceshop\",\"twitterUrl\":\"https://twitter.com/owasp_juiceshop\",\"facebookUrl\":\"https://www.facebook.com/owasp.juiceshop\",\"slackUrl\":\"https://owasp.org/slack/invite\",\"redditUrl\":\"https://www.reddit.com/r/owasp_juiceshop\",\"pressKitUrl\":\"https://github.com/OWASP/owasp-swag/tree/master/projects/juice-shop\",\"nftUrl\":\"https://opensea.io/collection/juice-shop\",\"questionnaireUrl\":null},\"recyclePage\":{\"topProductImage\":\"fruit_press.jpg\",\"bottomProductImage\":\"apple_pressings.jpg\"},\"welcomeBanner\":{\"showOnFirstStart\":true,\"title\":\"Welcome to OWASP Juice Shop!\",\"message\":\"<p>Being a web application with a vast number of intended security vulnerabilities, the <strong>OWASP Juice Shop</strong> is supposed to be the opposite of a best practice or template application for web developers: It is an awareness, training, demonstration and exercise tool for security risks in modern web applications. The <strong>OWASP Juice Shop</strong> is an open-source project hosted by the non-profit <a href='https://owasp.org' target='_blank'>Open Worldwide Application Security Project (OWASP)</a> and is developed and maintained by volunteers. Check out the link below for more information and documentation on the project.<",
+        "response_json": null,
+        "response_body_hash": null,
+        "response_body_preview": "{\"config\":{\"server\":{\"port\":3000,\"basePath\":\"\",\"baseUrl\":\"http://localhost:3000\"},\"application\":{\"domain\":\"juice-sh.op\",\"name\":\"OWASP Juice Shop\",\"logo\":\"JuiceShop_Logo.png\",\"favicon\":\"favicon_js.ico\"",
+        "timestamp": "2026-03-25 03:20:13.711094",
+        "role_context": null,
+        "state_context": null,
+        "duration_ms": null,
+        "endpoint_id": null,
+        "warc_ref": null
+      },
+      "response_proof": "HTTP 200 — indicator 'Unexpected HTTP 200 on sensitive endpoint' found in response body",
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 45.0,
+      "root_cause": "Potential IDOR vulnerability detected by RAG-guided testing",
+      "impact_types": [
+        "confidentiality",
+        "integrity"
+      ],
+      "cvss_score": null,
+      "cwe_id": "CWE-284",
+      "discovered_at": "2026-03-25 03:20:13.711193",
+      "test_plan_id": null,
+      "raw_evidence": {
+        "source": "rag_tester",
+        "vuln_class": "IDOR",
+        "confidence": 0.45,
+        "signal_type": "unexpected_success",
+        "rag_generated": true,
+        "request": {
+          "method": "GET",
+          "url": "https://demo.owasp-juice.shop/rest/admin/application-configuration",
+          "headers": {},
+          "body": null
+        },
+        "response": {
+          "status": 200,
+          "body_preview": "{\"config\":{\"server\":{\"port\":3000,\"basePath\":\"\",\"baseUrl\":\"http://localhost:3000\"},\"application\":{\"domain\":\"juice-sh.op\",\"name\":\"OWASP Juice Shop\",\"logo\":\"JuiceShop_Logo.png\",\"favicon\":\"favicon_js.ico\",\"theme\":\"bluegrey-lightgreen\",\"showVersionNumber\":true,\"showGitHubLinks\":true,\"localBackupEnabled\":true,\"numberOfRandomFakeUsers\":0,\"altcoinName\":\"Juicycoin\",\"privacyContactEmail\":\"donotreply@owasp-juice.shop\",\"customMetricsPrefix\":\"juiceshop\",\"chatBot\":{\"name\":\"Juicy\",\"greeting\":\"Nice to meet you "
+        }
+      },
+      "evidence_warc_refs": [],
+      "verification_method": "automated",
+      "confirmed_impact": "",
+      "exploit_chain": [],
+      "breadth": "",
+      "alternative_paths": [],
+      "timing_sensitivity": null,
+      "environment_requirements": [],
+      "false_positive_ruled_out": false,
+      "cross_role_confirmed": false,
+      "cross_tenant_confirmed": false,
+      "status": "needs_more_data",
+      "verified_at": "2026-03-25 03:33:00.402205"
+    },
+    {
+      "id": "c75090ca-d37f-47d2-94f5-53477a0ca021",
+      "title": "[RAG] IDOR: Tests if manipulating the 'name' parameter allows access to challenges not inten",
+      "severity": "medium",
+      "category": "rag",
+      "asset": "https://demo.owasp-juice.shop/api/Challenges/?name=Login%20Admin",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [
+        "Target application is accessible",
+        "RAG knowledge base contains IDOR patterns"
+      ],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET https://demo.owasp-juice.shop/api/Challenges/?name=Login%20Admin",
+          "request": null,
+          "expected_result": "Should reject or return 403 (not vulnerable to IDOR)",
+          "actual_result": "HTTP 200 — indicator: Unexpected HTTP 200 on sensitive endpoint",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": {
+        "id": "0547ee8b-f7d8-4067-ab57-80c978354ac8",
+        "method": "GET",
+        "url": "https://demo.owasp-juice.shop/api/Challenges/?name=Login%20Admin",
+        "final_url": null,
+        "redirect_chain": [],
+        "headers": {},
+        "cookies": {},
+        "body": null,
+        "body_json": null,
+        "response_status": 200,
+        "response_content_type": null,
+        "response_headers": {
+          "date": "Wed, 25 Mar 2026 03:20:14 GMT",
+          "server": "Heroku",
+          "access-control-allow-origin": "*",
+          "content-length": "531",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"213-eJfQy7AAtmNv2D1TvhIJaaugoak\"",
+          "feature-policy": "payment 'self'",
+          "nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+          "report-to": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=lYVeqS%2FtuirG6MZUUbV%2B3DJDbeApQCQGMOtENv510WQ%3D\\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\\u0026ts=1774408813\"}],\"max_age\":3600}",
+          "reporting-endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=lYVeqS%2FtuirG6MZUUbV%2B3DJDbeApQCQGMOtENv510WQ%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1774408813\"",
+          "vary": "Accept-Encoding",
+          "via": "1.1 heroku-router",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-recruiting": "/#/jobs",
+          "keep-alive": "timeout=3, max=100",
+          "connection": "Keep-Alive"
+        },
+        "response_body": "{\"status\":\"success\",\"data\":[{\"id\":45,\"key\":\"loginAdminChallenge\",\"name\":\"Login Admin\",\"category\":\"Injection\",\"tags\":\"Tutorial,Good for Demos,With Coding Challenge\",\"description\":\"Log in with the administrator's user account.\",\"difficulty\":2,\"mitigationUrl\":\"https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html\",\"solved\":true,\"disabledEnv\":null,\"tutorialOrder\":7,\"codingChallengeStatus\":0,\"hasCodingChallenge\":true,\"createdAt\":\"2026-03-25T03:15:48.868Z\",\"updatedAt\":\"2026-03-25T03:15:56.292Z\"}]}",
+        "response_json": null,
+        "response_body_hash": null,
+        "response_body_preview": "{\"status\":\"success\",\"data\":[{\"id\":45,\"key\":\"loginAdminChallenge\",\"name\":\"Login Admin\",\"category\":\"Injection\",\"tags\":\"Tutorial,Good for Demos,With Coding Challenge\",\"description\":\"Log in with the admin",
+        "timestamp": "2026-03-25 03:20:14.196490",
+        "role_context": null,
+        "state_context": null,
+        "duration_ms": null,
+        "endpoint_id": null,
+        "warc_ref": null
+      },
+      "response_proof": "HTTP 200 — indicator 'Unexpected HTTP 200 on sensitive endpoint' found in response body",
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 45.0,
+      "root_cause": "Potential IDOR vulnerability detected by RAG-guided testing",
+      "impact_types": [
+        "confidentiality",
+        "integrity"
+      ],
+      "cvss_score": null,
+      "cwe_id": "CWE-284",
+      "discovered_at": "2026-03-25 03:20:14.196551",
+      "test_plan_id": null,
+      "raw_evidence": {
+        "source": "rag_tester",
+        "vuln_class": "IDOR",
+        "confidence": 0.45,
+        "signal_type": "unexpected_success",
+        "rag_generated": true,
+        "request": {
+          "method": "GET",
+          "url": "https://demo.owasp-juice.shop/api/Challenges/?name=Login%20Admin",
+          "headers": {},
+          "body": null
+        },
+        "response": {
+          "status": 200,
+          "body_preview": "{\"status\":\"success\",\"data\":[{\"id\":45,\"key\":\"loginAdminChallenge\",\"name\":\"Login Admin\",\"category\":\"Injection\",\"tags\":\"Tutorial,Good for Demos,With Coding Challenge\",\"description\":\"Log in with the administrator's user account.\",\"difficulty\":2,\"mitigationUrl\":\"https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html\",\"solved\":true,\"disabledEnv\":null,\"tutorialOrder\":7,\"codingChallengeStatus\":0,\"hasCodingChallenge\":true,\"createdAt\":\"2026-03-25T03:15:48.868Z\",\"updatedAt"
+        }
+      },
+      "evidence_warc_refs": [],
+      "verification_method": "automated",
+      "confirmed_impact": "",
+      "exploit_chain": [],
+      "breadth": "",
+      "alternative_paths": [],
+      "timing_sensitivity": null,
+      "environment_requirements": [],
+      "false_positive_ruled_out": false,
+      "cross_role_confirmed": false,
+      "cross_tenant_confirmed": false,
+      "status": "needs_more_data",
+      "verified_at": "2026-03-25 03:33:00.402567"
+    },
+    {
+      "id": "d80599f9-b65a-4668-bec5-074e95fdc72c",
+      "title": "[RAG] Authentication Bypass: Tests direct unauthenticated access to admin configuration endpoint for authenti",
+      "severity": "high",
+      "category": "rag",
+      "asset": "https://demo.owasp-juice.shop/rest/admin/application-configuration",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [
+        "Target application is accessible",
+        "RAG knowledge base contains Authentication Bypass patterns"
+      ],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET https://demo.owasp-juice.shop/rest/admin/application-configuration",
+          "request": null,
+          "expected_result": "Should reject or return 403 (not vulnerable to Authentication Bypass)",
+          "actual_result": "HTTP 200 — indicator: Unexpected HTTP 200 on sensitive endpoint",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": {
+        "id": "60170020-5fac-4183-b017-b1ce1fb0940e",
+        "method": "GET",
+        "url": "https://demo.owasp-juice.shop/rest/admin/application-configuration",
+        "final_url": null,
+        "redirect_chain": [],
+        "headers": {
+          "User-Agent": "PenTestBot"
+        },
+        "cookies": {},
+        "body": null,
+        "body_json": null,
+        "response_status": 200,
+        "response_content_type": null,
+        "response_headers": {
+          "date": "Wed, 25 Mar 2026 03:25:40 GMT",
+          "server": "Heroku",
+          "access-control-allow-origin": "*",
+          "content-encoding": "gzip",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"550a-OEo3agZPnY9Z7Todze3/X9Rt2J8\"",
+          "feature-policy": "payment 'self'",
+          "nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+          "report-to": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=D2Km6aDf%2FXH4%2BHxDsgpkqYAES2A7K18g0B0%2ByuW0Tlo%3D\\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\\u0026ts=1774409140\"}],\"max_age\":3600}",
+          "reporting-endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=D2Km6aDf%2FXH4%2BHxDsgpkqYAES2A7K18g0B0%2ByuW0Tlo%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1774409140\"",
+          "vary": "Accept-Encoding",
+          "via": "1.1 heroku-router",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-recruiting": "/#/jobs",
+          "keep-alive": "timeout=3, max=100",
+          "connection": "Keep-Alive",
+          "transfer-encoding": "chunked"
+        },
+        "response_body": "{\"config\":{\"server\":{\"port\":3000,\"basePath\":\"\",\"baseUrl\":\"http://localhost:3000\"},\"application\":{\"domain\":\"juice-sh.op\",\"name\":\"OWASP Juice Shop\",\"logo\":\"JuiceShop_Logo.png\",\"favicon\":\"favicon_js.ico\",\"theme\":\"bluegrey-lightgreen\",\"showVersionNumber\":true,\"showGitHubLinks\":true,\"localBackupEnabled\":true,\"numberOfRandomFakeUsers\":0,\"altcoinName\":\"Juicycoin\",\"privacyContactEmail\":\"donotreply@owasp-juice.shop\",\"customMetricsPrefix\":\"juiceshop\",\"chatBot\":{\"name\":\"Juicy\",\"greeting\":\"Nice to meet you <customer-name>, I'm <bot-name>\",\"trainingData\":\"botDefaultTrainingData.json\",\"defaultResponse\":\"Sorry I couldn't understand what you were trying to say\",\"avatar\":\"JuicyChatBot.png\"},\"social\":{\"blueSkyUrl\":\"https://bsky.app/profile/owasp-juice.shop\",\"mastodonUrl\":\"https://fosstodon.org/@owasp_juiceshop\",\"twitterUrl\":\"https://twitter.com/owasp_juiceshop\",\"facebookUrl\":\"https://www.facebook.com/owasp.juiceshop\",\"slackUrl\":\"https://owasp.org/slack/invite\",\"redditUrl\":\"https://www.reddit.com/r/owasp_juiceshop\",\"pressKitUrl\":\"https://github.com/OWASP/owasp-swag/tree/master/projects/juice-shop\",\"nftUrl\":\"https://opensea.io/collection/juice-shop\",\"questionnaireUrl\":null},\"recyclePage\":{\"topProductImage\":\"fruit_press.jpg\",\"bottomProductImage\":\"apple_pressings.jpg\"},\"welcomeBanner\":{\"showOnFirstStart\":true,\"title\":\"Welcome to OWASP Juice Shop!\",\"message\":\"<p>Being a web application with a vast number of intended security vulnerabilities, the <strong>OWASP Juice Shop</strong> is supposed to be the opposite of a best practice or template application for web developers: It is an awareness, training, demonstration and exercise tool for security risks in modern web applications. The <strong>OWASP Juice Shop</strong> is an open-source project hosted by the non-profit <a href='https://owasp.org' target='_blank'>Open Worldwide Application Security Project (OWASP)</a> and is developed and maintained by volunteers. Check out the link below for more information and documentation on the project.<",
+        "response_json": null,
+        "response_body_hash": null,
+        "response_body_preview": "{\"config\":{\"server\":{\"port\":3000,\"basePath\":\"\",\"baseUrl\":\"http://localhost:3000\"},\"application\":{\"domain\":\"juice-sh.op\",\"name\":\"OWASP Juice Shop\",\"logo\":\"JuiceShop_Logo.png\",\"favicon\":\"favicon_js.ico\"",
+        "timestamp": "2026-03-25 03:25:40.356151",
+        "role_context": null,
+        "state_context": null,
+        "duration_ms": null,
+        "endpoint_id": null,
+        "warc_ref": null
+      },
+      "response_proof": "HTTP 200 — indicator 'Unexpected HTTP 200 on sensitive endpoint' found in response body",
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 45.0,
+      "root_cause": "Potential Authentication Bypass vulnerability detected by RAG-guided testing",
+      "impact_types": [
+        "confidentiality",
+        "integrity"
+      ],
+      "cvss_score": null,
+      "cwe_id": "CWE-287",
+      "discovered_at": "2026-03-25 03:25:40.357020",
+      "test_plan_id": null,
+      "raw_evidence": {
+        "source": "rag_tester",
+        "vuln_class": "Authentication Bypass",
+        "confidence": 0.45,
+        "signal_type": "unexpected_success",
+        "rag_generated": true,
+        "request": {
+          "method": "GET",
+          "url": "https://demo.owasp-juice.shop/rest/admin/application-configuration",
+          "headers": {
+            "User-Agent": "PenTestBot"
+          },
+          "body": null
+        },
+        "response": {
+          "status": 200,
+          "body_preview": "{\"config\":{\"server\":{\"port\":3000,\"basePath\":\"\",\"baseUrl\":\"http://localhost:3000\"},\"application\":{\"domain\":\"juice-sh.op\",\"name\":\"OWASP Juice Shop\",\"logo\":\"JuiceShop_Logo.png\",\"favicon\":\"favicon_js.ico\",\"theme\":\"bluegrey-lightgreen\",\"showVersionNumber\":true,\"showGitHubLinks\":true,\"localBackupEnabled\":true,\"numberOfRandomFakeUsers\":0,\"altcoinName\":\"Juicycoin\",\"privacyContactEmail\":\"donotreply@owasp-juice.shop\",\"customMetricsPrefix\":\"juiceshop\",\"chatBot\":{\"name\":\"Juicy\",\"greeting\":\"Nice to meet you "
+        }
+      },
+      "evidence_warc_refs": [],
+      "verification_method": "automated",
+      "confirmed_impact": "",
+      "exploit_chain": [],
+      "breadth": "",
+      "alternative_paths": [],
+      "timing_sensitivity": null,
+      "environment_requirements": [],
+      "false_positive_ruled_out": false,
+      "cross_role_confirmed": false,
+      "cross_tenant_confirmed": false,
+      "status": "needs_more_data",
+      "verified_at": "2026-03-25 03:33:00.402595"
+    },
+    {
+      "id": "4285d1e7-2f36-4870-aa6c-3182fa9babfe",
+      "title": "[RAG] Authentication Bypass: Tests if challenges API allows unauthorized access to admin-level challenge deta",
+      "severity": "high",
+      "category": "rag",
+      "asset": "https://demo.owasp-juice.shop/api/Challenges/?name=Login%20Admin",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [
+        "Target application is accessible",
+        "RAG knowledge base contains Authentication Bypass patterns"
+      ],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET https://demo.owasp-juice.shop/api/Challenges/?name=Login%20Admin",
+          "request": null,
+          "expected_result": "Should reject or return 403 (not vulnerable to Authentication Bypass)",
+          "actual_result": "HTTP 200 — indicator: Unexpected HTTP 200 on sensitive endpoint",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": {
+        "id": "6f4c0b59-0675-4b20-a518-4d2a8389bb16",
+        "method": "GET",
+        "url": "https://demo.owasp-juice.shop/api/Challenges/?name=Login%20Admin",
+        "final_url": null,
+        "redirect_chain": [],
+        "headers": {
+          "User-Agent": "PenTestBot"
+        },
+        "cookies": {},
+        "body": null,
+        "body_json": null,
+        "response_status": 200,
+        "response_content_type": null,
+        "response_headers": {
+          "date": "Wed, 25 Mar 2026 03:25:40 GMT",
+          "server": "Heroku",
+          "access-control-allow-origin": "*",
+          "content-length": "531",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"213-eJfQy7AAtmNv2D1TvhIJaaugoak\"",
+          "feature-policy": "payment 'self'",
+          "nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+          "report-to": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=D2Km6aDf%2FXH4%2BHxDsgpkqYAES2A7K18g0B0%2ByuW0Tlo%3D\\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\\u0026ts=1774409140\"}],\"max_age\":3600}",
+          "reporting-endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=D2Km6aDf%2FXH4%2BHxDsgpkqYAES2A7K18g0B0%2ByuW0Tlo%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1774409140\"",
+          "vary": "Accept-Encoding",
+          "via": "1.1 heroku-router",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-recruiting": "/#/jobs",
+          "keep-alive": "timeout=3, max=100",
+          "connection": "Keep-Alive"
+        },
+        "response_body": "{\"status\":\"success\",\"data\":[{\"id\":45,\"key\":\"loginAdminChallenge\",\"name\":\"Login Admin\",\"category\":\"Injection\",\"tags\":\"Tutorial,Good for Demos,With Coding Challenge\",\"description\":\"Log in with the administrator's user account.\",\"difficulty\":2,\"mitigationUrl\":\"https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html\",\"solved\":true,\"disabledEnv\":null,\"tutorialOrder\":7,\"codingChallengeStatus\":0,\"hasCodingChallenge\":true,\"createdAt\":\"2026-03-25T03:15:48.868Z\",\"updatedAt\":\"2026-03-25T03:15:56.292Z\"}]}",
+        "response_json": null,
+        "response_body_hash": null,
+        "response_body_preview": "{\"status\":\"success\",\"data\":[{\"id\":45,\"key\":\"loginAdminChallenge\",\"name\":\"Login Admin\",\"category\":\"Injection\",\"tags\":\"Tutorial,Good for Demos,With Coding Challenge\",\"description\":\"Log in with the admin",
+        "timestamp": "2026-03-25 03:25:40.639613",
+        "role_context": null,
+        "state_context": null,
+        "duration_ms": null,
+        "endpoint_id": null,
+        "warc_ref": null
+      },
+      "response_proof": "HTTP 200 — indicator 'Unexpected HTTP 200 on sensitive endpoint' found in response body",
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 45.0,
+      "root_cause": "Potential Authentication Bypass vulnerability detected by RAG-guided testing",
+      "impact_types": [
+        "confidentiality",
+        "integrity"
+      ],
+      "cvss_score": null,
+      "cwe_id": "CWE-287",
+      "discovered_at": "2026-03-25 03:25:40.639707",
+      "test_plan_id": null,
+      "raw_evidence": {
+        "source": "rag_tester",
+        "vuln_class": "Authentication Bypass",
+        "confidence": 0.45,
+        "signal_type": "unexpected_success",
+        "rag_generated": true,
+        "request": {
+          "method": "GET",
+          "url": "https://demo.owasp-juice.shop/api/Challenges/?name=Login%20Admin",
+          "headers": {
+            "User-Agent": "PenTestBot"
+          },
+          "body": null
+        },
+        "response": {
+          "status": 200,
+          "body_preview": "{\"status\":\"success\",\"data\":[{\"id\":45,\"key\":\"loginAdminChallenge\",\"name\":\"Login Admin\",\"category\":\"Injection\",\"tags\":\"Tutorial,Good for Demos,With Coding Challenge\",\"description\":\"Log in with the administrator's user account.\",\"difficulty\":2,\"mitigationUrl\":\"https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html\",\"solved\":true,\"disabledEnv\":null,\"tutorialOrder\":7,\"codingChallengeStatus\":0,\"hasCodingChallenge\":true,\"createdAt\":\"2026-03-25T03:15:48.868Z\",\"updatedAt"
+        }
+      },
+      "evidence_warc_refs": [],
+      "verification_method": "automated",
+      "confirmed_impact": "",
+      "exploit_chain": [],
+      "breadth": "",
+      "alternative_paths": [],
+      "timing_sensitivity": null,
+      "environment_requirements": [],
+      "false_positive_ruled_out": false,
+      "cross_role_confirmed": false,
+      "cross_tenant_confirmed": false,
+      "status": "needs_more_data",
+      "verified_at": "2026-03-25 03:33:00.402619"
+    },
+    {
+      "id": "103de8ee-0d5a-4e9d-8544-edfd59d762bb",
+      "title": "[RAG] Authentication Bypass: Tests another admin endpoint for authentication bypass via direct unauthenticate",
+      "severity": "high",
+      "category": "rag",
+      "asset": "https://demo.owasp-juice.shop/rest/admin/application-version",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [
+        "Target application is accessible",
+        "RAG knowledge base contains Authentication Bypass patterns"
+      ],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET https://demo.owasp-juice.shop/rest/admin/application-version",
+          "request": null,
+          "expected_result": "Should reject or return 403 (not vulnerable to Authentication Bypass)",
+          "actual_result": "HTTP 200 — indicator: Unexpected HTTP 200 on sensitive endpoint",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": {
+        "id": "1948e5d6-3a5b-4d9f-9418-19845376821a",
+        "method": "GET",
+        "url": "https://demo.owasp-juice.shop/rest/admin/application-version",
+        "final_url": null,
+        "redirect_chain": [],
+        "headers": {
+          "User-Agent": "PenTestBot"
+        },
+        "cookies": {},
+        "body": null,
+        "body_json": null,
+        "response_status": 200,
+        "response_content_type": null,
+        "response_headers": {
+          "date": "Wed, 25 Mar 2026 03:25:40 GMT",
+          "server": "Heroku",
+          "access-control-allow-origin": "*",
+          "content-length": "20",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"14-tCKnqyl1elU2Vzkywa8P9qRtJx4\"",
+          "feature-policy": "payment 'self'",
+          "nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+          "report-to": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=D2Km6aDf%2FXH4%2BHxDsgpkqYAES2A7K18g0B0%2ByuW0Tlo%3D\\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\\u0026ts=1774409140\"}],\"max_age\":3600}",
+          "reporting-endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=D2Km6aDf%2FXH4%2BHxDsgpkqYAES2A7K18g0B0%2ByuW0Tlo%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1774409140\"",
+          "vary": "Accept-Encoding",
+          "via": "1.1 heroku-router",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-recruiting": "/#/jobs",
+          "keep-alive": "timeout=3, max=100",
+          "connection": "Keep-Alive"
+        },
+        "response_body": "{\"version\":\"19.2.1\"}",
+        "response_json": null,
+        "response_body_hash": null,
+        "response_body_preview": "{\"version\":\"19.2.1\"}",
+        "timestamp": "2026-03-25 03:25:40.845184",
+        "role_context": null,
+        "state_context": null,
+        "duration_ms": null,
+        "endpoint_id": null,
+        "warc_ref": null
+      },
+      "response_proof": "HTTP 200 — indicator 'Unexpected HTTP 200 on sensitive endpoint' found in response body",
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 45.0,
+      "root_cause": "Potential Authentication Bypass vulnerability detected by RAG-guided testing",
+      "impact_types": [
+        "confidentiality",
+        "integrity"
+      ],
+      "cvss_score": null,
+      "cwe_id": "CWE-287",
+      "discovered_at": "2026-03-25 03:25:40.845279",
+      "test_plan_id": null,
+      "raw_evidence": {
+        "source": "rag_tester",
+        "vuln_class": "Authentication Bypass",
+        "confidence": 0.45,
+        "signal_type": "unexpected_success",
+        "rag_generated": true,
+        "request": {
+          "method": "GET",
+          "url": "https://demo.owasp-juice.shop/rest/admin/application-version",
+          "headers": {
+            "User-Agent": "PenTestBot"
+          },
+          "body": null
+        },
+        "response": {
+          "status": 200,
+          "body_preview": "{\"version\":\"19.2.1\"}"
+        }
+      },
+      "evidence_warc_refs": [],
+      "verification_method": "automated",
+      "confirmed_impact": "",
+      "exploit_chain": [],
+      "breadth": "",
+      "alternative_paths": [],
+      "timing_sensitivity": null,
+      "environment_requirements": [],
+      "false_positive_ruled_out": false,
+      "cross_role_confirmed": false,
+      "cross_tenant_confirmed": false,
+      "status": "needs_more_data",
+      "verified_at": "2026-03-25 03:33:00.402641"
+    },
+    {
+      "id": "60131f07-243b-493b-8cd2-db293f9b6fe9",
+      "title": "[RAG] SSRF: Tests if the redirect endpoint allows server-side requests to localhost, which c",
+      "severity": "critical",
+      "category": "rag",
+      "asset": "https://demo.owasp-juice.shop/redirect?to=http://localhost:80",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [
+        "Target application is accessible",
+        "RAG knowledge base contains SSRF patterns"
+      ],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET https://demo.owasp-juice.shop/redirect?to=http://localhost:80",
+          "request": null,
+          "expected_result": "Should reject or return 403 (not vulnerable to SSRF)",
+          "actual_result": "HTTP 406 — indicator: localhost",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": {
+        "id": "8c736289-fa8f-4cc8-8b84-f305f489c027",
+        "method": "GET",
+        "url": "https://demo.owasp-juice.shop/redirect?to=http://localhost:80",
+        "final_url": null,
+        "redirect_chain": [],
+        "headers": {
+          "User-Agent": "Mozilla/5.0"
+        },
+        "cookies": {},
+        "body": null,
+        "body_json": null,
+        "response_status": 406,
+        "response_content_type": null,
+        "response_headers": {
+          "date": "Wed, 25 Mar 2026 03:30:19 GMT",
+          "server": "Heroku",
+          "access-control-allow-origin": "*",
+          "content-encoding": "gzip",
+          "content-type": "text/html; charset=utf-8",
+          "feature-policy": "payment 'self'",
+          "nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+          "report-to": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=GCo9irDcxQWc%2FpKF2eb30kY0EUu8dU5AZIUACtsUya4%3D\\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\\u0026ts=1774409418\"}],\"max_age\":3600}",
+          "reporting-endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=GCo9irDcxQWc%2FpKF2eb30kY0EUu8dU5AZIUACtsUya4%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1774409418\"",
+          "vary": "Accept-Encoding",
+          "via": "1.1 heroku-router",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-recruiting": "/#/jobs",
+          "keep-alive": "timeout=3, max=100",
+          "connection": "Keep-Alive",
+          "transfer-encoding": "chunked"
+        },
+        "response_body": "<html>\n  <head>\n    <meta charset='utf-8'> \n    <title>Error: Unrecognized target URL for redirect: http://localhost:80</title>\n    <style>* {\n  margin: 0;\n  padding: 0;\n  outline: 0;\n}\n\nbody {\n  padding: 80px 100px;\n  font: 13px \"Helvetica Neue\", \"Lucida Grande\", \"Arial\";\n  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));\n  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);\n  background-repeat: no-repeat;\n  color: #555;\n  -webkit-font-smoothing: antialiased;\n}\nh1, h2 {\n  font-size: 22px;\n  color: #343434;\n}\nh1 em, h2 em {\n  padding: 0 5px;\n  font-weight: normal;\n}\nh1 {\n  font-size: 60px;\n}\nh2 {\n  margin-top: 10px;\n}\nul li {\n  list-style: none;\n}\n#stacktrace {\n  margin-left: 60px;\n}\n</style>\n  </head>\n  <body>\n    <div id=\"wrapper\">\n      <h1>OWASP Juice Shop (Express ^4.22.1)</h1>\n      <h2><em>406</em> Error: Unrecognized target URL for redirect: http://localhost:80</h2>\n      <ul id=\"stacktrace\"><li> &nbsp; &nbsp;at /app/build/routes/redirect.js:45:18</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at next (/app/node_modules/express/lib/router/route.js:149:13)</li><li> &nbsp; &nbsp;at Route.dispatch (/app/node_modules/express/lib/router/route.js:119:3)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at /app/node_modules/express/lib/router/index.js:284:15</li><li> &nbsp; &nbsp;at router.process_params (/app/node_modules/express/lib/router/index.js:346:12)</li><li> &nbsp; &nbsp;at next (/app/node_modules/express/lib/router/index.js:280:10)</li><li> &nbsp; &nbsp;at /app/build/routes/verify.js:208:5</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at trim_prefix (/app/node_modules/express/lib/router/index.js:328:13)</li><li> &nbsp; &nbsp;at /app/node_modules/express/lib",
+        "response_json": null,
+        "response_body_hash": null,
+        "response_body_preview": "<html>\n  <head>\n    <meta charset='utf-8'> \n    <title>Error: Unrecognized target URL for redirect: http://localhost:80</title>\n    <style>* {\n  margin: 0;\n  padding: 0;\n  outline: 0;\n}\n\nbody {\n  padd",
+        "timestamp": "2026-03-25 03:30:19.276711",
+        "role_context": null,
+        "state_context": null,
+        "duration_ms": null,
+        "endpoint_id": null,
+        "warc_ref": null
+      },
+      "response_proof": "HTTP 406 — indicator 'localhost' found in response body",
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 75.0,
+      "root_cause": "Potential SSRF vulnerability detected by RAG-guided testing",
+      "impact_types": [
+        "confidentiality",
+        "availability"
+      ],
+      "cvss_score": null,
+      "cwe_id": "CWE-918",
+      "discovered_at": "2026-03-25 03:30:19.277228",
+      "test_plan_id": null,
+      "raw_evidence": {
+        "source": "rag_tester",
+        "vuln_class": "SSRF",
+        "confidence": 0.75,
+        "signal_type": "body_pattern",
+        "rag_generated": true,
+        "request": {
+          "method": "GET",
+          "url": "https://demo.owasp-juice.shop/redirect?to=http://localhost:80",
+          "headers": {
+            "User-Agent": "Mozilla/5.0"
+          },
+          "body": null
+        },
+        "response": {
+          "status": 406,
+          "body_preview": "<html>\n  <head>\n    <meta charset='utf-8'> \n    <title>Error: Unrecognized target URL for redirect: http://localhost:80</title>\n    <style>* {\n  margin: 0;\n  padding: 0;\n  outline: 0;\n}\n\nbody {\n  padding: 80px 100px;\n  font: 13px \"Helvetica Neue\", \"Lucida Grande\", \"Arial\";\n  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));\n  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);\n  background-repeat: no-repeat;\n  color: #555;\n  -webkit-font-smoothing: "
+        }
+      },
+      "evidence_warc_refs": [],
+      "verification_method": "automated",
+      "confirmed_impact": "",
+      "exploit_chain": [],
+      "breadth": "",
+      "alternative_paths": [],
+      "timing_sensitivity": null,
+      "environment_requirements": [],
+      "false_positive_ruled_out": false,
+      "cross_role_confirmed": false,
+      "cross_tenant_confirmed": false,
+      "status": "likely",
+      "verified_at": "2026-03-25 03:33:00.402662"
+    },
+    {
+      "id": "672054ab-992e-4e8e-90fb-1ed94cea7c8e",
+      "title": "[RAG] SSRF: Tests for SSRF to access AWS instance metadata, which could leak sensitive cloud",
+      "severity": "critical",
+      "category": "rag",
+      "asset": "https://demo.owasp-juice.shop/redirect?to=http://169.254.169.254/latest/meta-data/",
+      "affected_roles": [],
+      "affected_states": [],
+      "preconditions": [
+        "Target application is accessible",
+        "RAG knowledge base contains SSRF patterns"
+      ],
+      "reproduction_steps": [
+        {
+          "step_number": 1,
+          "action": "GET https://demo.owasp-juice.shop/redirect?to=http://169.254.169.254/latest/meta-data/",
+          "request": null,
+          "expected_result": "Should reject or return 403 (not vulnerable to SSRF)",
+          "actual_result": "HTTP 406 — indicator: 169.254.169.254",
+          "screenshot_path": null
+        }
+      ],
+      "request_proof": {
+        "id": "131a965a-0704-4e95-a9ee-4ea9941674e3",
+        "method": "GET",
+        "url": "https://demo.owasp-juice.shop/redirect?to=http://169.254.169.254/latest/meta-data/",
+        "final_url": null,
+        "redirect_chain": [],
+        "headers": {
+          "User-Agent": "Mozilla/5.0"
+        },
+        "cookies": {},
+        "body": null,
+        "body_json": null,
+        "response_status": 406,
+        "response_content_type": null,
+        "response_headers": {
+          "date": "Wed, 25 Mar 2026 03:30:19 GMT",
+          "server": "Heroku",
+          "access-control-allow-origin": "*",
+          "content-encoding": "gzip",
+          "content-type": "text/html; charset=utf-8",
+          "feature-policy": "payment 'self'",
+          "nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+          "report-to": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=MPXrrTT6sk0CwbZif6FqLgN3nPNpji2C7O%2BANDjs69I%3D\\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\\u0026ts=1774409419\"}],\"max_age\":3600}",
+          "reporting-endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=MPXrrTT6sk0CwbZif6FqLgN3nPNpji2C7O%2BANDjs69I%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1774409419\"",
+          "vary": "Accept-Encoding",
+          "via": "1.1 heroku-router",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-recruiting": "/#/jobs",
+          "content-length": "811",
+          "keep-alive": "timeout=3, max=100",
+          "connection": "Keep-Alive"
+        },
+        "response_body": "<html>\n  <head>\n    <meta charset='utf-8'> \n    <title>Error: Unrecognized target URL for redirect: http://169.254.169.254/latest/meta-data/</title>\n    <style>* {\n  margin: 0;\n  padding: 0;\n  outline: 0;\n}\n\nbody {\n  padding: 80px 100px;\n  font: 13px \"Helvetica Neue\", \"Lucida Grande\", \"Arial\";\n  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));\n  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);\n  background-repeat: no-repeat;\n  color: #555;\n  -webkit-font-smoothing: antialiased;\n}\nh1, h2 {\n  font-size: 22px;\n  color: #343434;\n}\nh1 em, h2 em {\n  padding: 0 5px;\n  font-weight: normal;\n}\nh1 {\n  font-size: 60px;\n}\nh2 {\n  margin-top: 10px;\n}\nul li {\n  list-style: none;\n}\n#stacktrace {\n  margin-left: 60px;\n}\n</style>\n  </head>\n  <body>\n    <div id=\"wrapper\">\n      <h1>OWASP Juice Shop (Express ^4.22.1)</h1>\n      <h2><em>406</em> Error: Unrecognized target URL for redirect: http://169.254.169.254/latest/meta-data/</h2>\n      <ul id=\"stacktrace\"><li> &nbsp; &nbsp;at /app/build/routes/redirect.js:45:18</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at next (/app/node_modules/express/lib/router/route.js:149:13)</li><li> &nbsp; &nbsp;at Route.dispatch (/app/node_modules/express/lib/router/route.js:119:3)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at /app/node_modules/express/lib/router/index.js:284:15</li><li> &nbsp; &nbsp;at router.process_params (/app/node_modules/express/lib/router/index.js:346:12)</li><li> &nbsp; &nbsp;at next (/app/node_modules/express/lib/router/index.js:280:10)</li><li> &nbsp; &nbsp;at /app/build/routes/verify.js:208:5</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at trim_prefix (/app/node_modules/express/lib/router/index.js:328:13)</li><li> &nb",
+        "response_json": null,
+        "response_body_hash": null,
+        "response_body_preview": "<html>\n  <head>\n    <meta charset='utf-8'> \n    <title>Error: Unrecognized target URL for redirect: http://169.254.169.254/latest/meta-data/</title>\n    <style>* {\n  margin: 0;\n  padding: 0;\n  outline",
+        "timestamp": "2026-03-25 03:30:20.203164",
+        "role_context": null,
+        "state_context": null,
+        "duration_ms": null,
+        "endpoint_id": null,
+        "warc_ref": null
+      },
+      "response_proof": "HTTP 406 — indicator '169.254.169.254' found in response body",
+      "before_state": null,
+      "after_state": null,
+      "reliability_score": 75.0,
+      "root_cause": "Potential SSRF vulnerability detected by RAG-guided testing",
+      "impact_types": [
+        "confidentiality",
+        "availability"
+      ],
+      "cvss_score": null,
+      "cwe_id": "CWE-918",
+      "discovered_at": "2026-03-25 03:30:20.203196",
+      "test_plan_id": null,
+      "raw_evidence": {
+        "source": "rag_tester",
+        "vuln_class": "SSRF",
+        "confidence": 0.75,
+        "signal_type": "body_pattern",
+        "rag_generated": true,
+        "request": {
+          "method": "GET",
+          "url": "https://demo.owasp-juice.shop/redirect?to=http://169.254.169.254/latest/meta-data/",
+          "headers": {
+            "User-Agent": "Mozilla/5.0"
+          },
+          "body": null
+        },
+        "response": {
+          "status": 406,
+          "body_preview": "<html>\n  <head>\n    <meta charset='utf-8'> \n    <title>Error: Unrecognized target URL for redirect: http://169.254.169.254/latest/meta-data/</title>\n    <style>* {\n  margin: 0;\n  padding: 0;\n  outline: 0;\n}\n\nbody {\n  padding: 80px 100px;\n  font: 13px \"Helvetica Neue\", \"Lucida Grande\", \"Arial\";\n  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));\n  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);\n  background-repeat: no-repeat;\n  color: #555;\n  -we"
+        }
+      },
+      "evidence_warc_refs": [],
+      "verification_method": "automated",
+      "confirmed_impact": "",
+      "exploit_chain": [],
+      "breadth": "",
+      "alternative_paths": [],
+      "timing_sensitivity": null,
+      "environment_requirements": [],
+      "false_positive_ruled_out": false,
+      "cross_role_confirmed": false,
+      "cross_tenant_confirmed": false,
+      "status": "likely",
+      "verified_at": "2026-03-25 03:33:00.402696"
+    }
+  ]
 }

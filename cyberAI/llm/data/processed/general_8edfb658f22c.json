@@ -1,0 +1,25 @@
+{
+  "title": "Cross-Site Request Forgery Prevention Cheat Sheet¶",
+  "vuln_class": "XSS",
+  "cwe": "CWE-352",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Cross-Site Request Forgery Prevention Cheat Sheet\n¶\nIntroduction\n¶\nA\nCross-Site Request Forgery (CSRF)\nattack occurs when a malicious web site, email, blog, instant message, or program tricks an authenticated user's web browser into performing an unwanted action on a trusted site. If a target user is authenticated to the site, unprotected target sites cannot distinguish between legitimate authorized requests and forged authenticated requests.\nSince browser requests automatically include all cook",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "8edfb658f22c",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.642001"
+}

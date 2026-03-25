@@ -1,0 +1,25 @@
+{
+  "title": "SQL Injection Prevention Cheat Sheet¶",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-89",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "SQL Injection Prevention Cheat Sheet\n¶\nIntroduction\n¶\nThis cheat sheet will help you prevent SQL injection flaws in your applications. It will define what SQL injection is, explain where those flaws occur, and provide four options for defending against SQL injection attacks.\nSQL Injection\nattacks are common because:\nSQL Injection vulnerabilities are very common, and\nThe application's database is a frequent target for attackers because it typically contains interesting/critical data.\nWhat Is a SQ",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "703ebe057e7a",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.628164"
+}

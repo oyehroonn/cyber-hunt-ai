@@ -1,0 +1,25 @@
+{
+  "title": "PayloadsAllTheThings: Prototype Pollution",
+  "vuln_class": "XSS",
+  "cwe": "CWE-1321",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Prototype Pollution\nPrototype pollution is a type of vulnerability that occurs in JavaScript when properties of Object.prototype are modified. This is particularly risky because JavaScript objects are dynamic and we can add properties to them at any time. Also, almost all objects in JavaScript inherit from Object.prototype, making it a potential attack vector.\nSummary\nTools\nMethodology\nExamples\nManual Testing\nPrototype Pollution via JSON Input\nPrototype Pollution in URL\nPrototype Pollution Paylo",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "a878a3f5025b",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/Prototype%20Pollution/",
+  "processed_at": "2026-03-15T23:08:39.522618"
+}

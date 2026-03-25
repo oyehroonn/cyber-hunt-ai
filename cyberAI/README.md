@@ -125,8 +125,7 @@ cyberAI/
 │   ├── reporter.py
 │   └── templates/
 │
-├── llm/                    # LLM Integration (stub)
-│   └── llm_client.py       # Replace with RAG pipeline
+├── llm/                    # RAG / LLM (ChromaDB, rag_engine, llm_client)
 │
 ├── utils/                  # Shared utilities
 │   ├── browser.py          # Playwright management
@@ -171,9 +170,9 @@ All outputs are written to the `outputs/` directory:
 
 The system works fully without LLM. To enable LLM-powered analysis:
 
-1. Implement your RAG pipeline in `llm/llm_client.py`
-2. Replace the stub functions with your client calls
-3. Set `LLM_ENABLED=true` in `.env`
+1. Configure API keys / Ollama in the project root `.env` (see `cyberAI/.env.example`)
+2. Set `LLM_ENABLED=true` in `.env`
+3. See `llm/README_RAG.md` for the knowledge-base pipeline and dependencies
 
 The LLM enhances:
 - Attack hypothesis generation

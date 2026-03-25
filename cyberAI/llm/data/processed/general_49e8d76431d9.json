@@ -1,0 +1,25 @@
+{
+  "title": "Password Storage Cheat Sheet¶",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Password Storage Cheat Sheet\n¶\nIntroduction\n¶\nThis cheat sheet advises you on the proper methods for storing passwords for authentication. When passwords are stored, they must be protected from an attacker even if the application or database is compromised. Fortunately, a majority of modern languages and frameworks provide built-in functionality to help store passwords safely.\nHowever, once an attacker has acquired stored password hashes, they are always able to brute force hashes offline. Defen",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "49e8d76431d9",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.520203"
+}

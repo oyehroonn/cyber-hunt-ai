@@ -1,0 +1,25 @@
+{
+  "title": "CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition",
+  "vuln_class": "Race Condition",
+  "cwe": "CWE-367",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product checks the state of a resource before using that resource, but the resource's state can change between the check and the use in a way that invalidates the results of the check.",
+  "root_cause": "Insufficient race condition protection",
+  "impact": "Attacker could exploit race condition vulnerability",
+  "remediation": "Implement proper race condition controls",
+  "test_hints": [
+    "Send concurrent requests",
+    "Test coupon/discount codes",
+    "Check atomic operations"
+  ],
+  "keywords": [
+    "race condition",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-367",
+  "original_url": "https://cwe.mitre.org/data/definitions/367.html",
+  "processed_at": "2026-03-15T23:08:39.506073"
+}

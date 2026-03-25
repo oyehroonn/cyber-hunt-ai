@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: SQL Injection",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-89",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nSQL injection\nSQL injection\nIn this section, we explain:\nWhat SQL injection (SQLi) is.\nHow to find and exploit different types of SQLi vulnerabilities.\nHow to prevent SQLi.\nLabs\nIf you're familiar with the basic concepts behind SQLi vulnerabilities and want to practice exploiting them on some realistic, deliberately vulnerable targets, you can access labs in this topic from the link below.\nView all SQL injection labs\nWhat is SQL injection (SQLi)?\nSQL injection (SQLi) is a we",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "b4c2aeca502b",
+  "original_url": "https://portswigger.net/web-security/sql-injection",
+  "processed_at": "2026-03-15T23:08:39.654119"
+}

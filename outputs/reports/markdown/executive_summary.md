@@ -1,23 +1,58 @@
 # Security Assessment - Executive Summary
 
 **Target:** https://example.com
-**Assessment Date:** 2026-03-24
+**Assessment Date:** 2026-03-25
 
 ## Overview
 
-This automated security assessment identified **0** potential vulnerabilities across the target application.
+This automated security assessment identified **7** potential vulnerabilities across the target application.
 
 ## Risk Summary
 
 | Severity | Count |
 |----------|-------|
-| Critical | 0 |
-| High | 0 |
-| Medium | 0 |
+| Critical | 2 |
+| High | 3 |
+| Medium | 2 |
 | Low | 0 |
 | Info | 0 |
 
 ## Top Priority Issues
+
+
+### 1. [RAG] IDOR: Tests if unauthenticated users can access admin configuration data, indicating I
+
+- **Severity:** MEDIUM
+- **Asset:** `https://demo.owasp-juice.shop/rest/admin/application-configuration`
+- **Impact:** Potential security compromise
+
+
+### 2. [RAG] IDOR: Tests if manipulating the 'name' parameter allows access to challenges not inten
+
+- **Severity:** MEDIUM
+- **Asset:** `https://demo.owasp-juice.shop/api/Challenges/?name=Login%20Admin`
+- **Impact:** Potential security compromise
+
+
+### 3. [RAG] Authentication Bypass: Tests direct unauthenticated access to admin configuration endpoint for authenti
+
+- **Severity:** HIGH
+- **Asset:** `https://demo.owasp-juice.shop/rest/admin/application-configuration`
+- **Impact:** Potential security compromise
+
+
+### 4. [RAG] Authentication Bypass: Tests if challenges API allows unauthorized access to admin-level challenge deta
+
+- **Severity:** HIGH
+- **Asset:** `https://demo.owasp-juice.shop/api/Challenges/?name=Login%20Admin`
+- **Impact:** Potential security compromise
+
+
+### 5. [RAG] Authentication Bypass: Tests another admin endpoint for authentication bypass via direct unauthenticate
+
+- **Severity:** HIGH
+- **Asset:** `https://demo.owasp-juice.shop/rest/admin/application-version`
+- **Impact:** Potential security compromise
 
 
 

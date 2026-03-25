@@ -1,0 +1,25 @@
+{
+  "title": "File Upload Cheat Sheet¶",
+  "vuln_class": "XSS",
+  "cwe": "CWE-434",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "File Upload Cheat Sheet\n¶\nIntroduction\n¶\nFile upload is becoming a more and more essential part of any application, where the user is able to upload their photo, their CV, or a video showcasing a project they are working on. The application should be able to fend off bogus and malicious files in a way to keep the application and the users safe.\nIn short, the following principles should be followed to reach a secure file upload implementation:\nList allowed extensions. Only allow safe and critical",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "070ae9052e0f",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.544053"
+}

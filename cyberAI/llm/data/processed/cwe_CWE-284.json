@@ -1,0 +1,25 @@
+{
+  "title": "CWE-284: Improper Access Control",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-284",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product does not restrict or incorrectly restricts access to a resource from an unauthorized actor.",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-284",
+  "original_url": "https://cwe.mitre.org/data/definitions/284.html",
+  "processed_at": "2026-03-15T23:08:39.595699"
+}

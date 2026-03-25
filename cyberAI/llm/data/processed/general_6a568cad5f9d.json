@@ -1,0 +1,25 @@
+{
+  "title": "Injection Prevention Cheat Sheet¶",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Injection Prevention Cheat Sheet\n¶\nIntroduction\n¶\nThis article is focused on providing clear, simple, actionable guidance for preventing the entire category of Injection flaws in your applications. Injection attacks, especially\nSQL Injection\n, are unfortunately very common.\nApplication accessibility is a very important factor in protection and prevention of injection flaws. Only the minority of all applications within a company/enterprise are developed in house, where as most applications are fr",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "6a568cad5f9d",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.588705"
+}

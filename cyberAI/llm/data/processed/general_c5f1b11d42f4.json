@@ -1,0 +1,25 @@
+{
+  "title": "Authentication Cheat Sheet¶",
+  "vuln_class": "XSS",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Authentication Cheat Sheet\n¶\nIntroduction\n¶\nAuthentication\n(\nAuthN\n) is the process of verifying that an individual, entity, or website is who or what it claims to be by determining the validity of one or more authenticators (like passwords, fingerprints, or security tokens) that are used to back up this claim.\nDigital Identity\nis the unique representation of a subject engaged in an online transaction. A digital identity is always unique in the context of a digital service but does not necessari",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "c5f1b11d42f4",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.512558"
+}

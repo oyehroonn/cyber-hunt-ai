@@ -1,0 +1,25 @@
+{
+  "title": "CWE-639: Authorization Bypass Through User-Controlled Key",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-639",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The system's authorization functionality does not prevent one user from gaining access to another user's data or record by modifying the key value identifying the data.",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-639",
+  "original_url": "https://cwe.mitre.org/data/definitions/639.html",
+  "processed_at": "2026-03-15T23:08:39.566458"
+}

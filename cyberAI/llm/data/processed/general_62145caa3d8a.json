@@ -1,0 +1,23 @@
+{
+  "title": "REST Security Cheat Sheet¶",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "REST Security Cheat Sheet\n¶\nIntroduction\n¶\nREST\n(or\nRE\npresentational\nS\ntate\nT\nransfer) is an architectural style first described in\nRoy Fielding\n's Ph.D. dissertation on\nArchitectural Styles and the Design of Network-based Software Architectures\n.\nIt evolved as Fielding wrote the HTTP/1.1 and URI specs and has been proven to be well-suited for developing distributed hypermedia applications. While REST is more widely applicable, it is most commonly used within the context of communicating with s",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "62145caa3d8a",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.578539"
+}

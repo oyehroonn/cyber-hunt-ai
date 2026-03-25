@@ -1,0 +1,20 @@
+{
+  "id": "9a1549240c47",
+  "source": "general",
+  "title": "HackTricks",
+  "url": "https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting",
+  "scraped_at": "2026-03-15T23:07:18.720830",
+  "severity": "medium",
+  "vuln_type": "XSS",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "Document not found (404)\nThis URL is invalid, sorry. Please use the navigation bar or search to continue.",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "source_name": "hacktricks_xss",
+    "source_type": "single_page"
+  }
+}

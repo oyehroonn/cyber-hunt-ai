@@ -1,0 +1,25 @@
+{
+  "title": "HackTricks",
+  "vuln_class": "SSRF",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Uncovering CloudFlare\nTip\nLearn & practice AWS Hacking:\nHackTricks Training AWS Red Team Expert (ARTE)\nLearn & practice GCP Hacking:\nHackTricks Training GCP Red Team Expert (GRTE)\nLearn & practice Az Hacking:\nHackTricks Training Azure Red Team Expert (AzRTE)\nSupport HackTricks\nCheck the\nsubscription plans\n!\nJoin the\n💬\nDiscord group\nor the\ntelegram group\nor\nfollow\nus on\nTwitter\n🐦\n@hacktricks_live\n.\nShare hacking tricks by submitting PRs to the\nHackTricks\nand\nHackTricks Cloud\ngithub repos.\nCommon ",
+  "root_cause": "Insufficient ssrf protection",
+  "impact": "Attacker could exploit ssrf vulnerability",
+  "remediation": "Implement proper ssrf controls",
+  "test_hints": [
+    "Test internal IP addresses",
+    "Check URL parameters",
+    "Try cloud metadata endpoints"
+  ],
+  "keywords": [
+    "ssrf",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "81db58d445c5",
+  "original_url": "https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/uncovering-cloudflare.html",
+  "processed_at": "2026-03-15T23:08:39.559713"
+}

@@ -1,16 +1,28 @@
 {
   "_meta": {
-    "generated_at": "2026-03-24T23:22:35.224102",
-    "target_url": "https://example.com",
+    "generated_at": "2026-03-25T02:56:37.955817",
+    "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "full_1"
+    "run_id": "juice_steps_20260325_034629"
   },
-  "flows": [],
+  "flows": [
+    {
+      "id": "9f31a013-bffb-44cb-9541-f09e6b46aea5",
+      "name": "unknown",
+      "trigger_endpoint": "https://github.com/juice-shop/juice-shop/latest-commit",
+      "job_id_format": "unknown",
+      "polling_endpoint": null,
+      "result_url_pattern": null,
+      "expiry_seconds": null,
+      "is_guessable": false,
+      "signed_url_pattern": null
+    }
+  ],
   "guessable_flows": [],
   "observed_patterns": {},
   "summary": {
-    "total_flows": 0,
+    "total_flows": 1,
     "guessable_count": 0,
     "with_signed_urls": 0
   }

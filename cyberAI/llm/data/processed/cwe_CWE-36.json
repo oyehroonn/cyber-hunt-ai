@@ -1,0 +1,23 @@
+{
+  "title": "CWE-36: Absolute Path Traversal",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-36",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize absolute path sequences such as \"/abs/path\" that can resolve to a location that is outside of that directory.",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-36",
+  "original_url": "https://cwe.mitre.org/data/definitions/36.html",
+  "processed_at": "2026-03-15T23:08:39.641326"
+}

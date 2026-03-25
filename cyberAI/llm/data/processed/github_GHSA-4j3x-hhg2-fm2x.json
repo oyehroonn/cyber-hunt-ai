@@ -1,0 +1,23 @@
+{
+  "title": "SiYuan's renderSprig has a missing admin check that allows any user to read full workspace DB",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": 6.5,
+  "severity": "medium",
+  "affected_component": "go:github.com/siyuan-note/siyuan/kernel",
+  "attack_vector": "SiYuan's renderSprig has a missing admin check that allows any user to read full workspace DB",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-4j3x-hhg2-fm2x",
+  "original_url": "https://github.com/advisories/GHSA-4j3x-hhg2-fm2x",
+  "processed_at": "2026-03-16T03:34:39.020542"
+}

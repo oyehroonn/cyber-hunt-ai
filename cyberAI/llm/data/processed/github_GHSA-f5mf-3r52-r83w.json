@@ -1,0 +1,23 @@
+{
+  "title": "OpenClaw's Zalouser allowlist authorization matched mutable group names by default",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": "npm:openclaw",
+  "attack_vector": "OpenClaw's Zalouser allowlist authorization matched mutable group names by default",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-f5mf-3r52-r83w",
+  "original_url": "https://github.com/advisories/GHSA-f5mf-3r52-r83w",
+  "processed_at": "2026-03-16T03:34:38.297642"
+}

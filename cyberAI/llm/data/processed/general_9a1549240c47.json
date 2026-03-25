@@ -1,0 +1,23 @@
+{
+  "title": "HackTricks",
+  "vuln_class": "Other",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Document not found (404)\nThis URL is invalid, sorry. Please use the navigation bar or search to continue.",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "9a1549240c47",
+  "original_url": "https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting",
+  "processed_at": "2026-03-15T23:08:39.593841"
+}

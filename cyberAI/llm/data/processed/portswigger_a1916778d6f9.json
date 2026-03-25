@@ -1,0 +1,25 @@
+{
+  "title": "Obfuscating attacks using encodings",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nEssential skills\nObfuscating attacks using encodings\nObfuscating attacks using encodings\nIn this section, we'll show you how you can take advantage of the standard decoding performed by websites to evade input filters and inject harmful payloads for a variety of attacks, such as XSS and SQL injection.\nContext-specific decoding\nBoth clients and servers use a variety of different encodings to pass data between systems. When they want to actually use the data, this often means ",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "a1916778d6f9",
+  "original_url": "https://portswigger.net/web-security/essential-skills/obfuscating-attacks-using-encodings",
+  "processed_at": "2026-03-16T03:34:38.665154"
+}

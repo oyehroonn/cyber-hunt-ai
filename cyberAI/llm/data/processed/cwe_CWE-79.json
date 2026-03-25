@@ -1,0 +1,25 @@
+{
+  "title": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+  "vuln_class": "XSS",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-79",
+  "original_url": "https://cwe.mitre.org/data/definitions/79.html",
+  "processed_at": "2026-03-15T23:08:39.508525"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "GHSA-7x23-j8gv-v54x",
+  "source": "github",
+  "title": "github.com/ctfer-io/monitoring Vulnerable to Improper Access Control",
+  "url": "https://github.com/advisories/GHSA-7x23-j8gv-v54x",
+  "scraped_at": "2026-03-15T23:26:49.729340",
+  "severity": "high",
+  "vuln_type": "Broken Access Control",
+  "cwe": null,
+  "cvss_score": null,
+  "affected_component": "go:github.com/ctfer-io/monitoring",
+  "description": "github.com/ctfer-io/monitoring Vulnerable to Improper Access Control",
+  "body": "### Impact\n\nDue to a mis-written NetworkPolicy, a malicious actor can pivot from a component to any other namespace.\nThis breaks the security-by-default property expected as part of the deployment program, leading to a potential lateral movement.\n\n### Patch\n\nRemoving the `inter-ns` NetworkPolicy patches the vulnerability. If updates are not possible in production environments, we recommend to manually delete it and update as soon as possible.\n\n### Workaround\n\nGiven your context, delete the failing network policy that should be prefixed by `inter-ns-` in the monitoring namespace.\nYou can use the following to delete all matching network policy. If unsure of the outcome, please do it manually.\n\n```bash\nfor ns in $(kubectl get ns -o jsonpath='{.items[*].metadata.name}' | tr ' ' '\\n' | grep '^monitoring-'); do\n  kubectl -n \"$ns\" get networkpolicy -o name \\\n  | grep '^networkpolicy.networking.k8s.io/inter-ns-' \\\n  | xargs -r kubectl -n \"$ns\" delete\ndone\n```",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:58:28Z",
+  "metadata": {
+    "ghsa_id": "GHSA-7x23-j8gv-v54x",
+    "cve_id": "CVE-2026-32720",
+    "cwe_ids": [],
+    "cvss_vector": null,
+    "affected_packages": [
+      "go:github.com/ctfer-io/monitoring"
+    ],
+    "references": [],
+    "credits": [
+      "ViRb3"
+    ]
+  }
+}

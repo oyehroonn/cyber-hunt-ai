@@ -1,0 +1,23 @@
+{
+  "title": "PayloadsAllTheThings: File Inclusion",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-98",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "File Inclusion\nA File Inclusion Vulnerability refers to a type of security vulnerability in web applications, particularly prevalent in applications developed in PHP, where an attacker can include a file, usually exploiting a lack of proper input/output sanitization. This vulnerability can lead to a range of malicious activities, including code execution, data theft, and website defacement.\nSummary\nTools\nLocal File Inclusion\nNull Byte\nDouble Encoding\nUTF-8 Encoding\nPath Truncation\nFilter Bypass\n",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "a5a7ad85ef7f",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/File%20Inclusion/",
+  "processed_at": "2026-03-15T23:08:39.631536"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "CWE-943: Improper Neutralization of Special Elements in Data Query Logic",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-943",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product generates a query intended to access or manipulate data in a data store such as a database, but it does not neutralize or incorrectly neutralizes special elements that can modify the intended logic of the query.",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-943",
+  "original_url": "https://cwe.mitre.org/data/definitions/943.html",
+  "processed_at": "2026-03-15T23:08:39.646748"
+}

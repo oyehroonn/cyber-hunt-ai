@@ -1,0 +1,23 @@
+{
+  "title": "Introduction to Bugcrowd University",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "LevelUp\nIntroduction to Bugcrowd University\nWelcome to Bugcrowd University! Join us for free and begin your journey to become a white hat hacker. Bugcrowd University was created to help you learn the basics of hacking and bug bounty hunting.\nBack to resources\nMore resources\nGuide\nBugcrowd for Government\nRead More\neBooks\n5 Reasons to Choose Bugcrowd\nRead More\nGuide\nA guide to major cybersecurity compliance requirements\nRead More\nGet Started with\nBugcrowd\nEvery minute that goes by, your unknown vu",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "bugcrowd"
+  ],
+  "source": "bugcrowd",
+  "original_id": "2a96aefd91f3",
+  "original_url": "https://www.bugcrowd.com/resources/levelup/introduction-to-bugcrowd-university/",
+  "processed_at": "2026-03-16T03:34:38.276389"
+}

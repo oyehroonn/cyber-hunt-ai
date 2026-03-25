@@ -1,0 +1,23 @@
+{
+  "title": "Inside the Mind of a Hacker",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Report\nInside the Mind of a Hacker\nDownload Report\nThe preemptive shift in modern hacking\nInside the Mind of a Hacker\nreveals how today’s hackers actually think and work—and why understanding those shifts is critical for staying ahead of real-world risk.\nHacking isn’t static. Motivations change. Collaboration is increasing. AI is reshaping how vulnerabilities are found. This report breaks down those changes and shows how security teams can respond more effectively right now.\nWhat’s inside:\nWhat ",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "bugcrowd"
+  ],
+  "source": "bugcrowd",
+  "original_id": "01a0f8153110",
+  "original_url": "https://www.bugcrowd.com/resources/report/inside-the-mind-of-a-hacker/",
+  "processed_at": "2026-03-16T03:34:38.812195"
+}

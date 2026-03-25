@@ -1,0 +1,25 @@
+{
+  "title": "PayloadsAllTheThings: OAuth Misconfiguration",
+  "vuln_class": "XSS",
+  "cwe": "CWE-287",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "OAuth Misconfiguration\nOAuth is a widely-used authorization framework that allows third-party applications to access user data without exposing user credentials. However, improper configuration and implementation of OAuth can lead to severe security vulnerabilities. This document explores common OAuth misconfigurations, potential attack vectors, and best practices for mitigating these risks.\nSummary\nStealing OAuth Token via referer\nGrabbing OAuth Token via redirect_uri\nExecuting XSS via redirect",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "34d4964f355a",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/OAuth%20Misconfiguration/",
+  "processed_at": "2026-03-15T23:08:39.590788"
+}

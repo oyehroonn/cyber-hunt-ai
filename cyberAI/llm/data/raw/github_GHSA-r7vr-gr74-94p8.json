@@ -1,0 +1,29 @@
+{
+  "id": "GHSA-r7vr-gr74-94p8",
+  "source": "github",
+  "title": "OpenClaw: Command-authorized non-owners could reach owner-only `/config` and `/debug` surfaces",
+  "url": "https://github.com/advisories/GHSA-r7vr-gr74-94p8",
+  "scraped_at": "2026-03-15T23:26:49.740713",
+  "severity": "high",
+  "vuln_type": "Broken Access Control",
+  "cwe": null,
+  "cvss_score": 8.8,
+  "affected_component": "npm:openclaw",
+  "description": "OpenClaw: Command-authorized non-owners could reach owner-only `/config` and `/debug` surfaces",
+  "body": "### Summary\n\nOpenClaw documented `/config` and `/debug` as owner-only commands, but the command handlers checked only whether the sender was command-authorized. A lower-trust sender who was intentionally allowed to run commands could still reach privileged configuration and debugging surfaces.\n\n### Impact\n\nThis allowed a non-owner sender to read or change privileged configuration that should have remained restricted to owners.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.11`\n\n### Patch\n\nFixed in `openclaw` `2026.3.12`. Owner checks are now enforced for privileged command surfaces, and regression tests cover `/config` and `/debug` access control.",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:55:09Z",
+  "metadata": {
+    "ghsa_id": "GHSA-r7vr-gr74-94p8",
+    "cve_id": null,
+    "cwe_ids": [],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "affected_packages": [
+      "npm:openclaw"
+    ],
+    "references": [],
+    "credits": [
+      "tdjackey"
+    ]
+  }
+}

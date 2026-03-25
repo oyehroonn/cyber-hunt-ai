@@ -1,0 +1,25 @@
+{
+  "title": "SQL injection cheat sheet",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-89",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nSQL injection\nCheat sheet\nSQL injection cheat sheet\nThis SQL injection cheat sheet contains examples of useful syntax that you can use to perform a variety of tasks that often arise when performing SQL injection attacks.\nString concatenation\nYou can concatenate together multiple strings to make a single string.\nOracle\n'foo'||'bar'\nMicrosoft\n'foo'+'bar'\nPostgreSQL\n'foo'||'bar'\nMySQL\n'foo' 'bar'\n[Note the space between the two strings]\nCONCAT('foo','bar')\nSubstring\nYou can ext",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "5606a5706ef3",
+  "original_url": "https://portswigger.net/web-security/sql-injection/cheat-sheet",
+  "processed_at": "2026-03-16T03:34:38.669009"
+}

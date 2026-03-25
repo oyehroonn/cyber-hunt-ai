@@ -1,0 +1,25 @@
+{
+  "title": "What is GraphQL?",
+  "vuln_class": "IDOR",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nGraphQL API vulnerabilities\nWhat is GraphQL?\nWhat is GraphQL?\nGraphQL is an API query language that is designed to facilitate efficient communication between clients and servers. It enables the user to specify exactly what data they want in the response, helping to avoid the large response objects and multiple calls that can sometimes be seen with REST APIs.\nGraphQL services define a contract through which a client can communicate with a server. The client doesn't need to kn",
+  "root_cause": "Insufficient idor protection",
+  "impact": "Attacker could exploit idor vulnerability",
+  "remediation": "Implement proper idor controls",
+  "test_hints": [
+    "Test changing object IDs in requests",
+    "Check if user A can access user B's resources",
+    "Enumerate sequential IDs"
+  ],
+  "keywords": [
+    "idor",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "8fcb9c14b722",
+  "original_url": "https://portswigger.net/web-security/graphql/what-is-graphql",
+  "processed_at": "2026-03-16T03:34:38.321472"
+}

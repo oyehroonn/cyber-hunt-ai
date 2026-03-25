@@ -1,0 +1,25 @@
+{
+  "title": "HackTricks",
+  "vuln_class": "IDOR",
+  "cwe": "CWE-639",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "IDOR (Insecure Direct Object Reference)\nTip\nLearn & practice AWS Hacking:\nHackTricks Training AWS Red Team Expert (ARTE)\nLearn & practice GCP Hacking:\nHackTricks Training GCP Red Team Expert (GRTE)\nLearn & practice Az Hacking:\nHackTricks Training Azure Red Team Expert (AzRTE)\nSupport HackTricks\nCheck the\nsubscription plans\n!\nJoin the\n💬\nDiscord group\nor the\ntelegram group\nor\nfollow\nus on\nTwitter\n🐦\n@hacktricks_live\n.\nShare hacking tricks by submitting PRs to the\nHackTricks\nand\nHackTricks Cloud\ngit",
+  "root_cause": "Insufficient idor protection",
+  "impact": "Attacker could exploit idor vulnerability",
+  "remediation": "Implement proper idor controls",
+  "test_hints": [
+    "Test changing object IDs in requests",
+    "Check if user A can access user B's resources",
+    "Enumerate sequential IDs"
+  ],
+  "keywords": [
+    "idor",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "e006b3ad996d",
+  "original_url": "https://book.hacktricks.xyz/pentesting-web/idor",
+  "processed_at": "2026-03-15T23:08:39.596073"
+}

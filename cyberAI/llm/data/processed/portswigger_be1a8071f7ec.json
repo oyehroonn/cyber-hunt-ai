@@ -1,0 +1,23 @@
+{
+  "title": "PortSwigger: Broken Access Control",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-284",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nAccess control\nAccess control vulnerabilities and privilege escalation\nIn this section, we describe:\nPrivilege escalation.\nThe types of vulnerabilities that can arise with access control.\nHow to prevent access control vulnerabilities.\nLabs\nIf you're familiar with the basic concepts behind access control vulnerabilities and want to practice exploiting them on some realistic, deliberately vulnerable targets, you can access labs in this topic from the link below.\nView all acces",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "be1a8071f7ec",
+  "original_url": "https://portswigger.net/web-security/access-control",
+  "processed_at": "2026-03-15T23:08:39.611163"
+}

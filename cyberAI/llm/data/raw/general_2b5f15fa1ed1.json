@@ -1,0 +1,20 @@
+{
+  "id": "2b5f15fa1ed1",
+  "source": "general",
+  "title": "HackTricks",
+  "url": "https://book.hacktricks.xyz/pentesting-web/sql-injection",
+  "scraped_at": "2026-03-15T23:07:17.768997",
+  "severity": "medium",
+  "vuln_type": "SQL Injection",
+  "cwe": "CWE-89",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "Document not found (404)\nThis URL is invalid, sorry. Please use the navigation bar or search to continue.",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "source_name": "hacktricks_sqli",
+    "source_type": "single_page"
+  }
+}

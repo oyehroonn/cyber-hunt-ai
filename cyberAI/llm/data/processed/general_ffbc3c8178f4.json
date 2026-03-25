@@ -1,0 +1,25 @@
+{
+  "title": "XML External Entity Prevention Cheat Sheet¶",
+  "vuln_class": "SSRF",
+  "cwe": "CWE-611",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "XML External Entity Prevention Cheat Sheet\n¶\nIntroduction\n¶\nAn\nXML eXternal Entity injection\n(XXE), which is now part of the\nOWASP Top 10\nvia the point\nA4\n, is attack against applications that parse XML input. This issue is referenced in the ID\n611\nin the\nCommon Weakness Enumeration\nreferential. An XXE attack occurs when untrusted XML input with a\nreference to an external entity is processed by a weakly configured XML parser\n, and this attack could be used to stage multiple incidents, including:",
+  "root_cause": "Insufficient ssrf protection",
+  "impact": "Attacker could exploit ssrf vulnerability",
+  "remediation": "Implement proper ssrf controls",
+  "test_hints": [
+    "Test internal IP addresses",
+    "Check URL parameters",
+    "Try cloud metadata endpoints"
+  ],
+  "keywords": [
+    "ssrf",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "ffbc3c8178f4",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.601583"
+}

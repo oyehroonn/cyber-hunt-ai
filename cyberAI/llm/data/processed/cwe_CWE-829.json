@@ -1,0 +1,25 @@
+{
+  "title": "CWE-829: Inclusion of Functionality from Untrusted Control Sphere",
+  "vuln_class": "XSS",
+  "cwe": "CWE-829",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product imports, requires, or includes executable functionality (such as a library) from a source that is outside of the intended control sphere.",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-829",
+  "original_url": "https://cwe.mitre.org/data/definitions/829.html",
+  "processed_at": "2026-03-15T23:08:39.532368"
+}

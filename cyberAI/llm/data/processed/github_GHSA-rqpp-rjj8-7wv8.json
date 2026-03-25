@@ -1,0 +1,23 @@
+{
+  "title": "OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": 10.0,
+  "severity": "critical",
+  "affected_component": "npm:openclaw",
+  "attack_vector": "OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-rqpp-rjj8-7wv8",
+  "original_url": "https://github.com/advisories/GHSA-rqpp-rjj8-7wv8",
+  "processed_at": "2026-03-16T03:34:38.762345"
+}

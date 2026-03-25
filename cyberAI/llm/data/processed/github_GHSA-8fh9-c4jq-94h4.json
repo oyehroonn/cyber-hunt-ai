@@ -1,0 +1,23 @@
+{
+  "title": "idunno.Bluesky, idunno.AtProto and idunno.AtProto.OAuthCallback Denial of Service Vulnerability",
+  "vuln_class": "Command Injection",
+  "cwe": null,
+  "cvss_score": 7.5,
+  "severity": "high",
+  "affected_component": "nuget:idunno.AtProto, nuget:idunno.AtProto.OAuthCallback, nuget:idunno.Bluesky",
+  "attack_vector": "idunno.Bluesky, idunno.AtProto and idunno.AtProto.OAuthCallback Denial of Service Vulnerability",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-8fh9-c4jq-94h4",
+  "original_url": "https://github.com/advisories/GHSA-8fh9-c4jq-94h4",
+  "processed_at": "2026-03-16T03:34:38.998289"
+}

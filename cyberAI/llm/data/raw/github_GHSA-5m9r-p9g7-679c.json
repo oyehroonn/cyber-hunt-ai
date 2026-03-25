@@ -1,0 +1,29 @@
+{
+  "id": "GHSA-5m9r-p9g7-679c",
+  "source": "github",
+  "title": "OpenClaw: Zalo webhook rate limiting could be bypassed before secret validation",
+  "url": "https://github.com/advisories/GHSA-5m9r-p9g7-679c",
+  "scraped_at": "2026-03-15T23:26:49.737195",
+  "severity": "medium",
+  "vuln_type": "RCE",
+  "cwe": null,
+  "cvss_score": null,
+  "affected_component": "npm:openclaw",
+  "description": "OpenClaw: Zalo webhook rate limiting could be bypassed before secret validation",
+  "body": "### Summary\n\nThe Zalo webhook handler applied request rate limiting only after webhook authentication succeeded. Requests with an invalid secret returned `401` but did not count against the rate limiter, allowing repeated secret guesses without triggering `429`.\n\n### Impact\n\nThis made brute-force guessing materially easier for weak but policy-compliant webhook secrets. Once the secret was guessed, an attacker could submit forged Zalo webhook traffic.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.11`\n\n### Patch\n\nFixed in `openclaw` `2026.3.12`. Rate limiting now applies before successful authentication is required, closing the pre-auth brute-force gap. Users should update to `2026.3.12` or later and prefer strong webhook secrets.",
+  "bounty": null,
+  "disclosed_at": "2026-03-13T20:55:38Z",
+  "metadata": {
+    "ghsa_id": "GHSA-5m9r-p9g7-679c",
+    "cve_id": null,
+    "cwe_ids": [],
+    "cvss_vector": null,
+    "affected_packages": [
+      "npm:openclaw"
+    ],
+    "references": [],
+    "credits": [
+      "zpbrent"
+    ]
+  }
+}

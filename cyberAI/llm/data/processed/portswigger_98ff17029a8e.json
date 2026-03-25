@@ -1,0 +1,23 @@
+{
+  "title": "PortSwigger: request-smuggling",
+  "vuln_class": "Other",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nRequest smuggling\nHTTP request smuggling\nIn this section, we'll explain HTTP request smuggling attacks and describe how common request smuggling vulnerabilities can arise.\nLabs\nIf you're already familiar with HTTP request smuggling and just want to practice on a series of deliberately vulnerable sites, check out the link below for an overview of all labs in this topic.\nView all HTTP request smuggling labs\nWhat is HTTP request smuggling?\nHTTP request smuggling is a technique ",
+  "root_cause": "Insufficient other protection",
+  "impact": "Attacker could exploit other vulnerability",
+  "remediation": "Implement proper other controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "other",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "98ff17029a8e",
+  "original_url": "https://portswigger.net/web-security/request-smuggling",
+  "processed_at": "2026-03-15T23:08:39.624702"
+}

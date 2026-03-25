@@ -1,0 +1,22 @@
+{
+  "id": "CWE-917",
+  "source": "cwe",
+  "title": "CWE-917: Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')",
+  "url": "https://cwe.mitre.org/data/definitions/917.html",
+  "scraped_at": "2026-03-15T23:05:20.166489",
+  "severity": "high",
+  "vuln_type": "Expression Language Injection",
+  "cwe": "CWE-917",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": "The product constructs all or part of an expression language (EL) statement in a framework such as a Java Server Page (JSP) using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended EL statement before it is executed.",
+  "body": "Description:\nThe product constructs all or part of an expression language (EL) statement in a framework such as a Java Server Page (JSP) using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended EL statement before it is executed.\n\nExtended Description:\nFrameworks such as Java Server Page (JSP) allow a developer to insert executable expressions within otherwise-static content. When the developer is not aware of the executable nature of these expressions and/or does not disable them, then if an attacker can inject expressions, this could lead to code execution or other unexpected behaviors.\n\nConsequences:\nImpact Details Read Application Data Scope: Confidentiality Execute Unauthorized Code or Commands Scope: Integrity\n\nMitigations:\nPhase(s)\nMitigation\nArchitecture and Design\nAvoid adding user-controlled data into an expression interpreter when possible.\nImplementation\nIf user-controlled data must be added to an expression interpreter, one or more of the following should be performed:\nValidate that the user input will not evaluate as an expression\nEncode the user input in a way that ensures it is not evaluated as an expression\nSystem Configuration; Operation\nThe framework or tooling might allow the developer to disable or deactivate the processing of EL expressions, such as setting the isELIgnored attribute for a JSP page to \"true\".\n\nDetection Methods:\nMethod\nDetails\nAutomated Static Analysis\nAutomated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)\nEffectiveness: High",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "cwe_id": "CWE-917",
+    "mitigations": "Phase(s)\nMitigation\nArchitecture and Design\nAvoid adding user-controlled data into an expression interpreter when possible.\nImplementation\nIf user-controlled data must be added to an expression interpreter, one or more of the following should be performed:\nValidate that the user input will not evaluate as an expression\nEncode the user input in a way that ensures it is not evaluated as an expression\nSystem Configuration; Operation\nThe framework or tooling might allow the developer to disable or deactivate the processing of EL expressions, such as setting the isELIgnored attribute for a JSP page to \"true\".",
+    "detection": "Method\nDetails\nAutomated Static Analysis\nAutomated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external componen",
+    "consequences": "Impact Details Read Application Data Scope: Confidentiality Execute Unauthorized Code or Commands Scope: Integrity"
+  }
+}

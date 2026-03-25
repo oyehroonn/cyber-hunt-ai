@@ -1,0 +1,25 @@
+{
+  "title": "Angular vulnerable to XSS in i18n attribute bindings",
+  "vuln_class": "XSS",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": "npm:@angular/core, npm:@angular/core, npm:@angular/core",
+  "attack_vector": "Angular vulnerable to XSS in i18n attribute bindings",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-g93w-mfhg-p222",
+  "original_url": "https://github.com/advisories/GHSA-g93w-mfhg-p222",
+  "processed_at": "2026-03-16T03:34:38.626229"
+}

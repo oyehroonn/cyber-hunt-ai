@@ -1,0 +1,23 @@
+{
+  "title": "Centrifugo's InsecureSkipTokenSignatureVerify flag silently disables JWT verification with no warning",
+  "vuln_class": "JWT Vulnerabilities",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "low",
+  "affected_component": "go:github.com/centrifugal/centrifugo/v6",
+  "attack_vector": "Centrifugo's InsecureSkipTokenSignatureVerify flag silently disables JWT verification with no warning",
+  "root_cause": "Insufficient jwt vulnerabilities protection",
+  "impact": "Attacker could exploit jwt vulnerabilities vulnerability",
+  "remediation": "Implement proper jwt vulnerabilities controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "jwt vulnerabilities",
+    "github"
+  ],
+  "source": "github",
+  "original_id": "GHSA-q926-c743-49qj",
+  "original_url": "https://github.com/advisories/GHSA-q926-c743-49qj",
+  "processed_at": "2026-03-16T03:34:38.521942"
+}

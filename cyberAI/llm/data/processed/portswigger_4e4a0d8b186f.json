@@ -1,0 +1,25 @@
+{
+  "title": "PortSwigger: CSRF",
+  "vuln_class": "XSS",
+  "cwe": "CWE-352",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "Web Security Academy\nCSRF\nCross-site request forgery (CSRF)\nIn this section, we'll explain what cross-site request forgery is, describe some examples of common CSRF vulnerabilities, and explain how to prevent CSRF attacks.\nWhat is CSRF?\nCross-site request forgery (also known as CSRF) is a web security vulnerability that allows an attacker to induce users to perform actions that they do not intend to perform. It allows an attacker to partly circumvent the same origin policy, which is designed to ",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "portswigger"
+  ],
+  "source": "portswigger",
+  "original_id": "4e4a0d8b186f",
+  "original_url": "https://portswigger.net/web-security/csrf",
+  "processed_at": "2026-03-15T23:08:39.634675"
+}

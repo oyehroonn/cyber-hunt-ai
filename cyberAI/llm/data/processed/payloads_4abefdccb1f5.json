@@ -1,0 +1,23 @@
+{
+  "title": "PayloadsAllTheThings: CSV Injection",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-1236",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "CSV Injection\nMany web applications allow the user to download content such as templates for invoices or user settings to a CSV file. Many users choose to open the CSV file in either Excel, Libre Office or Open Office. When a web application does not properly validate the contents of the CSV file, it could lead to contents of a cell or many cells being executed.\nSummary\nMethodology\nGoogle Sheets\nReferences\nMethodology\nCSV Injection, also known as Formula Injection, is a security vulnerability th",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "payloads"
+  ],
+  "source": "payloads",
+  "original_id": "4abefdccb1f5",
+  "original_url": "https://swisskyrepo.github.io/PayloadsAllTheThings/CSV%20Injection/",
+  "processed_at": "2026-03-15T23:08:39.655457"
+}

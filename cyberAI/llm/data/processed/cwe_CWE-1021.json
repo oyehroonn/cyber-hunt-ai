@@ -1,0 +1,23 @@
+{
+  "title": "CWE-1021: Improper Restriction of Rendered UI Layers or Frames",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-1021",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "The web application does not restrict or incorrectly restricts frame objects or UI layers that belong to another application or domain, which can lead to user confusion about which interface the user is interacting with.",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-1021",
+  "original_url": "https://cwe.mitre.org/data/definitions/1021.html",
+  "processed_at": "2026-03-15T23:08:39.635453"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "f9c16eadd604",
+  "source": "portswigger",
+  "title": "FAQs",
+  "url": "https://portswigger.net/web-security/certification/frequently-asked-questions/index.html",
+  "scraped_at": "2026-03-16T03:19:42.349099",
+  "severity": "high",
+  "vuln_type": null,
+  "cwe": null,
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "So long as you have access to a valid, active Burp Suite Professional license at the time of your certification exam, you will be able to use it to take the exam.\nIn addition, we require that you use a project file, which we may request up to a week after you have taken the exam to confirm your certificate or investigate any reported issues.",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "type": "material",
+    "solution": null,
+    "attack_vector": null,
+    "remediation": null
+  }
+}

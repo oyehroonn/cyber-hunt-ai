@@ -1,0 +1,25 @@
+{
+  "title": "CWE-863: Incorrect Authorization",
+  "vuln_class": "Business Logic",
+  "cwe": "CWE-863",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product performs an authorization check when an actor attempts to access a resource or perform an action, but it does not correctly perform the check.",
+  "root_cause": "Insufficient business logic protection",
+  "impact": "Attacker could exploit business logic vulnerability",
+  "remediation": "Implement proper business logic controls",
+  "test_hints": [
+    "Test workflow sequences",
+    "Check boundary conditions",
+    "Verify state transitions"
+  ],
+  "keywords": [
+    "business logic",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-863",
+  "original_url": "https://cwe.mitre.org/data/definitions/863.html",
+  "processed_at": "2026-03-15T23:08:39.570030"
+}

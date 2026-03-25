@@ -1,0 +1,25 @@
+{
+  "title": "Input Validation Cheat Sheet¶",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "Input Validation Cheat Sheet\n¶\nIntroduction\n¶\nThis article is focused on providing clear, simple, actionable guidance for providing Input Validation security functionality in your applications.\nGoals of Input Validation\n¶\nInput validation is performed to ensure only properly formed data is entering the workflow in an information system, preventing malformed data from persisting in the database and triggering malfunction of various downstream components. Input validation should happen as early as",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "c35c03d3541d",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.645122"
+}

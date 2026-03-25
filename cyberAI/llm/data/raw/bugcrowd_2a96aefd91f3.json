@@ -1,0 +1,17 @@
+{
+  "id": "2a96aefd91f3",
+  "source": "bugcrowd",
+  "title": "Introduction to Bugcrowd University",
+  "url": "https://www.bugcrowd.com/resources/levelup/introduction-to-bugcrowd-university/",
+  "scraped_at": "2026-03-15T23:27:06.860209",
+  "severity": "medium",
+  "vuln_type": "RCE",
+  "cwe": null,
+  "cvss_score": null,
+  "affected_component": null,
+  "description": null,
+  "body": "LevelUp\nIntroduction to Bugcrowd University\nWelcome to Bugcrowd University! Join us for free and begin your journey to become a white hat hacker. Bugcrowd University was created to help you learn the basics of hacking and bug bounty hunting.\nBack to resources\nMore resources\nGuide\nBugcrowd for Government\nRead More\neBooks\n5 Reasons to Choose Bugcrowd\nRead More\nGuide\nA guide to major cybersecurity compliance requirements\nRead More\nGet Started with\nBugcrowd\nEvery minute that goes by, your unknown vulnerabilities leave you more exposed to cyber attacks.\nTry Bugcrowd\nContact Us",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {}
+}

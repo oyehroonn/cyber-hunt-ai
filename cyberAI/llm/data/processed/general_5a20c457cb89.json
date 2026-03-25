@@ -1,0 +1,25 @@
+{
+  "title": "LDAP Injection Prevention Cheat Sheet¶",
+  "vuln_class": "SQL Injection",
+  "cwe": null,
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "LDAP Injection Prevention Cheat Sheet\n¶\nIntroduction\n¶\nThe Lightweight Directory Access Protocol (LDAP) allows an application to remotely perform operations such as searching and modifying records in\ndirectories. LDAP injection results from inadequate input sanitization and validation and allows malicious users to glean restricted information using the\ndirectory service. For general information about LDAP please visit\nlightweight directory access protocol (LDAP)\n.\nLDAP Injection is an attack use",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "5a20c457cb89",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.583182"
+}

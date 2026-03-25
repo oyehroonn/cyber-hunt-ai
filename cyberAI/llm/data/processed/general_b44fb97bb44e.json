@@ -1,0 +1,25 @@
+{
+  "title": "DOM based XSS Prevention Cheat Sheet¶",
+  "vuln_class": "XSS",
+  "cwe": "CWE-79",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "DOM based XSS Prevention Cheat Sheet\n¶\nIntroduction\n¶\nWhen looking at XSS (Cross-Site Scripting), there are three generally recognized forms of\nXSS\n:\nReflected or Stored\nDOM Based XSS\n.\nThe\nXSS Prevention Cheatsheet\ndoes an excellent job of addressing Reflected and Stored XSS. This cheatsheet addresses DOM (Document Object Model) based XSS and is an extension (and assumes comprehension) of the\nXSS Prevention Cheatsheet\n.\nIn order to understand DOM based XSS, one needs to see the fundamental diff",
+  "root_cause": "Insufficient xss protection",
+  "impact": "Attacker could exploit xss vulnerability",
+  "remediation": "Implement proper xss controls",
+  "test_hints": [
+    "Inject script tags",
+    "Test event handlers",
+    "Check for reflected inputs"
+  ],
+  "keywords": [
+    "xss",
+    "general"
+  ],
+  "source": "general",
+  "original_id": "b44fb97bb44e",
+  "original_url": "https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html",
+  "processed_at": "2026-03-15T23:08:39.531370"
+}

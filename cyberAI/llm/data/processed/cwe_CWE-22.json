@@ -1,0 +1,23 @@
+{
+  "title": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-22",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product uses external input to construct a pathname that is intended to identify a file or directory that is located underneath a restricted parent directory, but the product does not properly neutralize special elements within the pathname that can cause the pathname to resolve to a location that is outside of the restricted directory.",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-22",
+  "original_url": "https://cwe.mitre.org/data/definitions/22.html",
+  "processed_at": "2026-03-15T23:08:39.521432"
+}

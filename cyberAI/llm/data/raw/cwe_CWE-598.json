@@ -1,0 +1,22 @@
+{
+  "id": "CWE-598",
+  "source": "cwe",
+  "title": "CWE-598: Use of GET Request Method With Sensitive Query Strings",
+  "url": "https://cwe.mitre.org/data/definitions/598.html",
+  "scraped_at": "2026-03-15T23:05:40.376822",
+  "severity": "medium",
+  "vuln_type": "URL Query String Exposure",
+  "cwe": "CWE-598",
+  "cvss_score": null,
+  "affected_component": null,
+  "description": "The web application uses the HTTP GET method to process a request and includes sensitive information in the query string of that request.",
+  "body": "Description:\nThe web application uses the HTTP GET method to process a request and includes sensitive information in the query string of that request.\n\nConsequences:\nImpact Details Read Application Data Scope: Confidentiality At a minimum, attackers can garner information from\n\t\t   query strings that can be utilized in escalating\n\t\t   their method of attack, such as information about\n\t\t   the internal workings of the application or\n\t\t   database column names.  Successful exploitation of\n\t\t   query string parameter vulnerabilities could lead\n\t\t   to an attacker impersonating a legitimate user,\n\t\t   obtaining proprietary data, or simply executing\n\t\t   actions not intended by the application developers. Examples of sensitive information may include\n\t\t   secrets such as session identifiers, passwords,\n\t\t   access tokens, or API keys; Personally Identifiable\n\t\t   Information (PII) such as email addresses or phone\n\t\t   numbers; records or logs of private activities;\n\t\t   communications that are expected to be private;\n\t\t   etc.  Successful exploitation of query string\n\t\t   parameter vulnerabilities could lead to an attacker\n\t\t   impersonating a legitimate user, obtaining\n\t\t   proprietary data, or simply executing actions not\n\t\t   intended by the application developers.\n\nMitigations:\nPhase(s)\nMitigation\nImplementation\nWhen sensitive information is sent, use the POST method (e.g. registration form).\n\nDetection Methods:\nMethod\nDetails\nAutomated Static Analysis\nAutomated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)\nEffectiveness: High",
+  "bounty": null,
+  "disclosed_at": null,
+  "metadata": {
+    "cwe_id": "CWE-598",
+    "mitigations": "Phase(s)\nMitigation\nImplementation\nWhen sensitive information is sent, use the POST method (e.g. registration form).",
+    "detection": "Method\nDetails\nAutomated Static Analysis\nAutomated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external componen",
+    "consequences": "Impact Details Read Application Data Scope: Confidentiality At a minimum, attackers can garner information from\n\t\t   query strings that can be utilized in escalating\n\t\t   their method of attack, such as information about\n\t\t   the internal workings of the application or\n\t\t   database column names.  Successful exploitation of\n\t\t   query string parameter vulnerabilities could lead\n\t\t   to an attacker impersonating a legitimate user,\n\t\t   obtaining proprietary data, or simply executing\n\t\t   actions "
+  }
+}

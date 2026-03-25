@@ -1,0 +1,23 @@
+{
+  "title": "CWE-614: Sensitive Cookie in HTTPS Session Without 'Secure' Attribute",
+  "vuln_class": "Command Injection",
+  "cwe": "CWE-614",
+  "cvss_score": null,
+  "severity": "medium",
+  "affected_component": null,
+  "attack_vector": "The Secure attribute for sensitive cookies in HTTPS sessions is not set.",
+  "root_cause": "Insufficient command injection protection",
+  "impact": "Attacker could exploit command injection vulnerability",
+  "remediation": "Implement proper command injection controls",
+  "test_hints": [
+    "Test for common vulnerability patterns"
+  ],
+  "keywords": [
+    "command injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-614",
+  "original_url": "https://cwe.mitre.org/data/definitions/614.html",
+  "processed_at": "2026-03-15T23:08:39.595103"
+}

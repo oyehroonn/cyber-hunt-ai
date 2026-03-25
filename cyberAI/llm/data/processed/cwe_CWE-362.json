@@ -1,0 +1,25 @@
+{
+  "title": "CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
+  "vuln_class": "Race Condition",
+  "cwe": "CWE-362",
+  "cvss_score": null,
+  "severity": "high",
+  "affected_component": null,
+  "attack_vector": "The product contains a concurrent code sequence that requires temporary, exclusive access to a shared resource, but a timing window exists in which the shared resource can be modified by another code sequence operating concurrently.",
+  "root_cause": "Insufficient race condition protection",
+  "impact": "Attacker could exploit race condition vulnerability",
+  "remediation": "Implement proper race condition controls",
+  "test_hints": [
+    "Send concurrent requests",
+    "Test coupon/discount codes",
+    "Check atomic operations"
+  ],
+  "keywords": [
+    "race condition",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-362",
+  "original_url": "https://cwe.mitre.org/data/definitions/362.html",
+  "processed_at": "2026-03-15T23:08:39.620719"
+}

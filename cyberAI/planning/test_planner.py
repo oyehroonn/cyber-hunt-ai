@@ -396,18 +396,96 @@ class TestPlanner:
         
         return plans
     
+    def _generate_rag_tests(self) -> list[TestPlan]:
+        """
+        Generate RAG-driven test plans using the vulnerability knowledge base.
+        These plans act as placeholders; the actual RAG tester generates live
+        HTTP tests from the knowledge base at execution time.
+        """
+        plans = []
+
+        config = self.config
+        if not getattr(config, "llm_enabled", False):
+            return plans
+
+        try:
+            import sys
+            from pathlib import Path
+            _cyberai_dir = str(Path(__file__).parent.parent)
+            if _cyberai_dir not in sys.path:
+                sys.path.insert(0, _cyberai_dir)
+
+            from llm.rag_engine import create_rag_engine
+            data_dir = Path(__file__).parent.parent / "llm" / "data"
+            engine = create_rag_engine(data_dir=data_dir)
+
+            obj_model = {}
+            perm_matrix = {}
+            workflow_map = None
+
+            if self._intel:
+                if self._intel.objects:
+                    obj_model = {
+                        o.name: {
+                            "fields": [f.name for f in o.readable_fields[:10]],
+                            "ownership": o.ownership_fields,
+                            "criticality": o.security_criticality,
+                        }
+                        for o in self._intel.objects[:15]
+                    }
+                if self._intel.permission_matrix:
+                    pm = self._intel.permission_matrix
+                    perm_matrix = {
+                        e.role: {e.object_type: {e.action: e.allowed}}
+                        for e in (pm.entries if hasattr(pm, "entries") else [])
+                    }
+                if self._intel.workflows:
+                    workflow_map = {
+                        w.name: {
+                            "states": [n.state for n in w.nodes[:5]],
+                            "suspicious": w.suspicious_transitions[:3],
+                        }
+                        for w in self._intel.workflows[:5]
+                    }
+
+            hypotheses = engine.generate_hypotheses(obj_model, perm_matrix, workflow_map)
+
+            for i, h in enumerate(hypotheses[:20]):
+                if not isinstance(h, dict):
+                    continue
+                attack = (
+                    h.get("attack_type")
+                    or h.get("attack")
+                    or h.get("vulnerability_class")
+                    or "Unknown"
+                )
+                desc = h.get("description") or h.get("test_name") or f"RAG hypothesis #{i+1}"
+                plans.append(TestPlan(
+                    category=TestCategory.RAG,
+                    name=f"rag_hypothesis_{i+1}_{attack.lower().replace(' ', '_')[:20]}",
+                    description=str(desc)[:200],
+                    expected_safe_behavior=h.get("expected_safe", "Application should reject attack"),
+                    attack_vector=str(attack),
+                    confidence_score=min(float(h.get("confidence", 0.6)), 1.0),
+                    priority=int(h.get("priority", 3)),
+                ))
+        except Exception as e:
+            logger.debug(f"RAG hypothesis generation: {e}")
+
+        return plans
+
     def generate_all_plans(self) -> list[TestPlan]:
         """
         Generate all test plans from intelligence.
-        
+
         Returns:
             List of TestPlan objects
         """
         if not self._intel:
             self.load_intelligence()
-        
+
         self._test_plans = []
-        
+
         self._test_plans.extend(self._generate_auth_tests())
         self._test_plans.extend(self._generate_authz_tests())
         self._test_plans.extend(self._generate_business_logic_tests())
@@ -417,7 +495,8 @@ class TestPlanner:
         self._test_plans.extend(self._generate_graphql_tests())
         self._test_plans.extend(self._generate_websocket_tests())
         self._test_plans.extend(self._generate_file_upload_tests())
-        
+        self._test_plans.extend(self._generate_rag_tests())
+
         self._test_plans.sort(key=lambda p: (p.priority, -p.confidence_score))
         
         for plan in self._test_plans:

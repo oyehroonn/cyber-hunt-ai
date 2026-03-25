@@ -1,0 +1,25 @@
+{
+  "title": "CWE-209: Generation of Error Message Containing Sensitive Information",
+  "vuln_class": "SQL Injection",
+  "cwe": "CWE-209",
+  "cvss_score": null,
+  "severity": "low",
+  "affected_component": null,
+  "attack_vector": "The product generates an error message that includes sensitive information about its environment, users, or associated data.",
+  "root_cause": "Insufficient sql injection protection",
+  "impact": "Attacker could exploit sql injection vulnerability",
+  "remediation": "Implement proper sql injection controls",
+  "test_hints": [
+    "Test single quotes in inputs",
+    "Check for error messages",
+    "Try UNION-based injection"
+  ],
+  "keywords": [
+    "sql injection",
+    "cwe"
+  ],
+  "source": "cwe",
+  "original_id": "CWE-209",
+  "original_url": "https://cwe.mitre.org/data/definitions/209.html",
+  "processed_at": "2026-03-15T23:08:39.587403"
+}
