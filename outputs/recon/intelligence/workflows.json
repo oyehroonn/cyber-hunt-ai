@@ -1,14 +1,14 @@
 {
   "_meta": {
-    "generated_at": "2026-03-25T02:56:38.007729",
+    "generated_at": "2026-03-26T03:29:14.176729",
     "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "juice_steps_20260325_034629"
+    "run_id": "juiceshop-1774492575"
   },
   "workflows": {
     "submit": {
-      "id": "6b3ebf16-a2ff-4db9-8db9-201df4bfc972",
+      "id": "f5860b27-f2f9-4216-85b3-2607724d097c",
       "name": "submit",
       "description": null,
       "nodes": [
@@ -17,11 +17,66 @@
           "state": "step_0",
           "description": "GitHub - juice-shop/juice-shop: OWASP Juice Shop: Probably the most modern and sophisticated insecure web application · GitHub",
           "is_initial": true,
+          "is_terminal": false,
+          "required_role": null
+        },
+        {
+          "id": "submit_step_1",
+          "state": "step_1",
+          "description": "OWASP Juice Shop",
+          "is_initial": false,
+          "is_terminal": false,
+          "required_role": null
+        },
+        {
+          "id": "submit_step_2",
+          "state": "step_2",
+          "description": "GitHub - juice-shop/juice-shop: OWASP Juice Shop: Probably the most modern and sophisticated insecure web application · GitHub",
+          "is_initial": false,
+          "is_terminal": false,
+          "required_role": null
+        },
+        {
+          "id": "submit_step_3",
+          "state": "step_3",
+          "description": "OWASP Juice Shop",
+          "is_initial": false,
           "is_terminal": true,
           "required_role": null
         }
       ],
-      "edges": [],
+      "edges": [
+        {
+          "from_state": "step_0",
+          "to_state": "step_1",
+          "action": "next",
+          "preconditions": [],
+          "endpoint_id": null,
+          "is_reversible": true,
+          "requires_approval": false,
+          "requires_payment": false
+        },
+        {
+          "from_state": "step_1",
+          "to_state": "step_2",
+          "action": "next",
+          "preconditions": [],
+          "endpoint_id": null,
+          "is_reversible": true,
+          "requires_approval": false,
+          "requires_payment": false
+        },
+        {
+          "from_state": "step_2",
+          "to_state": "step_3",
+          "action": "next",
+          "preconditions": [],
+          "endpoint_id": null,
+          "is_reversible": true,
+          "requires_approval": false,
+          "requires_payment": false
+        }
+      ],
       "object_type": null,
       "suspicious_transitions": []
     }

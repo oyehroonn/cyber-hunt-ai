@@ -424,6 +424,62 @@ async def wait_for_network_idle(page: Page, timeout: int = 5000) -> None:
         logger.debug(f"Network idle wait timed out or failed: {e}")
 
 
+async def dismiss_overlays(page: Page) -> None:
+    """
+    Force-dismiss Angular CDK overlay backdrops, Material dialogs, and cookie/welcome
+    banners that would block subsequent click actions.
+
+    Strategy:
+    1. Set localStorage keys that common frameworks (Juice Shop, etc.) check before
+       showing welcome dialogs — prevents re-show on every SPA navigation.
+    2. Press Escape to trigger Angular's DialogRef.close() handler (clean path).
+    3. JS-remove any remaining .cdk-overlay-backdrop nodes (bypass interactability).
+    """
+    try:
+        await page.evaluate("""() => {
+            // Prevent common welcome/cookie dialogs from re-opening on the next
+            // Angular router navigation.  These keys are checked by many SPAs.
+            const suppressKeys = [
+                ['welcomeBannerStatus', 'dismiss'],
+                ['cookieConsent', 'true'],
+                ['cookie_consent', 'accepted'],
+                ['disclaimer', 'true'],
+                ['gdpr-consent', 'true'],
+                ['hasSeenWelcome', 'true'],
+                ['showedWelcomeBanner', 'true'],
+            ];
+            suppressKeys.forEach(([k, v]) => {
+                try { localStorage.setItem(k, v); } catch(e) {}
+            });
+        }""")
+    except Exception:
+        pass
+    try:
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(300)
+    except Exception:
+        pass
+    try:
+        await page.evaluate("""() => {
+            // Force-remove backdrop and all overlay panes
+            document.querySelectorAll(
+                '.cdk-overlay-backdrop, .cdk-overlay-dark-backdrop'
+            ).forEach(el => el.remove());
+            const container = document.querySelector('.cdk-overlay-container');
+            if (container) {
+                container.querySelectorAll('.cdk-overlay-pane').forEach(p => p.remove());
+                container.querySelectorAll('.cdk-overlay-backdrop').forEach(b => b.remove());
+            }
+            // Generic modal/dialog overlays for non-Angular frameworks
+            document.querySelectorAll(
+                '.modal-backdrop, .v-overlay__scrim, .mfp-bg, .fancybox-overlay'
+            ).forEach(el => el.remove());
+        }""")
+        await page.wait_for_timeout(200)
+    except Exception:
+        pass
+
+
 async def execute_js(page: Page, script: str) -> Any:
     """Execute JavaScript in page context."""
     return await page.evaluate(script)

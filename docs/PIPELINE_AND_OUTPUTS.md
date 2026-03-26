@@ -20,6 +20,14 @@ verify →  verification/confirmed/verified_findings.json (+ per-finding JSON fo
 report →  reports/{markdown,json,csv,txt}/...
 ```
 
+**Closed-loop agent (`agent`):** `python -m cyberAI.main agent --target <URL>` runs an LLM that **executes allowlisted tools** (subprocess phases, read artifacts, tail logs, scoped HTTP probe, persistent memory). See `docs/AGENT_LOOP_ARCHITECTURE.md`. Outputs: `outputs/llm/agent_memory/transcript_<run_id>.jsonl`, `scratch_<run_id>.jsonl`.
+
+**Single-file summary (`consolidate`):** After a run, merge artifacts into one Markdown report:
+
+`python -m cyberAI.main consolidate --run-id <run_id>`
+
+Writes `outputs/reports/markdown/CONSOLIDATED_ASSESSMENT_<run_id>.md` (findings table, recon/plan/testing notes, log paths, optional agent transcript, full verified JSON appendix). Implemented in `cyberAI/reporting/consolidate_run_report.py`.
+
 **Logs:** Each phase writes `outputs/logs/<phase>_<run_id>.log` when `setup_logging` runs (see `cyberAI/main.py`).
 
 ---

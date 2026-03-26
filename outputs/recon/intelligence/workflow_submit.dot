@@ -2,4 +2,10 @@ digraph submit {
     rankdir=LR;
     node [shape=box, style=filled, fillcolor=lightblue];
     "step_0" [fillcolor=lightgreen];
+    "step_1" [fillcolor=lightblue];
+    "step_2" [fillcolor=lightblue];
+    "step_3" [fillcolor=lightyellow];
+    "step_0" -> "step_1" [label="next"];
+    "step_1" -> "step_2" [label="next"];
+    "step_2" -> "step_3" [label="next"];
 }

@@ -1,10 +1,10 @@
 {
   "_meta": {
-    "generated_at": "2026-03-25T03:33:12.886857",
+    "generated_at": "2026-03-25T16:14:09.543874",
     "target_url": "https://example.com",
     "phase": "reporting",
     "version": "1.0.0",
-    "run_id": "juice_steps_20260325_034629"
+    "run_id": "a77cb3b5-8a14-4f54-a47a-fd44beb0f68f"
   },
   "findings": [
     {
@@ -114,7 +114,7 @@
       "cross_role_confirmed": false,
       "cross_tenant_confirmed": false,
       "status": "needs_more_data",
-      "verified_at": "2026-03-25 03:33:00.402205"
+      "verified_at": "2026-03-25 16:14:04.510519"
     },
     {
       "id": "c75090ca-d37f-47d2-94f5-53477a0ca021",
@@ -222,7 +222,7 @@
       "cross_role_confirmed": false,
       "cross_tenant_confirmed": false,
       "status": "needs_more_data",
-      "verified_at": "2026-03-25 03:33:00.402567"
+      "verified_at": "2026-03-25 16:14:04.511195"
     },
     {
       "id": "d80599f9-b65a-4668-bec5-074e95fdc72c",
@@ -335,7 +335,7 @@
       "cross_role_confirmed": false,
       "cross_tenant_confirmed": false,
       "status": "needs_more_data",
-      "verified_at": "2026-03-25 03:33:00.402595"
+      "verified_at": "2026-03-25 16:14:04.511222"
     },
     {
       "id": "4285d1e7-2f36-4870-aa6c-3182fa9babfe",
@@ -447,7 +447,7 @@
       "cross_role_confirmed": false,
       "cross_tenant_confirmed": false,
       "status": "needs_more_data",
-      "verified_at": "2026-03-25 03:33:00.402619"
+      "verified_at": "2026-03-25 16:14:04.511243"
     },
     {
       "id": "103de8ee-0d5a-4e9d-8544-edfd59d762bb",
@@ -559,7 +559,7 @@
       "cross_role_confirmed": false,
       "cross_tenant_confirmed": false,
       "status": "needs_more_data",
-      "verified_at": "2026-03-25 03:33:00.402641"
+      "verified_at": "2026-03-25 16:14:04.511264"
     },
     {
       "id": "60131f07-243b-493b-8cd2-db293f9b6fe9",
@@ -671,7 +671,7 @@
       "cross_role_confirmed": false,
       "cross_tenant_confirmed": false,
       "status": "likely",
-      "verified_at": "2026-03-25 03:33:00.402662"
+      "verified_at": "2026-03-25 16:14:04.511286"
     },
     {
       "id": "672054ab-992e-4e8e-90fb-1ed94cea7c8e",
@@ -783,7 +783,7 @@
       "cross_role_confirmed": false,
       "cross_tenant_confirmed": false,
       "status": "likely",
-      "verified_at": "2026-03-25 03:33:00.402696"
+      "verified_at": "2026-03-25 16:14:04.511322"
     }
   ]
 }

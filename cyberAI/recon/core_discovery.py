@@ -19,6 +19,7 @@ from playwright.async_api import BrowserContext, Page, TimeoutError as Playwrigh
 from cyberAI.config import get_config
 from cyberAI.models import Action, Route
 from cyberAI.utils.browser import (
+    dismiss_overlays,
     dump_dom,
     get_browser_pool,
     get_page_actions,
@@ -58,10 +59,17 @@ class CoreDiscovery:
         self._page_timeout = 30000
     
     def _normalize_url(self, url: str) -> str:
-        """Normalize URL for deduplication."""
+        """Normalize URL for deduplication.
+
+        Fragment (#section) is preserved for Angular/hash-mode SPA routes
+        (#/login, #/search, etc.) since each represents a distinct page.
+        Only bare fragment anchors like '#top' that have no path after # are stripped.
+        """
         parsed = urlparse(url)
         path = parsed.path.rstrip('/')
-        return f"{parsed.scheme}://{parsed.netloc}{path}"
+        # Keep SPA hash-routes (#/...) but drop pure anchor fragments (#word)
+        fragment = f"#{parsed.fragment}" if parsed.fragment and parsed.fragment.startswith('/') else ""
+        return f"{parsed.scheme}://{parsed.netloc}{path}{fragment}"
     
     def _is_same_domain(self, url: str) -> bool:
         """Check if URL belongs to the target domain."""
@@ -104,8 +112,16 @@ class CoreDiscovery:
         return True
     
     def _extract_slug(self, url: str) -> str:
-        """Extract a meaningful slug from URL."""
+        """Extract a meaningful slug from URL.
+
+        For Angular hash-mode routes (e.g. /#/login) use the fragment path as slug
+        so each SPA route gets a unique screenshot and DOM snapshot name.
+        """
         parsed = urlparse(url)
+        # SPA hash route: use fragment path (strip leading /)
+        if parsed.fragment and parsed.fragment.startswith('/'):
+            slug = parsed.fragment.lstrip('/').replace('/', '_') or "home"
+            return slug
         path = parsed.path.strip('/')
         if not path:
             return "home"
@@ -193,15 +209,30 @@ class CoreDiscovery:
         try:
             links = await page.evaluate(r'''() => {
                 const links = new Set();
-                
-                // Regular links
+                const base = window.location.origin + window.location.pathname.replace(/\/$/, '');
+
+                // Regular links — include Angular hash routes (#/...) and SPA history routes
                 document.querySelectorAll('a[href]').forEach(a => {
                     const href = a.getAttribute('href');
-                    if (href && !href.startsWith('#') && !href.startsWith('javascript:')) {
+                    if (!href || href === '#' || href.startsWith('javascript:') || href.startsWith('mailto:')) {
+                        return;
+                    }
+                    // Angular hash routes: href="#/path" → base + #/path
+                    if (href.startsWith('#/')) {
+                        links.add(base + href);
+                    } else {
                         links.add(href);
                     }
                 });
-                
+
+                // Angular routerLink / ng-reflect-router-link attributes
+                document.querySelectorAll('[routerlink], [ng-reflect-router-link]').forEach(el => {
+                    const rl = el.getAttribute('routerlink') || el.getAttribute('ng-reflect-router-link');
+                    if (rl && rl.startsWith('/')) {
+                        links.add(base + '#' + rl);
+                    }
+                });
+
                 // Links in onclick handlers
                 document.querySelectorAll('[onclick]').forEach(el => {
                     const onclick = el.getAttribute('onclick');
@@ -210,7 +241,7 @@ class CoreDiscovery:
                         links.add(matches[1]);
                     }
                 });
-                
+
                 // Data attributes with URLs
                 document.querySelectorAll('[data-href], [data-url], [data-link]').forEach(el => {
                     ['data-href', 'data-url', 'data-link'].forEach(attr => {
@@ -218,7 +249,7 @@ class CoreDiscovery:
                         if (val) links.add(val);
                     });
                 });
-                
+
                 return Array.from(links);
             }''')
             
@@ -308,9 +339,11 @@ class CoreDiscovery:
             
             for trigger in triggers[:10]:
                 try:
+                    # Always dismiss any lingering overlay before attempting each click
+                    await dismiss_overlays(page)
                     element = await page.query_selector(trigger['selector'])
                     if element:
-                        await element.click()
+                        await element.click(timeout=5000)
                         await asyncio.sleep(0.5)
                         
                         modal_content = await page.evaluate('''() => {
@@ -330,14 +363,9 @@ class CoreDiscovery:
                                 "has_form": modal_content.get("hasForm", False),
                             })
                         
-                        close_btn = await page.query_selector('.modal .close, .modal .btn-close, [data-dismiss="modal"]')
-                        if close_btn:
-                            await close_btn.click()
-                            await asyncio.sleep(0.3)
-                        else:
-                            await page.keyboard.press('Escape')
-                            await asyncio.sleep(0.3)
-                            
+                        # Dismiss however the dialog was opened (Escape covers Angular Material)
+                        await dismiss_overlays(page)
+
                 except Exception as e:
                     logger.debug(f"Error with modal trigger: {e}")
                     
@@ -369,14 +397,29 @@ class CoreDiscovery:
         safe_slug = safe_filename(f"{slug}_{depth}")
         
         try:
-            await page.goto(url, timeout=self._page_timeout, wait_until="networkidle")
+            # Use domcontentloaded first — networkidle times out on Angular/React SPAs
+            # because they continuously poll APIs.
+            await page.goto(url, timeout=self._page_timeout, wait_until="domcontentloaded")
+            # Give the SPA router a moment to render the initial view, then try networkidle
+            # with a short timeout so we don't block the whole crawl.
+            try:
+                await page.wait_for_load_state("networkidle", timeout=5000)
+            except PlaywrightTimeout:
+                pass
         except PlaywrightTimeout:
             logger.warning(f"Timeout loading {url}, continuing with partial content")
         except Exception as e:
             logger.warning(f"Error loading {url}: {e}")
             raise
-        
+
         await asyncio.sleep(1)
+
+        # Dismiss Angular CDK overlay / Material dialog (e.g. Juice Shop welcome dialog).
+        # Call twice: once right away (in case dialog was instant) and once after a short
+        # pause (in case Angular's dialog animation runs after DOMContentLoaded).
+        await dismiss_overlays(page)
+        await asyncio.sleep(0.5)
+        await dismiss_overlays(page)
         
         state = await self._detect_page_state(page)
         
@@ -586,6 +629,25 @@ class CoreDiscovery:
                 try:
                     route, new_links = await self._process_page(page, url, depth, role)
                     self._routes.append(route)
+
+                    # HTTP fallback: if first URL was https:// but yielded almost no network
+                    # requests and no actions (likely an error/TLS-redirect page), retry with http://
+                    if depth == 0 and url.startswith("https://"):
+                        captured_requests = []
+                        try:
+                            if network_intel is not None:
+                                captured_requests = list(getattr(network_intel, "_requests", []))
+                        except Exception:
+                            pass
+                        route_has_actions = bool(getattr(route, "actions", None))
+                        if len(captured_requests) < 10 and not route_has_actions:
+                            http_url = "http://" + url[len("https://"):]
+                            http_normalized = self._normalize_url(http_url)
+                            if http_normalized not in self._visited_urls:
+                                logger.info(f"HTTPS page looks empty, retrying with HTTP: {http_url}")
+                                heapq.heappush(heap, (-999.0, seq, http_url, 0))
+                                seq += 1
+
                     # ASRTS 2.4.5: Health re-check every 20 pages; repair and re-inject if needed
                     if role and len(self._routes) % 20 == 0:
                         await self._check_and_repair_session(context, page, role, start_url)

@@ -1,14 +1,14 @@
 {
   "_meta": {
-    "generated_at": "2026-03-25T02:56:37.973360",
+    "generated_at": "2026-03-26T03:29:14.099233",
     "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "juice_steps_20260325_034629"
+    "run_id": "juiceshop-1774492575"
   },
   "objects": [
     {
-      "id": "5cd4f913-b698-4a74-8870-8e3803c2c6a6",
+      "id": "7aec1e9e-958b-4fd9-b220-6f75276da734",
       "name": "i18n",
       "id_format": "unknown",
       "ownership_fields": [],
@@ -6779,507 +6779,31 @@
         "LABEL_PRIVATE_KEY"
       ],
       "lifecycle_states": [
-        "unavailable",
-        "all",
-        "status",
-        "state",
-        "please provide a state.",
-        "solved",
         "unsolved",
+        "state",
+        "status",
+        "solved",
+        "all",
+        "please provide a state.",
+        "unavailable",
         "partially solved"
       ],
       "linked_objects": [],
       "security_criticality": "low",
       "endpoints": [
-        "f09d3c41-a9eb-4002-b7a3-30d27a0eed33"
+        "fd952a72-d83f-4969-a622-403d5ffe88ad"
       ]
     },
     {
-      "id": "c0245916-ba0f-4082-b8c1-d25f8fcb9ed2",
+      "id": "a7918873-f14c-44a1-9c34-ea0bb6ab26fc",
       "name": "rest",
       "id_format": "unknown",
       "ownership_fields": [],
       "parent_relationships": {},
       "readable_fields": [
         {
-          "name": "config.server.port",
-          "field_type": "integer",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.server.basePath",
+          "name": "version",
           "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.server.baseUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.domain",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.name",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.logo",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.favicon",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.theme",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.showVersionNumber",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.showGitHubLinks",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.localBackupEnabled",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.numberOfRandomFakeUsers",
-          "field_type": "integer",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.altcoinName",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.privacyContactEmail",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.customMetricsPrefix",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.chatBot.name",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.chatBot.greeting",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.chatBot.trainingData",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.chatBot.defaultResponse",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.chatBot.avatar",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.blueSkyUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.mastodonUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.twitterUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.facebookUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.slackUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.redditUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.pressKitUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.nftUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.questionnaireUrl",
-          "field_type": "null",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.recyclePage.topProductImage",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.recyclePage.bottomProductImage",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.welcomeBanner.showOnFirstStart",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.welcomeBanner.title",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.welcomeBanner.message",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.cookieConsent.message",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.cookieConsent.dismissText",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.cookieConsent.linkText",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.cookieConsent.linkUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.securityTxt.contact",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.securityTxt.encryption",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.securityTxt.acknowledgements",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.securityTxt.hiring",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.securityTxt.csaf",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.promotion.video",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.promotion.subtitles",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.easterEggPlanet.name",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.easterEggPlanet.overlayMap",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.googleOauth.clientId",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.googleOauth.authorizedRedirects",
-          "field_type": "array",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.showSolvedNotifications",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.showHints",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.showMitigations",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.codingChallengesEnabled",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.restrictToTutorialsFirst",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.overwriteUrlForProductTamperingChallenge",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.xssBonusPayload",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.safetyMode",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.csafHashValue",
-          "field_type": "string",
-          "is_sensitive": true,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.metricsIgnoredUserAgents",
-          "field_type": "array",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.hackingInstructor.isEnabled",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.hackingInstructor.avatarImage",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.hackingInstructor.hintPlaybackSpeed",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.products",
-          "field_type": "array",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.memories",
-          "field_type": "array",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.ctf.showFlagsInNotifications",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.ctf.showCountryDetailsInNotifications",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.ctf.countryMapping",
-          "field_type": "null",
-          "is_sensitive": true,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.ctf.systemWideNotifications.url",
-          "field_type": "null",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.ctf.systemWideNotifications.pollFrequencySeconds",
-          "field_type": "null",
           "is_sensitive": false,
           "is_identifier": false,
           "is_ownership": false
@@ -7287,503 +6811,26 @@
       ],
       "writable_fields": [
         {
-          "name": "config.server.port",
-          "field_type": "integer",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.server.basePath",
+          "name": "version",
           "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.server.baseUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.domain",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.name",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.logo",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.favicon",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.theme",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.showVersionNumber",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.showGitHubLinks",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.localBackupEnabled",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.numberOfRandomFakeUsers",
-          "field_type": "integer",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.altcoinName",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.privacyContactEmail",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.customMetricsPrefix",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.chatBot.name",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.chatBot.greeting",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.chatBot.trainingData",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.chatBot.defaultResponse",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.chatBot.avatar",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.blueSkyUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.mastodonUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.twitterUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.facebookUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.slackUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.redditUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.pressKitUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.nftUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.social.questionnaireUrl",
-          "field_type": "null",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.recyclePage.topProductImage",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.recyclePage.bottomProductImage",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.welcomeBanner.showOnFirstStart",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.welcomeBanner.title",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.welcomeBanner.message",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.cookieConsent.message",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.cookieConsent.dismissText",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.cookieConsent.linkText",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.cookieConsent.linkUrl",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.securityTxt.contact",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.securityTxt.encryption",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.securityTxt.acknowledgements",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.securityTxt.hiring",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.securityTxt.csaf",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.promotion.video",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.promotion.subtitles",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.easterEggPlanet.name",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.easterEggPlanet.overlayMap",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.googleOauth.clientId",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.application.googleOauth.authorizedRedirects",
-          "field_type": "array",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.showSolvedNotifications",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.showHints",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.showMitigations",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.codingChallengesEnabled",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.restrictToTutorialsFirst",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.overwriteUrlForProductTamperingChallenge",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.xssBonusPayload",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.safetyMode",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.csafHashValue",
-          "field_type": "string",
-          "is_sensitive": true,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.challenges.metricsIgnoredUserAgents",
-          "field_type": "array",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.hackingInstructor.isEnabled",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.hackingInstructor.avatarImage",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.hackingInstructor.hintPlaybackSpeed",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.products",
-          "field_type": "array",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.memories",
-          "field_type": "array",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.ctf.showFlagsInNotifications",
-          "field_type": "boolean",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.ctf.showCountryDetailsInNotifications",
-          "field_type": "string",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.ctf.countryMapping",
-          "field_type": "null",
-          "is_sensitive": true,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.ctf.systemWideNotifications.url",
-          "field_type": "null",
-          "is_sensitive": false,
-          "is_identifier": false,
-          "is_ownership": false
-        },
-        {
-          "name": "config.ctf.systemWideNotifications.pollFrequencySeconds",
-          "field_type": "null",
           "is_sensitive": false,
           "is_identifier": false,
           "is_ownership": false
         }
       ],
-      "sensitive_fields": [
-        "config.challenges.csafHashValue",
-        "config.ctf.countryMapping"
-      ],
+      "sensitive_fields": [],
       "lifecycle_states": [],
       "linked_objects": [],
       "security_criticality": "low",
       "endpoints": [
-        "c2ace6fd-86f6-4bc2-a989-b4729307388d",
-        "f82656a6-5bca-4654-b5e5-d40029ae3f3a"
+        "1e7aca31-6b8a-49af-8c0f-0c51ae75547a",
+        "5aa5128d-5ffd-448a-bcc7-9a8a27e27f75",
+        "bb1b4c1b-b8c2-4704-86db-125e40f4e93e",
+        "086359b6-4223-471b-aa16-99cd2eaaeb92"
       ]
     },
     {
-      "id": "50b3172f-81c0-44a0-a3cc-c3df0d5e5e6d",
+      "id": "9afd813d-55eb-40a5-8822-ef7ed5e7e074",
       "name": "challenges",
       "id_format": "unknown",
       "ownership_fields": [],
@@ -7827,11 +6874,11 @@
       "linked_objects": [],
       "security_criticality": "low",
       "endpoints": [
-        "073ed615-32c4-4f13-8ac7-27685212dd14"
+        "b1c7c992-ab09-47eb-b6b8-60781cb263f6"
       ]
     },
     {
-      "id": "cb2efaf7-be33-482e-9c4b-2f561df5f64b",
+      "id": "53eeb0c8-c091-460c-8030-7ba3c756e0c5",
       "name": "quantitys",
       "id_format": "unknown",
       "ownership_fields": [],
@@ -7875,11 +6922,107 @@
       "linked_objects": [],
       "security_criticality": "low",
       "endpoints": [
-        "533eaae9-51e5-4e09-8853-830f9d0af231"
+        "15aa1810-7dde-43ab-875e-d93352818e44"
       ]
     },
     {
-      "id": "54d8f460-c277-4164-91a5-dedb25142998",
+      "id": "b569be1a-fd68-4316-a9d3-28dae6e9c8ae",
+      "name": "feedbacks",
+      "id_format": "unknown",
+      "ownership_fields": [],
+      "parent_relationships": {},
+      "readable_fields": [
+        {
+          "name": "status",
+          "field_type": "string",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        },
+        {
+          "name": "data",
+          "field_type": "array",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        }
+      ],
+      "writable_fields": [
+        {
+          "name": "status",
+          "field_type": "string",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        },
+        {
+          "name": "data",
+          "field_type": "array",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        }
+      ],
+      "sensitive_fields": [],
+      "lifecycle_states": [
+        "success"
+      ],
+      "linked_objects": [],
+      "security_criticality": "low",
+      "endpoints": [
+        "489269e9-10ff-4530-95ca-a32dd7fd4667"
+      ]
+    },
+    {
+      "id": "c29a04f9-f641-41be-b525-56e2118ec4b9",
+      "name": "hints",
+      "id_format": "unknown",
+      "ownership_fields": [],
+      "parent_relationships": {},
+      "readable_fields": [
+        {
+          "name": "status",
+          "field_type": "string",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        },
+        {
+          "name": "data",
+          "field_type": "array",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        }
+      ],
+      "writable_fields": [
+        {
+          "name": "status",
+          "field_type": "string",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        },
+        {
+          "name": "data",
+          "field_type": "array",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        }
+      ],
+      "sensitive_fields": [],
+      "lifecycle_states": [
+        "success"
+      ],
+      "linked_objects": [],
+      "security_criticality": "low",
+      "endpoints": [
+        "ddde6903-bd9b-4bc5-b0f1-5ef421fbedc5"
+      ]
+    },
+    {
+      "id": "89455af6-7167-4a7c-b512-c44159ca6d8f",
       "name": "assets",
       "id_format": "unknown",
       "ownership_fields": [],
@@ -7891,23 +7034,23 @@
       "linked_objects": [],
       "security_criticality": "low",
       "endpoints": [
-        "19c6cf01-3d91-4262-a0d2-9d1e90c75f8f",
-        "b0684a0a-c5b8-4bf6-8ca1-b426cb2ee009",
-        "720b17b1-1daf-49a8-ac00-e1272784b043",
-        "50174005-6bb5-44a0-8db5-29d0f2c91844",
-        "855a6b77-7674-46fe-9904-7dac11a4f72f",
-        "7b0b1267-709b-4f04-89f8-553470051633",
-        "c187ac56-05a8-4c6e-b5ca-17074b5db77d",
-        "4e7e05b4-898e-4283-a5fd-a9051b6df507",
-        "cdcf39a7-6e44-4cc1-a4d2-d4e831834c21",
-        "4eb950bd-e7be-4880-a61c-2bc47719c0e7",
-        "2471c692-a75e-486b-b059-708902b9b5e4",
-        "a4a4a4a9-b732-46d0-a0eb-9376568aaba5",
-        "17b27aa5-6001-47c4-b452-15cc1e4dce84"
+        "b6515b45-dc6b-4449-8b78-898e77540843",
+        "4776e783-4b52-4afd-8330-3419ee292c69",
+        "2778db74-25d0-47c3-b4d9-872455ce11ad",
+        "953553ed-60d7-4c0c-b2ca-60d0f02ed77b",
+        "2012ef03-43ca-4988-bfbc-fc59da5cb350",
+        "c03989e3-6ff7-47c0-813f-d9a5f39f8937",
+        "9532f897-c315-46b3-a908-bb9dce8890d4",
+        "53160d57-ee03-4bcf-9623-bd656e526b1e",
+        "9f5920ef-9235-4a35-ae0a-0c72255479f2",
+        "ed9c5d76-06ba-4346-a7a3-6ba8718e4432",
+        "155a2c88-c4b0-418b-8fb3-da27249ba4ad",
+        "9fa07990-e6c2-42d1-ba2a-d61d9a4b5ee2",
+        "7414dc2b-ef5a-4c08-ad4d-76674aadab88"
       ]
     },
     {
-      "id": "db56b825-d045-4ea4-968d-206cbd5bbe97",
+      "id": "530c5c7a-8dc9-4272-aa48-ccbb9c25dac3",
       "name": "workflows",
       "id_format": "unknown",
       "ownership_fields": [],
@@ -7919,7 +7062,55 @@
       "linked_objects": [],
       "security_criticality": "low",
       "endpoints": [
-        "4c4a661a-a1f3-496b-8362-8224192f5706"
+        "60614e6e-b336-46f5-abfc-10e61808650c"
+      ]
+    },
+    {
+      "id": "dbd3c747-1f19-4459-8c90-7ffddceb4ef1",
+      "name": "securityquestions",
+      "id_format": "unknown",
+      "ownership_fields": [],
+      "parent_relationships": {},
+      "readable_fields": [
+        {
+          "name": "status",
+          "field_type": "string",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        },
+        {
+          "name": "data",
+          "field_type": "array",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        }
+      ],
+      "writable_fields": [
+        {
+          "name": "status",
+          "field_type": "string",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        },
+        {
+          "name": "data",
+          "field_type": "array",
+          "is_sensitive": false,
+          "is_identifier": false,
+          "is_ownership": false
+        }
+      ],
+      "sensitive_fields": [],
+      "lifecycle_states": [
+        "success"
+      ],
+      "linked_objects": [],
+      "security_criticality": "low",
+      "endpoints": [
+        "420482c2-6d9b-435f-97f8-18eab1ba0259"
       ]
     }
   ],
@@ -7950,6 +7141,18 @@
         "id_format": "unknown"
       },
       {
+        "id": "feedbacks",
+        "type": "object",
+        "criticality": "low",
+        "id_format": "unknown"
+      },
+      {
+        "id": "hints",
+        "type": "object",
+        "criticality": "low",
+        "id_format": "unknown"
+      },
+      {
         "id": "assets",
         "type": "object",
         "criticality": "low",
@@ -7960,12 +7163,18 @@
         "type": "object",
         "criticality": "low",
         "id_format": "unknown"
+      },
+      {
+        "id": "securityquestions",
+        "type": "object",
+        "criticality": "low",
+        "id_format": "unknown"
       }
     ],
     "edges": []
   },
   "summary": {
-    "total_objects": 6,
+    "total_objects": 9,
     "high_criticality": 0,
     "with_ownership": 0
   }

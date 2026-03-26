@@ -2,8 +2,6 @@
 
 ## Hidden Routes (from JS bundles)
 
-- `/` (source: react_router)
-- `/engine.io` (source: react_router)
 
 ## GraphQL Surface
 
@@ -15,7 +13,6 @@
 
 ## Async Flows
 
-- unknown: `https://github.com/juice-shop/juice-shop/latest-commit` (ID format: unknown) 
 
 ## Sensitive Surfaces
 

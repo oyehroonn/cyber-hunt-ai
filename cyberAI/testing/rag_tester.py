@@ -337,13 +337,34 @@ class RAGTester:
         body_lower = response.get("body", "").lower()
         vuln_lower = vuln_class.lower()
 
+        # SSRF: do not treat error pages that only echo blocked URLs as vulnerable
+        if vuln_lower == "ssrf":
+            if status in (400, 401, 403, 404, 405, 406, 422, 429) or status >= 500:
+                if any(
+                    x in body_lower
+                    for x in (
+                        "error",
+                        "unrecognized",
+                        "not allowed",
+                        "invalid",
+                        "forbidden",
+                        "blocked",
+                        "denied",
+                    )
+                ):
+                    return None
+            # Stronger signal: redirect or success, not mere reflection in 4xx error HTML
+            if status in (400, 401, 403, 404, 405, 406):
+                return None
+
         # Check body patterns
         for pattern in VULN_INDICATORS.get(vuln_lower, []):
             if pattern in body_lower:
+                conf = 0.75 if vuln_lower != "ssrf" else 0.55
                 return {
                     "indicator": pattern,
                     "status_code": status,
-                    "confidence": 0.75,
+                    "confidence": conf,
                     "signal_type": "body_pattern",
                 }
 
@@ -493,11 +514,13 @@ class RAGTester:
         target_url: str,
         recon_summary: str,
         findings_summary: str,
+        orchestration_addon: str = "",
     ) -> list[Finding]:
         """Generate and execute RAG tests for one vulnerability class."""
 
         prompt = (
             f"You are a penetration tester probing {target_url} for {vuln_class} vulnerabilities.\n\n"
+            f"Engagement (any target, not a specific CTF):\n{orchestration_addon}\n\n"
             f"Recon Data:\n{recon_summary}\n\n"
             f"Prior Findings:\n{findings_summary}\n\n"
             f"Using similar vulnerabilities from your knowledge base, generate exactly 3 HTTP requests "
@@ -598,13 +621,24 @@ class RAGTester:
 
         recon_summary = self._build_recon_summary(intel)
         findings_summary = self._build_findings_summary(existing_findings)
+        try:
+            from cyberAI.llm.engagement_context import build_rag_addon_context
+
+            orchestration = build_rag_addon_context(self.run_id)
+        except Exception:
+            orchestration = ""
 
         all_findings: list[Finding] = []
 
         for vuln_class in VULN_PROFILES:
             try:
                 found = await self._test_vuln_class(
-                    engine, vuln_class, target_url, recon_summary, findings_summary
+                    engine,
+                    vuln_class,
+                    target_url,
+                    recon_summary,
+                    findings_summary,
+                    orchestration_addon=orchestration,
                 )
                 all_findings.extend(found)
                 # Update findings summary with new finds so next vuln class avoids duplication

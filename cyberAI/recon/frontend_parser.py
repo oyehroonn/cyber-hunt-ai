@@ -43,38 +43,60 @@ class FrontendParser:
         self._upload_endpoints: list[str] = []
         self._validation_schemas: list[dict] = []
     
-    async def fetch_js_bundles(self, html_content: str, base_url: str) -> list[str]:
+    async def fetch_js_bundles(
+        self,
+        html_content: str,
+        base_url: str,
+        network_js_urls: Optional[list[str]] = None,
+    ) -> list[str]:
         """
-        Extract and download all JavaScript bundle URLs from HTML.
-        
+        Extract and download all JavaScript bundle URLs from HTML and network captures.
+
+        For Angular/React SPAs the initial HTML shell has no <script src> tags — bundles
+        are injected after JS execution.  Pass ``network_js_urls`` (URLs seen in the
+        Playwright network intercept queue) so those bundles are also analysed.
+
         Args:
             html_content: HTML content to parse
             base_url: Base URL for resolving relative URLs
-            
+            network_js_urls: JS URLs already captured from Playwright network events
+
         Returns:
             List of downloaded JS file paths
         """
         soup = BeautifulSoup(html_content, 'lxml')
         js_urls = set()
-        
+
+        # Static HTML <script src> tags (works for SSR / non-SPA pages)
         for script in soup.find_all('script', src=True):
             src = script['src']
             if src.endswith('.js') or '.js?' in src or 'chunk' in src or 'bundle' in src:
                 full_url = urljoin(base_url, src)
                 js_urls.add(full_url)
-        
+
         for link in soup.find_all('link', rel='preload'):
             href = link.get('href', '')
             if href.endswith('.js') or link.get('as') == 'script':
                 full_url = urljoin(base_url, href)
                 js_urls.add(full_url)
-        
+
         js_pattern = r'["\']([^"\']*?\.js(?:\?[^"\']*)?)["\']'
         for match in re.finditer(js_pattern, html_content):
             js_path = match.group(1)
             if not js_path.startswith(('http://', 'https://', '//')):
                 js_path = urljoin(base_url, js_path)
             js_urls.add(js_path)
+
+        # Angular / React / Vite SPA bundles from network intercept (most reliable)
+        _spa_bundle_re = re.compile(
+            r'(main|vendor|polyfills|runtime|chunk|common|app|scripts)'
+            r'[.\-][a-zA-Z0-9._\-]*\.js',
+            re.IGNORECASE,
+        )
+        if network_js_urls:
+            for u in network_js_urls:
+                if u.endswith('.js') or '.js?' in u or _spa_bundle_re.search(u):
+                    js_urls.add(u)
         
         self._js_urls = js_urls
         
@@ -565,21 +587,24 @@ async def run_frontend_parser(
     base_url: str,
     crawled_routes: Optional[list[Route]] = None,
     run_id: Optional[str] = None,
+    network_js_urls: Optional[list[str]] = None,
 ) -> FrontendParser:
     """
     Run frontend parsing on HTML content.
-    
+
     Args:
         html_content: HTML content to parse
         base_url: Base URL for resolving relative paths
         crawled_routes: Optional routes from crawl for hidden route detection
         run_id: Run ID
-        
+        network_js_urls: JS bundle URLs captured from Playwright network events
+            (pass these for Angular/React SPAs whose HTML shell has no <script src>)
+
     Returns:
         FrontendParser instance with analysis results
     """
     parser = FrontendParser(run_id=run_id)
-    await parser.fetch_js_bundles(html_content, base_url)
+    await parser.fetch_js_bundles(html_content, base_url, network_js_urls=network_js_urls)
     parser.save_analysis(crawled_routes)
     return parser
 

@@ -1,17 +1,30 @@
 {
   "_meta": {
-    "generated_at": "2026-03-25T03:32:41.598711",
+    "generated_at": "2026-03-26T02:49:10.775900",
     "target_url": "https://demo.owasp-juice.shop",
     "phase": "testing",
     "version": "1.0.0",
-    "run_id": "juice_steps_20260325_034629"
+    "run_id": "juiceshop-1774492575"
   },
   "stats": {
-    "tests_run": 0,
+    "tests_run": 3,
     "findings_discovered": 0,
     "pending": 0,
     "in_progress": 0,
-    "by_category": {}
+    "by_category": {
+      "ssrf_oob": {
+        "run": 1,
+        "findings": 0
+      },
+      "rag": {
+        "run": 1,
+        "findings": 0
+      },
+      "confirmed_authz": {
+        "run": 1,
+        "findings": 0
+      }
+    }
   },
-  "completed_at": "2026-03-25T03:32:41.598697"
+  "completed_at": "2026-03-26T02:49:10.775894"
 }

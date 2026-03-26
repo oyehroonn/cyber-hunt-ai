@@ -349,7 +349,15 @@ class RAGEngine:
                 else:
                     raise
             except httpx.HTTPStatusError as e:
-                if e.response.status_code >= 500 and attempt < max_retries - 1:
+                if e.response.status_code in (402, 429):
+                    console.print(f"[yellow]Payment/rate-limit error ({e.response.status_code}), falling back to Ollama[/yellow]")
+                    try:
+                        ollama_client = OllamaClient(self.model_name)
+                        return ollama_client.generate(prompt, system_prompt=system_prompt, config=config)
+                    except Exception as ollama_err:
+                        console.print(f"[red]Ollama fallback also failed: {ollama_err}[/red]")
+                        return ""
+                elif e.response.status_code >= 500 and attempt < max_retries - 1:
                     wait = 2 ** (attempt + 1)
                     console.print(f"[yellow]Server error, retrying in {wait}s[/yellow]")
                     time.sleep(wait)

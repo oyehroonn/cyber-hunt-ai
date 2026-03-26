@@ -1,16 +1,16 @@
 {
   "_meta": {
-    "generated_at": "2026-03-25T02:55:28.794938",
+    "generated_at": "2026-03-26T03:29:06.316999",
     "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "juice_steps_20260325_034629"
+    "run_id": "juiceshop-1774492575"
   },
   "surfaces": [
     {
       "path": "/admin",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -20,8 +20,8 @@
     },
     {
       "path": "/admin/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -31,8 +31,8 @@
     },
     {
       "path": "/administrator",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -42,8 +42,8 @@
     },
     {
       "path": "/internal",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -53,8 +53,8 @@
     },
     {
       "path": "/internal/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -64,8 +64,8 @@
     },
     {
       "path": "/billing",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -75,8 +75,8 @@
     },
     {
       "path": "/billing/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -86,8 +86,8 @@
     },
     {
       "path": "/export",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -97,8 +97,8 @@
     },
     {
       "path": "/exports",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -108,8 +108,8 @@
     },
     {
       "path": "/import",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -119,8 +119,8 @@
     },
     {
       "path": "/imports",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -130,8 +130,8 @@
     },
     {
       "path": "/tokens",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -141,8 +141,8 @@
     },
     {
       "path": "/api-tokens",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2871,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -152,8 +152,8 @@
     },
     {
       "path": "/api/tokens",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2871,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -163,8 +163,8 @@
     },
     {
       "path": "/audit",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -174,8 +174,8 @@
     },
     {
       "path": "/audit-logs",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -185,8 +185,8 @@
     },
     {
       "path": "/audit/logs",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -196,8 +196,8 @@
     },
     {
       "path": "/graphql",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -207,8 +207,8 @@
     },
     {
       "path": "/graphql/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -218,8 +218,8 @@
     },
     {
       "path": "/graphql/playground",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -229,8 +229,8 @@
     },
     {
       "path": "/graphiql",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -240,8 +240,8 @@
     },
     {
       "path": "/swagger",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -251,8 +251,8 @@
     },
     {
       "path": "/swagger/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -262,8 +262,8 @@
     },
     {
       "path": "/swagger-ui",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -273,8 +273,8 @@
     },
     {
       "path": "/swagger-ui.html",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -284,8 +284,8 @@
     },
     {
       "path": "/swagger-ui/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -295,8 +295,8 @@
     },
     {
       "path": "/openapi.json",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -306,8 +306,8 @@
     },
     {
       "path": "/openapi.yaml",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -317,8 +317,8 @@
     },
     {
       "path": "/api/docs",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2867,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -328,8 +328,8 @@
     },
     {
       "path": "/api-docs",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 3106,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -339,8 +339,8 @@
     },
     {
       "path": "/docs",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -350,8 +350,8 @@
     },
     {
       "path": "/redoc",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -361,8 +361,8 @@
     },
     {
       "path": "/health",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -372,8 +372,8 @@
     },
     {
       "path": "/healthz",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -383,8 +383,8 @@
     },
     {
       "path": "/health/live",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -394,8 +394,8 @@
     },
     {
       "path": "/health/ready",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -405,8 +405,8 @@
     },
     {
       "path": "/debug",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -416,8 +416,8 @@
     },
     {
       "path": "/debug/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -427,8 +427,8 @@
     },
     {
       "path": "/metrics",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 25534,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -438,8 +438,8 @@
     },
     {
       "path": "/prometheus",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -449,19 +449,20 @@
     },
     {
       "path": "/.well-known/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 8874,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
-        "header:server=Heroku"
+        "header:server=Heroku",
+        "stack_trace"
       ],
       "classification": "LEAKS_METADATA"
     },
     {
       "path": "/.well-known/security.txt",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 475,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -471,8 +472,8 @@
     },
     {
       "path": "/.well-known/openid-configuration",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -482,8 +483,8 @@
     },
     {
       "path": "/robots.txt",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 28,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -493,8 +494,8 @@
     },
     {
       "path": "/sitemap.xml",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -504,8 +505,8 @@
     },
     {
       "path": "/sitemap_index.xml",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -515,8 +516,8 @@
     },
     {
       "path": "/__admin",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -526,8 +527,8 @@
     },
     {
       "path": "/__admin/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -537,8 +538,8 @@
     },
     {
       "path": "/staff",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -548,8 +549,8 @@
     },
     {
       "path": "/staff/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -559,8 +560,8 @@
     },
     {
       "path": "/superuser",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -570,8 +571,8 @@
     },
     {
       "path": "/console",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -581,8 +582,8 @@
     },
     {
       "path": "/console/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -592,8 +593,8 @@
     },
     {
       "path": "/manage",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -603,8 +604,8 @@
     },
     {
       "path": "/manage/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -614,8 +615,8 @@
     },
     {
       "path": "/management",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -625,8 +626,8 @@
     },
     {
       "path": "/api/v1/admin",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2875,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -636,8 +637,8 @@
     },
     {
       "path": "/api/v2/admin",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2875,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -647,8 +648,8 @@
     },
     {
       "path": "/api/internal",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2875,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -658,8 +659,8 @@
     },
     {
       "path": "/api/private",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2873,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -669,8 +670,8 @@
     },
     {
       "path": "/.env",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -680,8 +681,8 @@
     },
     {
       "path": "/.git",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -691,8 +692,8 @@
     },
     {
       "path": "/.git/config",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -702,8 +703,8 @@
     },
     {
       "path": "/.git/HEAD",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -713,8 +714,8 @@
     },
     {
       "path": "/.gitignore",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -735,8 +736,8 @@
     },
     {
       "path": "/config",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -746,8 +747,8 @@
     },
     {
       "path": "/config/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -757,8 +758,8 @@
     },
     {
       "path": "/configuration",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -768,8 +769,8 @@
     },
     {
       "path": "/settings",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -779,8 +780,8 @@
     },
     {
       "path": "/system",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -790,8 +791,8 @@
     },
     {
       "path": "/actuator",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -801,8 +802,8 @@
     },
     {
       "path": "/actuator/health",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -812,8 +813,8 @@
     },
     {
       "path": "/actuator/info",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -823,8 +824,8 @@
     },
     {
       "path": "/actuator/env",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -834,8 +835,8 @@
     },
     {
       "path": "/actuator/beans",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -845,8 +846,8 @@
     },
     {
       "path": "/actuator/mappings",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -856,8 +857,8 @@
     },
     {
       "path": "/trace",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -867,8 +868,8 @@
     },
     {
       "path": "/elmah.axd",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -878,8 +879,8 @@
     },
     {
       "path": "/phpinfo.php",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -889,8 +890,8 @@
     },
     {
       "path": "/info.php",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -900,8 +901,8 @@
     },
     {
       "path": "/test",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -911,8 +912,8 @@
     },
     {
       "path": "/test/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -922,8 +923,8 @@
     },
     {
       "path": "/testing",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -933,8 +934,8 @@
     },
     {
       "path": "/dev",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -944,8 +945,8 @@
     },
     {
       "path": "/development",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -955,8 +956,8 @@
     },
     {
       "path": "/staging",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -966,8 +967,8 @@
     },
     {
       "path": "/backup",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -977,8 +978,8 @@
     },
     {
       "path": "/backups",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -988,8 +989,8 @@
     },
     {
       "path": "/dump",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -999,8 +1000,8 @@
     },
     {
       "path": "/sql",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1010,8 +1011,8 @@
     },
     {
       "path": "/database",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1021,8 +1022,8 @@
     },
     {
       "path": "/db",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1032,8 +1033,8 @@
     },
     {
       "path": "/phpmyadmin",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1043,8 +1044,8 @@
     },
     {
       "path": "/pma",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1054,8 +1055,8 @@
     },
     {
       "path": "/adminer",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1065,8 +1066,8 @@
     },
     {
       "path": "/status",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1076,8 +1077,8 @@
     },
     {
       "path": "/server-status",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1087,8 +1088,8 @@
     },
     {
       "path": "/server-info",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1098,8 +1099,8 @@
     },
     {
       "path": "/_debug",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1109,8 +1110,8 @@
     },
     {
       "path": "/_profiler",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1120,8 +1121,8 @@
     },
     {
       "path": "/profiler",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1131,8 +1132,8 @@
     },
     {
       "path": "/api/debug",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2869,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1142,8 +1143,8 @@
     },
     {
       "path": "/api/status",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2871,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1153,8 +1154,8 @@
     },
     {
       "path": "/api/health",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2871,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1164,8 +1165,8 @@
     },
     {
       "path": "/api/info",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2867,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1175,8 +1176,8 @@
     },
     {
       "path": "/api/version",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2873,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1186,8 +1187,8 @@
     },
     {
       "path": "/version",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1197,8 +1198,8 @@
     },
     {
       "path": "/version.txt",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1208,8 +1209,8 @@
     },
     {
       "path": "/changelog",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1219,8 +1220,8 @@
     },
     {
       "path": "/CHANGELOG.md",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1230,8 +1231,8 @@
     },
     {
       "path": "/README.md",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1241,8 +1242,8 @@
     },
     {
       "path": "/license",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1252,8 +1253,8 @@
     },
     {
       "path": "/LICENSE",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1263,8 +1264,8 @@
     },
     {
       "path": "/webpack.config.js",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1274,8 +1275,8 @@
     },
     {
       "path": "/package.json",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1285,8 +1286,8 @@
     },
     {
       "path": "/composer.json",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1296,8 +1297,8 @@
     },
     {
       "path": "/Gemfile",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1307,8 +1308,8 @@
     },
     {
       "path": "/requirements.txt",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1318,8 +1319,8 @@
     },
     {
       "path": "/.dockerenv",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1329,8 +1330,8 @@
     },
     {
       "path": "/Dockerfile",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1340,8 +1341,8 @@
     },
     {
       "path": "/docker-compose.yml",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1351,8 +1352,8 @@
     },
     {
       "path": "/api/webhooks",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2875,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1362,8 +1363,8 @@
     },
     {
       "path": "/webhooks",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1373,8 +1374,8 @@
     },
     {
       "path": "/callback",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1384,8 +1385,8 @@
     },
     {
       "path": "/callbacks",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1395,8 +1396,8 @@
     },
     {
       "path": "/oauth",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1406,8 +1407,8 @@
     },
     {
       "path": "/oauth/",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1417,8 +1418,8 @@
     },
     {
       "path": "/oauth/authorize",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1428,8 +1429,8 @@
     },
     {
       "path": "/oauth/token",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1439,8 +1440,8 @@
     },
     {
       "path": "/.aws/credentials",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1450,8 +1451,8 @@
     },
     {
       "path": "/credentials",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1461,8 +1462,8 @@
     },
     {
       "path": "/secrets",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1472,8 +1473,8 @@
     },
     {
       "path": "/private",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1483,8 +1484,8 @@
     },
     {
       "path": "/restricted",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 500,
+      "response_size": 2871,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1494,8 +1495,8 @@
     },
     {
       "path": "/confidential",
-      "status_code": 503,
-      "response_size": 567,
+      "status_code": 200,
+      "response_size": 75002,
       "redirect_target": null,
       "leaks_metadata": true,
       "metadata_leaked": [
@@ -1508,8 +1509,8 @@
     "LEAKS_METADATA": [
       {
         "path": "/admin",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1519,8 +1520,8 @@
       },
       {
         "path": "/admin/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1530,8 +1531,8 @@
       },
       {
         "path": "/administrator",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1541,8 +1542,8 @@
       },
       {
         "path": "/internal",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1552,8 +1553,8 @@
       },
       {
         "path": "/internal/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1563,8 +1564,8 @@
       },
       {
         "path": "/billing",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1574,8 +1575,8 @@
       },
       {
         "path": "/billing/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1585,8 +1586,8 @@
       },
       {
         "path": "/export",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1596,8 +1597,8 @@
       },
       {
         "path": "/exports",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1607,8 +1608,8 @@
       },
       {
         "path": "/import",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1618,8 +1619,8 @@
       },
       {
         "path": "/imports",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1629,8 +1630,8 @@
       },
       {
         "path": "/tokens",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1640,8 +1641,8 @@
       },
       {
         "path": "/api-tokens",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2871,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1651,8 +1652,8 @@
       },
       {
         "path": "/api/tokens",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2871,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1662,8 +1663,8 @@
       },
       {
         "path": "/audit",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1673,8 +1674,8 @@
       },
       {
         "path": "/audit-logs",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1684,8 +1685,8 @@
       },
       {
         "path": "/audit/logs",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1695,8 +1696,8 @@
       },
       {
         "path": "/graphql",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1706,8 +1707,8 @@
       },
       {
         "path": "/graphql/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1717,8 +1718,8 @@
       },
       {
         "path": "/graphql/playground",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1728,8 +1729,8 @@
       },
       {
         "path": "/graphiql",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1739,8 +1740,8 @@
       },
       {
         "path": "/swagger",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1750,8 +1751,8 @@
       },
       {
         "path": "/swagger/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1761,8 +1762,8 @@
       },
       {
         "path": "/swagger-ui",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1772,8 +1773,8 @@
       },
       {
         "path": "/swagger-ui.html",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1783,8 +1784,8 @@
       },
       {
         "path": "/swagger-ui/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1794,8 +1795,8 @@
       },
       {
         "path": "/openapi.json",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1805,8 +1806,8 @@
       },
       {
         "path": "/openapi.yaml",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1816,8 +1817,8 @@
       },
       {
         "path": "/api/docs",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2867,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1827,8 +1828,8 @@
       },
       {
         "path": "/api-docs",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 3106,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1838,8 +1839,8 @@
       },
       {
         "path": "/docs",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1849,8 +1850,8 @@
       },
       {
         "path": "/redoc",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1860,8 +1861,8 @@
       },
       {
         "path": "/health",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1871,8 +1872,8 @@
       },
       {
         "path": "/healthz",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1882,8 +1883,8 @@
       },
       {
         "path": "/health/live",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1893,8 +1894,8 @@
       },
       {
         "path": "/health/ready",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1904,8 +1905,8 @@
       },
       {
         "path": "/debug",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1915,8 +1916,8 @@
       },
       {
         "path": "/debug/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1926,8 +1927,8 @@
       },
       {
         "path": "/metrics",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 25534,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1937,8 +1938,8 @@
       },
       {
         "path": "/prometheus",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1948,19 +1949,20 @@
       },
       {
         "path": "/.well-known/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 8874,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
-          "header:server=Heroku"
+          "header:server=Heroku",
+          "stack_trace"
         ],
         "classification": "LEAKS_METADATA"
       },
       {
         "path": "/.well-known/security.txt",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 475,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1970,8 +1972,8 @@
       },
       {
         "path": "/.well-known/openid-configuration",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1981,8 +1983,8 @@
       },
       {
         "path": "/robots.txt",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 28,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -1992,8 +1994,8 @@
       },
       {
         "path": "/sitemap.xml",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2003,8 +2005,8 @@
       },
       {
         "path": "/sitemap_index.xml",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2014,8 +2016,8 @@
       },
       {
         "path": "/__admin",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2025,8 +2027,8 @@
       },
       {
         "path": "/__admin/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2036,8 +2038,8 @@
       },
       {
         "path": "/staff",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2047,8 +2049,8 @@
       },
       {
         "path": "/staff/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2058,8 +2060,8 @@
       },
       {
         "path": "/superuser",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2069,8 +2071,8 @@
       },
       {
         "path": "/console",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2080,8 +2082,8 @@
       },
       {
         "path": "/console/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2091,8 +2093,8 @@
       },
       {
         "path": "/manage",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2102,8 +2104,8 @@
       },
       {
         "path": "/manage/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2113,8 +2115,8 @@
       },
       {
         "path": "/management",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2124,8 +2126,8 @@
       },
       {
         "path": "/api/v1/admin",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2875,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2135,8 +2137,8 @@
       },
       {
         "path": "/api/v2/admin",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2875,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2146,8 +2148,8 @@
       },
       {
         "path": "/api/internal",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2875,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2157,8 +2159,8 @@
       },
       {
         "path": "/api/private",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2873,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2168,8 +2170,8 @@
       },
       {
         "path": "/.env",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2179,8 +2181,8 @@
       },
       {
         "path": "/.git",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2190,8 +2192,8 @@
       },
       {
         "path": "/.git/config",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2201,8 +2203,8 @@
       },
       {
         "path": "/.git/HEAD",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2212,8 +2214,8 @@
       },
       {
         "path": "/.gitignore",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2234,8 +2236,8 @@
       },
       {
         "path": "/config",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2245,8 +2247,8 @@
       },
       {
         "path": "/config/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2256,8 +2258,8 @@
       },
       {
         "path": "/configuration",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2267,8 +2269,8 @@
       },
       {
         "path": "/settings",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2278,8 +2280,8 @@
       },
       {
         "path": "/system",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2289,8 +2291,8 @@
       },
       {
         "path": "/actuator",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2300,8 +2302,8 @@
       },
       {
         "path": "/actuator/health",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2311,8 +2313,8 @@
       },
       {
         "path": "/actuator/info",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2322,8 +2324,8 @@
       },
       {
         "path": "/actuator/env",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2333,8 +2335,8 @@
       },
       {
         "path": "/actuator/beans",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2344,8 +2346,8 @@
       },
       {
         "path": "/actuator/mappings",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2355,8 +2357,8 @@
       },
       {
         "path": "/trace",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2366,8 +2368,8 @@
       },
       {
         "path": "/elmah.axd",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2377,8 +2379,8 @@
       },
       {
         "path": "/phpinfo.php",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2388,8 +2390,8 @@
       },
       {
         "path": "/info.php",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2399,8 +2401,8 @@
       },
       {
         "path": "/test",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2410,8 +2412,8 @@
       },
       {
         "path": "/test/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2421,8 +2423,8 @@
       },
       {
         "path": "/testing",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2432,8 +2434,8 @@
       },
       {
         "path": "/dev",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2443,8 +2445,8 @@
       },
       {
         "path": "/development",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2454,8 +2456,8 @@
       },
       {
         "path": "/staging",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2465,8 +2467,8 @@
       },
       {
         "path": "/backup",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2476,8 +2478,8 @@
       },
       {
         "path": "/backups",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2487,8 +2489,8 @@
       },
       {
         "path": "/dump",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2498,8 +2500,8 @@
       },
       {
         "path": "/sql",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2509,8 +2511,8 @@
       },
       {
         "path": "/database",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2520,8 +2522,8 @@
       },
       {
         "path": "/db",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2531,8 +2533,8 @@
       },
       {
         "path": "/phpmyadmin",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2542,8 +2544,8 @@
       },
       {
         "path": "/pma",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2553,8 +2555,8 @@
       },
       {
         "path": "/adminer",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2564,8 +2566,8 @@
       },
       {
         "path": "/status",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2575,8 +2577,8 @@
       },
       {
         "path": "/server-status",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2586,8 +2588,8 @@
       },
       {
         "path": "/server-info",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2597,8 +2599,8 @@
       },
       {
         "path": "/_debug",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2608,8 +2610,8 @@
       },
       {
         "path": "/_profiler",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2619,8 +2621,8 @@
       },
       {
         "path": "/profiler",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2630,8 +2632,8 @@
       },
       {
         "path": "/api/debug",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2869,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2641,8 +2643,8 @@
       },
       {
         "path": "/api/status",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2871,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2652,8 +2654,8 @@
       },
       {
         "path": "/api/health",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2871,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2663,8 +2665,8 @@
       },
       {
         "path": "/api/info",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2867,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2674,8 +2676,8 @@
       },
       {
         "path": "/api/version",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2873,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2685,8 +2687,8 @@
       },
       {
         "path": "/version",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2696,8 +2698,8 @@
       },
       {
         "path": "/version.txt",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2707,8 +2709,8 @@
       },
       {
         "path": "/changelog",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2718,8 +2720,8 @@
       },
       {
         "path": "/CHANGELOG.md",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2729,8 +2731,8 @@
       },
       {
         "path": "/README.md",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2740,8 +2742,8 @@
       },
       {
         "path": "/license",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2751,8 +2753,8 @@
       },
       {
         "path": "/LICENSE",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2762,8 +2764,8 @@
       },
       {
         "path": "/webpack.config.js",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2773,8 +2775,8 @@
       },
       {
         "path": "/package.json",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2784,8 +2786,8 @@
       },
       {
         "path": "/composer.json",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2795,8 +2797,8 @@
       },
       {
         "path": "/Gemfile",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2806,8 +2808,8 @@
       },
       {
         "path": "/requirements.txt",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2817,8 +2819,8 @@
       },
       {
         "path": "/.dockerenv",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2828,8 +2830,8 @@
       },
       {
         "path": "/Dockerfile",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2839,8 +2841,8 @@
       },
       {
         "path": "/docker-compose.yml",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2850,8 +2852,8 @@
       },
       {
         "path": "/api/webhooks",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2875,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2861,8 +2863,8 @@
       },
       {
         "path": "/webhooks",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2872,8 +2874,8 @@
       },
       {
         "path": "/callback",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2883,8 +2885,8 @@
       },
       {
         "path": "/callbacks",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2894,8 +2896,8 @@
       },
       {
         "path": "/oauth",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2905,8 +2907,8 @@
       },
       {
         "path": "/oauth/",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2916,8 +2918,8 @@
       },
       {
         "path": "/oauth/authorize",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2927,8 +2929,8 @@
       },
       {
         "path": "/oauth/token",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2938,8 +2940,8 @@
       },
       {
         "path": "/.aws/credentials",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2949,8 +2951,8 @@
       },
       {
         "path": "/credentials",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2960,8 +2962,8 @@
       },
       {
         "path": "/secrets",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2971,8 +2973,8 @@
       },
       {
         "path": "/private",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2982,8 +2984,8 @@
       },
       {
         "path": "/restricted",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 500,
+        "response_size": 2871,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [
@@ -2993,8 +2995,8 @@
       },
       {
         "path": "/confidential",
-        "status_code": 503,
-        "response_size": 567,
+        "status_code": 200,
+        "response_size": 75002,
         "redirect_target": null,
         "leaks_metadata": true,
         "metadata_leaked": [

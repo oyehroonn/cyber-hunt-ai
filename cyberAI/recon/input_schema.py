@@ -93,21 +93,31 @@ class InputSchemaAnalyzer:
     
     def _extract_fields_from_body(
         self,
-        body: dict,
+        body,
         prefix: str = "",
     ) -> list[FieldSchema]:
         """
         Extract field schemas from request body.
-        
+
         Args:
-            body: Request body dict
+            body: Request body — may be a dict, list, or scalar (JSON allows all types)
             prefix: Field name prefix for nested fields
-            
+
         Returns:
             List of FieldSchema objects
         """
+        # Handle list bodies (e.g. batch API calls that POST a JSON array)
+        if isinstance(body, list):
+            if body and isinstance(body[0], dict):
+                return self._extract_fields_from_body(body[0], f"{prefix}[]" if prefix else "[]")
+            return []
+
+        # If body is not a dict (int, str, bool, None) there are no named fields to extract
+        if not isinstance(body, dict):
+            return []
+
         fields = []
-        
+
         for key, value in body.items():
             full_name = f"{prefix}.{key}" if prefix else key
             

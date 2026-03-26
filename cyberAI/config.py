@@ -52,6 +52,20 @@ class Config:
     
     # LLM settings
     llm_enabled: bool = False
+    # Structured LLM orchestration (phase context + final markdown report)
+    llm_orchestration_enabled: bool = True
+    # Confirmatory tests: differential auth + unauth vs auth + OOB SSRF (any target)
+    confirmed_tests_enabled: bool = True
+    # JSON string: registration API spec for automated test users (see .env.example)
+    auto_register_spec: str = ""
+    # Out-of-band SSRF: webhook.site inbox UUID (optional)
+    webhook_site_uuid: str = ""
+    # Seconds to poll OOB callback
+    oob_poll_timeout_seconds: float = 35.0
+
+    # Closed-loop agent (see docs/AGENT_LOOP_ARCHITECTURE.md)
+    agent_max_turns: int = 50
+    agent_log_tail_lines: int = 80
     
     # Role accounts for multi-role testing
     role_accounts: list[RoleAccount] = field(default_factory=list)
@@ -80,6 +94,8 @@ class Config:
     def _ensure_output_dirs(self) -> None:
         """Create all required output directories."""
         subdirs = [
+            "llm/engagement",
+            "llm/agent_memory",
             "recon/screenshots",
             "recon/dom_snapshots", 
             "recon/requests",
@@ -144,6 +160,13 @@ class Config:
             max_requests_per_endpoint=int(os.getenv("MAX_REQUESTS_PER_ENDPOINT", "10")),
             rate_limit_window_seconds=int(os.getenv("RATE_LIMIT_WINDOW_SECONDS", "10")),
             llm_enabled=os.getenv("LLM_ENABLED", "false").lower() == "true",
+            llm_orchestration_enabled=os.getenv("LLM_ORCHESTRATION", "true").lower() == "true",
+            confirmed_tests_enabled=os.getenv("CONFIRMED_TESTS_ENABLED", "true").lower() == "true",
+            auto_register_spec=os.getenv("AUTO_REGISTER_SPEC", "").strip(),
+            webhook_site_uuid=os.getenv("WEBHOOK_SITE_UUID", "").strip(),
+            oob_poll_timeout_seconds=float(os.getenv("OOB_POLL_TIMEOUT_SECONDS", "35")),
+            agent_max_turns=int(os.getenv("AGENT_MAX_TURNS", "50")),
+            agent_log_tail_lines=int(os.getenv("AGENT_LOG_TAIL_LINES", "80")),
             role_accounts=role_accounts,
             output_dir=Path(os.getenv("OUTPUT_DIR", "outputs")),
             ignore_robots=os.getenv("IGNORE_ROBOTS", "false").lower() == "true",

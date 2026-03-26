@@ -46,6 +46,15 @@ class TestRunner:
             "by_category": {},
         }
         self._testers: dict[str, Any] = {}
+
+    def _record_special_category(self, category: str, findings: list[Finding]) -> None:
+        """Update runner stats for categories that do not use TestPlan rows."""
+        self._stats["tests_run"] += 1
+        self._stats["findings_discovered"] += len(findings)
+        if category not in self._stats["by_category"]:
+            self._stats["by_category"][category] = {"run": 0, "findings": 0}
+        self._stats["by_category"][category]["run"] += 1
+        self._stats["by_category"][category]["findings"] += len(findings)
     
     def load_test_plans(self, categories: Optional[list[str]] = None) -> list[TestPlan]:
         """Load test plans from planning output."""
@@ -114,10 +123,12 @@ class TestRunner:
         if category == "api_fuzz":
             try:
                 from cyberAI.testing.api_fuzzer import run_api_fuzzer
-                return await run_api_fuzzer(
+                findings = await run_api_fuzzer(
                     self.config.target_url or "",
-                    run_id=self.config.run_id,
+                    run_id=self.run_id,
                 )
+                self._record_special_category("api_fuzz", findings)
+                return findings
             except Exception as e:
                 logger.debug(f"API fuzzer: {e}")
                 return []
@@ -127,9 +138,31 @@ class TestRunner:
             try:
                 from cyberAI.testing.rag_tester import RAGTester
                 tester = RAGTester(run_id=self.run_id)
-                return await tester.run_rag_tests()
+                findings = await tester.run_rag_tests()
+                self._record_special_category("rag", findings)
+                return findings
             except Exception as e:
                 logger.debug(f"RAG tester: {e}")
+                return []
+
+        if category == "confirmed_authz":
+            try:
+                from cyberAI.testing.confirmed_authz import run_confirmed_authz_tests
+                findings = await run_confirmed_authz_tests(self.run_id)
+                self._record_special_category("confirmed_authz", findings)
+                return findings
+            except Exception as e:
+                logger.debug(f"confirmed_authz: {e}")
+                return []
+
+        if category == "ssrf_oob":
+            try:
+                from cyberAI.testing.ssrf_oob import run_ssrf_oob_tests
+                findings = await run_ssrf_oob_tests(self.run_id)
+                self._record_special_category("ssrf_oob", findings)
+                return findings
+            except Exception as e:
+                logger.debug(f"ssrf_oob: {e}")
                 return []
 
         plans = [p for p in self._test_plans if p.category.value == category]
@@ -152,8 +185,12 @@ class TestRunner:
         for result in results:
             findings.extend(result)
         
-        # ASRTS Phase 2.5: differential auth when we have multiple role accounts
-        if category == "authz" and len(self.config.role_accounts) >= 2:
+        # ASRTS Phase 2.5: differential auth (skip if confirmed_authz will run same check)
+        if (
+            category == "authz"
+            and len(self.config.role_accounts) >= 2
+            and not self.config.confirmed_tests_enabled
+        ):
             tester = self._testers.get("authz")
             if tester and hasattr(tester, "test_differential_auth"):
                 roles = [acc.role for acc in self.config.role_accounts]
@@ -196,11 +233,20 @@ class TestRunner:
                 all_categories.add("api_fuzz")
             if "rag" in categories:
                 all_categories.add("rag")
+            if "confirmed_authz" in categories:
+                all_categories.add("confirmed_authz")
+            if "ssrf_oob" in categories:
+                all_categories.add("ssrf_oob")
         else:
             # Always include rag when running all categories (if LLM enabled)
             from cyberAI.config import get_config
-            if get_config().llm_enabled:
+            cfg = get_config()
+            if cfg.llm_enabled:
                 all_categories.add("rag")
+            if cfg.confirmed_tests_enabled:
+                all_categories.add("confirmed_authz")
+                if cfg.webhook_site_uuid:
+                    all_categories.add("ssrf_oob")
         
         with Progress() as progress:
             main_task = progress.add_task("[cyan]Running security tests...", total=len(all_categories))

@@ -11,6 +11,7 @@ Usage:
     python main.py verify [--findings-dir outputs/testing/findings]
     python main.py report [--verified-dir outputs/verification/confirmed]
     python main.py full   --target https://example.com   # runs all phases sequentially
+    python main.py agent  --target https://example.com     # closed-loop LLM agent + tools
 """
 
 import argparse
@@ -117,6 +118,17 @@ async def run_recon(args) -> dict:
     browser_pool = get_browser_pool()
     await browser_pool.initialize()
 
+    # Optional: HTTP registration of test users (AUTO_REGISTER_SPEC) before login sequences
+    if getattr(config, "auto_register_spec", "") and not config.dry_run:
+        try:
+            from cyberAI.identity.auto_register import ensure_auto_registered_roles
+
+            n_reg = await ensure_auto_registered_roles(config, run_id)
+            if n_reg:
+                logger.info(f"auto_register: registered {n_reg} test account(s)")
+        except Exception as e:
+            logger.debug(f"auto_register: {e}")
+
     # ASRTS Phase 2.4: Populate sessions for role accounts (login then save to SessionStore)
     if config.role_accounts:
         try:
@@ -132,7 +144,7 @@ async def run_recon(args) -> dict:
         except Exception as e:
             logger.debug(f"Session populate: {e}")
 
-    total_steps = 25
+    total_steps = 26
     with Progress() as progress:
         task = progress.add_task("[cyan]Running recon phases...", total=total_steps)
 
@@ -308,7 +320,19 @@ async def run_recon(args) -> dict:
         else:
             html_content = "<html><head></head><body></body></html>"
         base_url = args.target.rstrip("/") if args.target else ""
-        await run_frontend_parser(html_content, base_url, crawled_routes=routes, run_id=run_id)
+        # Collect JS bundle URLs seen in network traffic (captures Angular/React SPA bundles
+        # that are injected after JS execution and absent from the initial HTML shell)
+        _network_js_urls = [
+            r.url for r in network_intel.get_requests()
+            if r.url.endswith(".js") or ".js?" in r.url
+        ]
+        await run_frontend_parser(
+            html_content,
+            base_url,
+            crawled_routes=routes,
+            run_id=run_id,
+            network_js_urls=_network_js_urls,
+        )
         progress.advance(task)
 
         # Step 5: Role discovery (optional; only if role accounts configured)
@@ -322,12 +346,14 @@ async def run_recon(args) -> dict:
             progress.update(task, description="[cyan]Role discovery (skipped, no accounts)...")
             progress.advance(task)
 
-        # Step 5: Account state (optional)
+        # Step 5: Account state (only when role accounts are configured — otherwise it
+        # runs 5 pointless full-crawls with generic state labels that waste minutes)
         progress.update(task, description="[cyan]Account state discovery...")
-        try:
-            await run_account_state_discovery(args.target, run_id=run_id)
-        except Exception:
-            pass
+        if config.role_accounts:
+            try:
+                await run_account_state_discovery(args.target, run_id=run_id)
+            except Exception:
+                pass
         progress.advance(task)
 
         # Step 6: Sensitive surfaces
@@ -381,6 +407,21 @@ async def run_recon(args) -> dict:
         # Step 13: Input schema analysis
         progress.update(task, description="[cyan]Input schema analysis...")
         run_input_schema_analysis(requests, endpoints, run_id=run_id)
+        progress.advance(task)
+
+        # Step 13b: Direct vulnerability tests (deterministic, no LLM, no recon dependency)
+        progress.update(task, description="[cyan]Direct vulnerability tests...")
+        try:
+            from cyberAI.testing.direct_vuln_tester import run_direct_vuln_tests
+            direct_findings = await run_direct_vuln_tests(
+                target_url=args.target or config.target_url or "",
+                run_id=run_id,
+                output_dir=str(config.output_dir),
+            )
+            if direct_findings:
+                logger.info(f"Direct vuln tests: {len(direct_findings)} findings")
+        except Exception as e:
+            logger.debug(f"Direct vuln tests: {e}")
         progress.advance(task)
 
         # Step 14: Security controls
@@ -456,6 +497,7 @@ async def run_test(args) -> dict:
 
     config = get_config()
     run_id = args.run_id or generate_run_id()
+    config.run_id = run_id
     setup_logging(run_id, "test")
 
     # Ensure target URL is set for HTTP client (from args or last recon output)
@@ -547,6 +589,68 @@ async def run_report(args) -> dict:
     return results
 
 
+async def run_agent(args) -> dict:
+    """
+    Closed-loop LLM agent: tool calls execute pipeline phases, read artifacts, tail logs, save memory.
+    See docs/AGENT_LOOP_ARCHITECTURE.md.
+    """
+    from cyberAI.llm.agent.loop import run_agent_loop
+
+    config = get_config()
+    run_id = getattr(args, "run_id", None) or generate_run_id()
+    config.run_id = run_id
+    if getattr(args, "target", None):
+        config.target_url = args.target
+
+    setup_logging(run_id, "agent")
+
+    if not config.llm_enabled:
+        console.print(
+            "[yellow]Warning: LLM_ENABLED is false. Set LLM_ENABLED=true and API keys in .env.[/yellow]"
+        )
+
+    goal = getattr(args, "goal", None) or (
+        "Drive a full security assessment: run_pipeline_phase recon, then plan, then test "
+        "(use categories rag,confirmed_authz when appropriate), verify, report. "
+        "Read master_intel or all_findings via read_artifact to verify results. "
+        "Call finish when the pipeline has been executed and summarized."
+    )
+    max_turns = getattr(args, "max_turns", None)
+
+    console.print(
+        Panel(
+            f"[bold cyan]Agent loop[/bold cyan]\nTarget: {config.target_url}\nRun ID: {run_id}",
+            title="CyberAI Agent",
+        )
+    )
+
+    result = await run_agent_loop(
+        run_id=run_id,
+        target_url=config.target_url or "",
+        goal=goal,
+        max_turns=max_turns,
+    )
+    console.print(Panel(str(result), title="Agent result", border_style="green"))
+    return {"phase": "agent", "run_id": run_id, **result}
+
+
+async def _llm_phase_hook(run_id: str, phase: str, summary: dict) -> None:
+    """Record structured context and print LLM guidance after each phase."""
+    cfg = get_config()
+    if not cfg.llm_enabled or not getattr(cfg, "llm_orchestration_enabled", True):
+        return
+    try:
+        from cyberAI.llm.assessment_orchestrator import get_orchestrator
+
+        orch = get_orchestrator(run_id)
+        orch.append_event(phase, "phase_complete", summary)
+        text = await orch.phase_guidance_async(phase, summary)
+        if text:
+            console.print(Panel(text[:8000], title=f"LLM guidance — {phase}", border_style="cyan"))
+    except Exception as e:
+        logger.debug(f"LLM orchestration: {e}")
+
+
 async def run_full(args) -> dict:
     """Run full assessment (all phases)."""
     run_id = generate_run_id()
@@ -561,22 +665,48 @@ async def run_full(args) -> dict:
     
     start_time = datetime.utcnow()
     all_results = {"run_id": run_id, "target": args.target, "phases": {}}
+    cfg = get_config()
+    if cfg.llm_enabled and getattr(cfg, "llm_orchestration_enabled", True):
+        try:
+            from cyberAI.llm.assessment_orchestrator import get_orchestrator
+
+            get_orchestrator(run_id).append_event("full", "started", {"target": args.target})
+        except Exception:
+            pass
     
     try:
         console.print("\n[bold]Phase 1: Reconnaissance[/bold]")
         all_results["phases"]["recon"] = await run_recon(args)
+        await _llm_phase_hook(run_id, "recon", all_results["phases"]["recon"])
         
         console.print("\n[bold]Phase 2: Planning[/bold]")
         all_results["phases"]["plan"] = await run_plan(args)
+        await _llm_phase_hook(run_id, "plan", all_results["phases"]["plan"])
         
         console.print("\n[bold]Phase 3: Testing[/bold]")
         all_results["phases"]["test"] = await run_test(args)
+        await _llm_phase_hook(run_id, "test", all_results["phases"]["test"])
         
         console.print("\n[bold]Phase 4: Verification[/bold]")
         all_results["phases"]["verify"] = await run_verify(args)
+        await _llm_phase_hook(run_id, "verify", all_results["phases"]["verify"])
         
         console.print("\n[bold]Phase 5: Reporting[/bold]")
         all_results["phases"]["report"] = await run_report(args)
+        await _llm_phase_hook(run_id, "report", all_results["phases"]["report"])
+
+        if cfg.llm_enabled and getattr(cfg, "llm_orchestration_enabled", True):
+            try:
+                from cyberAI.llm.assessment_orchestrator import get_orchestrator
+
+                orch = get_orchestrator(run_id)
+                md = await orch.final_markdown_report_async()
+                if md:
+                    path = orch.save_final_report(md)
+                    all_results["phases"]["llm_final_report"] = str(path)
+                    console.print(f"[green]LLM final report:[/green] {path}")
+            except Exception as e:
+                logger.debug(f"LLM final report: {e}")
         
     finally:
         await cleanup_browser_pool()
@@ -683,6 +813,34 @@ def main():
     full_parser.add_argument("--categories", "-c", help="Test categories to run")
     full_parser.add_argument("--dry-run", action="store_true", help="Dry run mode")
     full_parser.add_argument("--ignore-robots", action="store_true", help="Ignore robots.txt")
+
+    agent_parser = subparsers.add_parser(
+        "agent",
+        help="Closed-loop LLM agent (tools: pipeline phases, artifacts, logs, memory)",
+    )
+    agent_parser.add_argument("--target", "-t", required=True, help="Target URL")
+    agent_parser.add_argument("--run-id", help="Run ID (default: new)")
+    agent_parser.add_argument(
+        "--max-turns",
+        type=int,
+        default=None,
+        help="Max tool rounds (default: AGENT_MAX_TURNS / config)",
+    )
+    agent_parser.add_argument(
+        "--goal",
+        "-g",
+        help="Natural-language goal for the agent",
+    )
+
+    consolidate_parser = subparsers.add_parser(
+        "consolidate",
+        help="Write one Markdown file merging recon/plan/test/verify outputs for a run_id",
+    )
+    consolidate_parser.add_argument(
+        "--run-id",
+        required=True,
+        help="Run ID (same as logs/verification _meta.run_id)",
+    )
     
     parser.add_argument("--env", help="Path to .env file")
     
@@ -733,6 +891,18 @@ def main():
             console.print(f"[green]Retention: {len(result['deleted'])} items deleted[/green]" + (" (dry run)" if result.get("dry_run") else ""))
         elif args.command == "full":
             asyncio.run(run_full(args))
+        elif args.command == "agent":
+            asyncio.run(run_agent(args))
+        elif args.command == "consolidate":
+            import importlib.util
+            from pathlib import Path as _Path
+
+            mod_path = _Path(__file__).resolve().parent / "reporting" / "consolidate_run_report.py"
+            spec = importlib.util.spec_from_file_location("consolidate_run_report", mod_path)
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            out_path = mod.write_consolidated_report(args.run_id)
+            console.print(f"[green]Consolidated report written:[/green] {out_path}")
             
     except KeyboardInterrupt:
         console.print("\n[yellow]Assessment interrupted by user[/yellow]")

@@ -1,12 +1,17 @@
 {
   "_meta": {
-    "generated_at": "2026-03-25T02:53:43.974872",
+    "generated_at": "2026-03-26T03:28:59.246465",
     "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "juice_steps_20260325_034629"
+    "run_id": "juiceshop-1774492575"
   },
   "hidden_routes": [
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
     {
       "path": "/",
       "source": "react_router",

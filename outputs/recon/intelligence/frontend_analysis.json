@@ -1,12 +1,17 @@
 {
   "_meta": {
-    "generated_at": "2026-03-25T02:53:43.976298",
+    "generated_at": "2026-03-26T03:28:59.247474",
     "target_url": "https://demo.owasp-juice.shop",
     "phase": "recon",
     "version": "1.0.0",
-    "run_id": "juice_steps_20260325_034629"
+    "run_id": "juiceshop-1774492575"
   },
   "routes": [
+    {
+      "path": "/",
+      "source": "react_router",
+      "pattern": "path:\\s*[\"\\']([^\"\\']+)[\"\\']"
+    },
     {
       "path": "/",
       "source": "react_router",
@@ -73,19 +78,38 @@
       "url": "//js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js",
       "method": "UNKNOWN",
       "source": "definition"
+    },
+    {
+      "url": "/generate_204",
+      "method": "GET",
+      "source": "fetch/axios"
     }
   ],
   "role_constants": {
+    "User": "SESSION_INDEX",
+    "editor": "LATENCY_ACTION_CREATOR_VIDEO_EDITOR",
+    "owner": "LATENCY_ACTION_CREATOR_CMS_DASHBOARD",
+    "USER": "Se ha detenido la reproducci\\u00f3n porque se est\\u00e1n viendo demasiados v\\u00eddeos de la misma cuenta.",
+    "permission_DENIED": true,
     "admin": "admin",
     "user": "user"
   },
   "feature_flags": {
+    "get": true,
+    "web_csi_action_sampling_enabled": true,
+    "web_csi_debug_sample_enabled": true,
+    "DAI_TYPE_SS_DISABLED": true,
+    "cpu_usage_tracker_intervals_enabled": true,
+    "SMART_DOWNLOADS_ENABLED": true,
+    "safari_autoplay_disabled": true,
     "compress": true,
     "volatile": true,
     "outlined_flag": true
   },
   "graphql_operations": [],
   "websocket_events": [],
-  "upload_endpoints": [],
+  "upload_endpoints": [
+    "/file/index.m3u8"
+  ],
   "validation_schemas": []
 }

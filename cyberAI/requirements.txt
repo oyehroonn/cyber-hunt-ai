@@ -45,3 +45,10 @@ ruff>=0.1.0
 
 # Note: playwright requires browser binaries
 # Run: playwright install chromium
+
+# OOB SSRF — Interactsh client (Go binary, install separately)
+# go install -v github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest
+# OR: download from https://github.com/projectdiscovery/interactsh/releases
+
+# Ollama fallback (local LLM, install separately)
+# https://ollama.ai — run: ollama pull deepseek-r1:14b

@@ -18,7 +18,7 @@ from playwright.async_api import BrowserContext, Page
 
 from cyberAI.config import get_config
 from cyberAI.models import CrawlState, CrawlTransition
-from cyberAI.utils.browser import get_page_actions, wait_for_network_idle
+from cyberAI.utils.browser import dismiss_overlays, get_page_actions, wait_for_network_idle
 from cyberAI.utils.helpers import add_meta_to_output, atomic_write_json, safe_filename
 
 # JS to get canonical DOM string: body without script/style, normalized
@@ -137,11 +137,17 @@ class StateFlowCrawler:
     ) -> bool:
         """Replay a sequence of (action_type, selector, href_or_action) to reach a state."""
         await page.goto(start_url, wait_until="domcontentloaded", timeout=15000)
-        await asyncio.sleep(0.5)
+        await wait_for_network_idle(page, self._network_idle_timeout)
+        await dismiss_overlays(page)
+        await asyncio.sleep(0.3)
+        await dismiss_overlays(page)
         for action_type, selector, extra in path:
             try:
+                await dismiss_overlays(page)
                 if action_type == "navigate" and extra:
                     await page.goto(extra, wait_until="domcontentloaded", timeout=10000)
+                    await wait_for_network_idle(page, self._network_idle_timeout)
+                    await dismiss_overlays(page)
                 elif action_type == "click" and selector:
                     await page.click(selector, timeout=3000)
                 elif action_type == "submit" and selector:
@@ -171,6 +177,11 @@ class StateFlowCrawler:
         try:
             await page.goto(start_url, wait_until="domcontentloaded", timeout=15000)
             await wait_for_network_idle(page, self._network_idle_timeout)
+            # Dismiss Angular welcome/cookie dialogs *after* networkidle so the dialog
+            # has already appeared. Also sets localStorage to prevent re-show.
+            await dismiss_overlays(page)
+            await asyncio.sleep(0.3)
+            await dismiss_overlays(page)  # second pass in case animation took time
             initial_html = await self._get_dom_html(page)
             if not initial_html:
                 return list(self._states.values()), self._transitions
@@ -227,8 +238,10 @@ class StateFlowCrawler:
                     await self._replay_path(page, start_url, path)
 
                     try:
+                        await dismiss_overlays(page)
                         if action_type == "navigate" and extra:
                             await page.goto(extra, wait_until="domcontentloaded", timeout=10000)
+                            await dismiss_overlays(page)
                         elif action_type == "click" and selector:
                             await page.click(selector, timeout=3000)
                         elif action_type == "submit" and selector:

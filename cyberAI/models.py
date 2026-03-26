@@ -74,6 +74,9 @@ class TestCategory(str, Enum):
     NOTIFICATION = "notification"
     CONFIG = "config"
     RAG = "rag"
+    # High-confidence / confirmatory (cross-session, OOB, unauth vs auth)
+    CONFIRMED_AUTHZ = "confirmed_authz"
+    SSRF_OOB = "ssrf_oob"
 
 
 class ImpactType(str, Enum):
@@ -167,12 +170,12 @@ class RequestRecord(BaseModel):
     headers: dict[str, str] = Field(default_factory=dict)
     cookies: dict[str, str] = Field(default_factory=dict)
     body: Optional[str] = None
-    body_json: Optional[dict[str, Any]] = None
+    body_json: Optional[Any] = None
     response_status: int
     response_content_type: Optional[str] = None
     response_headers: dict[str, str] = Field(default_factory=dict)
     response_body: Optional[str] = None
-    response_json: Optional[dict[str, Any]] = None
+    response_json: Optional[Any] = None
     response_body_hash: Optional[str] = None
     response_body_preview: Optional[str] = None  # truncated preview for quick triage
     timestamp: datetime = Field(default_factory=datetime.utcnow)
@@ -190,7 +193,7 @@ class CanonicalRequest(BaseModel):
     url_template: str  # path with {id} placeholders
     query_params: list[dict[str, str]] = Field(default_factory=list)  # [{name, value_placeholder}]
     headers: dict[str, str] = Field(default_factory=dict)
-    body_ast: Optional[dict[str, Any]] = None  # tree with placeholders
+    body_ast: Optional[Any] = None  # tree with placeholders
     warc_ref: Optional[str] = None
 
 
